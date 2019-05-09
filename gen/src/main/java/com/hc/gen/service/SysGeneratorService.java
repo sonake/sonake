@@ -49,20 +49,22 @@ public class SysGeneratorService {
 		return generatorDao.queryColumns(tableName);
 	}
 
-	public byte[] generatorCode(String[] tableNames,Map<String,String> params) {
-		ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
-
-		ZipOutputStream zip = new ZipOutputStream(outputStream);
-
+	public boolean generatorCode(String[] tableNames,Map<String,String> params) {
+        int size=0;
 		for(String tableName : tableNames){
 			//查询表信息
 			Map<String, String> table = queryTable(tableName);
 			//查询列信息
 			List<Map<String, String>> columns = queryColumns(tableName);
 			//生成代码
-			GenUtils.generatorCode(table, columns, zip,params);
+			if(GenUtils.generatorCode(table, columns, params)){
+				size++;
+			};
 		}
-		IOUtils.closeQuietly(zip);
-		return outputStream.toByteArray();
+		if(tableNames.length==size){
+			return true;
+		}else {
+			return false;
+		}
 	}
 }

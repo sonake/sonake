@@ -47,8 +47,8 @@ public class GenUtils {
     /**
      * 生成代码
      */
-    public static void generatorCode(Map<String, String> table,
-                                     List<Map<String, String>> columns, ZipOutputStream zip,Map<String,String> params) {
+    public static boolean generatorCode(Map<String, String> table,
+                                     List<Map<String, String>> columns, Map<String,String> params) {
         //配置信息
         Configuration config = getConfig();
         boolean hasBigDecimal = false;
@@ -121,22 +121,35 @@ public class GenUtils {
 
         //获取模板列表
         List<String> templates = getTemplates();
+        int size=0;
         for (String template : templates) {
             //渲染模板
             StringWriter sw = new StringWriter();
             Template tpl = Velocity.getTemplate(template, "UTF-8" );
+            //VelocityContext velocityContext=tpl.getData();
             tpl.merge(context, sw);
 
             try {
-                //添加到zip
                 String fileName=getFileName(template,tableEntity.getClassName(),config.getString("package"),config.getString("moduleName" ),params);
-                zip.putNextEntry(new ZipEntry(getFileName(template, tableEntity.getClassName(), config.getString("package" ), config.getString("moduleName" ),params)));
-                IOUtils.write(sw.toString(), zip, "UTF-8" );
-                IOUtils.closeQuietly(sw);
-                zip.closeEntry();
-            } catch (IOException e) {
+                //源文件存在先删除
+                FileUtils.deleteFile(fileName);
+                // 创建并写入文件
+                if(FileUtils.createFile(fileName)){
+                    FileUtils.writeToFile(fileName,sw.toString(),true);
+                }
+                //zip.putNextEntry(new ZipEntry(fileName));
+                //IOUtils.write(sw.toString(), zip, "UTF-8" );
+                //IOUtils.closeQuietly(sw);
+                //zip.closeEntry();
+            } catch (Exception e) {
                 throw new RRException("渲染模板失败，表名：" + tableEntity.getTableName(), e);
             }
+            size++;
+        }
+        if(templates.size()==size){
+            return true;
+        }else {
+            return false;
         }
     }
 
@@ -173,12 +186,12 @@ public class GenUtils {
      * 获取文件名
      */
     public static String getFileName(String template, String className, String packageName, String moduleName,Map<String,String> params) {
-        String packagePath ="src"+File.separator+ "main" + File.separator + "java" + File.separator;
         String codeUrl = params.get("codeUrl").replace("/",File.separator).replace("\\",File.separator);
         String xmlUrl = params.get("xmlUrl").replace("/",File.separator).replace("\\",File.separator);
         String vueUrl = params.get("vueUrl").replace("/",File.separator).replace("\\",File.separator);
+        String packagePath =codeUrl+File.separator+"src"+File.separator+ "main" + File.separator + "java" + File.separator;
         if (StringUtils.isNotBlank(packageName)) {
-            packagePath += codeUrl+File.separator+packageName.replace(".", File.separator) + File.separator + moduleName + File.separator;
+            packagePath +=packageName.replace(".", File.separator) + File.separator + moduleName + File.separator;
         }
 
         if (template.contains("Entity.java.vm" )) {
@@ -206,7 +219,7 @@ public class GenUtils {
         }
 
         if (template.contains("menu.sql.vm" )) {
-            return className.toLowerCase() + "_menu.sql";
+            return xmlUrl+File.separator+"src"+File.separator+"main" + File.separator + "resources" + File.separator + "mapper" + File.separator + moduleName + File.separator+className.toLowerCase() + "_menu.sql";
         }
 
         if (template.contains("index.vue.vm" )) {
@@ -214,7 +227,7 @@ public class GenUtils {
         }
 
         if (template.contains("add-or-update.vue.vm" )) {
-            return vueUrl + className.toLowerCase() + "-add-or-update.vue";
+            return vueUrl +File.separator+ className.toLowerCase() + "-add-or-update.vue";
         }
 
         return null;

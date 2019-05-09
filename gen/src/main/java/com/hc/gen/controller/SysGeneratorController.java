@@ -14,6 +14,8 @@ import com.hc.gen.utils.Query;
 import com.hc.gen.utils.R;
 import org.apache.commons.io.IOUtils;
 import org.apache.ibatis.annotations.Param;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -33,6 +35,7 @@ import java.util.Map;
 @Controller
 @RequestMapping("/sys/generator")
 public class SysGeneratorController {
+	private static Logger logger = LoggerFactory.getLogger(SysGeneratorController.class);
 	@Autowired
 	private SysGeneratorService sysGeneratorService;
 	
@@ -59,14 +62,15 @@ public class SysGeneratorController {
 		Map<String,String> params = new HashMap<>();
 		params.put("codeUrl",codeUrl);
 		params.put("xmlUrl",xmlUrl);
-		params.put("vueXml",vueUrl);
-		byte[] data = sysGeneratorService.generatorCode(tables.split(","),params);
+		params.put("vueUrl",vueUrl);
+		boolean isExist = sysGeneratorService.generatorCode(tables.split(","),params);
 		
-		response.reset();  
-        response.setHeader("Content-Disposition", "attachment; filename=\"renren.zip\"");  
-        response.addHeader("Content-Length", "" + data.length);  
-        response.setContentType("application/octet-stream; charset=UTF-8");  
-  
-        IOUtils.write(data, response.getOutputStream());  
+		response.reset();
+		if(isExist) {
+			IOUtils.write("200", response.getOutputStream());
+			logger.info("代码生成完毕");
+		}else{
+			IOUtils.write("500", response.getOutputStream());
+		    logger.error("代码生成失败，请检查配置后重新操作！");}
 	}
 }
