@@ -118,14 +118,14 @@ var vm = new Vue({
                         // window.location.reload();
                         alert("代码生成完成",function(){
                             window.location.reload();
-                        });
+                        },3000);
                         document.getElementById("myModal").style.display="none";
                     }else{
                         //base_alert_time("代码生成失败，请检查相关配置!",2000);
                         //alert("代码生成失败，请检查相关配置");
                         alert("代码生成失败，请检查相关配置!",function(){
                             window.location.reload();
-                        });
+                        },3000);
                         document.getElementById("myModal").style.display="none";
                     }
                 }

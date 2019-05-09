@@ -20,7 +20,7 @@
     padding: 10px;
     border: 1px solid #888;
     width: 40%;
-    height: 45%;
+    height: 60%;
     animation: topDown 0.4s; /*自定义动画，从模态框内容上到下出现*/
 }
 @keyframes topDown {
@@ -62,5 +62,5 @@
 }
 .form-control{
     border-radius: 100px;
-    margin-bottom: 35px;
+    margin-bottom: 8%;
 }
