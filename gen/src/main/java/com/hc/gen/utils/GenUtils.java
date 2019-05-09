@@ -48,7 +48,7 @@ public class GenUtils {
      * 生成代码
      */
     public static void generatorCode(Map<String, String> table,
-                                     List<Map<String, String>> columns, ZipOutputStream zip) {
+                                     List<Map<String, String>> columns, ZipOutputStream zip,Map<String,String> params) {
         //配置信息
         Configuration config = getConfig();
         boolean hasBigDecimal = false;
@@ -129,7 +129,8 @@ public class GenUtils {
 
             try {
                 //添加到zip
-                zip.putNextEntry(new ZipEntry(getFileName(template, tableEntity.getClassName(), config.getString("package" ), config.getString("moduleName" ))));
+                String fileName=getFileName(template,tableEntity.getClassName(),config.getString("package"),config.getString("moduleName" ),params);
+                zip.putNextEntry(new ZipEntry(getFileName(template, tableEntity.getClassName(), config.getString("package" ), config.getString("moduleName" ),params)));
                 IOUtils.write(sw.toString(), zip, "UTF-8" );
                 IOUtils.closeQuietly(sw);
                 zip.closeEntry();
@@ -171,10 +172,13 @@ public class GenUtils {
     /**
      * 获取文件名
      */
-    public static String getFileName(String template, String className, String packageName, String moduleName) {
-        String packagePath = "main" + File.separator + "java" + File.separator;
+    public static String getFileName(String template, String className, String packageName, String moduleName,Map<String,String> params) {
+        String packagePath ="src"+File.separator+ "main" + File.separator + "java" + File.separator;
+        String codeUrl = params.get("codeUrl").replace("/",File.separator).replace("\\",File.separator);
+        String xmlUrl = params.get("xmlUrl").replace("/",File.separator).replace("\\",File.separator);
+        String vueUrl = params.get("vueUrl").replace("/",File.separator).replace("\\",File.separator);
         if (StringUtils.isNotBlank(packageName)) {
-            packagePath += packageName.replace(".", File.separator) + File.separator + moduleName + File.separator;
+            packagePath += codeUrl+File.separator+packageName.replace(".", File.separator) + File.separator + moduleName + File.separator;
         }
 
         if (template.contains("Entity.java.vm" )) {
@@ -198,7 +202,7 @@ public class GenUtils {
         }
 
         if (template.contains("Dao.xml.vm" )) {
-            return "main" + File.separator + "resources" + File.separator + "mapper" + File.separator + moduleName + File.separator + className + "Dao.xml";
+            return xmlUrl+File.separator+"src"+File.separator+"main" + File.separator + "resources" + File.separator + "mapper" + File.separator + moduleName + File.separator + className + "Dao.xml";
         }
 
         if (template.contains("menu.sql.vm" )) {
@@ -206,13 +210,11 @@ public class GenUtils {
         }
 
         if (template.contains("index.vue.vm" )) {
-            return "main" + File.separator + "resources" + File.separator + "src" + File.separator + "views" + File.separator + "modules" +
-                    File.separator + moduleName + File.separator + className.toLowerCase() + ".vue";
+            return vueUrl + File.separator + className.toLowerCase() + ".vue";
         }
 
         if (template.contains("add-or-update.vue.vm" )) {
-            return "main" + File.separator + "resources" + File.separator + "src" + File.separator + "views" + File.separator + "modules" +
-                    File.separator + moduleName + File.separator + className.toLowerCase() + "-add-or-update.vue";
+            return vueUrl + className.toLowerCase() + "-add-or-update.vue";
         }
 
         return null;

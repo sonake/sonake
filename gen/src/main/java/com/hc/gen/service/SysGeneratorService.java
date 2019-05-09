@@ -19,6 +19,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.io.ByteArrayOutputStream;
+import java.io.FileOutputStream;
 import java.util.List;
 import java.util.Map;
 import java.util.zip.ZipOutputStream;
@@ -48,8 +49,9 @@ public class SysGeneratorService {
 		return generatorDao.queryColumns(tableName);
 	}
 
-	public byte[] generatorCode(String[] tableNames) {
+	public byte[] generatorCode(String[] tableNames,Map<String,String> params) {
 		ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
+
 		ZipOutputStream zip = new ZipOutputStream(outputStream);
 
 		for(String tableName : tableNames){
@@ -58,7 +60,7 @@ public class SysGeneratorService {
 			//查询列信息
 			List<Map<String, String>> columns = queryColumns(tableName);
 			//生成代码
-			GenUtils.generatorCode(table, columns, zip);
+			GenUtils.generatorCode(table, columns, zip,params);
 		}
 		IOUtils.closeQuietly(zip);
 		return outputStream.toByteArray();

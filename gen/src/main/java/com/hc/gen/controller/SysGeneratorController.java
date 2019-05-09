@@ -22,6 +22,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.util.HashMap;
 import java.util.Map;
 
 /**
@@ -54,7 +55,12 @@ public class SysGeneratorController {
 					 @Param("codeUrl")String codeUrl,
 					 @Param("xmlUrl")String xmlUrl,
 					 @Param("vueUrl")String vueUrl ) throws IOException{
-		byte[] data = sysGeneratorService.generatorCode(tables.split(","));
+		//拼装路径参数
+		Map<String,String> params = new HashMap<>();
+		params.put("codeUrl",codeUrl);
+		params.put("xmlUrl",xmlUrl);
+		params.put("vueXml",vueUrl);
+		byte[] data = sysGeneratorService.generatorCode(tables.split(","),params);
 		
 		response.reset();  
         response.setHeader("Content-Disposition", "attachment; filename=\"renren.zip\"");  
