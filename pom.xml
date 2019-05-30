@@ -7,7 +7,11 @@
     <groupId>com.hc</groupId>
     <artifactId>sonake</artifactId>
     <version>1.0-SNAPSHOT</version>
-
+    <packaging>pom</packaging>
+    <modules>
+        <module>admin-api</module>
+        <module>shop-api</module>
+    </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>

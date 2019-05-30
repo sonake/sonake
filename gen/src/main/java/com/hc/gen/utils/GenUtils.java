@@ -31,15 +31,16 @@ public class GenUtils {
     public static List<String> getTemplates(){
         List<String> templates = new ArrayList<String>();
         templates.add("template/Entity.java.vm");
+        templates.add("template/Dto.java.vm");
         templates.add("template/Dao.java.vm");
         templates.add("template/Dao.xml.vm");
         templates.add("template/Service.java.vm");
         templates.add("template/ServiceImpl.java.vm");
         templates.add("template/Controller.java.vm");
-        templates.add("template/menu.sql.vm");
+        //templates.add("template/menu.sql.vm");
 
-        templates.add("template/index.vue.vm");
-        templates.add("template/add-or-update.vue.vm");
+        //templates.add("template/index.vue.vm");
+        //templates.add("template/add-or-update.vue.vm");
 
         return templates;
     }
@@ -126,7 +127,6 @@ public class GenUtils {
             //渲染模板
             StringWriter sw = new StringWriter();
             Template tpl = Velocity.getTemplate(template, "UTF-8" );
-            //VelocityContext velocityContext=tpl.getData();
             tpl.merge(context, sw);
 
             try {
@@ -182,6 +182,62 @@ public class GenUtils {
         }
     }
 
+//    /**
+//     * 获取文件名
+//     */
+//    public static String getFileName(String template, String className, String packageName, String moduleName,Map<String,String> params) {
+//        String codeUrl = params.get("codeUrl").replace("/",File.separator).replace("\\",File.separator);
+//        String xmlUrl = params.get("xmlUrl").replace("/",File.separator).replace("\\",File.separator);
+//        String vueUrl = params.get("vueUrl").replace("/",File.separator).replace("\\",File.separator);
+//        String packagePath =codeUrl+File.separator+"src"+File.separator+ "main" + File.separator + "java" + File.separator;
+//        if (StringUtils.isNotBlank(packageName)) {
+//            packagePath +=packageName.replace(".", File.separator) + File.separator + moduleName + File.separator;
+//        }
+//
+//        if (template.contains("Entity.java.vm" )) {
+//            return packagePath + "entity" + File.separator + className + "Entity.java";
+//        }
+//        if(template.contains("Dto.java.vm")){
+//            return packagePath + "dto" + File.separator + className + "Dto.java";
+//        }
+//
+//        if (template.contains("Dao.java.vm" )) {
+//            return packagePath + "dao" + File.separator + className + "Dao.java";
+//        }
+//
+//        if (template.contains("Service.java.vm" )) {
+//            return packagePath + "service" + File.separator + className + "Service.java";
+//        }
+//
+//        if (template.contains("ServiceImpl.java.vm" )) {
+//            return packagePath + "service" + File.separator + "impl" + File.separator + className + "ServiceImpl.java";
+//        }
+//
+//        if (template.contains("Controller.java.vm" )) {
+//            return packagePath + "controller" + File.separator + className + "Controller.java";
+//        }
+//
+//        if (template.contains("Dao.xml.vm" )) {
+//            return xmlUrl+File.separator+"src"+File.separator+"main" + File.separator + "resources" + File.separator + "mapper" + File.separator + moduleName + File.separator + className + "Dao.xml";
+//        }
+//
+//        if (template.contains("menu.sql.vm" )) {
+//            return xmlUrl+File.separator+"src"+File.separator+"main" + File.separator + "resources" + File.separator + "mapper" + File.separator + moduleName + File.separator+className.toLowerCase() + "_menu.sql";
+//        }
+//
+//        if (template.contains("index.vue.vm" )) {
+//            return vueUrl + File.separator + className.toLowerCase() + ".vue";
+//        }
+//
+//        if (template.contains("add-or-update.vue.vm" )) {
+//            return vueUrl +File.separator+ className.toLowerCase() + "-add-or-update.vue";
+//        }
+//
+//
+//        return null;
+//    }
+
+
     /**
      * 获取文件名
      */
@@ -195,40 +251,44 @@ public class GenUtils {
         }
 
         if (template.contains("Entity.java.vm" )) {
-            return packagePath + "entity" + File.separator + className + "Entity.java";
+            return codeUrl+File.separator + className + ".java";
+        }
+        if(template.contains("Dto.java.vm")){
+            return codeUrl+File.separator + className + "Dto.java";
         }
 
         if (template.contains("Dao.java.vm" )) {
-            return packagePath + "dao" + File.separator + className + "Dao.java";
+            return codeUrl+File.separator + className + "Dao.java";
         }
 
         if (template.contains("Service.java.vm" )) {
-            return packagePath + "service" + File.separator + className + "Service.java";
+            return codeUrl+File.separator + className + "Service.java";
         }
 
         if (template.contains("ServiceImpl.java.vm" )) {
-            return packagePath + "service" + File.separator + "impl" + File.separator + className + "ServiceImpl.java";
+            return codeUrl+File.separator + className + "ServiceImpl.java";
         }
 
         if (template.contains("Controller.java.vm" )) {
-            return packagePath + "controller" + File.separator + className + "Controller.java";
+            return codeUrl+File.separator + className + "Controller.java";
         }
 
         if (template.contains("Dao.xml.vm" )) {
-            return xmlUrl+File.separator+"src"+File.separator+"main" + File.separator + "resources" + File.separator + "mapper" + File.separator + moduleName + File.separator + className + "Dao.xml";
+            return codeUrl+File.separator + className + "Dao.xml";
         }
 
         if (template.contains("menu.sql.vm" )) {
-            return xmlUrl+File.separator+"src"+File.separator+"main" + File.separator + "resources" + File.separator + "mapper" + File.separator + moduleName + File.separator+className.toLowerCase() + "_menu.sql";
+            return  codeUrl+File.separator+className.toLowerCase() + "_menu.sql";
         }
 
         if (template.contains("index.vue.vm" )) {
-            return vueUrl + File.separator + className.toLowerCase() + ".vue";
+            return codeUrl+File.separator + className.toLowerCase() + ".vue";
         }
 
         if (template.contains("add-or-update.vue.vm" )) {
-            return vueUrl +File.separator+ className.toLowerCase() + "-add-or-update.vue";
+            return codeUrl+File.separator+ className.toLowerCase() + "-add-or-update.vue";
         }
+
 
         return null;
     }

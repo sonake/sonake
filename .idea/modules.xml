@@ -2,6 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/admin-api/admin-api.iml" filepath="$PROJECT_DIR$/admin-api/admin-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/gen/gen.iml" filepath="$PROJECT_DIR$/gen/gen.iml" />
+      <module fileurl="file://$PROJECT_DIR$/shop-api/shop-api.iml" filepath="$PROJECT_DIR$/shop-api/shop-api.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/sonake.iml" filepath="$PROJECT_DIR$/.idea/sonake.iml" />
     </modules>
   </component>
