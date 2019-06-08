@@ -201,8 +201,8 @@ public class GenUtils {
 //            return packagePath + "dto" + File.separator + className + "Dto.java";
 //        }
 //
-//        if (template.contains("Dao.java.vm" )) {
-//            return packagePath + "dao" + File.separator + className + "Dao.java";
+//        if (template.contains("dao.java.vm" )) {
+//            return packagePath + "dao" + File.separator + className + "dao.java";
 //        }
 //
 //        if (template.contains("Service.java.vm" )) {
@@ -217,8 +217,8 @@ public class GenUtils {
 //            return packagePath + "controller" + File.separator + className + "Controller.java";
 //        }
 //
-//        if (template.contains("Dao.xml.vm" )) {
-//            return xmlUrl+File.separator+"src"+File.separator+"main" + File.separator + "resources" + File.separator + "mapper" + File.separator + moduleName + File.separator + className + "Dao.xml";
+//        if (template.contains("dao.xml.vm" )) {
+//            return xmlUrl+File.separator+"src"+File.separator+"main" + File.separator + "resources" + File.separator + "mapper" + File.separator + moduleName + File.separator + className + "dao.xml";
 //        }
 //
 //        if (template.contains("menu.sql.vm" )) {
@@ -257,8 +257,8 @@ public class GenUtils {
             return codeUrl+File.separator + className + "Dto.java";
         }
 
-        if (template.contains("Dao.java.vm" )) {
-            return codeUrl+File.separator + className + "Dao.java";
+        if (template.contains("dao.java.vm" )) {
+            return codeUrl+File.separator + className + "dao.java";
         }
 
         if (template.contains("Service.java.vm" )) {
@@ -273,8 +273,8 @@ public class GenUtils {
             return codeUrl+File.separator + className + "Controller.java";
         }
 
-        if (template.contains("Dao.xml.vm" )) {
-            return codeUrl+File.separator + className + "Dao.xml";
+        if (template.contains("dao.xml.vm" )) {
+            return codeUrl+File.separator + className + "dao.xml";
         }
 
         if (template.contains("menu.sql.vm" )) {

@@ -1,36 +1,33 @@
 server:
-  port: 8041
+  port: 8081
 
 # mysql
 spring:
   datasource:
     type: com.zaxxer.hikari.HikariDataSource
-    #MySQLé…ç½®
+    #MySQLÅäÖÃ
     driverClassName: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://47.105.40.52:3306/sonake?useUnicode=true&characterEncoding=UTF-8&useSSL=false
-    username: root
-    password: Jdkc0912..
-    #oracleé…ç½®
+    #url: jdbc:mysql://47.105.40.52:3306/sonake?useUnicode=true&characterEncoding=UTF-8&useSSL=false
+    #username: root
+    #password: Jdkc0912..
+    #oracleÅäÖÃ
     #    driverClassName: oracle.jdbc.OracleDriver
     #    url: jdbc:oracle:thin:@47.100.206.162:1521:xe
     #    username: renren
     #    password: 123456
-    #SQLServeré…ç½®
+    #SQLServerÅäÖÃ
     #    driverClassName: com.microsoft.sqlserver.jdbc.SQLServerDriver
     #    url: jdbc:sqlserver://192.168.10.10:1433;DatabaseName=renren_fast
     #    username: sa
     #    password: 123456
-    #PostgreSQLé…ç½®
+    #PostgreSQLÅäÖÃ
     #    driverClassName: org.postgresql.Driver
     #    url: jdbc:postgresql://192.168.10.10:5432/renren_fast
     #    username: postgres
     #    password: 123456
-    #url: jdbc:mysql://192.168.10.204:3306/ntc-api?useUnicode=true&characterEncoding=UTF-8&useSSL=false
-    #username: root
-    #password: 111111
-  jackson:
-    time-zone: GMT+8
-    date-format: yyyy-MM-dd HH:mm:ss
+    url: jdbc:mysql://47.105.40.52:3306/ntc-sonake?useUnicode=true&characterEncoding=UTF-8&useSSL=false
+    username: root
+    password: Jdkc0912..
   resources:
     static-locations: classpath:/static/,classpath:/views/
 
@@ -45,7 +42,7 @@ pagehelper:
   params: count=countSql
 
 
-#æŒ‡å®šæ•°æ®åº“ï¼Œå¯é€‰å€¼æœ‰ã€mysqlã€oracleã€sqlserverã€postgresqlã€‘
+#Ö¸¶¨Êı¾İ¿â£¬¿ÉÑ¡ÖµÓĞ¡¾mysql¡¢oracle¡¢sqlserver¡¢postgresql¡¿
 renren:
   database: mysql
 

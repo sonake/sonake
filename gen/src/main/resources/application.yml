@@ -7,9 +7,9 @@ spring:
     type: com.zaxxer.hikari.HikariDataSource
     #MySQL配置
     driverClassName: com.mysql.cj.jdbc.Driver
-    #url: jdbc:mysql://47.105.40.52:3306/sonake?useUnicode=true&characterEncoding=UTF-8&useSSL=false
-    #username: root
-    #password: Jdkc0912..
+    url: jdbc:mysql://47.105.40.52:3306/sonake?useUnicode=true&characterEncoding=UTF-8&useSSL=false
+    username: root
+    password: Jdkc0912..
     #oracle配置
     #    driverClassName: oracle.jdbc.OracleDriver
     #    url: jdbc:oracle:thin:@47.100.206.162:1521:xe
@@ -25,9 +25,9 @@ spring:
     #    url: jdbc:postgresql://192.168.10.10:5432/renren_fast
     #    username: postgres
     #    password: 123456
-    url: jdbc:mysql://192.168.10.204:3306/ntc-api?useUnicode=true&characterEncoding=UTF-8&useSSL=false
-    username: root
-    password: 111111
+    #url: jdbc:mysql://192.168.10.204:3306/ntc-api?useUnicode=true&characterEncoding=UTF-8&useSSL=false
+    #username: root
+    #password: 111111
   jackson:
     time-zone: GMT+8
     date-format: yyyy-MM-dd HH:mm:ss
