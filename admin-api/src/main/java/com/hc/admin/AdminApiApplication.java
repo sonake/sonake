@@ -5,7 +5,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-@MapperScan("com.hc.admin.dao.*")
+@MapperScan("com.hc.admin.dao")
 public class AdminApiApplication {
 
     public static void main(String[] args) {

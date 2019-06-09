@@ -1,6 +1,10 @@
 package com.hc.admin.service.impl;
 
+import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
+import com.baomidou.mybatisplus.core.metadata.IPage;
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.hc.admin.bean.Area;
+import com.hc.admin.common.PageUtils;
 import com.hc.admin.dao.AreaDao;
 import com.hc.admin.service.AreaService;
 import org.springframework.stereotype.Service;
@@ -15,17 +19,15 @@ import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 @Service("areaService")
 public class AreaServiceImpl extends ServiceImpl<AreaDao, Area> implements AreaService {
 
-//    @Override
-//    public PageUtils queryPage(Map<String, Object> params) {
-//        //构造自定义查询条件(自定义添加条件)
-//        LambdaQueryWrapper<AreaEntity> queryWrapper=new LambdaQueryWrapper<>();
-//        long total=this.count();
-//        IPage<AreaEntity> page = this.page(
-//                ToolUtil.getPage(total),
-//                queryWrapper
-//        );
-//
-//        return new PageUtils(page);
-//    }
+    @Override
+    public PageUtils queryPage(Area area) {
+        //构造自定义查询条件(自定义添加条件)
+        LambdaQueryWrapper<Area> queryWrapper=new LambdaQueryWrapper<>();
+        IPage<Area> page = this.page(
+                new Page<>(),
+                queryWrapper
+        );
+        return new PageUtils(page);
+    }
 
 }

@@ -2,8 +2,9 @@ package com.hc.admin.service;
 
 import com.baomidou.mybatisplus.extension.service.IService;
 import com.hc.admin.bean.UserArea;
+import com.hc.admin.common.PageUtils;
 
- /**
+/**
  * 
  *
  * @author xzyuan
@@ -12,6 +13,6 @@ import com.hc.admin.bean.UserArea;
  */
 public interface UserAreaService extends IService<UserArea> {
 
-    //PageUtils queryPage(Map<String, Object> params);
+    PageUtils queryPage(UserArea userArea);
 }
 

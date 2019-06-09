@@ -1,7 +1,11 @@
 package com.hc.admin.service.impl;
 
+import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
+import com.baomidou.mybatisplus.core.metadata.IPage;
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.hc.admin.bean.Menu;
+import com.hc.admin.common.PageUtils;
 import com.hc.admin.dao.MenuDao;
 import com.hc.admin.service.MenuService;
 import org.springframework.stereotype.Service;
@@ -17,17 +21,17 @@ import java.util.Map;
 @Service("menuService")
 public class MenuServiceImpl extends ServiceImpl<MenuDao, Menu> implements MenuService {
 
-//    @Override
-//    public PageUtils queryPage(Map<String, Object> params) {
-//        //构造自定义查询条件(自定义添加条件)
-//        LambdaQueryWrapper<MenuEntity> queryWrapper=new LambdaQueryWrapper<>();
-//        long total=this.count();
-//        IPage<MenuEntity> page = this.page(
-//                ToolUtil.getPage(total),
-//                queryWrapper
-//        );
-//
-//        return new PageUtils(page);
-//    }
+    @Override
+    public PageUtils queryPage(Menu menu) {
+        //构造自定义查询条件(自定义添加条件)
+        LambdaQueryWrapper<Menu> queryWrapper=new LambdaQueryWrapper<>();
+        long total=this.count();
+        IPage<Menu> page = this.page(
+                new Page<>(),
+                queryWrapper
+        );
+
+        return new PageUtils(page);
+    }
 
 }

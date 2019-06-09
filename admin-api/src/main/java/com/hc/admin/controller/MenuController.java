@@ -1,29 +1,22 @@
 package com.hc.admin.controller;
 
 import java.util.Arrays;
-import java.util.Map;
 
-import org.apache.shiro.authz.annotation.RequiresPermissions;
+import com.alibaba.fastjson.JSON;
+import com.hc.admin.bean.Menu;
+import com.hc.admin.common.BaseController;
+import com.hc.admin.common.HcLog;
+import com.hc.admin.common.PageUtils;
+import com.hc.admin.common.Rets;
+import com.hc.admin.service.MenuService;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiResponse;
 import io.swagger.annotations.ApiResponses;
 import org.springframework.validation.BindingResult;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
-import com.hc.admin.generator.entity.MenuEntity;
-import com.hc.admin.generator.service.MenuService;
-import cn.nis.ntc.api.controller.BaseController;
-import com.common.utils.PageUtils;
-
 import javax.validation.Valid;
-import cn.nis.ntc.bean.vo.front.Rets;
 
 
 /**
@@ -34,9 +27,9 @@ import cn.nis.ntc.bean.vo.front.Rets;
  * @date 2019-06-08 17:36:39
  */
 @RestController
-@RequestMapping("generator/menu")
-public class MenuController extends BaseController{
-    private Logger logger = LoggerFactory.getLogger(MenuController.class);
+@RequestMapping("sys/menu")
+@Slf4j
+public class MenuController extends BaseController {
     @Autowired
     private MenuService menuService;
 
@@ -46,7 +39,7 @@ public class MenuController extends BaseController{
     @RequestMapping(method = RequestMethod.GET)
     @ApiResponses({@ApiResponse(code = 200, message = "请求成功")})
     @ApiOperation(value = "查询 Menu列表", notes = "查询Menu列表")
-    public Object list(@Valid MenuDto dto){
+    public Object list(@Valid Menu dto){
         PageUtils page = menuService.queryPage(dto);
 
         return Rets.success(page);
@@ -57,10 +50,10 @@ public class MenuController extends BaseController{
      */
     @ApiResponses({@ApiResponse(code = 200, message = "新增成功")})
     @ApiOperation(value = "新增 Menu", notes = "新增Menu")
-    @BussinessLog(value = "save Menu",key = "Id")
+    @HcLog(value = "save Menu",key = "Id")
     @RequestMapping(method = RequestMethod.POST)
-    public Object save(@RequestBody MenuEntity menu, BindingResult result){
-        logger.info(JSON.toJSONString(menu));
+    public Object save(@RequestBody Menu menu, BindingResult result){
+        log.info(JSON.toJSONString(menu));
 		menuService.save(menu);
 
         return Rets.success();
@@ -71,10 +64,10 @@ public class MenuController extends BaseController{
      */
     @ApiResponses({@ApiResponse(code = 200, message = "修改成功")})
     @ApiOperation(value = "修改 Menu", notes = "新增Menu")
-    @BussinessLog(value = "update Menu" ,key = "Id")
+    @HcLog(value = "update Menu" ,key = "Id")
     @RequestMapping(method = RequestMethod.PUT)
-    public Object update(@RequestBody MenuEntity menu){
-        logger.info(JSON.toJSONString(Menu));
+    public Object update(@RequestBody Menu menu){
+        log.info(JSON.toJSONString(menu));
 		menuService.updateById(menu);
 
         return Rets.success();
@@ -85,11 +78,12 @@ public class MenuController extends BaseController{
      */
     @ApiResponses({@ApiResponse(code = 200, message = "删除成功")})
     @ApiOperation(value = "删除 Menu", notes = "删除 Menu")
-    @BussinessLog(value = "delete Menu",key = "Id")
-    public R delete(@RequestBody MenuDto Menu){
-        Long [] ids=Menu.getIds();
-		menuService.removeByIds(Arrays.asList(menuIds));
-
+    @HcLog(value = "delete Menu",key = "Id")
+    @DeleteMapping
+    public Object delete(@RequestBody Menu menu){
+        Long [] ids=menu.getIds();
+		menuService.removeByIds(Arrays.asList(ids));
+       //todo 需要将其所属的子菜单一并删除
         return Rets.success();
     }
 

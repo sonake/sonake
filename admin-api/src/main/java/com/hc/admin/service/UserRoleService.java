@@ -2,6 +2,7 @@ package com.hc.admin.service;
 
 import com.baomidou.mybatisplus.extension.service.IService;
 import com.hc.admin.bean.UserRole;
+import com.hc.admin.common.PageUtils;
 
 /**
  * 
@@ -12,6 +13,6 @@ import com.hc.admin.bean.UserRole;
  */
 public interface UserRoleService extends IService<UserRole> {
 
-    //PageUtils queryPage(Map<String, Object> params);
+    PageUtils queryPage(UserRole userRole);
 }
 

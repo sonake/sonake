@@ -25,15 +25,18 @@ spring:
     #    url: jdbc:postgresql://192.168.10.10:5432/renren_fast
     #    username: postgres
     #    password: 123456
-    url: jdbc:mysql://47.105.40.52:3306/ntc-sonake?useUnicode=true&characterEncoding=UTF-8&useSSL=false
+    url: jdbc:mysql://47.105.40.52:3306/sonake?useUnicode=true&characterEncoding=UTF-8&useSSL=false
     username: root
     password: Jdkc0912..
   resources:
     static-locations: classpath:/static/,classpath:/views/
 
 
-mybatis:
+mybatis-plus:
   mapperLocations: classpath:mapper/**/*.xml
+  type-aliases-package: com.hc.admim.bean
+  global-config:
+    banner: false
 
 
 pagehelper:

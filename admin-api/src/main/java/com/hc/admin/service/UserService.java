@@ -2,6 +2,8 @@ package com.hc.admin.service;
 
 import com.baomidou.mybatisplus.extension.service.IService;
 import com.hc.admin.bean.User;
+import com.hc.admin.common.PageUtils;
+
 /**
  * 用户信息表
  *
@@ -11,6 +13,6 @@ import com.hc.admin.bean.User;
  */
 public interface UserService extends IService<User> {
 
-    //PageUtils queryPage(Map<String, Object> params);
+    PageUtils queryPage(User user);
 }
 

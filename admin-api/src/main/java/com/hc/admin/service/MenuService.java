@@ -2,6 +2,7 @@ package com.hc.admin.service;
 
 import com.baomidou.mybatisplus.extension.service.IService;
 import com.hc.admin.bean.Menu;
+import com.hc.admin.common.PageUtils;
 
 /**
  * 
@@ -12,6 +13,6 @@ import com.hc.admin.bean.Menu;
  */
 public interface MenuService extends IService<Menu> {
 
-    //PageUtils queryPage(Map<String, Object> params);
+    PageUtils queryPage(Menu menu);
 }
 

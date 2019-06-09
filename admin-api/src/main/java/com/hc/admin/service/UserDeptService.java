@@ -1,7 +1,10 @@
 package com.hc.admin.service;
 
 import com.baomidou.mybatisplus.extension.service.IService;
+import com.hc.admin.bean.User;
 import com.hc.admin.bean.UserDept;
+import com.hc.admin.common.PageUtils;
+
 /**
  * 
  *
@@ -11,6 +14,6 @@ import com.hc.admin.bean.UserDept;
  */
 public interface UserDeptService extends IService<UserDept> {
 
-    //PageUtils queryPage(Map<String, Object> params);
+    PageUtils queryPage(UserDept userDepts);
 }
 

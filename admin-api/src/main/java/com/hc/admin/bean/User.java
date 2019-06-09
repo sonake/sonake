@@ -6,6 +6,8 @@ import com.baomidou.mybatisplus.annotation.TableName;
 
 import java.io.Serializable;
 import java.util.Date;
+
+import com.hc.admin.common.BaseBean;
 import lombok.Data;
 
 /**
@@ -17,7 +19,7 @@ import lombok.Data;
  */
 @Data
 @TableName("t_user")
-public class User implements Serializable {
+public class User extends BaseBean implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	/**
@@ -61,37 +63,5 @@ public class User implements Serializable {
 	 * 帐号状态（0正常 1停用）
 	 */
 	private String status;
-	/**
-	 * 删除标志（0代表存在 1代表删除）
-	 */
-	private String delFlag;
-	/**
-	 * 最后登陆IP
-	 */
-	private String loginIp;
-	/**
-	 * 最后登陆时间
-	 */
-	private Date loginDate;
-	/**
-	 * 创建者
-	 */
-	private String createBy;
-	/**
-	 * 创建时间
-	 */
-	private Date createTime;
-	/**
-	 * 更新者
-	 */
-	private String updateBy;
-	/**
-	 * 更新时间
-	 */
-	private Date updateTime;
-	/**
-	 * 备注
-	 */
-	private String remark;
 
 }

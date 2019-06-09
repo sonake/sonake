@@ -1,29 +1,21 @@
 package com.hc.admin.controller;
 
 import java.util.Arrays;
-import java.util.Map;
 
-import org.apache.shiro.authz.annotation.RequiresPermissions;
+import com.alibaba.fastjson.JSON;
+import com.hc.admin.bean.Dept;
+import com.hc.admin.common.BaseController;
+import com.hc.admin.common.HcLog;
+import com.hc.admin.common.PageUtils;
+import com.hc.admin.common.Rets;
+import com.hc.admin.service.DeptService;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiResponse;
 import io.swagger.annotations.ApiResponses;
-import org.springframework.validation.BindingResult;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
-import com.hc.admin.generator.entity.DeptEntity;
-import com.hc.admin.generator.service.DeptService;
-import cn.nis.ntc.api.controller.BaseController;
-import com.common.utils.PageUtils;
-
 import javax.validation.Valid;
-import cn.nis.ntc.bean.vo.front.Rets;
 
 
 /**
@@ -34,9 +26,9 @@ import cn.nis.ntc.bean.vo.front.Rets;
  * @date 2019-06-08 17:36:42
  */
 @RestController
-@RequestMapping("generator/dept")
-public class DeptController extends BaseController{
-    private Logger logger = LoggerFactory.getLogger(DeptController.class);
+@Slf4j
+@RequestMapping("sys/dept")
+public class DeptController extends BaseController {
     @Autowired
     private DeptService deptService;
 
@@ -46,8 +38,8 @@ public class DeptController extends BaseController{
     @RequestMapping(method = RequestMethod.GET)
     @ApiResponses({@ApiResponse(code = 200, message = "请求成功")})
     @ApiOperation(value = "查询 Dept列表", notes = "查询Dept列表")
-    public Object list(@Valid DeptDto dto){
-        PageUtils page = deptService.queryPage(dto);
+    public Object list(@Valid Dept dept){
+        PageUtils page = deptService.queryPage(dept);
 
         return Rets.success(page);
     }
@@ -57,10 +49,10 @@ public class DeptController extends BaseController{
      */
     @ApiResponses({@ApiResponse(code = 200, message = "新增成功")})
     @ApiOperation(value = "新增 Dept", notes = "新增Dept")
-    @BussinessLog(value = "save Dept",key = "Id")
+    @HcLog(value = "save Dept",key = "Id")
     @RequestMapping(method = RequestMethod.POST)
-    public Object save(@RequestBody DeptEntity dept, BindingResult result){
-        logger.info(JSON.toJSONString(dept));
+    public Object save(@RequestBody Dept dept){
+        log.info(JSON.toJSONString(dept));
 		deptService.save(dept);
 
         return Rets.success();
@@ -71,10 +63,10 @@ public class DeptController extends BaseController{
      */
     @ApiResponses({@ApiResponse(code = 200, message = "修改成功")})
     @ApiOperation(value = "修改 Dept", notes = "新增Dept")
-    @BussinessLog(value = "update Dept" ,key = "Id")
+    @HcLog(value = "update Dept" ,key = "Id")
     @RequestMapping(method = RequestMethod.PUT)
-    public Object update(@RequestBody DeptEntity dept){
-        logger.info(JSON.toJSONString(Dept));
+    public Object update(@RequestBody Dept dept){
+        log.info(JSON.toJSONString(dept));
 		deptService.updateById(dept);
 
         return Rets.success();
@@ -83,12 +75,13 @@ public class DeptController extends BaseController{
     /**
      * 删除
      */
+    @DeleteMapping
     @ApiResponses({@ApiResponse(code = 200, message = "删除成功")})
     @ApiOperation(value = "删除 Dept", notes = "删除 Dept")
-    @BussinessLog(value = "delete Dept",key = "Id")
-    public R delete(@RequestBody DeptDto Dept){
-        Long [] ids=Dept.getIds();
-		deptService.removeByIds(Arrays.asList(deptIds));
+    @HcLog(value = "delete Dept",key = "Id")
+    public Object delete(@RequestBody Dept dept){
+        Long [] ids=dept.getIds();
+		deptService.removeByIds(Arrays.asList(ids));
 
         return Rets.success();
     }
