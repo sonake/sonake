@@ -10,6 +10,7 @@ import com.hc.admin.common.PageUtils;
 import com.hc.admin.common.Rets;
 import com.hc.admin.service.UserService;
 import lombok.extern.slf4j.Slf4j;
+import org.apache.shiro.authz.annotation.RequiresPermissions;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import io.swagger.annotations.ApiOperation;
@@ -36,6 +37,7 @@ public class UserController extends BaseController {
     /**
      * 列表
      */
+    @RequiresPermissions("sys:user:list")
     @RequestMapping(method = RequestMethod.GET)
     @ApiResponses({@ApiResponse(code = 200, message = "请求成功")})
     @ApiOperation(value = "查询 User列表", notes = "查询User列表")

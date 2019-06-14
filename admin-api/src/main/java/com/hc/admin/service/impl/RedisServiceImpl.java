@@ -18,7 +18,7 @@ import java.util.*;
  * @description：
  * @version:
  */
-@Service
+@Service("redisService")
 public class RedisServiceImpl implements RedisService {
     @Autowired
     JedisPool jedisPool;

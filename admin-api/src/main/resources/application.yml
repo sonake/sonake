@@ -1,26 +1,35 @@
-server:
-  port: 8081
-
 # mysql
 spring:
+  #redis
+  redis:
+    host: 127.0.0.1
+    port: 6379
+    password:
+    jedis:
+      pool:
+        min-idle: 8
+        max-idle: 500
+        max-active: 2000
+        max-wait: 10000
+    timeout: 0
   datasource:
     type: com.zaxxer.hikari.HikariDataSource
-    #MySQLÅäÖÃ
+    #MySQLï¿½ï¿½ï¿½ï¿½
     driverClassName: com.mysql.cj.jdbc.Driver
     #url: jdbc:mysql://47.105.40.52:3306/sonake?useUnicode=true&characterEncoding=UTF-8&useSSL=false
     #username: root
     #password: Jdkc0912..
-    #oracleÅäÖÃ
+    #oracleï¿½ï¿½ï¿½ï¿½
     #    driverClassName: oracle.jdbc.OracleDriver
     #    url: jdbc:oracle:thin:@47.100.206.162:1521:xe
     #    username: renren
     #    password: 123456
-    #SQLServerÅäÖÃ
+    #SQLServerï¿½ï¿½ï¿½ï¿½
     #    driverClassName: com.microsoft.sqlserver.jdbc.SQLServerDriver
     #    url: jdbc:sqlserver://192.168.10.10:1433;DatabaseName=renren_fast
     #    username: sa
     #    password: 123456
-    #PostgreSQLÅäÖÃ
+    #PostgreSQLï¿½ï¿½ï¿½ï¿½
     #    driverClassName: org.postgresql.Driver
     #    url: jdbc:postgresql://192.168.10.10:5432/renren_fast
     #    username: postgres
@@ -43,26 +52,16 @@ pagehelper:
   reasonable: true
   supportMethodsArguments: true
   params: count=countSql
-#redis
-redis:
-  host: 127.0.0.1
-  port: 6379
-  password:
-  jedis:
-    pool:
-      min-idle: 8
-      max-idle: 500
-      max-active: 2000
-      max-wait: 10000
-  timeout: 0
 
-#Ö¸¶¨Êý¾Ý¿â£¬¿ÉÑ¡ÖµÓÐ¡¾mysql¡¢oracle¡¢sqlserver¡¢postgresql¡¿
+#Ö¸ï¿½ï¿½ï¿½ï¿½ï¿½Ý¿â£¬ï¿½ï¿½Ñ¡Öµï¿½Ð¡ï¿½mysqlï¿½ï¿½oracleï¿½ï¿½sqlserverï¿½ï¿½postgresqlï¿½ï¿½
 renren:
   database: mysql
-#×Ô¶¨ÒåÅäÖÃ
+#ï¿½Ô¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 hc:
   shiro:
-    #µ¥Î»Ãë
+    #ï¿½ï¿½Î»ï¿½ï¿½
     tokenTimeOut: 3600
-    # ºó¶ËÃâÈÏÖ¤½Ó¿Ú url
+    # ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö¤ï¿½Ó¿ï¿½ url
     anonUrl: /login,/logout/**,/regist,/user/check/**
+server:
+  port: 8081
