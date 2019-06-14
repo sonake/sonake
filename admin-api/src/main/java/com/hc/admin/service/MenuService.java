@@ -4,6 +4,8 @@ import com.baomidou.mybatisplus.extension.service.IService;
 import com.hc.admin.bean.Menu;
 import com.hc.admin.common.PageUtils;
 
+import java.util.List;
+
 /**
  * 
  *
@@ -14,5 +16,7 @@ import com.hc.admin.common.PageUtils;
 public interface MenuService extends IService<Menu> {
 
     PageUtils queryPage(Menu menu);
+    List<Menu> findUserPermissions(String username);
+    List<Menu> findUserMenus(String username);
 }
 

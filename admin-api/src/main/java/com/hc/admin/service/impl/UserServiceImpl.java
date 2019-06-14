@@ -20,6 +20,7 @@ import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 @Service("userService")
 public class UserServiceImpl extends ServiceImpl<UserDao, User> implements UserService {
 
+
     @Override
     public PageUtils queryPage(User user) {
         //构造自定义查询条件(自定义添加条件)
@@ -30,6 +31,12 @@ public class UserServiceImpl extends ServiceImpl<UserDao, User> implements UserS
         );
 
         return new PageUtils(page);
+    }
+
+    @Override
+    public User findByName(String username) {
+        User user=baseMapper.selectOne(new LambdaQueryWrapper<User>().eq(User::getUserName,username));
+        return user;
     }
 
 }

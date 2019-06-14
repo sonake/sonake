@@ -9,6 +9,8 @@ import com.hc.admin.common.PageUtils;
 import com.hc.admin.dao.MenuDao;
 import com.hc.admin.service.MenuService;
 import org.springframework.stereotype.Service;
+
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -32,6 +34,14 @@ public class MenuServiceImpl extends ServiceImpl<MenuDao, Menu> implements MenuS
         );
 
         return new PageUtils(page);
+    }
+    @Override
+    public List<Menu> findUserPermissions(String username) {
+        return this.baseMapper.findUserPermissions(username);
+    }
+    @Override
+    public List<Menu> findUserMenus(String username) {
+        return this.baseMapper.findUserMenus(username);
     }
 
 }

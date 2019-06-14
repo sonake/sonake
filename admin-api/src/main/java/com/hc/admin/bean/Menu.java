@@ -30,7 +30,7 @@ public class Menu extends BaseBean implements Serializable {
 	/**
 	 * 上级菜单ID
 	 */
-	private Long pId;
+	private Long pid;
 	/**
 	 * 菜单/按钮名称
 	 */

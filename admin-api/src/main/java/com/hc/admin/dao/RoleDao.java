@@ -3,6 +3,8 @@ package com.hc.admin.dao;
 import com.hc.admin.bean.Role;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 
+import java.util.List;
+
 /**
  * 
  * 
@@ -11,5 +13,6 @@ import com.baomidou.mybatisplus.core.mapper.BaseMapper;
  * @date 2019-06-08 17:36:44
  */
 public interface RoleDao extends BaseMapper<Role> {
+    List<Role> findUserRole(String userName);
 	
 }

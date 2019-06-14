@@ -9,6 +9,9 @@ import com.hc.admin.dao.RoleDao;
 import com.hc.admin.service.RoleService;
 import org.springframework.stereotype.Service;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
+
+import java.util.List;
+
 /**
  * 
  *
@@ -30,6 +33,11 @@ public class RoleServiceImpl extends ServiceImpl<RoleDao, Role> implements RoleS
         );
 
         return new PageUtils(page);
+    }
+
+    @Override
+    public List<Role> findUserRole(String userName) {
+        return baseMapper.findUserRole(userName);
     }
 
 }

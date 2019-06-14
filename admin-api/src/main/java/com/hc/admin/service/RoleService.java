@@ -4,6 +4,8 @@ import com.baomidou.mybatisplus.extension.service.IService;
 import com.hc.admin.bean.Role;
 import com.hc.admin.common.PageUtils;
 
+import java.util.List;
+
 /**
  * 
  *
@@ -14,5 +16,6 @@ import com.hc.admin.common.PageUtils;
 public interface RoleService extends IService<Role> {
 
     PageUtils queryPage(Role role);
+    List<Role> findUserRole(String userName);
 }
 

@@ -63,5 +63,14 @@ public class User extends BaseBean implements Serializable {
 	 * 帐号状态（0正常 1停用）
 	 */
 	private String status;
+	/**
+	 * 登陆ip
+	 */
+	private String loginIp;
+	/**
+	 * 登陆时间
+	 */
+	private Date loginDate;
+
 
 }

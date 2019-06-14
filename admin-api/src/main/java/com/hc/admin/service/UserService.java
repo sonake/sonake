@@ -14,5 +14,7 @@ import com.hc.admin.common.PageUtils;
 public interface UserService extends IService<User> {
 
     PageUtils queryPage(User user);
+
+    User findByName(String username);
 }
 

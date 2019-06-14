@@ -43,9 +43,26 @@ pagehelper:
   reasonable: true
   supportMethodsArguments: true
   params: count=countSql
-
+#redis
+redis:
+  host: 127.0.0.1
+  port: 6379
+  password:
+  jedis:
+    pool:
+      min-idle: 8
+      max-idle: 500
+      max-active: 2000
+      max-wait: 10000
+  timeout: 0
 
 #指定数据库，可选值有【mysql、oracle、sqlserver、postgresql】
 renren:
   database: mysql
-
+#自定义配置
+hc:
+  shiro:
+    #单位秒
+    tokenTimeOut: 3600
+    # 后端免认证接口 url
+    anonUrl: /login,/logout/**,/regist,/user/check/**
