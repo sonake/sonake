@@ -71,6 +71,7 @@ public class User extends BaseBean implements Serializable {
 	 * 登陆时间
 	 */
 	private Date loginDate;
+	public static final String STATUS_LOCK = "0";
 
 
 }

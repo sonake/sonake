@@ -111,4 +111,23 @@ public class FebsUtil {
         return StringUtils.lowerCase(result.toString());
     }
 
+    /**
+     * 字符串提取数字
+     * @param str
+     */
+
+    public static long getNumber(String str) {
+        str=str.trim();
+        String outStr="";
+        if(str != null && !"".equals(str)){
+            for(int i=0;i<str.length();i++){
+                if(str.charAt(i)>=48 && str.charAt(i)<=57){
+                    outStr+=str.charAt(i);
+                }
+            }
+        }
+        Long res=Long.valueOf(outStr);
+        return res;
+    }
+
 }
