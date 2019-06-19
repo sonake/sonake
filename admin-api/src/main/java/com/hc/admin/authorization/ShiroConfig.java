@@ -19,7 +19,7 @@ import java.util.LinkedHashMap;
 public class ShiroConfig {
 
     @Bean
-    public ShiroFilterFactoryBean shiroFilterFactoryBean(SecurityManager securityManager) {
+    public ShiroFilterFactoryBean shiroFilterFactoryBean(SecurityManager securityManager) throws Exception{
         ShiroFilterFactoryBean shiroFilterFactoryBean = new ShiroFilterFactoryBean();
         // 设置 securityManager
         shiroFilterFactoryBean.setSecurityManager(securityManager);
@@ -38,7 +38,7 @@ public class ShiroConfig {
     }
 
     @Bean
-    public SecurityManager securityManager() {
+    public SecurityManager securityManager() throws Exception{
         DefaultWebSecurityManager securityManager = new DefaultWebSecurityManager();
         // 配置 SecurityManager，并注入 shiroRealm
         securityManager.setRealm(shiroRealm());
@@ -46,13 +46,13 @@ public class ShiroConfig {
     }
 
     @Bean
-    public ShiroRealm shiroRealm() {
+    public ShiroRealm shiroRealm() throws Exception{
         // 配置 Realm
         return new ShiroRealm();
     }
 
     @Bean
-    public AuthorizationAttributeSourceAdvisor authorizationAttributeSourceAdvisor(SecurityManager securityManager) {
+    public AuthorizationAttributeSourceAdvisor authorizationAttributeSourceAdvisor(SecurityManager securityManager) throws Exception{
         AuthorizationAttributeSourceAdvisor authorizationAttributeSourceAdvisor = new AuthorizationAttributeSourceAdvisor();
         authorizationAttributeSourceAdvisor.setSecurityManager(securityManager);
         return authorizationAttributeSourceAdvisor;

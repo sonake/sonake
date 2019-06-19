@@ -88,7 +88,6 @@ public class ShiroRealm extends AuthorizingRealm {
         }
 
         String username = JWTUtil.getUsername(token);
-
         if (StringUtils.isBlank(username)) {
             throw new AuthenticationException("token校验不通过");
         }

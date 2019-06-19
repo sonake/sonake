@@ -41,10 +41,13 @@ public class UserController extends BaseController {
     @RequestMapping(method = RequestMethod.GET)
     @ApiResponses({@ApiResponse(code = 200, message = "请求成功")})
     @ApiOperation(value = "查询 User列表", notes = "查询User列表")
-    public Object list(@Valid User dto){
-        PageUtils page = userService.queryPage(dto);
-
-        return Rets.success(page);
+    public Object list(@Valid User dto) throws Exception{
+        try {
+            PageUtils page = userService.queryPage(dto);
+            return Rets.success(page);
+        }catch (Exception e){
+            return e.getMessage();
+        }
     }
 
     /**

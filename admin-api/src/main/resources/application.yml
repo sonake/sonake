@@ -60,7 +60,7 @@ renren:
 hc:
   shiro:
     # token有效期，单位秒
-    tokenTimeOut: 36000
+    tokenTimeOut: 3600
     # �������֤�ӿ� url
     anonUrl: /login,/logout/**,/regist,/user/check/**
 server:
