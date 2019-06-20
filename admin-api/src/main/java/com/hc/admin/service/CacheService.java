@@ -108,5 +108,12 @@ public interface CacheService {
      * @param userId 用户 ID
      */
     //void deleteUserConfigs(String userId) throws Exception;
-
+    /**
+     * 缓存所有异常信息至redis
+     */
+    void saveExcMsg() throws Exception;
+    /**
+     * 删除异常
+     */
+    void deleteExc(String code) throws Exception;
 }

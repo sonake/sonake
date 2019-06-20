@@ -2,7 +2,7 @@ package com.hc.admin.authorization;
 
 import com.baomidou.mybatisplus.core.toolkit.StringPool;
 import com.hc.admin.common.prop.HcProperties;
-import com.hc.admin.common.utils.FebsUtil;
+import com.hc.admin.common.utils.HcUtil;
 import com.hc.admin.common.utils.SpringContextUtil;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;
@@ -56,7 +56,7 @@ public class JWTFilter extends BasicHttpAuthenticationFilter {
     protected boolean executeLogin(ServletRequest request, ServletResponse response) {
         HttpServletRequest httpServletRequest = (HttpServletRequest) request;
         String token = httpServletRequest.getHeader(TOKEN);
-        JWTToken jwtToken = new JWTToken(FebsUtil.decryptToken(token));
+        JWTToken jwtToken = new JWTToken(HcUtil.decryptToken(token));
         try {
             getSubject(request, response).login(jwtToken);
             return true;

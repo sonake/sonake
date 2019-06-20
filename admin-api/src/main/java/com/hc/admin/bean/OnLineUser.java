@@ -1,9 +1,8 @@
 package com.hc.admin.bean;
 
-import com.alibaba.fastjson.parser.Feature;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.hc.admin.common.utils.DateUtil;
-import com.hc.admin.common.utils.FebsUtil;
+import com.hc.admin.common.utils.HcUtil;
 import lombok.Data;
 import org.apache.commons.lang3.RandomStringUtils;
 
@@ -19,7 +18,7 @@ public class OnLineUser implements Serializable {
     private static final long serialVersionUID = 2055229953429884344L;
 
     // 唯一编号
-    private Long id = FebsUtil.getNumber(RandomStringUtils.randomAlphanumeric(20));
+    private Long id = HcUtil.getNumber(RandomStringUtils.randomAlphanumeric(20));
     // 用户名
     private String username;
     // ip地址

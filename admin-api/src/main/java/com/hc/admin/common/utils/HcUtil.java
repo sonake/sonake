@@ -17,7 +17,7 @@ import java.util.stream.IntStream;
  * FEBS工具类
  */
 @Slf4j
-public class FebsUtil {
+public class HcUtil {
 
     /**
      * 缓存查询摸板，先查缓存，如果缓存查询失败再从数据库查询

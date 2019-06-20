@@ -3,9 +3,10 @@ package com.hc.admin.controller;
 import java.util.Arrays;
 
 import com.alibaba.fastjson.JSON;
+import com.hc.admin.annotion.ParamValid;
 import com.hc.admin.bean.User;
 import com.hc.admin.common.BaseController;
-import com.hc.admin.common.HcLog;
+import com.hc.admin.annotion.HcLog;
 import com.hc.admin.common.PageUtils;
 import com.hc.admin.common.Rets;
 import com.hc.admin.service.UserService;
@@ -41,7 +42,8 @@ public class UserController extends BaseController {
     @RequestMapping(method = RequestMethod.GET)
     @ApiResponses({@ApiResponse(code = 200, message = "请求成功")})
     @ApiOperation(value = "查询 User列表", notes = "查询User列表")
-    public Object list(@Valid User dto) throws Exception{
+    @ParamValid(classname = "com.hc.admin.bean.User")
+    public Object list(@Valid User dto,BindingResult bindingResult) throws Exception{
         try {
             PageUtils page = userService.queryPage(dto);
             return Rets.success(page);

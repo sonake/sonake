@@ -5,7 +5,7 @@ import java.util.Arrays;
 import com.alibaba.fastjson.JSON;
 import com.hc.admin.bean.Dept;
 import com.hc.admin.common.BaseController;
-import com.hc.admin.common.HcLog;
+import com.hc.admin.annotion.HcLog;
 import com.hc.admin.common.PageUtils;
 import com.hc.admin.common.Rets;
 import com.hc.admin.service.DeptService;

@@ -5,12 +5,14 @@ import com.hc.admin.common.function.JedisExecutor;
 import com.hc.admin.exception.RedisConnectException;
 import com.hc.admin.service.RedisService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Service;
 import redis.clients.jedis.Client;
 import redis.clients.jedis.Jedis;
 import redis.clients.jedis.JedisPool;
 
 import java.util.*;
+import java.util.concurrent.TimeUnit;
 
 /**
  * @author ：xzyuan
@@ -164,4 +166,67 @@ public class RedisServiceImpl implements RedisService {
     public Long zrem(String key, String... members) throws RedisConnectException {
         return this.excuteByJedis(j -> j.zrem(key, members));
     }
+//    /**
+//     * HashSet
+//     * @param key 键
+//     * @param map 对应多个键值
+//     * @return true 成功 false 失败
+//     */
+//    @Override
+//    public boolean hmset(String key, Map<String, Object> map) {
+//        try {
+//            redisTemplate.opsForHash().putAll(key, map);
+//            return true;
+//        } catch (Exception e) {
+//            e.printStackTrace();
+//            return false;
+//        }
+//    }
+//    /**
+//     * HashSet 并设置时间
+//     * @param key 键
+//     * @param map 对应多个键值
+//     * @param time 时间(秒)
+//     * @return true成功 false失败
+//     */
+//    @Override
+//    public boolean hmset(String key, Map<String, Object> map, long time) {
+//        try {
+//            redisTemplate.opsForHash().putAll(key, map);
+//            if (time > 0) {
+//                expire(key, time);
+//            }
+//            return true;
+//        } catch (Exception e) {
+//            e.printStackTrace();
+//            return false;
+//        }
+//    }
+//    /**
+//     * 指定缓存失效时间
+//     * @param key  键
+//     * @param time 时间(秒)
+//     * @return
+//     */
+//    @Override
+//    public boolean expire(String key, long time) {
+//        try {
+//            if (time > 0) {
+//                redisTemplate.expire(key, time, TimeUnit.SECONDS);
+//            }
+//            return true;
+//        } catch (Exception e) {
+//            e.printStackTrace();
+//            return false;
+//        }
+//    }
+//    /**
+//     * 获取hashKey对应的所有键值
+//     * @param key 键
+//     * @return 对应的多个键值
+//     */
+//    @Override
+//    public Map<Object, Object> hmget(String key) {
+//        return redisTemplate.opsForHash().entries(key);
+//    }
 }

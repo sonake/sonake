@@ -141,4 +141,11 @@ public interface RedisService {
      * @return Long
      */
     Long zrem(String key, String... members) throws RedisConnectException;
+
+//
+//    Map<Object, Object> hmget(String key);
+//    boolean expire(String key, long time);
+//    boolean hmset(String key, Map<String, Object> map, long time);
+//    boolean hmset(String key, Map<String, Object> map);
+
 }

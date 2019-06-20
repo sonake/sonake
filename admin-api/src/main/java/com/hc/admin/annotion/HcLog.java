@@ -1,4 +1,4 @@
-package com.hc.admin.common;
+package com.hc.admin.annotion;
 
 
 import java.lang.annotation.*;

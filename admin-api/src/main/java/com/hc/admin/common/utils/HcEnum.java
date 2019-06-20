@@ -28,6 +28,10 @@ public enum HcEnum {
      */
     ACTIVE_USERS_ZSET_PREFIX("hc.user.active"),
     /**
+     * 异常信息
+     */
+    Hc_EXC("hc.exc"),
+    /**
      *排序规则： descend 降序
      */
     ORDER_DESC("descend"),

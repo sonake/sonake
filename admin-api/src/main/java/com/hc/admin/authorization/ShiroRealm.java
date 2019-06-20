@@ -2,7 +2,7 @@ package com.hc.admin.authorization;
 
 import com.hc.admin.bean.User;
 import com.hc.admin.common.UserManager;
-import com.hc.admin.common.utils.FebsUtil;
+import com.hc.admin.common.utils.HcUtil;
 import com.hc.admin.common.utils.HcEnum;
 import com.hc.admin.common.utils.HttpContextUtil;
 import com.hc.admin.common.utils.IPUtil;
@@ -76,7 +76,7 @@ public class ShiroRealm extends AuthorizingRealm {
         HttpServletRequest request = HttpContextUtil.getHttpServletRequest();
         String ip = IPUtil.getIpAddr(request);
 
-        String encryptToken = FebsUtil.encryptToken(token);
+        String encryptToken = HcUtil.encryptToken(token);
         String encryptTokenInRedis = null;
         try {
             encryptTokenInRedis = redisService.get(HcEnum.TOKEN_CACHE_PREFIX.getValue() + encryptToken + "." + ip);

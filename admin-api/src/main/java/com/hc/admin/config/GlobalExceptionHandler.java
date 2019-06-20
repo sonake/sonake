@@ -3,6 +3,7 @@ package com.hc.admin.config;
 import com.baomidou.mybatisplus.core.toolkit.StringPool;
 import com.hc.admin.common.Code;
 import com.hc.admin.common.Rets;
+import com.hc.admin.exception.ParamException;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.shiro.authc.AuthenticationException;
 import org.apache.shiro.authz.UnauthorizedException;
@@ -60,4 +61,9 @@ public class GlobalExceptionHandler {
         return Rets.failure(Code.C999.getCode(),e.getMessage(),null);
     }
 
+    @ExceptionHandler(value = ParamException.class)
+    public Object handleParamValid(ParamException pe){
+        return Rets.failure(pe.getMsg());
+
+    }
 }

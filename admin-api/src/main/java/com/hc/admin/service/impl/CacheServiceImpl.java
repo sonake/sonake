@@ -1,12 +1,16 @@
 package com.hc.admin.service.impl;
 
+import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
+import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.fasterxml.jackson.databind.JavaType;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.hc.admin.bean.HcExc;
 import com.hc.admin.bean.Menu;
 import com.hc.admin.bean.Role;
 import com.hc.admin.bean.User;
 import com.hc.admin.common.utils.HcEnum;
 import com.hc.admin.common.utils.HttpContextUtil;
+import com.hc.admin.dao.HcExcDao;
 import com.hc.admin.service.*;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -30,6 +34,8 @@ public class CacheServiceImpl implements CacheService {
 
     @Autowired
     private ObjectMapper mapper;
+    @Autowired
+    private HcExcDao hcExcDao;
 
     @Override
     public void testConnect() throws Exception {
@@ -91,6 +97,8 @@ public class CacheServiceImpl implements CacheService {
         redisService.set(HcEnum.USER_CACHE_PREFIX.getValue() + username, mapper.writeValueAsString(user));
     }
 
+
+
     @Override
     public void saveRoles(String username) throws Exception {
         List<Role> roleList = this.roleService.findUserRole(username);
@@ -136,6 +144,28 @@ public class CacheServiceImpl implements CacheService {
         username = username.toLowerCase();
         redisService.del(HcEnum.USER_PERMISSION_CACHE_PREFIX.getValue() + username);
     }
+
+    /**
+     * 将所有的异常信息放进缓存里
+     * @throws Exception
+     */
+    @Override
+    public void saveExcMsg() throws Exception {
+        List<HcExc> list=hcExcDao.selectList(new LambdaQueryWrapper<HcExc>());
+        if (!list.isEmpty()) {
+                this.deleteExc(HcEnum.Hc_EXC.getValue());
+                for (HcExc he:list) {
+                    redisService.set(HcEnum.Hc_EXC.getValue()+"."+he.getClassname()+"."+he.getFieldname(),he.getCode()+":"+he.getMsg());
+                }
+        }
+
+    }
+    @Override
+    public void deleteExc(String code) throws Exception{
+        redisService.del(HcEnum.Hc_EXC.getValue()+code);
+    }
+
+
 
 //    @Override
 //    public void deleteUserConfigs(String userId) throws Exception {

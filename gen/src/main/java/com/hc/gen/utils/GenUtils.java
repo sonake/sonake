@@ -257,7 +257,7 @@ public class GenUtils {
             return codeUrl+File.separator + className + "Dto.java";
         }
 
-        if (template.contains("dao.java.vm" )) {
+        if (template.contains("Dao.java.vm" )) {
             return codeUrl+File.separator + className + "dao.java";
         }
 
@@ -273,7 +273,7 @@ public class GenUtils {
             return codeUrl+File.separator + className + "Controller.java";
         }
 
-        if (template.contains("dao.xml.vm" )) {
+        if (template.contains("Dao.xml.vm" )) {
             return codeUrl+File.separator + className + "dao.xml";
         }
 

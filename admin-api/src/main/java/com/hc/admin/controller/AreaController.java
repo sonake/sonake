@@ -5,7 +5,7 @@ import java.util.Arrays;
 import com.alibaba.fastjson.JSON;
 import com.hc.admin.bean.Area;
 import com.hc.admin.common.BaseController;
-import com.hc.admin.common.HcLog;
+import com.hc.admin.annotion.HcLog;
 import com.hc.admin.common.PageUtils;
 import com.hc.admin.common.Rets;
 import com.hc.admin.service.AreaService;
@@ -15,7 +15,6 @@ import org.springframework.web.bind.annotation.*;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiResponse;
 import io.swagger.annotations.ApiResponses;
-import org.springframework.validation.BindingResult;
 
 import javax.validation.Valid;
 

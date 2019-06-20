@@ -12,6 +12,7 @@ spring:
         max-active: 2000
         max-wait: 10000
     timeout: 0
+    database: 1
   datasource:
     type: com.zaxxer.hikari.HikariDataSource
     #MySQL����

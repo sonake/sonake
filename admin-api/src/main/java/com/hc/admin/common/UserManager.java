@@ -3,7 +3,7 @@ package com.hc.admin.common;
 import com.hc.admin.bean.Menu;
 import com.hc.admin.bean.Role;
 import com.hc.admin.bean.User;
-import com.hc.admin.common.utils.FebsUtil;
+import com.hc.admin.common.utils.HcUtil;
 import com.hc.admin.common.utils.RouterMeta;
 import com.hc.admin.common.utils.TreeUtil;
 import com.hc.admin.common.utils.VueRouter;
@@ -42,7 +42,7 @@ public class UserManager {
      * @return 用户基本信息
      */
     public User getUser(String username) {
-        return FebsUtil.selectCacheByTemplate(
+        return HcUtil.selectCacheByTemplate(
                 () -> this.cacheService.getUser(username),
                 () -> this.userService.findByName(username));
     }
@@ -54,7 +54,7 @@ public class UserManager {
      * @return 角色集合
      */
     public Set<String> getUserRoles(String username) {
-        List<Role> roleList = FebsUtil.selectCacheByTemplate(
+        List<Role> roleList = HcUtil.selectCacheByTemplate(
                 () -> this.cacheService.getRoles(username),
                 () -> this.roleService.findUserRole(username));
         return roleList.stream().map(Role::getRoleName).collect(Collectors.toSet());
@@ -67,7 +67,7 @@ public class UserManager {
      * @return 权限集合
      */
     public Set<String> getUserPermissions(String username) {
-        List<Menu> permissionList = FebsUtil.selectCacheByTemplate(
+        List<Menu> permissionList = HcUtil.selectCacheByTemplate(
                 () -> this.cacheService.getPermissions(username),
                 () -> this.menuService.findUserPermissions(username));
         return permissionList.stream().map(Menu::getPerms).collect(Collectors.toSet());
@@ -103,7 +103,7 @@ public class UserManager {
      * @return 前端系统个性化配置
      */
 //    public UserConfig getUserConfig(String userId) {
-//        return FebsUtil.selectCacheByTemplate(
+//        return HcUtil.selectCacheByTemplate(
 //                () -> this.cacheService.getUserConfig(userId),
 //                () -> this.userConfigService.findByUserId(userId));
 //    }

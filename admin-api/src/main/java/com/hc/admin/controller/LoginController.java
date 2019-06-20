@@ -15,7 +15,6 @@ import com.hc.admin.service.RedisService;
 import com.hc.admin.service.UserService;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;
-import org.apache.shiro.authz.annotation.RequiresPermissions;
 import org.lionsoul.ip2region.DbSearcher;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.validation.annotation.Validated;
@@ -24,7 +23,6 @@ import org.springframework.web.bind.annotation.*;
 import javax.servlet.http.HttpServletRequest;
 import javax.validation.constraints.NotBlank;
 import java.time.LocalDateTime;
-import java.util.*;
 
 @Slf4j
 @Validated
@@ -67,7 +65,7 @@ public class LoginController {
         //loginLog.setUsername(username);
         //this.loginLogService.saveLoginLog(loginLog);
 
-        String token = FebsUtil.encryptToken(JWTUtil.sign(username, password));
+        String token = HcUtil.encryptToken(JWTUtil.sign(username, password));
         log.info("token="+token);
         LocalDateTime expireTime = LocalDateTime.now().plusSeconds(properties.getShiro().getTokenTimeOut());
         String expireTimeStr = DateUtil.formatFullTime(expireTime);

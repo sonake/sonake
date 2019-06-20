@@ -44,6 +44,7 @@ public class CacheInitRunner implements ApplicationRunner {
             for (User user : list) {
                 userManager.loadUserRedisCache(user);
             }
+            cacheService.saveExcMsg();
         } catch (Exception e) {
             log.error("缓存初始化失败，{}", e.getMessage());
             log.error(" ____   __    _   _ ");
@@ -51,8 +52,9 @@ public class CacheInitRunner implements ApplicationRunner {
             log.error("|_|   /_/--\\ |_| |_|__");
             log.error("                        ");
             log.error("HC启动失败              ");
-            if (e instanceof RedisConnectException)
+            if (e instanceof RedisConnectException) {
                 log.error("Redis连接异常，请检查Redis连接配置并确保Redis服务已启动");
+            }
             // 关闭 FEBS
             context.close();
         }
