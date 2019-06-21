@@ -1,4 +1,4 @@
-package com.hc.admin.common;
+package com.hc.admin.bean;
 
 import com.baomidou.mybatisplus.annotation.TableField;
 import lombok.Data;

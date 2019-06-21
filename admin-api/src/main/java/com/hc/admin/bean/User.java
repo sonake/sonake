@@ -7,7 +7,6 @@ import com.baomidou.mybatisplus.annotation.TableName;
 import java.io.Serializable;
 import java.util.Date;
 
-import com.hc.admin.common.BaseBean;
 import lombok.Data;
 
 import javax.validation.constraints.Max;

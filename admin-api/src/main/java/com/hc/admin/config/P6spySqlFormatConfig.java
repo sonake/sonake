@@ -1,4 +1,4 @@
-package com.hc.admin.common;
+package com.hc.admin.config;
 
 import com.hc.admin.common.utils.DateUtil;
 import com.p6spy.engine.spy.appender.MessageFormattingStrategy;
