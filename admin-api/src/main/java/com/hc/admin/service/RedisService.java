@@ -1,7 +1,7 @@
 package com.hc.admin.service;
 
 import com.hc.admin.common.RedisInfo;
-import com.hc.admin.exception.RedisConnectException;
+import com.hc.admin.common.exception.RedisConnectException;
 
 import java.util.List;
 import java.util.Map;

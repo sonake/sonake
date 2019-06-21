@@ -1,4 +1,4 @@
-package com.hc.admin.exception;
+package com.hc.admin.common.exception;
 
 import lombok.Data;
 
@@ -9,13 +9,13 @@ import lombok.Data;
  * @version: 1.0
  */
 @Data
-public class ParamException extends RuntimeException{
+public class ParamValidException extends RuntimeException{
 
 
     private String code;
     private String msg;
 
-    public ParamException(String code, String msg) {
+    public ParamValidException(String code, String msg) {
         this.msg = msg;
         this.code = code;
 

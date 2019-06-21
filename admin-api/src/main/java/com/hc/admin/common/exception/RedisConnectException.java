@@ -1,4 +1,4 @@
-package com.hc.admin.exception;
+package com.hc.admin.common.exception;
 
 /**
  * Redis 连接异常

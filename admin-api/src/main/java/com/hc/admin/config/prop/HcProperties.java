@@ -1,7 +1,6 @@
-package com.hc.admin.common.prop;
+package com.hc.admin.config.prop;
 
 import lombok.Data;
-import org.aspectj.lang.annotation.Before;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.context.annotation.Configuration;
 

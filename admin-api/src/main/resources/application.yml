@@ -1,4 +1,12 @@
-# mysql
+mybatis-plus:
+  mapperLocations: classpath:mapper/**/*.xml
+  type-aliases-package: com.hc.admim.bean
+  global-config:
+    banner: false
+
+
+
+
 spring:
   #redis
   redis:
@@ -12,41 +20,36 @@ spring:
         max-active: 2000
         max-wait: 10000
     timeout: 0
-    database: 1
+    database: 0
   datasource:
-    type: com.zaxxer.hikari.HikariDataSource
-    #MySQL����
-    driverClassName: com.mysql.cj.jdbc.Driver
-    #url: jdbc:mysql://47.105.40.52:3306/sonake?useUnicode=true&characterEncoding=UTF-8&useSSL=false
-    #username: root
-    #password: Jdkc0912..
-    #oracle����
-    #    driverClassName: oracle.jdbc.OracleDriver
-    #    url: jdbc:oracle:thin:@47.100.206.162:1521:xe
-    #    username: renren
-    #    password: 123456
-    #SQLServer����
-    #    driverClassName: com.microsoft.sqlserver.jdbc.SQLServerDriver
-    #    url: jdbc:sqlserver://192.168.10.10:1433;DatabaseName=renren_fast
-    #    username: sa
-    #    password: 123456
-    #PostgreSQL����
-    #    driverClassName: org.postgresql.Driver
-    #    url: jdbc:postgresql://192.168.10.10:5432/renren_fast
-    #    username: postgres
-    #    password: 123456
-    url: jdbc:mysql://47.105.40.52:3306/sonake?useUnicode=true&characterEncoding=UTF-8&useSSL=false
-    username: root
-    password: Jdkc0912..
-  resources:
-    static-locations: classpath:/static/,classpath:/views/
+    dynamic:
+      # 是否开启 SQL日志输出，生产环境建议关闭，有性能损耗
+      p6spy: true
+      hikari:
+        connection-timeout: 30000
+        max-lifetime: 1800000
+        max-pool-size: 15
+        min-idle: 5
+        connection-test-query: select 1
+        pool-name: HcHikariCP
+      # 配置默认数据源
+      primary: primary
+      datasource:
+        # 数据源-1，名称为 primary
+        primary:
+          username: root
+          password: Jdkc0912..
+          driverClassName: com.mysql.cj.jdbc.Driver
+          url: jdbc:mysql://47.105.40.52:3306/sonake?useUnicode=true&characterEncoding=UTF-8&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC
+        # 数据源-2，名称为 test
+#        test:
+#          username: root
+#          password: 123456
+#          driver-class-name: com.mysql.cj.jdbc.Driver
+#          url: jdbc:mysql://127.0.0.1:3306/febs_test?useUnicode=true&characterEncoding=UTF-8&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC
 
 
-mybatis-plus:
-  mapperLocations: classpath:mapper/**/*.xml
-  type-aliases-package: com.hc.admim.bean
-  global-config:
-    banner: false
+
 
 
 pagehelper:

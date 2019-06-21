@@ -2,17 +2,15 @@ package com.hc.admin.service.impl;
 
 import com.hc.admin.common.RedisInfo;
 import com.hc.admin.common.function.JedisExecutor;
-import com.hc.admin.exception.RedisConnectException;
+import com.hc.admin.common.exception.RedisConnectException;
 import com.hc.admin.service.RedisService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Service;
 import redis.clients.jedis.Client;
 import redis.clients.jedis.Jedis;
 import redis.clients.jedis.JedisPool;
 
 import java.util.*;
-import java.util.concurrent.TimeUnit;
 
 /**
  * @author ：xzyuan

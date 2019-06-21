@@ -1,7 +1,7 @@
 package com.hc.admin.authorization;
 
 import com.baomidou.mybatisplus.core.toolkit.StringPool;
-import com.hc.admin.common.prop.HcProperties;
+import com.hc.admin.config.prop.HcProperties;
 import com.hc.admin.common.utils.HcUtil;
 import com.hc.admin.common.utils.SpringContextUtil;
 import lombok.extern.slf4j.Slf4j;

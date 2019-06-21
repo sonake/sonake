@@ -3,11 +3,10 @@ package com.hc.admin.config;
 import com.baomidou.mybatisplus.core.toolkit.StringPool;
 import com.hc.admin.common.Code;
 import com.hc.admin.common.Rets;
-import com.hc.admin.exception.ParamException;
+import com.hc.admin.common.exception.ParamValidException;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.shiro.authc.AuthenticationException;
 import org.apache.shiro.authz.UnauthorizedException;
-import org.apache.shiro.session.ExpiredSessionException;
 import org.springframework.core.Ordered;
 import org.springframework.core.annotation.Order;
 import org.springframework.http.HttpStatus;
@@ -17,6 +16,8 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 
+import javax.validation.ConstraintViolation;
+import javax.validation.ConstraintViolationException;
 import java.util.List;
 
 @Slf4j
@@ -61,9 +62,9 @@ public class GlobalExceptionHandler {
         return Rets.failure(Code.C999.getCode(),e.getMessage(),null);
     }
 
-    @ExceptionHandler(value = ParamException.class)
-    public Object handleParamValid(ParamException pe){
-        return Rets.failure(pe.getMsg());
+    @ExceptionHandler(value = ParamValidException.class)
+    public Object handleParamValid(ParamValidException p){
+        return Rets.failure(p.getMsg());
 
     }
 }

@@ -3,7 +3,7 @@ package com.hc.admin.controller;
 import java.util.Arrays;
 
 import com.alibaba.fastjson.JSON;
-import com.hc.admin.annotion.ParamValid;
+import com.hc.admin.annotion.ParamValidator;
 import com.hc.admin.bean.User;
 import com.hc.admin.common.BaseController;
 import com.hc.admin.annotion.HcLog;
@@ -13,6 +13,7 @@ import com.hc.admin.service.UserService;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.shiro.authz.annotation.RequiresPermissions;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.validation.ObjectError;
 import org.springframework.web.bind.annotation.*;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiResponse;
@@ -42,14 +43,17 @@ public class UserController extends BaseController {
     @RequestMapping(method = RequestMethod.GET)
     @ApiResponses({@ApiResponse(code = 200, message = "请求成功")})
     @ApiOperation(value = "查询 User列表", notes = "查询User列表")
-    @ParamValid(classname = "com.hc.admin.bean.User")
-    public Object list(@Valid User dto,BindingResult bindingResult) throws Exception{
-        try {
+    @ParamValidator(classname = "com.hc.admin.bean.User")
+    public Object list(@Valid User dto,BindingResult bindingResult){
+//        if(bindingResult.hasErrors()){
+//            StringBuilder sb=new StringBuilder();
+//            for(ObjectError error:bindingResult.getAllErrors()){
+//                sb.append(error.getDefaultMessage());
+//            }
+//            return Rets.failure(sb.toString());
+//        }
             PageUtils page = userService.queryPage(dto);
             return Rets.success(page);
-        }catch (Exception e){
-            return e.getMessage();
-        }
     }
 
     /**

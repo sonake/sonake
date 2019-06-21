@@ -1,4 +1,4 @@
-package com.hc.admin.common.prop;
+package com.hc.admin.config.prop;
 
 import lombok.Data;
 

@@ -1,8 +1,8 @@
-package com.hc.admin.common.runner;
+package com.hc.admin.config.runner;
 
 import com.hc.admin.bean.User;
 import com.hc.admin.common.UserManager;
-import com.hc.admin.exception.RedisConnectException;
+import com.hc.admin.common.exception.RedisConnectException;
 import com.hc.admin.service.CacheService;
 import com.hc.admin.service.UserService;
 import lombok.extern.slf4j.Slf4j;
@@ -51,7 +51,7 @@ public class CacheInitRunner implements ApplicationRunner {
             log.error("| |_   / /\\  | | | |");
             log.error("|_|   /_/--\\ |_| |_|__");
             log.error("                        ");
-            log.error("HC启动失败              ");
+            log.error("HC启动失败<<<<<<<<<<<<<<<<");
             if (e instanceof RedisConnectException) {
                 log.error("Redis连接异常，请检查Redis连接配置并确保Redis服务已启动");
             }

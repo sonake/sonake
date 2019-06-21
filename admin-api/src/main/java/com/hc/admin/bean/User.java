@@ -10,6 +10,9 @@ import java.util.Date;
 import com.hc.admin.common.BaseBean;
 import lombok.Data;
 
+import javax.validation.constraints.Max;
+import javax.validation.constraints.NotBlank;
+
 /**
  * 用户信息表
  * 
@@ -26,6 +29,7 @@ public class User extends BaseBean implements Serializable {
 	 * 用户ID
 	 */
 	@TableId(type = IdType.AUTO)
+	@NotBlank
 	private Long userId;
 	/**
 	 * 部门ID
@@ -38,6 +42,7 @@ public class User extends BaseBean implements Serializable {
 	/**
 	 * 用户昵称
 	 */
+	@Max(value = 3,message = "过长")
 	private String userName;
 	/**
 	 * 用户邮箱

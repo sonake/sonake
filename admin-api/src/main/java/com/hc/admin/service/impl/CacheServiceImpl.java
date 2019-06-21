@@ -1,5 +1,6 @@
 package com.hc.admin.service.impl;
 
+import com.alibaba.fastjson.JSON;
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.fasterxml.jackson.databind.JavaType;
@@ -155,7 +156,7 @@ public class CacheServiceImpl implements CacheService {
         if (!list.isEmpty()) {
                 this.deleteExc(HcEnum.Hc_EXC.getValue());
                 for (HcExc he:list) {
-                    redisService.set(HcEnum.Hc_EXC.getValue()+"."+he.getClassname()+"."+he.getFieldname(),he.getCode()+":"+he.getMsg());
+                    redisService.set(HcEnum.Hc_EXC.getValue()+"."+he.getClassname()+"."+he.getFieldname(), JSON.toJSONString(he));
                 }
         }
 
