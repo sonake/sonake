@@ -25,6 +25,7 @@ public class UserServiceImpl extends ServiceImpl<UserDao, User> implements UserS
     public PageUtils queryPage(User user) {
         //构造自定义查询条件(自定义添加条件)
         LambdaQueryWrapper<User> queryWrapper=new LambdaQueryWrapper<>();
+        queryWrapper.like(User::getUserName,user.getUserName());
         IPage<User> page = this.page(
                 new Page<>(),
                 queryWrapper
