@@ -101,6 +101,6 @@ public class ShiroRealm extends AuthorizingRealm {
         if (!JWTUtil.verify(token, username, user.getPassword())) {
             throw new AuthenticationException("token校验不通过");
         }
-        return new SimpleAuthenticationInfo(token, token, "febs_shiro_realm");
+        return new SimpleAuthenticationInfo(token, token, "hc_shiro_realm");
     }
 }

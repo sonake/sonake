@@ -5,6 +5,7 @@ import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.hc.admin.bean.User;
 import com.hc.admin.common.PageUtils;
+import com.hc.admin.common.utils.ToolUtil;
 import com.hc.admin.dao.UserDao;
 import com.hc.admin.service.UserService;
 import org.springframework.stereotype.Service;
@@ -25,7 +26,7 @@ public class UserServiceImpl extends ServiceImpl<UserDao, User> implements UserS
     public PageUtils queryPage(User user) {
         //构造自定义查询条件(自定义添加条件)
         LambdaQueryWrapper<User> queryWrapper=new LambdaQueryWrapper<>();
-        queryWrapper.like(User::getUserName,user.getUserName());
+        queryWrapper.like(ToolUtil.isNotEmpty(user.getUserName()),User::getUserName,user.getUserName());
         IPage<User> page = this.page(
                 new Page<>(),
                 queryWrapper
