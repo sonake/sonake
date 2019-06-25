@@ -1,12 +1,5 @@
-mybatis-plus:
-  mapperLocations: classpath:mapper/**/*.xml
-  type-aliases-package: com.hc.admim.bean
-  global-config:
-    banner: false
-
-
-
-
+server:
+  port: 8081
 spring:
   #redis
   redis:
@@ -42,30 +35,41 @@ spring:
           driverClassName: com.mysql.cj.jdbc.Driver
           url: jdbc:mysql://47.105.40.52:3306/sonake?useUnicode=true&characterEncoding=UTF-8&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC
         # 数据源-2，名称为 test
-#        test:
-#          username: root
-#          password: 123456
-#          driver-class-name: com.mysql.cj.jdbc.Driver
-#          url: jdbc:mysql://127.0.0.1:3306/febs_test?useUnicode=true&characterEncoding=UTF-8&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC
-
-
-
-
+  cloud:
+    consul:
+      host: 127.0.0.1
+      port: 8500
+      enabled: true
+      discovery:
+        register: true #注册服务至consul
+        health-check-path: /actuator/health #定义 consul 健康检查路径
+        health-check-interval: 10s #定义 consul 健康检查路径
+        instance-id: ${spring.application.name}:${server.port} # 配置注册到consul 服务的id
+        enabled: true #启用 consul 服务发现
+        service-name: ${spring.application.name} #设置 注册到 consul 的服务名称
+        #ip-address: 192.168.11.53 # 访问服务时使用的 ip地址 （还必须设置preferIpAddress才能使用）
+        prefer-ip-address: true
+        health-check-timeout: 20s #过20s健康监测不通过，删除服务
+  application:
+    name: hc-admin
+mybatis-plus:
+  mapperLocations: classpath:mapper/**/*.xml
+  type-aliases-package: com.hc.admim.bean
+  global-config:
+    banner: false
 
 pagehelper:
   reasonable: true
   supportMethodsArguments: true
   params: count=countSql
 
-#ָ�����ݿ⣬��ѡֵ�С�mysql��oracle��sqlserver��postgresql��
+#数据库类型
 renren:
   database: mysql
-#�Զ�������
+#自定义配置
 hc:
   shiro:
     # token有效期，单位秒
     tokenTimeOut: 36000
-    # �������֤�ӿ� url
+    # 免签url
     anonUrl: /login,/logout/**,/regist,/user/check/**
-server:
-  port: 8081

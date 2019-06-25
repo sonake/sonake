@@ -11,6 +11,7 @@
     <modules>
         <module>admin-api</module>
         <module>shop-api</module>
+        <module>hc-config</module>
     </modules>
     <properties>
         <swagger.version>2.2.2</swagger.version>
@@ -55,6 +56,12 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
+        </dependency>
+        <!--spring的redis注解请求过多时，会多次访问数据库,改为阿里的-->
+        <dependency>
+            <groupId>com.alicp.jetcache</groupId>
+            <artifactId>jetcache-starter-redis</artifactId>
+            <version>2.6.0.M2</version>
         </dependency>
         <dependency>
             <groupId>com.alibaba</groupId>
