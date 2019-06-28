@@ -2,7 +2,6 @@ package com.hc.admin.service.impl;
 
 import com.alibaba.fastjson.JSON;
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
-import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.fasterxml.jackson.databind.JavaType;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.hc.admin.bean.HcExc;
@@ -10,7 +9,6 @@ import com.hc.admin.bean.Menu;
 import com.hc.admin.bean.Role;
 import com.hc.admin.bean.User;
 import com.hc.admin.common.utils.HcEnum;
-import com.hc.admin.common.utils.HttpContextUtil;
 import com.hc.admin.dao.HcExcDao;
 import com.hc.admin.service.*;
 import org.apache.commons.lang3.StringUtils;

@@ -1,6 +1,5 @@
 server:
-  port: 8071
-
+  port: 8600
 spring:
   application:
     name: hc-config
@@ -11,31 +10,22 @@ spring:
     config:
       server:
         git:
-          uri: https://github.com/sonake/server-config
+          uri: https://github.com/sonake/server-config.git
           search-paths: /config/
           username: 760946378@qq.com
           password: yxz0921java
-          default-label: master
+          force-pull: true
+          #default-label: master
         #本地路径
         #native:
           #search-locations: classpath:/config/
-    #注册中心
-    consul:
-      host: 127.0.0.1
-      port: 8500
-      enabled: true
-      discovery:
-        #注册服务至consul
-        register: true
-        health-check-path: /actuator/health #定义 consul 健康检查路径
-        health-check-interval: 10s #定义 consul 健康检查路径
-        instance-id: ${spring.application.name}:${server.port} # 配置注册到consul 服务的id
-        enabled: true #启用 consul 服务发现
-        service-name: ${spring.application.name} #设置 注册到 consul 的服务名称
-        #ip-address: 192.168.11.53 # 访问服务时使用的 ip地址 （还必须设置preferIpAddress才能使用）
-        prefer-ip-address: true
-        health-check-timeout: 20s #过20s健康监测不通过，删除服务
-
+# 注册中心配置
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    service-url:
+      defaultZone: http://sonake:sonake@hc-eureka:8500/eureka/
 # 暴露监控端点
 management:
   endpoints:
