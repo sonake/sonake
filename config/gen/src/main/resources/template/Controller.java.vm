@@ -1,0 +1,97 @@
+package ${package}.${moduleName}.controller;
+
+import java.util.Arrays;
+import java.util.Map;
+
+import org.apache.shiro.authz.annotation.RequiresPermissions;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
+import io.swagger.annotations.ApiOperation;
+import io.swagger.annotations.ApiResponse;
+import io.swagger.annotations.ApiResponses;
+import org.springframework.validation.BindingResult;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+import ${package}.${moduleName}.entity.${className}Entity;
+import ${package}.${moduleName}.service.${className}Service;
+import cn.nis.ntc.api.controller.BaseController;
+import ${mainPath}.common.utils.PageUtils;
+
+import javax.validation.Valid;
+
+import cn.nis.ntc.bean.vo.front.Rets;
+
+
+/**
+ * ${comments}
+ *
+ * @author ${author}
+ * @email ${email}
+ * @date ${datetime}
+ */
+@RestController
+@RequestMapping("${moduleName}/${pathName}")
+public class ${className}Controller extends BaseController {
+    private Logger logger = LoggerFactory.getLogger(${className}Controller.class);
+    @Autowired
+    private ${className}Service ${classname}Service;
+
+    /**
+     * 列表
+     */
+    @RequestMapping(method = RequestMethod.GET)
+    @ApiResponses({@ApiResponse(code = 200, message = "请求成功")})
+    @ApiOperation(value = "查询 ${className}列表" , notes = "查询${className}列表")
+    public Object list(@Valid ${className}Dto dto) {
+        PageUtils page = ${classname}Service.queryPage(dto);
+
+        return Rets.success(page);
+    }
+
+    /**
+     * 保存
+     */
+    @ApiResponses({@ApiResponse(code = 200, message = "新增成功")})
+    @ApiOperation(value = "新增 ${className}" , notes = "新增${className}")
+    @BussinessLog(value = "save ${className}" , key = "Id")
+    @RequestMapping(method = RequestMethod.POST)
+    public Object save(@RequestBody ${className}Entity ${classname}, BindingResult result) {
+        logger.info(JSON.toJSONString(${classname}));
+            ${classname}Service.save(${classname});
+
+        return Rets.success();
+    }
+
+    /**
+     * 修改
+     */
+    @ApiResponses({@ApiResponse(code = 200, message = "修改成功")})
+    @ApiOperation(value = "修改 ${className}" , notes = "新增${className}")
+    @BussinessLog(value = "update ${className}" , key = "Id")
+    @RequestMapping(method = RequestMethod.PUT)
+    public Object update(@RequestBody ${className}Entity ${classname}) {
+        logger.info(JSON.toJSONString(${className}));
+            ${classname}Service.updateById(${classname});
+
+        return Rets.success();
+    }
+
+    /**
+     * 删除
+     */
+    @ApiResponses({@ApiResponse(code = 200, message = "删除成功")})
+    @ApiOperation(value = "删除 ${className}" , notes = "删除 ${className}")
+    @BussinessLog(value = "delete ${className}" , key = "Id")
+    public R delete(@RequestBody ${className}Dto ${className}) {
+        Long[] ids =${className}.getIds();
+            ${classname}Service.removeByIds(Arrays.asList(${pk.attrname}s));
+
+        return Rets.success();
+    }
+
+}
