@@ -58,28 +58,29 @@
                 {
                     this.$http({
                         url:
-                #
-                    [[this.$http.adornUrl]]
-                #
+                                #
+                                        [[this.$http.adornUrl]]
+                    #
                     (`/${moduleName}/${pathName}/info/#[[$]]#{this.dataForm.${pk.attrname}}`),
                             method
                 :
                     'get',
-                #
-                    [[params
+                            #
+                                    [[params
                 :
                     this.$http.adornParams()
-                ]]#
+                ]]
+                    #
                 }).
                     then(({data}) = > {
                         if(data && data.code === 0
                 )
                     {
-                    #
-                        foreach($column in $columns)
-                    #
-                        if ($column.columnName != $pk.columnName)
-                            this.dataForm.$
+                        #
+                                foreach($column in $columns)
+                        #
+                                if($column.columnName != $pk.columnName)
+                        this.dataForm.$
                         {
                             column.attrname
                         }
@@ -92,10 +93,10 @@
                         {
                             column.attrname
                         }
-                    #
-                        end
-                    #
-                        end
+                        #
+                                end
+                        #
+                                end
                     }
                 })
                 }
@@ -103,88 +104,91 @@
             },
             // 表单提交
             dataFormSubmit() {
+                #
+                        [[this.$refs['dataForm'].validate((valid) = > {]]
             #
-                [[this.$refs['dataForm'].validate((valid) = > {]]
+            if(valid) {
+            this.$http({
+            url:
             #
-                if (valid) {
-                    this.$http({
-                        url:
+            [[this.$http.adornUrl]]
+            #
+            (`/${moduleName}/${pathName}/${!this.dataForm.${pk.attrname} ? 'save' : 'update'}`),
+            method
+            :
+            'post',
+            #
+            [[data
+            :
+            this.$http.adornData({
+                ]]
                 #
-                    [[this.$http.adornUrl]]
                 #
-                    (`/${moduleName}/${pathName}/${!this.dataForm.${pk.attrname} ? 'save' : 'update'}`),
-                            method
+                foreach($column in $columns)
+                #
+                if($column.columnName == $pk.columnName)
+                    '${column.attrname}'
                 :
-                    'post',
-                #
-                    [[data
-                :
-                    this.$http.adornData({
-                ]]#
-                #
-                    foreach($column in $columns)
-                #
-                    if ($column.columnName == $pk.columnName)
-                        '${column.attrname}'
-                :
-                    this.dataForm.$
-                    {
-                        column.attrname
-                    }
+                this.dataForm.$
+                {
+                column.attrname
+                }
                 ||
-                    undefined,
+                undefined,
                 #else
                     '${column.attrname}'
                 :
-                    this.dataForm.$
-                    {
-                        column.attrname
-                    }
+                this.dataForm.$
+                {
+                column.attrname
+                }
                 #
-                    if ($velocityCount != $columns.size()),
+                if($velocityCount != $columns.size()),
                 #
-                    end
+                end
 
                 #
-                    end
+                end
                 #
-                    end
+                end
                 })
-                }).
-                    then(({data}) = > {
-                        if(data && data.code === 0
-                )
-                    {
-                    #
-                        [[this.$message({]]
-                    #
-                        message: '操作成功',
-                                type
-                    :
-                        'success',
-                                duration
-                    :
-                        1500,
-                                onClose
-                    :
-                        () =
-                    >
-                        {
-                            this.visible = false
-                        #
-                            [[this.$emit('refreshDataList')]]
-                        #
-                        }
-                    })
-                    }
-                else
-                    {
-                    #
-                        [[this.$message.error(data.msg)]]
-                    #
-                    }
-                })
-                }
+            }).
+            then(({data}) = > {
+            if(data && data.code === 0
+            )
+            {
+            #
+            [[this.$message({]]
+            #
+            message
+            :
+            '操作成功',
+            type
+            :
+            'success',
+            duration
+            :
+            1500,
+            onClose
+            :
+            () =
+            >
+            {
+            this.visible = false
+            #
+            [[this.$emit('refreshDataList')]]
+            #
+            }
+            })
+            }
+            else
+            {
+            #
+            [[this.$message.error(data.msg)]]
+            #
+            }
+            })
+            }
             })
             }
         }
