@@ -108,13 +108,12 @@ public class BetterPaginationInterceptor extends AbstractSqlParserHandler implem
     public Object intercept(Invocation invocation) throws Throwable {
         StatementHandler statementHandler = PluginUtils.realTarget(invocation.getTarget());
         MetaObject metaObject = SystemMetaObject.forObject(statementHandler);
-
-        Object args = invocation.getArgs();
         // SQL 解析
         this.sqlParser(metaObject);
-
         // 先判断是不是SELECT操作
         MappedStatement mappedStatement = (MappedStatement) metaObject.getValue("delegate.mappedStatement");
+        Class<?> classType=Class.forName(mappedStatement.getId().substring(0,mappedStatement.getId().lastIndexOf(".")));
+        String currentMethodName=mappedStatement.getId().substring(mappedStatement.getId().lastIndexOf(".")+1,mappedStatement.getId().length());
         if (!SqlCommandType.SELECT.equals(mappedStatement.getSqlCommandType())) {
             return invocation.proceed();
         }

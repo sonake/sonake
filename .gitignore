@@ -1,6 +1,9 @@
 HELP.md
 /target/
 *.class
+.mvn/
+mvnw
+mvnw.cmd
 
 ### STS ###
 .apt_generated

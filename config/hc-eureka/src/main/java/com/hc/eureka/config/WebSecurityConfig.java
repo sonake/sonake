@@ -14,12 +14,13 @@
  * limitations under the License.
  */
 
-package com.hc.eureka.config;
 
+package com.hc.eureka.config;
 /**
  * @author lengleng
  * @date 2019/2/1
  */
+
 
 import lombok.SneakyThrows;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;

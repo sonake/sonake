@@ -89,33 +89,34 @@
             // 获取数据列表
             getDataList() {
                 this.dataListLoading = true
-            #
-                [[this.$http({]]
-            #
-            #
-                [[url
+                #
+                        [[this.$http({]]
+                #
+                #
+                        [[url
             :
                 this.$http.adornUrl
-            ]]#
+            ]]
+                #
                 ('/${moduleName}/${pathName}/list'),
                         method
             :
                 'get',
-            #
-                [[params
+                        #
+                                [[params
             :
                 this.$http.adornParams({
-            ]]#
-                'page'
-            :
+                ]]#
+                    'page'
+                :
                 this.pageIndex,
-                        'limit'
-            :
+                    'limit'
+                :
                 this.pageSize,
-                        'key'
-            :
+                    'key'
+                :
                 this.dataForm.key
-            })
+                })
             }).
                 then(({data}) = > {
                     if(data && data.code === 0
@@ -150,10 +151,10 @@
             // 新增 / 修改
             addOrUpdateHandle(id) {
                 this.addOrUpdateVisible = true
-            #
-                [[this.$nextTick(() = > {]]
-            #
-                this.$refs.addOrUpdate.init(id)
+                #
+                        [[this.$nextTick(() = > {]]
+                #
+                        this.$refs.addOrUpdate.init(id)
             })
             },
             // 删除
@@ -164,10 +165,12 @@
                     pk.attrname
                 }
             })
-            #
-                [[this.$confirm(`确定对[id=${ids.join(',')}]进行[${id ? '删除' : '批量删除'}]操作?`, '提示', {]]
-            #
-                confirmButtonText: '确定',
+                #
+                        [[this.$confirm(`确定对[id=${ids.join(',')}]进行[${id ? '删除' : '批量删除'}]操作?`, '提示', {]]
+                #
+                        confirmButtonText
+            :
+                '确定',
                         cancelButtonText
             :
                 '取消',
@@ -176,12 +179,14 @@
                 'warning'
             }).
                 then(() = > {
-            #
-                [[this.$http({]]
-            #
-                url: #
-                [[this.$http.adornUrl]]
-            #
+                #
+                        [[this.$http({]]
+                #
+                        url
+            :
+                #
+                        [[this.$http.adornUrl]]
+                #
                 ('/${moduleName}/${pathName}/delete'),
                         method
             :
@@ -194,10 +199,12 @@
                     if(data && data.code === 0
             )
                 {
-                #
-                    [[this.$message({]]
-                #
-                    message: '操作成功',
+                    #
+                            [[this.$message({]]
+                    #
+                            message
+                :
+                    '操作成功',
                             type
                 :
                     'success',
@@ -215,9 +222,9 @@
                 }
             else
                 {
-                #
-                    [[this.$message.error(data.msg)]]
-                #
+                    #
+                            [[this.$message.error(data.msg)]]
+                    #
                 }
             })
             })

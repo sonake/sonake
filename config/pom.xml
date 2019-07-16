@@ -11,8 +11,14 @@
     <groupId>com.hc</groupId>
     <artifactId>config</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <description>Demo project for Spring Boot</description>
+    <name>config</name>
+    <description>服务调度中心</description>
 
+    <modules>
+        <module>hc-eureka</module>
+        <module>hc-config</module>
+        <module>hc-gateway</module>
+    </modules>
     <properties>
         <java.version>1.8</java.version>
         <spring-cloud.version>Greenwich.SR1</spring-cloud.version>

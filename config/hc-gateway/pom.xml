@@ -9,9 +9,11 @@
 		<version>1.0-SNAPSHOT</version>
 	</parent>
 
-	<artifactId>hc-gateway</artifactId>
-	<packaging>jar</packaging>
-
+    <groupId>com.hc</groupId>
+    <artifactId>hc-gateway</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <name>hc-gateway</name>
+    <packaging>jar</packaging>
 	<description>服务网关，基于 spring cloud gateway</description>
 
 	<properties>
@@ -47,6 +49,18 @@
 		</dependency>
 	</dependencies>
 
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-dependencies</artifactId>
+                <version>${spring-cloud.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
 	<build>
 		<plugins>
 			<plugin>
@@ -74,5 +88,4 @@
 			</plugin>
 		</plugins>
 	</build>
-
 </project>
