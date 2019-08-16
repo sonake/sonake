@@ -1,5 +1,5 @@
 server:
-  port: 8041
+  port: 8042
 
 # mysql
 spring:
@@ -7,7 +7,7 @@ spring:
     type: com.zaxxer.hikari.HikariDataSource
     #MySQL配置
     driverClassName: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://47.105.40.52:3306/sonake?useUnicode=true&characterEncoding=UTF-8&useSSL=false
+    url: jdbc:mysql://47.105.40.52:3306/gc_guide?useUnicode=true&characterEncoding=UTF-8&useSSL=false
     username: root
     password: Jdkc0912..
     #oracle配置

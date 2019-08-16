@@ -18,6 +18,7 @@
         <module>hc-eureka</module>
         <module>hc-config</module>
         <module>hc-gateway</module>
+        <module>gen</module>
     </modules>
     <properties>
         <java.version>1.8</java.version>
