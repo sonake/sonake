@@ -1,10 +1,9 @@
 package ${package}.${moduleName}.service;
 
+import com.baomidou.mybatisplus.core.metadata.IPage;
+import com.sonake.common.domain.QueryRequest;
+import ${package}.${moduleName}.entity.${className};
 import com.baomidou.mybatisplus.extension.service.IService;
-import ${mainPath}.common.utils.PageUtils;
-import ${package}.${moduleName}.entity.${className}Entity;
-
-import java.util.Map;
 
 /**
  * ${comments}
@@ -13,8 +12,12 @@ import java.util.Map;
  * @email ${email}
  * @date ${datetime}
  */
-public interface ${className}Service extends IService<${className}Entity> {
+public interface ${className}Service extends IService<${className}> {
 
-    PageUtils queryPage(Map<String, Object> params);
+    IPage<${className}> findAll(${className} entity, QueryRequest request);
+
+    void createOrUpdate${className}(${className} entity);
+
+    void delete(String[] ids);
 }
 

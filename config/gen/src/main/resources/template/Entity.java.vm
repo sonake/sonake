@@ -21,7 +21,7 @@ import lombok.Data;
  */
 @Data
 @TableName("${tableName}")
-public class ${className} implements Serializable {
+public class ${className} extends BaseEntity implements Serializable {
     private static final long serialVersionUID = 1L;
 
     #foreach ($column in $columns)
