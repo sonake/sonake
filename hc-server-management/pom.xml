@@ -12,11 +12,11 @@
     <groupId>com.hc</groupId>
     <artifactId>hc-server-management</artifactId>
     <version>1.0-SNAPSHOT</version>
-    <packaging>pom</packaging>
     <description>聚合服务治理的相关模块</description>
 
     <modules>
         <module>hc-register</module>
+        <module>hc-config</module>
     </modules>
     <dependencies>
         <dependency>
