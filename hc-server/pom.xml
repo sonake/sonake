@@ -3,17 +3,22 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
+
+
     <parent>
-        <artifactId>hc-cloud</artifactId>
         <groupId>com.hc</groupId>
+        <artifactId>hc-cloud</artifactId>
         <version>1.0-SNAPSHOT</version>
         <relativePath/>
     </parent>
-
-
     <groupId>com.hc</groupId>
-    <artifactId>hc-business</artifactId>
+    <artifactId>hc-server</artifactId>
     <version>1.0-SNAPSHOT</version>
-    <description>聚合所有业务微服务</description>
+
+    <modules>
+        <module>hc-register</module>
+        <module>hc-config</module>
+    </modules>
+
 
 </project>
