@@ -9,20 +9,19 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.hc</groupId>
-    <artifactId>hc-config</artifactId>
+    <artifactId>hc-register</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>hc-config</name>
-    <description>配置中心</description>
+    <name>hc-register</name>
+    <description>Demo project for Spring Boot</description>
 
     <properties>
         <java.version>1.8</java.version>
-        <spring-cloud.version>Greenwich.SR3</spring-cloud.version>
     </properties>
 
     <dependencies>
         <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-config-server</artifactId>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter</artifactId>
         </dependency>
 
         <dependency>
@@ -31,18 +30,6 @@
             <scope>test</scope>
         </dependency>
     </dependencies>
-
-    <dependencyManagement>
-        <dependencies>
-            <dependency>
-                <groupId>org.springframework.cloud</groupId>
-                <artifactId>spring-cloud-dependencies</artifactId>
-                <version>${spring-cloud.version}</version>
-                <type>pom</type>
-                <scope>import</scope>
-            </dependency>
-        </dependencies>
-    </dependencyManagement>
 
     <build>
         <plugins>
