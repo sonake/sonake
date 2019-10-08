@@ -16,6 +16,7 @@
         <module>../hc-common</module>
         <module>../hc-business</module>
         <module>../hc-auth</module>
+        <module>../hc-gateway</module>
     </modules>
 
 

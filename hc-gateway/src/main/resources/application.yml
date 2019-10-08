@@ -1,0 +1,36 @@
+server:
+  port: 9030
+
+spring:
+  application:
+    name: hc-gateway
+
+eureka:
+  instance:
+    #向Eureka服务端发送心跳的间隔时间，单位为秒，用于服务续约。这里配置为20秒，即每隔20秒向febs-register发送心跳，表明当前服务没有宕机
+    lease-expiration-duration-in-seconds: 20
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    instance-info-replication-interval-seconds: 30
+    #默认值为30秒，即每30秒去Eureka服务端上获取服务并缓存，这里指定为3秒的原因是方便开发时测试，实际可以指定为默认值即可
+    registry-fetch-interval-seconds: 3
+    service-url:
+      defaultZone: http://sonake:123456@localhost:9010/register/eureka/
+zuul:
+  routes:
+    auth:
+      path: /auth/**
+      serviceId: hc-auth
+      sensitiveHeaders: "*"
+  retryable: true
+  #Zuul配合Eureka后会有一套默认的配置规则，这里我们只想请求根据我们显示配置的路由规则走，所以设置为*，表示关闭所有默认路由配置规则；
+  ignored-services: "*"
+  #Zuul内部通过Ribbon按照一定的负载均衡算法来获取服务，Ribbon进行客户端负载均衡的Client并不是在服务启动的时候就初始化好的，而是在调用的时候
+  #才会去创建相应的Client，所以第一次调用的耗时不仅仅包含发送HTTP请求的时间，还包含了创建RibbonClient的时间，这样一来如果创建时间速度较慢，同时设置的超时时间又比较短的话，第一次请求很容易出现超时的情况。设置为true的时候表示开启Ribbon的饥饿加载模式，即在应用启动的时候就去获取相应的Client备用。
+  ribbon:
+    eager-load:
+      enabled: true
+  host:
+    connect-timeout-millis: 3000
+    socket-timeout-millis: 3000
