@@ -6,15 +6,27 @@ spring:
   application:
     name: hc-auth
 
+  redis:
+    database: 0
+    host: 127.0.0.1
+    port: 6379
+    jedis:
+      pool:
+        min-idle: 8
+        max-idle: 500
+        max-active: 2000
+        max-wait: 10000
+    timeout: 5000
+
 eureka:
   instance:
-    #ÏòEureka ·şÎñ¶Ë·¢ËÍĞÄÌøµÄ¼ä¸ôÊ±¼ä£¬µ¥Î»ÎªÃë£¬ÓÃÓÚ·şÎñĞøÔ¼¡£ÕâÀïÅäÖÃÎª20Ãë£¬¼´Ã¿¸ô20ÃëÏòfebs-register·¢ËÍĞÄÌø£¬±íÃ÷µ±Ç°·şÎñÃ»ÓĞå´»ú
+    #å‘EurekaæœåŠ¡ç«¯å‘é€å¿ƒè·³çš„é—´éš”æ—¶é—´ï¼Œå•ä½ä¸ºç§’ï¼Œç”¨äºæœåŠ¡ç»­çº¦ã€‚è¿™é‡Œé…ç½®ä¸º20ç§’ï¼Œå³æ¯éš”20ç§’å‘febs-registerå‘é€å¿ƒè·³ï¼Œè¡¨æ˜å½“å‰æœåŠ¡æ²¡æœ‰å®•æœº
     lease-expiration-duration-in-seconds: 20
   client:
     register-with-eureka: true
     fetch-registry: true
     instance-info-replication-interval-seconds: 30
-    #Ä¬ÈÏÖµÎª30Ãë£¬¼´Ã¿30ÃëÈ¥Eureka·şÎñ¶ËÉÏ»ñÈ¡·şÎñ²¢»º´æ£¬ÕâÀïÖ¸¶¨Îª3ÃëµÄÔ­ÒòÊÇ·½±ã¿ª·¢Ê±²âÊÔ£¬Êµ¼Ê¿ÉÒÔÖ¸¶¨ÎªÄ¬ÈÏÖµ¼´¿É
+    #é»˜è®¤å€¼ä¸º30ç§’ï¼Œå³æ¯30ç§’å»EurekaæœåŠ¡ç«¯ä¸Šè·å–æœåŠ¡å¹¶ç¼“å­˜ï¼Œè¿™é‡ŒæŒ‡å®šä¸º3ç§’çš„åŸå› æ˜¯æ–¹ä¾¿å¼€å‘æ—¶æµ‹è¯•ï¼Œå®é™…å¯ä»¥æŒ‡å®šä¸ºé»˜è®¤å€¼å³å¯
     registry-fetch-interval-seconds: 3
     service-url:
       defaultZone: http://sonake:123456@localhost:9010/register/eureka/
