@@ -17,6 +17,8 @@
         <module>../hc-business</module>
         <module>../hc-auth</module>
         <module>../hc-gateway</module>
+        <module>../hc-server</module>
+        <module>../hc-server</module>
     </modules>
 
 
