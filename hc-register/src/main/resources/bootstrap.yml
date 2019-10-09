@@ -10,6 +10,17 @@ spring:
     user:
       name: sonake
       password: 123456
+  cloud:
+    #配置中心
+    config:
+      fail-fast: true
+      name: ${spring.application.name}
+      profile: ${spring.profiles.active}
+      discovery:
+        enabled: true
+        service-id: hc-config
+    profiles:
+      active: dev
 
 eureka:
   instance:
