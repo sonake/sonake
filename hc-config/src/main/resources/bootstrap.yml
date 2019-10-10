@@ -12,11 +12,16 @@ spring:
         git:
           uri: https://github.com/sonake/server-config.git
           search-paths: /sonake-cfg/
-          username: xxxx
-          password: xxxx
+          username: 760946378@qq.com
+          password: yxz0921..
+  rabbitmq:
+    host: 192.168.220.128
+    port: 5672
+    username: guest
+    password: guest
 eureka:
   instance:
-    #向Eureka服务端发送心跳的间隔时间，单位为秒，用于服务续约。这里配置为20秒，即每隔20秒向febs-register发送心跳，表明当前服务没有宕机
+    #向Eureka服务端发送心跳的间隔时间，单位为秒，用于服务续约。这里配置为20秒，即每隔20秒向hc-register发送心跳，表明当前服务没有宕机
     lease-expiration-duration-in-seconds: 20
   client:
     register-with-eureka: true
@@ -26,3 +31,9 @@ eureka:
     registry-fetch-interval-seconds: 3
     service-url:
       defaultZone: http://sonake:123456@localhost:9010/register/eureka/
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'

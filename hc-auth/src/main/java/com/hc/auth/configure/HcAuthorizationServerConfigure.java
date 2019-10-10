@@ -1,13 +1,19 @@
 package com.hc.auth.configure;
 
+import com.hc.auth.properties.HcAuthProperties;
+import com.hc.auth.properties.HcClientsProperties;
 import com.hc.auth.service.HcUserDetailService;
+import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Primary;
 import org.springframework.data.redis.connection.RedisConnectionFactory;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.security.oauth2.config.annotation.builders.InMemoryClientDetailsServiceBuilder;
 import org.springframework.security.oauth2.config.annotation.configurers.ClientDetailsServiceConfigurer;
 import org.springframework.security.oauth2.config.annotation.web.configuration.AuthorizationServerConfigurerAdapter;
 import org.springframework.security.oauth2.config.annotation.web.configuration.EnableAuthorizationServer;
@@ -15,6 +21,7 @@ import org.springframework.security.oauth2.config.annotation.web.configurers.Aut
 import org.springframework.security.oauth2.provider.token.DefaultTokenServices;
 import org.springframework.security.oauth2.provider.token.TokenStore;
 import org.springframework.security.oauth2.provider.token.store.redis.RedisTokenStore;
+import utils.ToolUtil;
 
 /**
  * @author ：xzyuan
@@ -33,15 +40,28 @@ public class HcAuthorizationServerConfigure extends AuthorizationServerConfigure
     private HcUserDetailService userDetailService;
     @Autowired
     private PasswordEncoder passwordEncoder;
+    @Autowired
+    private HcAuthProperties hcAuthProperties;
 
     @Override
     public void configure(ClientDetailsServiceConfigurer clientDetailsServiceConfigurer) throws Exception {
-        clientDetailsServiceConfigurer
-                .inMemory()
-                .withClient("hc")
-                .secret(passwordEncoder.encode("123456"))
-                .authorizedGrantTypes("password","refresh_token")
-                .scopes("all");
+        HcClientsProperties[] hcClientsProperties=hcAuthProperties.getClients();
+        InMemoryClientDetailsServiceBuilder builder = clientDetailsServiceConfigurer.inMemory();
+        if(ToolUtil.isNotEmpty(hcClientsProperties)){
+            for (HcClientsProperties client : hcClientsProperties) {
+                if (ToolUtil.isNotEmpty(client.getClient())) {
+                    throw new Exception("client不能为空");
+                }
+                if (ToolUtil.isNotEmpty(client.getSecret())) {
+                    throw new Exception("secret不能为空");
+                }
+                String[] grantTypes = StringUtils.splitByWholeSeparatorPreserveAllTokens(client.getGrantType(), ",");
+                builder.withClient(client.getClient())
+                        .secret(passwordEncoder.encode(client.getSecret()))
+                        .authorizedGrantTypes(grantTypes)
+                        .scopes(client.getScope());
+            }
+        }
 
     }
 
@@ -58,8 +78,8 @@ public class HcAuthorizationServerConfigure extends AuthorizationServerConfigure
         DefaultTokenServices tokenServices = new DefaultTokenServices();
         tokenServices.setTokenStore(tokenStore());
         tokenServices.setSupportRefreshToken(true);
-        tokenServices.setAccessTokenValiditySeconds(60 * 60 * 24);
-        tokenServices.setRefreshTokenValiditySeconds(60 * 60 * 24 * 7);
+        tokenServices.setAccessTokenValiditySeconds(hcAuthProperties.getAccessTokenValiditySeconds());
+        tokenServices.setRefreshTokenValiditySeconds(hcAuthProperties.getRefreshTokenValiditySeconds());
         return tokenServices;
     }
 
