@@ -16,9 +16,12 @@
 package utils;
 
 
+import com.alibaba.fastjson.JSONObject;
+import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.io.StringWriter;
@@ -32,9 +35,27 @@ import java.util.regex.Pattern;
 /**
  * 高频方法集合类
  */
+@Slf4j
 public class ToolUtil {
 
 	private static Pattern humpPattern = Pattern.compile("[A-Z]");
+
+
+    /**
+     * 设置响应
+     *
+     * @param response    HttpServletResponse
+     * @param contentType content-type
+     * @param status      http状态码
+     * @param value       响应内容
+     * @throws IOException IOException
+     */
+    public static void makeResponse(HttpServletResponse response, String contentType,
+                                    int status, Object value) throws IOException {
+        response.setContentType(contentType);
+        response.setStatus(status);
+        response.getOutputStream().write(JSONObject.toJSONString(value).getBytes());
+    }
 
     /**
      * 获取随机位数的字符串

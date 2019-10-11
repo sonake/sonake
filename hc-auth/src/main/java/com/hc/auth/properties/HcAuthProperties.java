@@ -17,6 +17,6 @@ import org.springframework.context.annotation.Configuration;
 @ConfigurationProperties(prefix = "hc.auth")
 public class HcAuthProperties {
     private HcClientsProperties[] clients = {};
-    private int accessTokenValiditySeconds ;
+    private int accessTokenValiditySeconds;
     private int refreshTokenValiditySeconds;
 }

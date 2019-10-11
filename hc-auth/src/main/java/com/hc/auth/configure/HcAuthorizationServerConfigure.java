@@ -42,6 +42,8 @@ public class HcAuthorizationServerConfigure extends AuthorizationServerConfigure
     private PasswordEncoder passwordEncoder;
     @Autowired
     private HcAuthProperties hcAuthProperties;
+    @Autowired
+    private HcWebResponseExceptionTranslator exceptionTranslator;
 
     @Override
     public void configure(ClientDetailsServiceConfigurer clientDetailsServiceConfigurer) throws Exception {
@@ -49,10 +51,10 @@ public class HcAuthorizationServerConfigure extends AuthorizationServerConfigure
         InMemoryClientDetailsServiceBuilder builder = clientDetailsServiceConfigurer.inMemory();
         if(ToolUtil.isNotEmpty(hcClientsProperties)){
             for (HcClientsProperties client : hcClientsProperties) {
-                if (ToolUtil.isNotEmpty(client.getClient())) {
+                if (ToolUtil.isEmpty(client.getClient())) {
                     throw new Exception("client不能为空");
                 }
-                if (ToolUtil.isNotEmpty(client.getSecret())) {
+                if (ToolUtil.isEmpty(client.getSecret())) {
                     throw new Exception("secret不能为空");
                 }
                 String[] grantTypes = StringUtils.splitByWholeSeparatorPreserveAllTokens(client.getGrantType(), ",");
@@ -84,12 +86,14 @@ public class HcAuthorizationServerConfigure extends AuthorizationServerConfigure
     }
 
     @Override
+    @SuppressWarnings("all")
     public void configure(AuthorizationServerEndpointsConfigurer authorizationServerEndpointsConfigurer){
         authorizationServerEndpointsConfigurer
                 .tokenStore(tokenStore())
                 .userDetailsService(userDetailService)
                 .authenticationManager(authenticationManager)
-                .tokenServices(defaultTokenServices());
+                .tokenServices(defaultTokenServices())
+                .exceptionTranslator(exceptionTranslator);
 
     }
 

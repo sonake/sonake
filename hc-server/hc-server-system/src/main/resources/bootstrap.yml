@@ -4,6 +4,8 @@ server:
 spring:
   application:
     name: hc-server-system
+  profiles:
+    active: dev
   cloud:
     #配置中心
     config:
@@ -13,9 +15,11 @@ spring:
       discovery:
         enabled: true
         service-id: hc-config
-    profiles:
-      active: dev
-
+  rabbitmq:
+    host: 192.168.220.128
+    port: 5672
+    username: guest
+    password: guest
 
 eureka:
   instance:
