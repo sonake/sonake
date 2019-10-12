@@ -1,6 +1,7 @@
 package com.hc.auth;
 
 import annotation.EnableHcAuthExceptionHandler;
+import annotation.EnableHcServerProtect;
 import com.hc.auth.properties.HcAuthProperties;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -11,6 +12,7 @@ import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 @EnableDiscoveryClient
 @EnableConfigurationProperties({HcAuthProperties.class})
 @EnableHcAuthExceptionHandler
+@EnableHcServerProtect
 public class HcAuthApplication {
 
     public static void main(String[] args) {

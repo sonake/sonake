@@ -17,11 +17,22 @@ public class TestController {
 
     @GetMapping("info")
     public String test(){
-        return "febs-server-system";
+        return "hc-server-system";
     }
 
     @GetMapping("user")
     public Principal currentUser(Principal principal) {
         return principal;
+    }
+
+
+    /**
+     * 供远程调用
+     * @param name
+     * @return
+     */
+    @GetMapping("hello")
+    public String hello(String name) {
+        return "hello" + name;
     }
 }

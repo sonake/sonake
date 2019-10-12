@@ -10,11 +10,6 @@ spring:
     user:
       name: sonake
       password: 123456
-  rabbitmq:
-    host: 192.168.220.128
-    port: 5672
-    username: guest
-    password: guest
 eureka:
   instance:
     #部署时替换为实际的ip地址

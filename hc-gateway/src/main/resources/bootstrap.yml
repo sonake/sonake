@@ -15,11 +15,7 @@ spring:
       discovery:
         enabled: true
         service-id: hc-config
-  rabbitmq:
-    host: 192.168.220.128
-    port: 5672
-    username: guest
-    password: guest
+
 eureka:
   instance:
     #向Eureka服务端发送心跳的间隔时间，单位为秒，用于服务续约。这里配置为20秒，即每隔20秒向febs-register发送心跳，表明当前服务没有宕机

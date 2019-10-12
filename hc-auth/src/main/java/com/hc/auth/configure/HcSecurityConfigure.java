@@ -1,8 +1,7 @@
 package com.hc.auth.configure;
 
 /**
- * @Order注解指定请求先经过改过滤链处理,处理/oauth开头的请求，其他的交由资源过滤链处理
- * 资源管理器order为3
+ * @Order注解指定请求先经过改过滤链处理,处理/oauth开头的请求，其他的交由资源过滤链处理 资源管理器order为3
  * 用于处理/oauth开头的请求，Spring Cloud OAuth内部定义的获取令牌，刷新令牌的请求地址都是以/oauth/开头的，
  * 也就是说HcSecurityConfigure用于处理和令牌相关的请求
  */
@@ -25,11 +24,9 @@ public class HcSecurityConfigure extends WebSecurityConfigurerAdapter {
 
     @Autowired
     private HcUserDetailService userDetailService;
+    @Autowired
+    private PasswordEncoder passwordEncoder;
 
-    @Bean
-    public PasswordEncoder passwordEncoder(){
-        return new BCryptPasswordEncoder();
-    }
 
     @Override
     @Bean
@@ -38,7 +35,7 @@ public class HcSecurityConfigure extends WebSecurityConfigurerAdapter {
     }
 
     @Override
-    protected void configure(HttpSecurity httpSecurity) throws Exception{
+    protected void configure(HttpSecurity httpSecurity) throws Exception {
         httpSecurity.requestMatchers()
                 .antMatchers("/oauth/**")
                 .and()
@@ -51,6 +48,6 @@ public class HcSecurityConfigure extends WebSecurityConfigurerAdapter {
 
     @Override
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
-        auth.userDetailsService(userDetailService).passwordEncoder(passwordEncoder());
+        auth.userDetailsService(userDetailService).passwordEncoder(passwordEncoder);
     }
 }
