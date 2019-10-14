@@ -1,7 +1,9 @@
 package com.hc.auth.configure;
 
-import handler.HcAccessDeniedHandler;
-import handler.HcAuthExceptionEntryPoint;
+import com.hc.auth.properties.HcAuthProperties;
+import com.hc.common.handler.HcAccessDeniedHandler;
+import com.hc.common.handler.HcAuthExceptionEntryPoint;
+import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
@@ -23,13 +25,17 @@ public class HcResourceConfigure extends ResourceServerConfigurerAdapter {
     private HcAccessDeniedHandler hcAccessDeniedHandler;
     @Autowired
     private HcAuthExceptionEntryPoint hcAuthExceptionEntryPoint;
+    @Autowired
+    private HcAuthProperties hcAuthProperties;
 
     @Override
     public void configure(HttpSecurity httpSecurity) throws Exception {
+        String [] anonUrls = StringUtils.splitByWholeSeparatorPreserveAllTokens(hcAuthProperties.getAnonUrl(), ",");
         httpSecurity.csrf().disable()
                 .requestMatchers().antMatchers("/**")
                 .and()
                 .authorizeRequests()
+                .antMatchers(anonUrls).permitAll()
                 .antMatchers("/**")
                 .authenticated();
     }

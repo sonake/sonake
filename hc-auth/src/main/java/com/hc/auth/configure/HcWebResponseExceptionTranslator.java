@@ -8,8 +8,8 @@ import org.springframework.security.oauth2.common.exceptions.InvalidGrantExcepti
 import org.springframework.security.oauth2.common.exceptions.UnsupportedGrantTypeException;
 import org.springframework.security.oauth2.provider.error.WebResponseExceptionTranslator;
 import org.springframework.stereotype.Component;
-import result.Ret;
-import result.Rets;
+import com.hc.common.result.Ret;
+import com.hc.common.result.Rets;
 
 /**
  * @author ：xzyuan

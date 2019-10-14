@@ -6,6 +6,7 @@ package com.hc.auth.configure;
  * 也就是说HcSecurityConfigure用于处理和令牌相关的请求
  */
 
+import com.hc.auth.filter.ValidateCodeFilter;
 import com.hc.auth.service.HcUserDetailService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
@@ -17,6 +18,7 @@ import org.springframework.security.config.annotation.web.configuration.EnableWe
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 
 @EnableWebSecurity
 @Order(2)
@@ -26,6 +28,8 @@ public class HcSecurityConfigure extends WebSecurityConfigurerAdapter {
     private HcUserDetailService userDetailService;
     @Autowired
     private PasswordEncoder passwordEncoder;
+    @Autowired
+    private ValidateCodeFilter validateCodeFilter;
 
 
     @Override
@@ -36,7 +40,9 @@ public class HcSecurityConfigure extends WebSecurityConfigurerAdapter {
 
     @Override
     protected void configure(HttpSecurity httpSecurity) throws Exception {
-        httpSecurity.requestMatchers()
+        httpSecurity
+                .addFilterBefore(validateCodeFilter, UsernamePasswordAuthenticationFilter.class)
+                .requestMatchers()
                 .antMatchers("/oauth/**")
                 .and()
                 .authorizeRequests()

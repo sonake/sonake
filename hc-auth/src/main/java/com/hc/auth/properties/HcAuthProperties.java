@@ -17,6 +17,13 @@ import org.springframework.context.annotation.Configuration;
 @ConfigurationProperties(prefix = "hc.auth")
 public class HcAuthProperties {
     private HcClientsProperties[] clients = {};
-    private int accessTokenValiditySeconds;
-    private int refreshTokenValiditySeconds;
+    private int accessTokenValiditySeconds = 60 * 60 * 24;
+    private int refreshTokenValiditySeconds = 60 * 60 * 24 * 7;
+    /**
+     * 验证码配置
+     */
+    private HcValidateCodeProperties codeProperties = new HcValidateCodeProperties();
+
+    // 免认证路径
+    private String anonUrl;
 }

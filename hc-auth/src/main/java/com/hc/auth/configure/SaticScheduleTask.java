@@ -1,5 +1,6 @@
 package com.hc.auth.configure;
 
+import com.alibaba.fastjson.JSON;
 import com.hc.auth.properties.HcAuthProperties;
 import com.hc.auth.properties.HcClientsProperties;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -28,6 +29,6 @@ public class SaticScheduleTask {
     private void configureTasks() {
         HcClientsProperties[] hcClientsProperties=hcAuthProperties.getClients();
         System.err.println("执行静态定时任务时间: " + LocalDateTime.now());
-        System.err.println("输出参数： "+hcClientsProperties[0].getClient());
+        System.err.println("输出参数： "+ JSON.toJSONString(hcClientsProperties));
     }
 }

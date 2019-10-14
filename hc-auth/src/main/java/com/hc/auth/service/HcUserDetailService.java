@@ -1,6 +1,9 @@
 package com.hc.auth.service;
 
-import bean.HcAuthUser;
+import com.hc.auth.manager.UserManager;
+import com.hc.common.bean.HcAuthUser;
+import com.hc.common.bean.system.SysUser;
+import com.hc.common.utils.ToolUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.authority.AuthorityUtils;
 import org.springframework.security.core.userdetails.User;
@@ -20,15 +23,41 @@ import org.springframework.stereotype.Service;
 public class HcUserDetailService implements UserDetailsService {
     @Autowired
     private PasswordEncoder passwordEncoder;
+    @Autowired
+    private UserManager userManager;
 
 
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-        HcAuthUser hcAuthUser=new HcAuthUser();
-        hcAuthUser.setUsername(username);
-        hcAuthUser.setPassword(passwordEncoder.encode("123456"));
-        return new User(username,hcAuthUser.getPassword(),hcAuthUser.isEnabled(),
-                        hcAuthUser.isAccountNonExpired(),hcAuthUser.isCredentialsNonExpired(),
-                        hcAuthUser.isAccountNonLocked(), AuthorityUtils.commaSeparatedStringToAuthorityList("user:add"));
+        SysUser user=userManager.findUserByUsername(username);
+        if(ToolUtil.isNotEmpty(user)){
+            String perms = userManager.findUserPermissions(username);
+            boolean notBlock = false;
+            if(ToolUtil.equals(SysUser.STATUS_VALID,user.getStatus())){
+                notBlock = true;
+            }
+            HcAuthUser authUser = new HcAuthUser(user.getUsername(),user.getPassword(),true,true,true,notBlock,AuthorityUtils.commaSeparatedStringToAuthorityList(perms));
+            return transSystemUserToAuthUser(authUser,user);
+        }else {
+            throw new UsernameNotFoundException("");
+        }
+    }
+
+
+
+    private HcAuthUser transSystemUserToAuthUser(HcAuthUser authUser, SysUser sysUser) {
+        authUser.setAvatar(sysUser.getAvatar());
+        authUser.setDeptId(sysUser.getDeptId());
+        authUser.setDeptName(sysUser.getDeptName());
+        authUser.setEmail(sysUser.getEmail());
+        authUser.setPhone(sysUser.getPhone());
+        authUser.setRoleId(sysUser.getRoleId());
+        authUser.setRoleName(sysUser.getRoleName());
+        authUser.setSex(sysUser.getSex());
+        authUser.setId(sysUser.getId());
+        authUser.setLastLoginTime(sysUser.getLastLoginTime());
+        authUser.setRemark(sysUser.getRemark());
+        authUser.setStatus(sysUser.getStatus());
+        return authUser;
     }
 }

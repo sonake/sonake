@@ -1,16 +1,20 @@
 package com.hc.auth.controller;
 
+import com.hc.auth.service.ValidateCodeService;
+import com.hc.common.exception.ValidateCodeException;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.oauth2.provider.token.ConsumerTokenServices;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
-import exception.HcException;
-import result.Ret;
-import result.Rets;
+import com.hc.common.exception.HcException;
+import com.hc.common.result.Ret;
+import com.hc.common.result.Rets;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import java.io.IOException;
 import java.security.Principal;
 
 /**
@@ -23,6 +27,8 @@ import java.security.Principal;
 public class SecurityController {
     @Autowired
     private ConsumerTokenServices consumerTokenServices;
+    @Autowired
+    private ValidateCodeService validateCodeService;
 
     @GetMapping("oauth/test")
     public String testOauth() {
@@ -45,4 +51,8 @@ public class SecurityController {
         return Rets.success("退出登录成功");
     }
 
+    @GetMapping("captcha")
+    public void captcha(HttpServletRequest request, HttpServletResponse response) throws IOException, ValidateCodeException {
+        validateCodeService.create(request, response);
+    }
 }
