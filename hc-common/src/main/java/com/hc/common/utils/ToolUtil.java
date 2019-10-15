@@ -17,6 +17,7 @@ package com.hc.common.utils;
 
 
 import com.alibaba.fastjson.JSONObject;
+import com.baomidou.mybatisplus.core.metadata.IPage;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;
 
@@ -30,6 +31,7 @@ import java.math.BigDecimal;
 import java.net.URISyntaxException;
 import java.util.*;
 import java.util.Map.Entry;
+import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 /**
@@ -40,6 +42,33 @@ public class ToolUtil {
 
 	private static Pattern humpPattern = Pattern.compile("[A-Z]");
 
+
+
+    /**
+     * 正则校验
+     *
+     * @param regex 正则表达式字符串
+     * @param value 要匹配的字符串
+     * @return 正则校验结果
+     */
+    public static boolean match(String regex, String value) {
+        Pattern pattern = Pattern.compile(regex);
+        Matcher matcher = pattern.matcher(value);
+        return matcher.matches();
+    }
+
+    /**
+     * 封装前端分页表格所需数据
+     *
+     * @param pageInfo pageInfo
+     * @return Map<String, Object>
+     */
+    public static Map<String, Object> getDataTable(IPage<?> pageInfo) {
+        Map<String, Object> data = new HashMap<>();
+        data.put("rows", pageInfo.getRecords());
+        data.put("total", pageInfo.getTotal());
+        return data;
+    }
 
     /**
      * 设置响应

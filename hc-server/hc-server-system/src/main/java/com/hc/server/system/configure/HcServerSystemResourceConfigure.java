@@ -1,4 +1,4 @@
-package com.hc.hc.server.system.configure;
+package com.hc.server.system.configure;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;

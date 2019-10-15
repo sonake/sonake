@@ -1,6 +1,6 @@
-package com.hc.hc.server.system.test.fallback;
+package com.hc.server.system.test.fallback;
 
-import com.hc.hc.server.system.test.service.IHelloService;
+import com.hc.server.system.test.service.IHelloService;
 import feign.hystrix.FallbackFactory;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;

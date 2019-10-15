@@ -1,6 +1,6 @@
-package com.hc.hc.server.system.test.service;
+package com.hc.server.system.test.service;
 
-import com.hc.hc.server.system.test.fallback.HelloServiceFallback;
+import com.hc.server.system.test.fallback.HelloServiceFallback;
 import com.hc.common.constant.HcServerConstant;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;

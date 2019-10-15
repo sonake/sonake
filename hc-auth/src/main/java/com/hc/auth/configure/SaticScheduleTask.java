@@ -3,6 +3,7 @@ package com.hc.auth.configure;
 import com.alibaba.fastjson.JSON;
 import com.hc.auth.properties.HcAuthProperties;
 import com.hc.auth.properties.HcClientsProperties;
+import com.hc.auth.properties.HcValidateCodeProperties;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.scheduling.annotation.EnableScheduling;
@@ -28,7 +29,9 @@ public class SaticScheduleTask {
     //@Scheduled(fixedRate=5000)
     private void configureTasks() {
         HcClientsProperties[] hcClientsProperties=hcAuthProperties.getClients();
+        HcValidateCodeProperties hcValidateCodeProperties = hcAuthProperties.getCode();
         System.err.println("执行静态定时任务时间: " + LocalDateTime.now());
         System.err.println("输出参数： "+ JSON.toJSONString(hcClientsProperties));
+        System.err.println("输出参数： "+ JSON.toJSONString(hcValidateCodeProperties));
     }
 }

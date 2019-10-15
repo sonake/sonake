@@ -1,6 +1,6 @@
-package com.hc.hc.server.system.test.controller;
+package com.hc.server.system.test.controller;
 
-import com.hc.hc.server.system.test.service.IHelloService;
+import com.hc.server.system.test.service.IHelloService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.GetMapping;

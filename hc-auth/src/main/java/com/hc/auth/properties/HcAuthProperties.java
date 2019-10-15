@@ -22,7 +22,7 @@ public class HcAuthProperties {
     /**
      * 验证码配置
      */
-    private HcValidateCodeProperties codeProperties = new HcValidateCodeProperties();
+    private HcValidateCodeProperties code = new HcValidateCodeProperties();
 
     // 免认证路径
     private String anonUrl;

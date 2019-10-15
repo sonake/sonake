@@ -44,7 +44,7 @@ public class ValidateCodeService {
         if (ToolUtil.isEmpty(key)) {
             throw new ValidateCodeException("验证码key不能为空");
         }
-        HcValidateCodeProperties code = hcAuthProperties.getCodeProperties();
+        HcValidateCodeProperties code = hcAuthProperties.getCode();
         setHeader(response, code.getType());
 
         Captcha captcha = createCaptcha(code);

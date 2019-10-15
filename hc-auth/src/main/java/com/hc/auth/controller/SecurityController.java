@@ -44,7 +44,6 @@ public class SecurityController {
     public Ret signout(HttpServletRequest request) throws HcException {
         String authorization = request.getHeader("Authorization");
         String token = StringUtils.replace(authorization, "bearer ", "");
-        Ret r = new Ret();
         if (!consumerTokenServices.revokeToken(token)) {
             throw new HcException("退出登录失败");
         }

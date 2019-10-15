@@ -1,4 +1,4 @@
-package com.hc.hc.server.system.controller;
+package com.hc.server.system.controller;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -20,7 +20,7 @@ public class TestController {
         return "hc-server-system";
     }
 
-    @GetMapping("user")
+    @GetMapping("currentUser")
     public Principal currentUser(Principal principal) {
         return principal;
     }
