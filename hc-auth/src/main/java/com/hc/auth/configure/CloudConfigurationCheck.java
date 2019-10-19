@@ -15,7 +15,7 @@ import org.springframework.core.type.AnnotatedTypeMetadata;
 /**
  * @author ：xzyuan
  * @date ：Created in 2019/10/10 17:46
- * @description：检查是否拉取配置中心文件
+ * @description：检查是否拉取配置中心文件(Hc_Auth配置中心)
  * @version: 1.0
  */
 @Slf4j

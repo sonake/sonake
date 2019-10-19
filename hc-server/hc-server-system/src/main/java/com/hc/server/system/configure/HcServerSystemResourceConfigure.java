@@ -1,5 +1,8 @@
 package com.hc.server.system.configure;
 
+import com.hc.server.system.properties.HcSwaggerProperties;
+import org.apache.commons.lang3.StringUtils;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.oauth2.config.annotation.web.configuration.EnableResourceServer;
@@ -15,13 +18,17 @@ import org.springframework.security.oauth2.config.annotation.web.configuration.R
 @Configuration
 @EnableResourceServer
 public class HcServerSystemResourceConfigure extends ResourceServerConfigurerAdapter {
+    @Autowired
+    private HcSwaggerProperties properties;
 
     @Override
     public void configure(HttpSecurity httpSecurity) throws Exception {
+        String[] anonUrls = StringUtils.splitByWholeSeparatorPreserveAllTokens(properties.getAnonUrl(),",");
         httpSecurity.csrf().disable()
                 .requestMatchers().antMatchers("/**")
                 .and()
                 .authorizeRequests()
+                .antMatchers(anonUrls).permitAll()
                 .antMatchers("/**")
                 .authenticated();
     }

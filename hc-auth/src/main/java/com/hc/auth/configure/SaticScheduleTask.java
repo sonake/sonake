@@ -15,8 +15,8 @@ import java.time.LocalDateTime;
 /**
  * @author ：xzyuan
  * @date ：Created in 2019/10/11 11:49
- * @description：
- * @version:
+ * @description：输出认证中心的自定义配置内容
+ * @version: 1.0
  */
 @Configuration      //1.主要用于标记配置类，兼备Component的效果。
 @EnableScheduling   // 2.开启定时任务
