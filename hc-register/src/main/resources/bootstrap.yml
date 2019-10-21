@@ -10,6 +10,12 @@ spring:
     user:
       name: sonake
       password: 123456
+  boot:
+    admin:
+      client:
+        url: http://localhost:9060
+        username: sonake
+        password: 123456
 eureka:
   instance:
     #部署时替换为实际的ip地址
@@ -23,3 +29,17 @@ eureka:
     instance-info-replication-interval-seconds: 30
     service-url:
       defaultZone: http://${spring.security.user.name}:${spring.security.user.password}@${eureka.instance.hostname}:${server.port}/${server.servlet.context-path}/eureka/
+info:
+  app:
+    name: ${spring.application.name}
+    description: "@project.description@"
+    version: "@project.version@"
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+  endpoint:
+    health:
+      show-details: ALWAYS

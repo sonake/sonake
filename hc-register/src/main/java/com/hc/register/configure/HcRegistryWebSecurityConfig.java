@@ -13,7 +13,10 @@ public class HcRegistryWebSecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Override
     protected void configure(HttpSecurity httpSecurity) throws Exception{
-        httpSecurity.csrf().ignoringAntMatchers("/eureka/**");
+        httpSecurity.csrf()
+                .ignoringAntMatchers("/eureka/**")
+                .and()
+                .authorizeRequests().antMatchers("/actuator/**").permitAll();;
         super.configure(httpSecurity);
     }
 }

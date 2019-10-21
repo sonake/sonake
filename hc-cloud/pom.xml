@@ -19,6 +19,7 @@
         <module>../hc-gateway</module>
         <module>../hc-server</module>
         <module>../hc-server</module>
+        <module>../hc-monitor</module>
     </modules>
 
 

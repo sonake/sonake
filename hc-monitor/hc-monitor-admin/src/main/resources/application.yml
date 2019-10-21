@@ -1,0 +1,14 @@
+server:
+  port: 9060
+
+spring:
+  application:
+    name: hc-monitor-admin
+  boot:
+    admin:
+      ui:
+        title: ${spring.application.name}
+  security:
+    user:
+      name: sonake
+      password: 123456
