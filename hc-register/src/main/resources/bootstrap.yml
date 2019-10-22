@@ -42,4 +42,4 @@ management:
         include: '*'
   endpoint:
     health:
-      show-details: ALWAYS
+      show-details: always

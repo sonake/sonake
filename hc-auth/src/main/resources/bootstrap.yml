@@ -1,7 +1,5 @@
 server:
   port: 9020
-
-
 spring:
   application:
     name: hc-auth
@@ -30,9 +28,3 @@ eureka:
     registry-fetch-interval-seconds: 3
     service-url:
       defaultZone: http://sonake:123456@hc-register:9010/register/eureka/
-
-management:
-  endpoints:
-    web:
-      exposure:
-        include: '*'

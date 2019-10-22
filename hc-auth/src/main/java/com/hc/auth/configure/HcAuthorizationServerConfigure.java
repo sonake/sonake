@@ -3,6 +3,7 @@ package com.hc.auth.configure;
 import com.hc.auth.properties.HcAuthProperties;
 import com.hc.auth.properties.HcClientsProperties;
 import com.hc.auth.service.HcUserDetailService;
+import com.hc.auth.translator.HcWebResponseExceptionTranslator;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;

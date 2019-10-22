@@ -9,6 +9,9 @@
         <relativePath>../hc-cloud/pom.xml</relativePath>
     </parent>
     <modelVersion>4.0.0</modelVersion>
+    <modules>
+        <module>hc-monitor-admin</module>
+    </modules>
 
     <artifactId>hc-monitor</artifactId>
     <version>1.0-SNAPSHOT</version>
