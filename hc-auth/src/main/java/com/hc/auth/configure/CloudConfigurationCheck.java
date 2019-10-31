@@ -19,8 +19,8 @@ import org.springframework.core.type.AnnotatedTypeMetadata;
  * @version: 1.0
  */
 @Slf4j
-@Configuration
-@Conditional(CloudConfigurationCheck.InnerCondition.class)
+//@Configuration
+//@Conditional(CloudConfigurationCheck.InnerCondition.class)
 public class CloudConfigurationCheck implements InitializingBean {
 
     @Autowired(required = false)

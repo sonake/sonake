@@ -19,11 +19,11 @@ import org.springframework.security.oauth2.config.annotation.web.configuration.R
 @EnableResourceServer
 public class HcServerSystemResourceConfigure extends ResourceServerConfigurerAdapter {
     @Autowired
-    private HcSwaggerProperties properties;
+    private HcSwaggerProperties hcSwaggerProperties;
 
     @Override
     public void configure(HttpSecurity httpSecurity) throws Exception {
-        String[] anonUrls = StringUtils.splitByWholeSeparatorPreserveAllTokens(properties.getAnonUrl(),",");
+        String[] anonUrls = StringUtils.splitByWholeSeparatorPreserveAllTokens(hcSwaggerProperties.getAnonUrl(),",");
         httpSecurity.csrf().disable()
                 .requestMatchers().antMatchers("/**")
                 .and()

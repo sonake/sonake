@@ -1,6 +1,12 @@
 server:
   port: 9050
 spring:
+  boot:
+    admin:
+      client:
+        username: sonake
+        password: 123456
+        url: http://localhost:9060
   application:
     name: hc-config
   profiles:
@@ -15,7 +21,7 @@ spring:
           username: 760946378@qq.com
           password: yxz0921..
   rabbitmq:
-    host: 192.168.220.128
+    host: 47.105.40.52
     port: 5672
     username: guest
     password: guest
@@ -32,8 +38,17 @@ eureka:
     service-url:
       defaultZone: http://sonake:123456@127.0.0.1:9010/register/eureka/
 
+info:
+  app:
+    name: ${spring.application.name}
+    description: "@project.description@"
+    version: "@project.version@"
+
 management:
   endpoints:
     web:
       exposure:
         include: '*'
+  endpoint:
+    health:
+      show-details: always

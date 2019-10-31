@@ -14,10 +14,8 @@
         <module>../hc-register</module>
         <module>../hc-config</module>
         <module>../hc-common</module>
-        <module>../hc-business</module>
         <module>../hc-auth</module>
         <module>../hc-gateway</module>
-        <module>../hc-server</module>
         <module>../hc-server</module>
         <module>../hc-monitor</module>
     </modules>

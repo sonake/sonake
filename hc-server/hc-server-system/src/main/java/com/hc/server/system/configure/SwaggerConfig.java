@@ -1,5 +1,8 @@
 package com.hc.server.system.configure;
 
+import com.baomidou.mybatisplus.core.parser.ISqlParser;
+import com.baomidou.mybatisplus.extension.parsers.BlockAttackSqlParser;
+import com.baomidou.mybatisplus.extension.plugins.PaginationInterceptor;
 import com.hc.server.system.properties.HcSwaggerProperties;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
@@ -13,35 +16,41 @@ import springfox.documentation.spi.service.contexts.SecurityContext;
 import springfox.documentation.spring.web.plugins.Docket;
 import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
+import java.util.List;
 
 @Configuration
 @EnableSwagger2
 public class SwaggerConfig {
     @Autowired
-    private HcSwaggerProperties properties;
+    private HcSwaggerProperties hcSwaggerProperties;
+
+
+
+
 
     @Bean
     public Docket swaggerApi(){
         return new Docket(DocumentationType.SWAGGER_2)
                 .select()
-                .apis(RequestHandlerSelectors.basePackage(properties.getBasePackage()))
+                .apis(RequestHandlerSelectors.basePackage(hcSwaggerProperties.getBasePackage()))
                 .paths(PathSelectors.any())
                 .build()
                 .apiInfo(apiInfo())
-                .securitySchemes(Collections.singletonList(securityScheme(properties)))
-                .securityContexts(Collections.singletonList(securityContext(properties)));
+                .securitySchemes(Collections.singletonList(securityScheme(hcSwaggerProperties)))
+                .securityContexts(Collections.singletonList(securityContext(hcSwaggerProperties)));
     }
 
     private ApiInfo apiInfo(){
         return new ApiInfo(
-                properties.getTitle(),
-                properties.getDescription(),
-                properties.getVersion(),
+                hcSwaggerProperties.getTitle(),
+                hcSwaggerProperties.getDescription(),
+                hcSwaggerProperties.getVersion(),
                 null,
-                new Contact(properties.getAuthor(),properties.getUrl(),properties.getEmail()),
-                properties.getLicense(),properties.getLicenseUrl(), Collections.emptyList()
+                new Contact(hcSwaggerProperties.getAuthor(),hcSwaggerProperties.getUrl(),hcSwaggerProperties.getEmail()),
+                hcSwaggerProperties.getLicense(),hcSwaggerProperties.getLicenseUrl(), Collections.emptyList()
         );
     }
 
