@@ -1,6 +1,7 @@
 package com.hc.server.system.test.controller;
 
 import com.hc.server.system.test.service.IHelloService;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -16,6 +17,7 @@ import java.security.Principal;
  * @version: 1.0
  */
 @RestController
+@Slf4j
 public class TestController {
 
     @Autowired
@@ -23,6 +25,7 @@ public class TestController {
 
     @GetMapping("hello")
     public String hello(String name){
+        log.info("Feign调用hc-server-system的/hello服务");
         return this.helloService.hello(name);
     }
 
