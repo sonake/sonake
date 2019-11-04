@@ -22,7 +22,6 @@ public class HcOAuth2FeignConfigure {
             // 添加 Zuul Token
             String zuulToken = new String(Base64Utils.encode(HcConstant.ZUUL_TOKEN_VALUE.getBytes()));
             requestTemplate.header(HcConstant.ZUUL_TOKEN_HEADER, zuulToken);
-
             Object details = SecurityContextHolder.getContext().getAuthentication().getDetails();
             if(details instanceof OAuth2AuthenticationDetails){
                 String authorizationToken=((OAuth2AuthenticationDetails)details).getTokenValue();
