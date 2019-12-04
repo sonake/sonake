@@ -36,7 +36,8 @@ public class HcUserDetailService implements UserDetailsService {
             if(ToolUtil.equals(SysUser.STATUS_VALID,user.getStatus())){
                 notBlock = true;
             }
-            HcAuthUser authUser = new HcAuthUser(user.getUsername(),user.getPassword(),true,true,true,notBlock,AuthorityUtils.commaSeparatedStringToAuthorityList(perms));
+            HcAuthUser authUser = new HcAuthUser(user.getUsername(),user.getPassword(),true,true,
+                    true,notBlock,AuthorityUtils.commaSeparatedStringToAuthorityList(perms));
             return transSystemUserToAuthUser(authUser,user);
         }else {
             throw new UsernameNotFoundException("");

@@ -30,7 +30,12 @@
             <artifactId>mybatis-plus-boot-starter</artifactId>
             <version>3.1.2</version>
         </dependency>
-
+        <!--hystrix熔断-->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-netflix-hystrix</artifactId>
+        </dependency>
+        <!--微服务调用-->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-openfeign</artifactId>

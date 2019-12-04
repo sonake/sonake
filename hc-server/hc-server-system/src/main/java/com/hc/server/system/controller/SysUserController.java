@@ -62,9 +62,9 @@ public class SysUserController {
         }
     }
 
-    @DeleteMapping("/{userIds}")
+    @DeleteMapping
     @PreAuthorize("hasAnyAuthority('user:delete')")
-    public void deleteUsers(@NotBlank(message = "{required}") @PathVariable String userIds) throws HcException {
+    public void deleteUsers(@NotBlank(message = "{required}") String userIds) throws HcException {
         try {
             String[] ids = userIds.split(StringPool.COMMA);
             this.userService.deleteUsers(ids);

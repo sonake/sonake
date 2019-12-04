@@ -57,7 +57,7 @@ public class HcGatewayRequestFilter extends ZuulFilter {
      * @throws ZuulException
      */
     @Override
-    public Object run() throws ZuulException {
+    public Object run() throws ZuulException{
         RequestContext requestContext=RequestContext.getCurrentContext();
         String serviceId = (String)requestContext.get(FilterConstants.SERVICE_ID_KEY);
         HttpServletRequest request = requestContext.getRequest();

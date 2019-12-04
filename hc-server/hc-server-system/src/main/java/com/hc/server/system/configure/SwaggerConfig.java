@@ -28,9 +28,6 @@ public class SwaggerConfig {
     private HcSwaggerProperties hcSwaggerProperties;
 
 
-
-
-
     @Bean
     public Docket swaggerApi(){
         return new Docket(DocumentationType.SWAGGER_2)

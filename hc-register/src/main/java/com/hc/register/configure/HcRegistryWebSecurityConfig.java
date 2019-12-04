@@ -16,7 +16,7 @@ public class HcRegistryWebSecurityConfig extends WebSecurityConfigurerAdapter {
         httpSecurity.csrf()
                 .ignoringAntMatchers("/eureka/**")
                 .and()
-                .authorizeRequests().antMatchers("/actuator/**").permitAll();;
+                .authorizeRequests().antMatchers("/actuator/**").permitAll();
         super.configure(httpSecurity);
     }
 }

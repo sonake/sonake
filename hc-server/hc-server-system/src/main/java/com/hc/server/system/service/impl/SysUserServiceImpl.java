@@ -58,8 +58,8 @@ public class SysUserServiceImpl extends ServiceImpl<SysUserMapper, SysUser> impl
     @Transactional
     public void updateUser(SysUser user) {
         // 更新用户
-        user.setPassword(null);
-        user.setUsername(null);
+//        user.setPassword(null);
+//        user.setUsername(null);
         user.setCreateTime(null);
         user.setUpdateTime(new Date());
         updateById(user);

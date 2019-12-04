@@ -1,5 +1,7 @@
 package com.hc.server.system.configure;
 
+import com.hc.common.handler.HcAccessDeniedHandler;
+import com.hc.common.handler.HcAuthExceptionEntryPoint;
 import com.hc.server.system.properties.HcSwaggerProperties;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -7,6 +9,7 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.oauth2.config.annotation.web.configuration.EnableResourceServer;
 import org.springframework.security.oauth2.config.annotation.web.configuration.ResourceServerConfigurerAdapter;
+import org.springframework.security.oauth2.config.annotation.web.configurers.ResourceServerSecurityConfigurer;
 
 /**
  * @author ：xzyuan
@@ -20,6 +23,10 @@ import org.springframework.security.oauth2.config.annotation.web.configuration.R
 public class HcServerSystemResourceConfigure extends ResourceServerConfigurerAdapter {
     @Autowired
     private HcSwaggerProperties hcSwaggerProperties;
+    @Autowired
+    private HcAccessDeniedHandler hcAccessDeniedHandler;
+    @Autowired
+    private HcAuthExceptionEntryPoint hcAuthExceptionEntryPoint;
 
     @Override
     public void configure(HttpSecurity httpSecurity) throws Exception {
@@ -31,5 +38,11 @@ public class HcServerSystemResourceConfigure extends ResourceServerConfigurerAda
                 .antMatchers(anonUrls).permitAll()
                 .antMatchers("/**")
                 .authenticated();
+    }
+    @Override
+    public void configure(ResourceServerSecurityConfigurer resourceServerSecurityConfigurer){
+        resourceServerSecurityConfigurer
+                .authenticationEntryPoint(hcAuthExceptionEntryPoint)
+                .accessDeniedHandler(hcAccessDeniedHandler);
     }
 }

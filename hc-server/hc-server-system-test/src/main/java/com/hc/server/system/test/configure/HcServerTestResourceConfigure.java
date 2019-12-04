@@ -1,9 +1,13 @@
 package com.hc.server.system.test.configure;
 
+import com.hc.common.handler.HcAccessDeniedHandler;
+import com.hc.common.handler.HcAuthExceptionEntryPoint;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.oauth2.config.annotation.web.configuration.EnableResourceServer;
 import org.springframework.security.oauth2.config.annotation.web.configuration.ResourceServerConfigurerAdapter;
+import org.springframework.security.oauth2.config.annotation.web.configurers.ResourceServerSecurityConfigurer;
 
 /**
  * @author ：xzyuan
@@ -16,13 +20,27 @@ import org.springframework.security.oauth2.config.annotation.web.configuration.R
 @EnableResourceServer
 public class HcServerTestResourceConfigure extends ResourceServerConfigurerAdapter {
 
+    @Autowired
+    private HcAccessDeniedHandler hcAccessDeniedHandler;
+    @Autowired
+    private HcAuthExceptionEntryPoint hcAuthExceptionEntryPoint;
+
     @Override
     public void configure(HttpSecurity httpSecurity) throws Exception {
         httpSecurity.csrf().disable()
                 .requestMatchers().antMatchers("/**")
                 .and()
+                .authorizeRequests().antMatchers("/actuator/**").permitAll()
+                .and()
                 .authorizeRequests()
                 .antMatchers("/**")
                 .authenticated();
+    }
+
+    @Override
+    public void configure(ResourceServerSecurityConfigurer resourceServerSecurityConfigurer){
+        resourceServerSecurityConfigurer
+                .authenticationEntryPoint(hcAuthExceptionEntryPoint)
+                .accessDeniedHandler(hcAccessDeniedHandler);
     }
 }
