@@ -1,0 +1,67 @@
+server:
+  port: 9042
+
+spring:
+  application:
+    name: hc-server-test
+  profiles:
+    active: dev
+  cloud:
+    #配置中心
+    config:
+      fail-fast: true
+      name: ${spring.application.name}
+      profile: ${spring.profiles.active}
+      discovery:
+        enabled: true
+        service-id: hc-config
+    nacos:
+      discovery:
+        server-addr: ${nacos.url}:9010
+  boot:
+    admin:
+      client:
+        url: http://localhost:9060
+        username: sonake
+        password: 123456
+  zipkin:
+    sender:
+      type: rabbit
+  sleuth:
+    sampler:
+      #默认值为0.1，即采样率才1/10，发送10笔请求只有一笔会被采集。为了测试方便，我们可以将它设置为1，即100%采样
+      probability: 1
+  rabbitmq:
+    host: 47.105.40.52
+    port: 5672
+    username: guest
+    password: guest
+  autoconfigure:
+    exclude: org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration,com.baomidou.dynamic.datasource.spring.boot.autoconfigure.DynamicDataSourceAutoConfiguration
+
+feign:
+  hystrix:
+    enabled: true
+#这样做会把SecurityContext对象从你当前主线程传输到Hystrix线程
+hystrix:
+  shareSecurityContext: true
+
+info:
+  app:
+    name: ${spring.application.name}
+    description: "@project.description@"
+    version: "@project.version@"
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+  endpoint:
+    health:
+      show-details: ALWAYS
+
+security:
+  oauth2:
+    resource:
+      id: ${spring.application.name}
+      user-info-uri: http://localhost:9030/auth/user

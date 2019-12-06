@@ -1,11 +1,11 @@
 server:
-  port: 9020
+  port: 9041
+
 spring:
   application:
-    name: hc-auth
+    name: hc-server-system
   profiles:
     active: dev
-
   cloud:
     #配置中心
     config:
@@ -24,15 +24,20 @@ spring:
         url: http://localhost:9060
         username: sonake
         password: 123456
-
+  zipkin:
+    sender:
+      type: rabbit
+  sleuth:
+    sampler:
+      probability: 1
   rabbitmq:
     host: 47.105.40.52
     port: 5672
     username: guest
     password: guest
-
   datasource:
     dynamic:
+      p6spy: true
       hikari:
         connection-timeout: 30000
         max-lifetime: 1800000
@@ -47,7 +52,6 @@ spring:
           password: Jdkc0912..
           driver-class-name: com.mysql.cj.jdbc.Driver
           url: jdbc:mysql://47.105.40.52:3306/sonake?useUnicode=true&characterEncoding=UTF-8&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=GMT%2b8
-
 mybatis-plus:
   type-aliases-package: com.hc.common.bean.system
   mapper-locations: classpath:mapper/*.xml
@@ -55,40 +59,6 @@ mybatis-plus:
     jdbc-type-for-null: null
   global-config:
     banner: false
-
-  redis:
-    database: 0
-    host: 127.0.0.1
-    port: 6379
-    lettuce:
-      pool:
-        min-idle: 8
-        max-idle: 500
-        max-active: 2000
-        max-wait: 10000
-    timeout: 5000
-
-hc:
-  auth:
-    accessTokenValiditySeconds: 186400
-    refreshTokenValiditySeconds: 604800
-    clients:
-      - client: hc
-        secret: 123456
-        grantType: password,authorization_code,refresh_token
-        scope: all
-      - client: swagger
-        secret: 123456
-        grantType: password
-        scope: test
-    code:
-      time: 12000
-      type: png
-      width: 115
-      height: 42
-      length: 4
-      charType: 2
-    anonUrl: /captcha,/actuator/**
 
 info:
   app:
@@ -103,3 +73,26 @@ management:
   endpoint:
     health:
       show-details: ALWAYS
+
+hc:
+  server:
+    system:
+      basePackage: com.hc.server.system.controller
+      title: Hc-Server-System API
+      description: Hc-System-System API
+      version: 1.0
+      author: Sonake
+      url: https://www.sonake.com
+      email: 760946378@qq.com
+      license: Apache 2.0
+      licenseUrl: https://www:apache.org/licenses/LICENSE-2.0.html
+      anonUrl: /swagger-ui.html,/webjars/**,/swagger-resources/**,/v2/api-docs/**,/,/csrf,/actuator/**
+      grantUrl: http://${hc-gateway}:9030/auth/oauth/token
+      name: hc_oauth_swagger
+      scope: test
+
+security:
+  oauth2:
+    resource:
+      id: ${spring.application.name}
+      user-info-uri: http://localhost:9030/auth/user
