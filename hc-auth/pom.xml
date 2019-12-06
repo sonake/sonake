@@ -20,6 +20,13 @@
 
     <dependencies>
 
+
+        <!--elk logstash-->
+        <dependency>
+            <groupId>net.logstash.logback</groupId>
+            <artifactId>logstash-logback-encoder</artifactId>
+            <version>6.1</version>
+        </dependency>
         <!--lettuce，redis客户端需要-->
         <dependency>
             <groupId>org.apache.commons</groupId>

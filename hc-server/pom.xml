@@ -19,6 +19,12 @@
 
 
     <dependencies>
+        <!--elk logstash-->
+        <dependency>
+            <groupId>net.logstash.logback</groupId>
+            <artifactId>logstash-logback-encoder</artifactId>
+            <version>6.1</version>
+        </dependency>
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-zipkin</artifactId>
@@ -46,6 +52,7 @@
             <artifactId>hc-common</artifactId>
             <version>1.0-SNAPSHOT</version>
         </dependency>
+        <!--链路追踪-->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-sleuth</artifactId>

@@ -1,0 +1,405 @@
+2019-12-05 12:44:16 INFO  [hc-auth,,,] main org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$37882a38] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-05 12:44:17 INFO  [hc-auth,,,] main org.springframework.cloud.netflix.eureka.InstanceInfoFactory Setting initial instance status as: STARTING
+2019-12-05 12:44:17 INFO  [hc-auth,,,] main com.netflix.discovery.DiscoveryClient Initializing Eureka in region us-east-1
+2019-12-05 12:44:17 INFO  [hc-auth,,,] main com.netflix.discovery.provider.DiscoveryJerseyProvider Using JSON encoding codec LegacyJacksonJson
+2019-12-05 12:44:17 INFO  [hc-auth,,,] main com.netflix.discovery.provider.DiscoveryJerseyProvider Using JSON decoding codec LegacyJacksonJson
+2019-12-05 12:44:18 INFO  [hc-auth,,,] main com.netflix.discovery.provider.DiscoveryJerseyProvider Using XML encoding codec XStreamXml
+2019-12-05 12:44:18 INFO  [hc-auth,,,] main com.netflix.discovery.provider.DiscoveryJerseyProvider Using XML decoding codec XStreamXml
+2019-12-05 12:44:18 INFO  [hc-auth,,,] main com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver Resolving eureka endpoints via configuration
+2019-12-05 12:44:18 INFO  [hc-auth,,,] main com.netflix.discovery.DiscoveryClient Disable delta property : false
+2019-12-05 12:44:18 INFO  [hc-auth,,,] main com.netflix.discovery.DiscoveryClient Single vip registry refresh property : null
+2019-12-05 12:44:18 INFO  [hc-auth,,,] main com.netflix.discovery.DiscoveryClient Force full registry fetch : false
+2019-12-05 12:44:18 INFO  [hc-auth,,,] main com.netflix.discovery.DiscoveryClient Application is null : false
+2019-12-05 12:44:18 INFO  [hc-auth,,,] main com.netflix.discovery.DiscoveryClient Registered Applications size is zero : true
+2019-12-05 12:44:18 INFO  [hc-auth,,,] main com.netflix.discovery.DiscoveryClient Application version is -1: true
+2019-12-05 12:44:18 INFO  [hc-auth,,,] main com.netflix.discovery.DiscoveryClient Getting all instance registry info from the eureka server
+2019-12-05 12:44:19 INFO  [hc-auth,,,] main com.netflix.discovery.DiscoveryClient The response status is 200
+2019-12-05 12:44:19 INFO  [hc-auth,,,] main com.netflix.discovery.DiscoveryClient Starting heartbeat executor: renew interval is: 30
+2019-12-05 12:44:19 INFO  [hc-auth,,,] main com.netflix.discovery.InstanceInfoReplicator InstanceInfoReplicator onDemand update allowed rate per min is 4
+2019-12-05 12:44:19 INFO  [hc-auth,,,] main com.netflix.discovery.DiscoveryClient Discovery Client initialized at timestamp 1575521059054 with initial instances count: 2
+2019-12-05 12:44:19 INFO  [hc-auth,,,] main org.springframework.cloud.netflix.eureka.serviceregistry.EurekaServiceRegistry Registering application HC-AUTH with eureka with status UP
+2019-12-05 12:44:19 INFO  [hc-auth,,,] main com.netflix.discovery.DiscoveryClient Saw local status change event StatusChangeEvent [timestamp=1575521059088, current=UP, previous=STARTING]
+2019-12-05 12:44:19 INFO  [hc-auth,,,] DiscoveryClient-InstanceInfoReplicator-0 com.netflix.discovery.DiscoveryClient DiscoveryClient_HC-AUTH/DESKTOP-R1RTOA8:hc-auth:9020: registering service...
+2019-12-05 12:44:19 INFO  [hc-auth,,,] main org.springframework.cloud.config.client.ConfigServicePropertySourceLocator Fetching config from server at : http://DESKTOP-R1RTOA8:9050/
+2019-12-05 12:44:21 INFO  [hc-auth,,,] main org.springframework.cloud.config.client.ConfigServicePropertySourceLocator Located environment: name=hc-auth, profiles=[dev], label=null, version=4e957313e00d4ddce675c635e17cf802649eddad, state=null
+2019-12-05 12:44:21 INFO  [hc-auth,,,] main org.springframework.cloud.bootstrap.config.PropertySourceBootstrapConfiguration Located property source: CompositePropertySource {name='configService', propertySources=[MapPropertySource {name='configClient'}, MapPropertySource {name='https://github.com/sonake/server-config.git/sonake-cfg/hc-auth-dev.yml'}]}
+2019-12-05 12:44:21 INFO  [hc-auth,,,] main com.hc.auth.HcAuthApplication The following profiles are active: dev
+2019-12-05 12:44:22 INFO  [hc-auth,,,] main org.springframework.data.repository.config.RepositoryConfigurationDelegate Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-12-05 12:44:22 INFO  [hc-auth,,,] main org.springframework.data.repository.config.RepositoryConfigurationDelegate Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-12-05 12:44:22 INFO  [hc-auth,,,] main org.springframework.data.repository.config.RepositoryConfigurationDelegate Finished Spring Data repository scanning in 17ms. Found 0 repository interfaces.
+2019-12-05 12:44:22 INFO  [hc-auth,,,] main org.springframework.cloud.context.scope.GenericScope BeanFactory id=f1481bec-d0ee-3a00-951b-9cf42218cc3b
+2019-12-05 12:44:22 INFO  [hc-auth,,,] main org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$1b6e273b] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-05 12:44:22 INFO  [hc-auth,,,] main org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker Bean 'spring.datasource.dynamic-com.baomidou.dynamic.datasource.spring.boot.autoconfigure.DynamicDataSourceProperties' of type [com.baomidou.dynamic.datasource.spring.boot.autoconfigure.DynamicDataSourceProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-05 12:44:22 INFO  [hc-auth,,,] main org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker Bean 'com.baomidou.dynamic.datasource.spring.boot.autoconfigure.DynamicDataSourceAutoConfiguration' of type [com.baomidou.dynamic.datasource.spring.boot.autoconfigure.DynamicDataSourceAutoConfiguration$$EnhancerBySpringCGLIB$$84fc980c] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-05 12:44:22 INFO  [hc-auth,,,] main org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker Bean 'dsProcessor' of type [com.baomidou.dynamic.datasource.processor.DsHeaderProcessor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-05 12:44:22 INFO  [hc-auth,,,] main org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker Bean 'dynamicDatasourceAnnotationAdvisor' of type [com.baomidou.dynamic.datasource.aop.DynamicDataSourceAnnotationAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-05 12:44:22 INFO  [hc-auth,,,] main org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$37882a38] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-05 12:44:23 INFO  [hc-auth,,,] main org.springframework.boot.web.embedded.tomcat.TomcatWebServer Tomcat initialized with port(s): 9020 (http)
+2019-12-05 12:44:23 INFO  [hc-auth,,,] main org.apache.coyote.http11.Http11NioProtocol Initializing ProtocolHandler ["http-nio-9020"]
+2019-12-05 12:44:23 INFO  [hc-auth,,,] main org.apache.catalina.core.StandardService Starting service [Tomcat]
+2019-12-05 12:44:23 INFO  [hc-auth,,,] main org.apache.catalina.core.StandardEngine Starting Servlet engine: [Apache Tomcat/9.0.21]
+2019-12-05 12:44:23 INFO  [hc-auth,,,] main org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] Initializing Spring embedded WebApplicationContext
+2019-12-05 12:44:23 INFO  [hc-auth,,,] main org.springframework.web.context.ContextLoader Root WebApplicationContext: initialization completed in 1547 ms
+2019-12-05 12:44:23 INFO  [hc-auth,,,] main com.netflix.config.sources.URLConfigurationSource To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2019-12-05 12:44:23 INFO  [hc-auth,,,] main com.netflix.config.DynamicPropertyFactory DynamicPropertyFactory is initialized with configuration sources: com.netflix.config.ConcurrentCompositeConfiguration@7de2bdc7
+2019-12-05 12:44:23 INFO  [hc-auth,,,] main com.zaxxer.hikari.HikariDataSource base - Starting...
+2019-12-05 12:44:24 INFO  [hc-auth,,,] main com.zaxxer.hikari.HikariDataSource base - Start completed.
+2019-12-05 12:44:24 INFO  [hc-auth,,,] main com.baomidou.dynamic.datasource.DynamicRoutingDataSource 初始共加载 1 个数据源
+2019-12-05 12:44:24 INFO  [hc-auth,,,] main com.baomidou.dynamic.datasource.DynamicRoutingDataSource 动态数据源-加载 base 成功
+2019-12-05 12:44:24 INFO  [hc-auth,,,] main com.baomidou.dynamic.datasource.DynamicRoutingDataSource 当前的默认数据源是单数据源，数据源名为 base
+2019-12-05 12:44:24 INFO  [hc-auth,,,] main org.springframework.boot.actuate.endpoint.web.ServletEndpointRegistrar Registered '/actuator/jolokia' to jolokia-actuator-endpoint
+2019-12-05 12:44:25 INFO  [hc-auth,,,] main org.springframework.security.web.DefaultSecurityFilterChain Creating filter chain: OrRequestMatcher [requestMatchers=[Ant [pattern='/oauth/token'], Ant [pattern='/oauth/token_key'], Ant [pattern='/oauth/check_token']]], [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@7164e54, org.springframework.security.web.context.SecurityContextPersistenceFilter@55c78556, org.springframework.security.web.header.HeaderWriterFilter@5d50e7f6, org.springframework.security.web.authentication.logout.LogoutFilter@7bdaf563, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@7f69c4c0, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@12d28106, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@21a462ce, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@7f36cd8f, org.springframework.security.web.session.SessionManagementFilter@649a6d88, org.springframework.security.web.access.ExceptionTranslationFilter@74ed1d35, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@6956081d]
+2019-12-05 12:44:25 INFO  [hc-auth,,,] main org.springframework.security.web.DefaultSecurityFilterChain Creating filter chain: OrRequestMatcher [requestMatchers=[Ant [pattern='/oauth/**']]], [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@78a0d664, org.springframework.security.web.context.SecurityContextPersistenceFilter@299cddbf, org.springframework.security.web.header.HeaderWriterFilter@5f5fb335, org.springframework.security.web.authentication.logout.LogoutFilter@e8fb390, com.hc.auth.filter.ValidateCodeFilter@78a34c47, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@31beb0d0, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@13da6bc9, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1237aa73, org.springframework.security.web.session.SessionManagementFilter@715d82a0, org.springframework.security.web.access.ExceptionTranslationFilter@492a220e, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@36e9794c]
+2019-12-05 12:44:26 INFO  [hc-auth,,,] main org.springframework.security.web.DefaultSecurityFilterChain Creating filter chain: OrRequestMatcher [requestMatchers=[Ant [pattern='/**']]], [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@247d44b4, org.springframework.security.web.context.SecurityContextPersistenceFilter@108d59b6, org.springframework.security.web.header.HeaderWriterFilter@65dafe50, org.springframework.security.web.authentication.logout.LogoutFilter@3687b83c, org.springframework.security.oauth2.provider.authentication.OAuth2AuthenticationProcessingFilter@5ce03a9d, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@38d9c9c4, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@a4388f1, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@640028f2, org.springframework.security.web.session.SessionManagementFilter@29b2a94c, org.springframework.security.web.access.ExceptionTranslationFilter@48cc060d, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@7be3a837]
+2019-12-05 12:44:26 INFO  [hc-auth,,,] main com.netflix.config.sources.URLConfigurationSource To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2019-12-05 12:44:26 INFO  [hc-auth,,,] main org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor Initializing ExecutorService 'applicationTaskExecutor'
+2019-12-05 12:44:26 INFO  [hc-auth,,,] main org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler Initializing ExecutorService
+2019-12-05 12:44:26 INFO  [hc-auth,,,] main org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver Exposing 20 endpoint(s) beneath base path '/actuator'
+2019-12-05 12:44:26 INFO  [hc-auth,,,] main org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler Initializing ExecutorService 'taskScheduler'
+2019-12-05 12:44:28 INFO  [hc-auth,,,] main com.netflix.discovery.DiscoveryClient Shutting down DiscoveryClient ...
+2019-12-05 12:44:31 INFO  [hc-auth,,,] main com.netflix.discovery.DiscoveryClient Unregistering ...
+2019-12-05 12:44:31 INFO  [hc-auth,,,] main com.netflix.discovery.DiscoveryClient DiscoveryClient_HC-AUTH/DESKTOP-R1RTOA8:hc-auth:9020 - deregister  status: 200
+2019-12-05 12:44:31 INFO  [hc-auth,,,] main com.netflix.discovery.DiscoveryClient Completed shut down of DiscoveryClient
+2019-12-05 12:44:31 INFO  [hc-auth,,,] main org.springframework.cloud.netflix.eureka.InstanceInfoFactory Setting initial instance status as: STARTING
+2019-12-05 12:44:31 INFO  [hc-auth,,,] main com.netflix.discovery.DiscoveryClient Initializing Eureka in region us-east-1
+2019-12-05 12:44:31 INFO  [hc-auth,,,] main com.netflix.discovery.provider.DiscoveryJerseyProvider Using JSON encoding codec LegacyJacksonJson
+2019-12-05 12:44:31 INFO  [hc-auth,,,] main com.netflix.discovery.provider.DiscoveryJerseyProvider Using JSON decoding codec LegacyJacksonJson
+2019-12-05 12:44:31 INFO  [hc-auth,,,] main com.netflix.discovery.provider.DiscoveryJerseyProvider Using XML encoding codec XStreamXml
+2019-12-05 12:44:31 INFO  [hc-auth,,,] main com.netflix.discovery.provider.DiscoveryJerseyProvider Using XML decoding codec XStreamXml
+2019-12-05 12:44:31 INFO  [hc-auth,,,] main com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver Resolving eureka endpoints via configuration
+2019-12-05 12:44:31 INFO  [hc-auth,,,] main com.netflix.discovery.DiscoveryClient Disable delta property : false
+2019-12-05 12:44:31 INFO  [hc-auth,,,] main com.netflix.discovery.DiscoveryClient Single vip registry refresh property : null
+2019-12-05 12:44:31 INFO  [hc-auth,,,] main com.netflix.discovery.DiscoveryClient Force full registry fetch : false
+2019-12-05 12:44:31 INFO  [hc-auth,,,] main com.netflix.discovery.DiscoveryClient Application is null : false
+2019-12-05 12:44:31 INFO  [hc-auth,,,] main com.netflix.discovery.DiscoveryClient Registered Applications size is zero : true
+2019-12-05 12:44:31 INFO  [hc-auth,,,] main com.netflix.discovery.DiscoveryClient Application version is -1: true
+2019-12-05 12:44:31 INFO  [hc-auth,,,] main com.netflix.discovery.DiscoveryClient Getting all instance registry info from the eureka server
+2019-12-05 12:44:31 INFO  [hc-auth,,,] main com.netflix.discovery.DiscoveryClient The response status is 200
+2019-12-05 12:44:31 INFO  [hc-auth,,,] main com.netflix.discovery.DiscoveryClient Starting heartbeat executor: renew interval is: 30
+2019-12-05 12:44:31 INFO  [hc-auth,,,] main com.netflix.discovery.InstanceInfoReplicator InstanceInfoReplicator onDemand update allowed rate per min is 4
+2019-12-05 12:44:31 INFO  [hc-auth,,,] main com.netflix.discovery.DiscoveryClient Discovery Client initialized at timestamp 1575521071480 with initial instances count: 3
+2019-12-05 12:44:31 INFO  [hc-auth,,,] main org.springframework.cloud.netflix.eureka.serviceregistry.EurekaServiceRegistry Registering application HC-AUTH with eureka with status UP
+2019-12-05 12:44:31 INFO  [hc-auth,,,] main com.netflix.discovery.DiscoveryClient Saw local status change event StatusChangeEvent [timestamp=1575521071482, current=UP, previous=STARTING]
+2019-12-05 12:44:31 INFO  [hc-auth,,,] DiscoveryClient-InstanceInfoReplicator-0 com.netflix.discovery.DiscoveryClient DiscoveryClient_HC-AUTH/DESKTOP-R1RTOA8:hc-auth:9020: registering service...
+2019-12-05 12:44:31 INFO  [hc-auth,,,] DiscoveryClient-InstanceInfoReplicator-0 com.netflix.discovery.DiscoveryClient DiscoveryClient_HC-AUTH/DESKTOP-R1RTOA8:hc-auth:9020 - registration status: 204
+2019-12-05 12:44:31 INFO  [hc-auth,,,] main org.apache.coyote.http11.Http11NioProtocol Starting ProtocolHandler ["http-nio-9020"]
+2019-12-05 12:44:31 INFO  [hc-auth,,,] main org.springframework.boot.web.embedded.tomcat.TomcatWebServer Tomcat started on port(s): 9020 (http) with context path ''
+2019-12-05 12:44:31 INFO  [hc-auth,,,] main org.springframework.cloud.netflix.eureka.serviceregistry.EurekaAutoServiceRegistration Updating port to 9020
+2019-12-05 12:44:31 INFO  [hc-auth,,,] main org.springframework.cloud.netflix.eureka.serviceregistry.EurekaAutoServiceRegistration Updating port to 9020
+2019-12-05 12:44:31 INFO  [hc-auth,,,] main com.hc.auth.HcAuthApplication Started HcAuthApplication in 17.034 seconds (JVM running for 18.36)
+2019-12-05 12:44:31 INFO  [hc-auth,,,] registrationTask1 de.codecentric.boot.admin.client.registration.ApplicationRegistrator Application registered itself as eaa3ebb2d5b7
+2019-12-05 12:44:31 INFO  [hc-auth,,,] http-nio-9020-exec-1 org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-12-05 12:44:31 INFO  [hc-auth,,,] http-nio-9020-exec-1 org.springframework.web.servlet.DispatcherServlet Initializing Servlet 'dispatcherServlet'
+2019-12-05 12:44:31 INFO  [hc-auth,,,] http-nio-9020-exec-1 org.springframework.web.servlet.DispatcherServlet Completed initialization in 9 ms
+2019-12-05 12:44:31 INFO  [hc-auth,,,] http-nio-9020-exec-1 org.springframework.cloud.config.client.ConfigServicePropertySourceLocator Fetching config from server at : http://DESKTOP-R1RTOA8:9050/
+2019-12-05 12:44:32 INFO  [hc-auth,,,] RMI TCP Connection(8)-192.168.41.90 org.springframework.cloud.config.client.ConfigServicePropertySourceLocator Fetching config from server at : http://DESKTOP-R1RTOA8:9050/
+2019-12-05 12:44:35 INFO  [hc-auth,,,] RMI TCP Connection(8)-192.168.41.90 org.springframework.cloud.config.client.ConfigServicePropertySourceLocator Located environment: name=hc-auth, profiles=[dev], label=null, version=4e957313e00d4ddce675c635e17cf802649eddad, state=null
+2019-12-05 12:44:35 INFO  [hc-auth,,,] parallel-1 io.lettuce.core.EpollProvider Starting without optional epoll library
+2019-12-05 12:44:35 INFO  [hc-auth,,,] parallel-1 io.lettuce.core.KqueueProvider Starting without optional kqueue library
+2019-12-05 12:44:37 INFO  [hc-auth,,,] http-nio-9020-exec-1 org.springframework.cloud.config.client.ConfigServicePropertySourceLocator Located environment: name=hc-auth, profiles=[dev], label=null, version=4e957313e00d4ddce675c635e17cf802649eddad, state=null
+2019-12-05 12:49:31 INFO  [hc-auth,,,] AsyncResolver-bootstrap-executor-0 com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver Resolving eureka endpoints via configuration
+2019-12-05 12:49:51 INFO  [hc-auth,,,] http-nio-9020-exec-1 org.springframework.cloud.config.client.ConfigServicePropertySourceLocator Fetching config from server at : http://DESKTOP-R1RTOA8:9050/
+2019-12-05 12:49:55 INFO  [hc-auth,,,] http-nio-9020-exec-1 org.springframework.cloud.config.client.ConfigServicePropertySourceLocator Located environment: name=hc-auth, profiles=[dev], label=null, version=4e957313e00d4ddce675c635e17cf802649eddad, state=null
+2019-12-05 12:54:31 INFO  [hc-auth,,,] AsyncResolver-bootstrap-executor-0 com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver Resolving eureka endpoints via configuration
+2019-12-05 12:55:11 INFO  [hc-auth,,,] http-nio-9020-exec-10 org.springframework.cloud.config.client.ConfigServicePropertySourceLocator Fetching config from server at : http://DESKTOP-R1RTOA8:9050/
+2019-12-05 12:55:15 INFO  [hc-auth,,,] http-nio-9020-exec-10 org.springframework.cloud.config.client.ConfigServicePropertySourceLocator Located environment: name=hc-auth, profiles=[dev], label=null, version=4e957313e00d4ddce675c635e17cf802649eddad, state=null
+2019-12-05 12:59:31 INFO  [hc-auth,,,] AsyncResolver-bootstrap-executor-0 com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver Resolving eureka endpoints via configuration
+2019-12-05 13:00:11 INFO  [hc-auth,,,] http-nio-9020-exec-9 org.springframework.cloud.config.client.ConfigServicePropertySourceLocator Fetching config from server at : http://DESKTOP-R1RTOA8:9050/
+2019-12-05 13:00:15 INFO  [hc-auth,,,] http-nio-9020-exec-9 org.springframework.cloud.config.client.ConfigServicePropertySourceLocator Located environment: name=hc-auth, profiles=[dev], label=null, version=4e957313e00d4ddce675c635e17cf802649eddad, state=null
+2019-12-05 13:04:31 INFO  [hc-auth,,,] AsyncResolver-bootstrap-executor-0 com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver Resolving eureka endpoints via configuration
+2019-12-05 13:05:31 INFO  [hc-auth,,,] http-nio-9020-exec-8 org.springframework.cloud.config.client.ConfigServicePropertySourceLocator Fetching config from server at : http://DESKTOP-R1RTOA8:9050/
+2019-12-05 13:05:35 INFO  [hc-auth,,,] http-nio-9020-exec-8 org.springframework.cloud.config.client.ConfigServicePropertySourceLocator Located environment: name=hc-auth, profiles=[dev], label=null, version=4e957313e00d4ddce675c635e17cf802649eddad, state=null
+2019-12-05 13:09:31 INFO  [hc-auth,,,] AsyncResolver-bootstrap-executor-0 com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver Resolving eureka endpoints via configuration
+2019-12-05 13:10:31 INFO  [hc-auth,,,] http-nio-9020-exec-6 org.springframework.cloud.config.client.ConfigServicePropertySourceLocator Fetching config from server at : http://DESKTOP-R1RTOA8:9050/
+2019-12-05 13:10:35 INFO  [hc-auth,,,] http-nio-9020-exec-6 org.springframework.cloud.config.client.ConfigServicePropertySourceLocator Located environment: name=hc-auth, profiles=[dev], label=null, version=4e957313e00d4ddce675c635e17cf802649eddad, state=null
+2019-12-05 13:14:31 INFO  [hc-auth,,,] AsyncResolver-bootstrap-executor-0 com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver Resolving eureka endpoints via configuration
+2019-12-05 13:15:51 INFO  [hc-auth,,,] http-nio-9020-exec-7 org.springframework.cloud.config.client.ConfigServicePropertySourceLocator Fetching config from server at : http://DESKTOP-R1RTOA8:9050/
+2019-12-05 13:15:55 INFO  [hc-auth,,,] http-nio-9020-exec-7 org.springframework.cloud.config.client.ConfigServicePropertySourceLocator Located environment: name=hc-auth, profiles=[dev], label=null, version=4e957313e00d4ddce675c635e17cf802649eddad, state=null
+2019-12-05 13:19:31 INFO  [hc-auth,,,] AsyncResolver-bootstrap-executor-0 com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver Resolving eureka endpoints via configuration
+2019-12-05 13:21:11 INFO  [hc-auth,,,] http-nio-9020-exec-2 org.springframework.cloud.config.client.ConfigServicePropertySourceLocator Fetching config from server at : http://DESKTOP-R1RTOA8:9050/
+2019-12-05 13:21:16 INFO  [hc-auth,,,] http-nio-9020-exec-2 org.springframework.cloud.config.client.ConfigServicePropertySourceLocator Located environment: name=hc-auth, profiles=[dev], label=null, version=4e957313e00d4ddce675c635e17cf802649eddad, state=null
+2019-12-05 13:24:31 INFO  [hc-auth,,,] AsyncResolver-bootstrap-executor-0 com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver Resolving eureka endpoints via configuration
+2019-12-05 13:26:31 INFO  [hc-auth,,,] http-nio-9020-exec-2 org.springframework.cloud.config.client.ConfigServicePropertySourceLocator Fetching config from server at : http://DESKTOP-R1RTOA8:9050/
+2019-12-05 13:26:35 INFO  [hc-auth,,,] http-nio-9020-exec-2 org.springframework.cloud.config.client.ConfigServicePropertySourceLocator Located environment: name=hc-auth, profiles=[dev], label=null, version=4e957313e00d4ddce675c635e17cf802649eddad, state=null
+2019-12-05 13:29:31 INFO  [hc-auth,,,] AsyncResolver-bootstrap-executor-0 com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver Resolving eureka endpoints via configuration
+2019-12-05 13:31:31 INFO  [hc-auth,,,] http-nio-9020-exec-3 org.springframework.cloud.config.client.ConfigServicePropertySourceLocator Fetching config from server at : http://DESKTOP-R1RTOA8:9050/
+2019-12-05 13:31:35 INFO  [hc-auth,,,] http-nio-9020-exec-3 org.springframework.cloud.config.client.ConfigServicePropertySourceLocator Located environment: name=hc-auth, profiles=[dev], label=null, version=4e957313e00d4ddce675c635e17cf802649eddad, state=null
+2019-12-05 13:34:31 INFO  [hc-auth,,,] AsyncResolver-bootstrap-executor-0 com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver Resolving eureka endpoints via configuration
+2019-12-05 13:36:51 INFO  [hc-auth,,,] http-nio-9020-exec-7 org.springframework.cloud.config.client.ConfigServicePropertySourceLocator Fetching config from server at : http://DESKTOP-R1RTOA8:9050/
+2019-12-05 13:36:55 INFO  [hc-auth,,,] http-nio-9020-exec-7 org.springframework.cloud.config.client.ConfigServicePropertySourceLocator Located environment: name=hc-auth, profiles=[dev], label=null, version=4e957313e00d4ddce675c635e17cf802649eddad, state=null
+2019-12-05 13:39:31 INFO  [hc-auth,,,] AsyncResolver-bootstrap-executor-0 com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver Resolving eureka endpoints via configuration
+2019-12-05 13:42:11 INFO  [hc-auth,,,] http-nio-9020-exec-9 org.springframework.cloud.config.client.ConfigServicePropertySourceLocator Fetching config from server at : http://DESKTOP-R1RTOA8:9050/
+2019-12-05 13:42:15 INFO  [hc-auth,,,] http-nio-9020-exec-9 org.springframework.cloud.config.client.ConfigServicePropertySourceLocator Located environment: name=hc-auth, profiles=[dev], label=null, version=4e957313e00d4ddce675c635e17cf802649eddad, state=null
+2019-12-05 13:44:31 INFO  [hc-auth,,,] AsyncResolver-bootstrap-executor-0 com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver Resolving eureka endpoints via configuration
+2019-12-05 13:47:31 INFO  [hc-auth,,,] http-nio-9020-exec-9 org.springframework.cloud.config.client.ConfigServicePropertySourceLocator Fetching config from server at : http://DESKTOP-R1RTOA8:9050/
+2019-12-05 13:47:35 INFO  [hc-auth,,,] http-nio-9020-exec-9 org.springframework.cloud.config.client.ConfigServicePropertySourceLocator Located environment: name=hc-auth, profiles=[dev], label=null, version=4e957313e00d4ddce675c635e17cf802649eddad, state=null
+2019-12-05 13:49:31 INFO  [hc-auth,,,] AsyncResolver-bootstrap-executor-0 com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver Resolving eureka endpoints via configuration
+2019-12-05 13:52:32 INFO  [hc-auth,,,] http-nio-9020-exec-6 org.springframework.cloud.config.client.ConfigServicePropertySourceLocator Fetching config from server at : http://DESKTOP-R1RTOA8:9050/
+2019-12-05 13:52:36 INFO  [hc-auth,,,] http-nio-9020-exec-6 org.springframework.cloud.config.client.ConfigServicePropertySourceLocator Located environment: name=hc-auth, profiles=[dev], label=null, version=4e957313e00d4ddce675c635e17cf802649eddad, state=null
+2019-12-05 13:54:31 INFO  [hc-auth,,,] AsyncResolver-bootstrap-executor-0 com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver Resolving eureka endpoints via configuration
+2019-12-05 13:57:52 INFO  [hc-auth,,,] http-nio-9020-exec-4 org.springframework.cloud.config.client.ConfigServicePropertySourceLocator Fetching config from server at : http://DESKTOP-R1RTOA8:9050/
+2019-12-05 13:57:56 INFO  [hc-auth,,,] http-nio-9020-exec-4 org.springframework.cloud.config.client.ConfigServicePropertySourceLocator Located environment: name=hc-auth, profiles=[dev], label=null, version=4e957313e00d4ddce675c635e17cf802649eddad, state=null
+2019-12-05 13:59:31 INFO  [hc-auth,,,] AsyncResolver-bootstrap-executor-0 com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver Resolving eureka endpoints via configuration
+2019-12-05 14:03:12 INFO  [hc-auth,,,] http-nio-9020-exec-7 org.springframework.cloud.config.client.ConfigServicePropertySourceLocator Fetching config from server at : http://DESKTOP-R1RTOA8:9050/
+2019-12-05 14:03:16 INFO  [hc-auth,,,] http-nio-9020-exec-7 org.springframework.cloud.config.client.ConfigServicePropertySourceLocator Located environment: name=hc-auth, profiles=[dev], label=null, version=4e957313e00d4ddce675c635e17cf802649eddad, state=null
+2019-12-05 14:04:31 INFO  [hc-auth,,,] AsyncResolver-bootstrap-executor-0 com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver Resolving eureka endpoints via configuration
+2019-12-05 14:08:03 INFO  [hc-auth,,,] Thread-29 org.springframework.cloud.netflix.eureka.serviceregistry.EurekaServiceRegistry Unregistering application HC-AUTH with eureka with status DOWN
+2019-12-05 14:08:03 INFO  [hc-auth,,,] DiscoveryClient-InstanceInfoReplicator-0 com.netflix.discovery.DiscoveryClient DiscoveryClient_HC-AUTH/DESKTOP-R1RTOA8:hc-auth:9020: registering service...
+2019-12-05 14:08:03 INFO  [hc-auth,,,] DiscoveryClient-InstanceInfoReplicator-0 com.netflix.discovery.DiscoveryClient DiscoveryClient_HC-AUTH/DESKTOP-R1RTOA8:hc-auth:9020 - registration status: 204
+2019-12-05 14:08:06 INFO  [hc-auth,,,] Thread-29 org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler Shutting down ExecutorService 'taskScheduler'
+2019-12-05 14:08:06 INFO  [hc-auth,,,] Thread-29 org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler Shutting down ExecutorService
+2019-12-05 14:08:06 INFO  [hc-auth,,,] Thread-29 org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor Shutting down ExecutorService 'applicationTaskExecutor'
+2019-12-05 14:08:13 INFO  [hc-auth,,,] http-nio-9020-exec-10 org.springframework.cloud.config.client.ConfigServicePropertySourceLocator Fetching config from server at : http://DESKTOP-R1RTOA8:9050/
+2019-12-05 14:08:15 INFO  [hc-auth,,,] http-nio-9020-exec-10 org.springframework.cloud.config.client.ConfigServicePropertySourceLocator Located environment: name=hc-auth, profiles=[dev], label=null, version=4e957313e00d4ddce675c635e17cf802649eddad, state=null
+2019-12-05 14:08:19 INFO  [hc-auth,,,] Thread-29 com.baomidou.dynamic.datasource.DynamicRoutingDataSource closing dynamicDatasource  ing....
+2019-12-05 14:08:19 INFO  [hc-auth,,,] Thread-29 com.zaxxer.hikari.HikariDataSource base - Shutdown initiated...
+2019-12-05 14:08:19 INFO  [hc-auth,,,] Thread-29 com.zaxxer.hikari.HikariDataSource base - Shutdown completed.
+2019-12-05 14:08:20 INFO  [hc-auth,,,] Thread-29 com.netflix.discovery.DiscoveryClient Shutting down DiscoveryClient ...
+2019-12-05 14:08:23 INFO  [hc-auth,,,] Thread-29 com.netflix.discovery.DiscoveryClient Unregistering ...
+2019-12-05 14:08:23 INFO  [hc-auth,,,] Thread-29 com.netflix.discovery.DiscoveryClient DiscoveryClient_HC-AUTH/DESKTOP-R1RTOA8:hc-auth:9020 - deregister  status: 200
+2019-12-05 14:08:25 INFO  [hc-auth,,,] Thread-29 com.netflix.discovery.DiscoveryClient Completed shut down of DiscoveryClient
+2019-12-05 14:14:44 INFO  [hc-auth,,,] main org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$f5862b6b] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-05 14:14:45 INFO  [hc-auth,,,] main org.springframework.cloud.netflix.eureka.InstanceInfoFactory Setting initial instance status as: STARTING
+2019-12-05 14:14:45 INFO  [hc-auth,,,] main com.netflix.discovery.DiscoveryClient Initializing Eureka in region us-east-1
+2019-12-05 14:14:45 INFO  [hc-auth,,,] main com.netflix.discovery.provider.DiscoveryJerseyProvider Using JSON encoding codec LegacyJacksonJson
+2019-12-05 14:14:45 INFO  [hc-auth,,,] main com.netflix.discovery.provider.DiscoveryJerseyProvider Using JSON decoding codec LegacyJacksonJson
+2019-12-05 14:14:46 INFO  [hc-auth,,,] main com.netflix.discovery.provider.DiscoveryJerseyProvider Using XML encoding codec XStreamXml
+2019-12-05 14:14:46 INFO  [hc-auth,,,] main com.netflix.discovery.provider.DiscoveryJerseyProvider Using XML decoding codec XStreamXml
+2019-12-05 14:14:46 INFO  [hc-auth,,,] main com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver Resolving eureka endpoints via configuration
+2019-12-05 14:14:47 INFO  [hc-auth,,,] main com.netflix.discovery.DiscoveryClient Disable delta property : false
+2019-12-05 14:14:47 INFO  [hc-auth,,,] main com.netflix.discovery.DiscoveryClient Single vip registry refresh property : null
+2019-12-05 14:14:47 INFO  [hc-auth,,,] main com.netflix.discovery.DiscoveryClient Force full registry fetch : false
+2019-12-05 14:14:47 INFO  [hc-auth,,,] main com.netflix.discovery.DiscoveryClient Application is null : false
+2019-12-05 14:14:47 INFO  [hc-auth,,,] main com.netflix.discovery.DiscoveryClient Registered Applications size is zero : true
+2019-12-05 14:14:47 INFO  [hc-auth,,,] main com.netflix.discovery.DiscoveryClient Application version is -1: true
+2019-12-05 14:14:47 INFO  [hc-auth,,,] main com.netflix.discovery.DiscoveryClient Getting all instance registry info from the eureka server
+2019-12-05 14:14:48 INFO  [hc-auth,,,] main com.netflix.discovery.DiscoveryClient The response status is 200
+2019-12-05 14:14:48 INFO  [hc-auth,,,] main com.netflix.discovery.DiscoveryClient Starting heartbeat executor: renew interval is: 30
+2019-12-05 14:14:48 INFO  [hc-auth,,,] main com.netflix.discovery.InstanceInfoReplicator InstanceInfoReplicator onDemand update allowed rate per min is 4
+2019-12-05 14:14:48 INFO  [hc-auth,,,] main com.netflix.discovery.DiscoveryClient Discovery Client initialized at timestamp 1575526488229 with initial instances count: 0
+2019-12-05 14:14:48 INFO  [hc-auth,,,] main org.springframework.cloud.netflix.eureka.serviceregistry.EurekaServiceRegistry Registering application HC-AUTH with eureka with status UP
+2019-12-05 14:14:48 INFO  [hc-auth,,,] main com.netflix.discovery.DiscoveryClient Saw local status change event StatusChangeEvent [timestamp=1575526488287, current=UP, previous=STARTING]
+2019-12-05 14:14:48 INFO  [hc-auth,,,] DiscoveryClient-InstanceInfoReplicator-0 com.netflix.discovery.DiscoveryClient DiscoveryClient_HC-AUTH/DESKTOP-R1RTOA8:hc-auth:9020: registering service...
+2019-12-05 14:14:48 INFO  [hc-auth,,,] main org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2019-12-05 14:14:48 INFO  [hc-auth,,,] main org.springframework.cloud.netflix.eureka.serviceregistry.EurekaServiceRegistry Unregistering application HC-AUTH with eureka with status DOWN
+2019-12-05 14:14:48 INFO  [hc-auth,,,] main com.netflix.discovery.DiscoveryClient Shutting down DiscoveryClient ...
+2019-12-05 14:14:48 INFO  [hc-auth,,,] DiscoveryClient-InstanceInfoReplicator-0 com.netflix.discovery.DiscoveryClient DiscoveryClient_HC-AUTH/DESKTOP-R1RTOA8:hc-auth:9020 - registration status: 204
+2019-12-05 14:14:48 INFO  [hc-auth,,,] DiscoveryClient-InstanceInfoReplicator-0 com.netflix.discovery.DiscoveryClient DiscoveryClient_HC-AUTH/DESKTOP-R1RTOA8:hc-auth:9020: registering service...
+2019-12-05 14:14:48 INFO  [hc-auth,,,] DiscoveryClient-InstanceInfoReplicator-0 com.netflix.discovery.DiscoveryClient DiscoveryClient_HC-AUTH/DESKTOP-R1RTOA8:hc-auth:9020 - registration status: 204
+2019-12-05 14:14:48 INFO  [hc-auth,,,] main com.netflix.discovery.DiscoveryClient Unregistering ...
+2019-12-05 14:14:48 INFO  [hc-auth,,,] main com.netflix.discovery.DiscoveryClient DiscoveryClient_HC-AUTH/DESKTOP-R1RTOA8:hc-auth:9020 - deregister  status: 200
+2019-12-05 14:14:48 INFO  [hc-auth,,,] main com.netflix.discovery.DiscoveryClient Completed shut down of DiscoveryClient
+2019-12-05 14:15:13 INFO  [hc-auth,,,] main org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$c2b2dd84] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-05 14:15:14 INFO  [hc-auth,,,] main org.springframework.cloud.netflix.eureka.InstanceInfoFactory Setting initial instance status as: STARTING
+2019-12-05 14:15:14 INFO  [hc-auth,,,] main com.netflix.discovery.DiscoveryClient Initializing Eureka in region us-east-1
+2019-12-05 14:15:14 INFO  [hc-auth,,,] main com.netflix.discovery.provider.DiscoveryJerseyProvider Using JSON encoding codec LegacyJacksonJson
+2019-12-05 14:15:14 INFO  [hc-auth,,,] main com.netflix.discovery.provider.DiscoveryJerseyProvider Using JSON decoding codec LegacyJacksonJson
+2019-12-05 14:15:15 INFO  [hc-auth,,,] main com.netflix.discovery.provider.DiscoveryJerseyProvider Using XML encoding codec XStreamXml
+2019-12-05 14:15:15 INFO  [hc-auth,,,] main com.netflix.discovery.provider.DiscoveryJerseyProvider Using XML decoding codec XStreamXml
+2019-12-05 14:15:15 INFO  [hc-auth,,,] main com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver Resolving eureka endpoints via configuration
+2019-12-05 14:15:17 INFO  [hc-auth,,,] main com.netflix.discovery.DiscoveryClient Disable delta property : false
+2019-12-05 14:15:17 INFO  [hc-auth,,,] main com.netflix.discovery.DiscoveryClient Single vip registry refresh property : null
+2019-12-05 14:15:17 INFO  [hc-auth,,,] main com.netflix.discovery.DiscoveryClient Force full registry fetch : false
+2019-12-05 14:15:17 INFO  [hc-auth,,,] main com.netflix.discovery.DiscoveryClient Application is null : false
+2019-12-05 14:15:17 INFO  [hc-auth,,,] main com.netflix.discovery.DiscoveryClient Registered Applications size is zero : true
+2019-12-05 14:15:17 INFO  [hc-auth,,,] main com.netflix.discovery.DiscoveryClient Application version is -1: true
+2019-12-05 14:15:17 INFO  [hc-auth,,,] main com.netflix.discovery.DiscoveryClient Getting all instance registry info from the eureka server
+2019-12-05 14:15:17 INFO  [hc-auth,,,] main com.netflix.discovery.DiscoveryClient The response status is 200
+2019-12-05 14:15:17 INFO  [hc-auth,,,] main com.netflix.discovery.DiscoveryClient Starting heartbeat executor: renew interval is: 30
+2019-12-05 14:15:17 INFO  [hc-auth,,,] main com.netflix.discovery.InstanceInfoReplicator InstanceInfoReplicator onDemand update allowed rate per min is 4
+2019-12-05 14:15:17 INFO  [hc-auth,,,] main com.netflix.discovery.DiscoveryClient Discovery Client initialized at timestamp 1575526517640 with initial instances count: 1
+2019-12-05 14:15:17 INFO  [hc-auth,,,] main org.springframework.cloud.netflix.eureka.serviceregistry.EurekaServiceRegistry Registering application HC-AUTH with eureka with status UP
+2019-12-05 14:15:17 INFO  [hc-auth,,,] main com.netflix.discovery.DiscoveryClient Saw local status change event StatusChangeEvent [timestamp=1575526517820, current=UP, previous=STARTING]
+2019-12-05 14:15:17 INFO  [hc-auth,,,] DiscoveryClient-InstanceInfoReplicator-0 com.netflix.discovery.DiscoveryClient DiscoveryClient_HC-AUTH/DESKTOP-R1RTOA8:hc-auth:9020: registering service...
+2019-12-05 14:15:19 INFO  [hc-auth,,,] main org.springframework.cloud.config.client.ConfigServicePropertySourceLocator Fetching config from server at : http://DESKTOP-R1RTOA8:9050/
+2019-12-05 14:15:22 INFO  [hc-auth,,,] main org.springframework.cloud.config.client.ConfigServicePropertySourceLocator Located environment: name=hc-auth, profiles=[dev], label=null, version=4e957313e00d4ddce675c635e17cf802649eddad, state=null
+2019-12-05 14:15:22 INFO  [hc-auth,,,] main org.springframework.cloud.bootstrap.config.PropertySourceBootstrapConfiguration Located property source: CompositePropertySource {name='configService', propertySources=[MapPropertySource {name='configClient'}, MapPropertySource {name='https://github.com/sonake/server-config.git/sonake-cfg/hc-auth-dev.yml'}]}
+2019-12-05 14:15:22 INFO  [hc-auth,,,] main com.hc.auth.HcAuthApplication The following profiles are active: dev
+2019-12-05 14:15:24 INFO  [hc-auth,,,] main org.springframework.data.repository.config.RepositoryConfigurationDelegate Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-12-05 14:15:24 INFO  [hc-auth,,,] main org.springframework.data.repository.config.RepositoryConfigurationDelegate Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-12-05 14:15:24 INFO  [hc-auth,,,] main org.springframework.data.repository.config.RepositoryConfigurationDelegate Finished Spring Data repository scanning in 16ms. Found 0 repository interfaces.
+2019-12-05 14:15:25 INFO  [hc-auth,,,] main org.springframework.cloud.context.scope.GenericScope BeanFactory id=f1481bec-d0ee-3a00-951b-9cf42218cc3b
+2019-12-05 14:15:26 INFO  [hc-auth,,,] main org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$a698da87] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-05 14:15:26 INFO  [hc-auth,,,] main org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker Bean 'spring.datasource.dynamic-com.baomidou.dynamic.datasource.spring.boot.autoconfigure.DynamicDataSourceProperties' of type [com.baomidou.dynamic.datasource.spring.boot.autoconfigure.DynamicDataSourceProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-05 14:15:26 INFO  [hc-auth,,,] main org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker Bean 'com.baomidou.dynamic.datasource.spring.boot.autoconfigure.DynamicDataSourceAutoConfiguration' of type [com.baomidou.dynamic.datasource.spring.boot.autoconfigure.DynamicDataSourceAutoConfiguration$$EnhancerBySpringCGLIB$$10274b58] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-05 14:15:26 INFO  [hc-auth,,,] main org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker Bean 'dsProcessor' of type [com.baomidou.dynamic.datasource.processor.DsHeaderProcessor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-05 14:15:26 INFO  [hc-auth,,,] main org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker Bean 'dynamicDatasourceAnnotationAdvisor' of type [com.baomidou.dynamic.datasource.aop.DynamicDataSourceAnnotationAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-05 14:15:26 INFO  [hc-auth,,,] main org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$c2b2dd84] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-05 14:15:32 INFO  [hc-auth,,,] main org.springframework.boot.web.embedded.tomcat.TomcatWebServer Tomcat initialized with port(s): 9020 (http)
+2019-12-05 14:15:33 INFO  [hc-auth,,,] main org.apache.coyote.http11.Http11NioProtocol Initializing ProtocolHandler ["http-nio-9020"]
+2019-12-05 14:15:34 INFO  [hc-auth,,,] main org.apache.catalina.core.StandardService Starting service [Tomcat]
+2019-12-05 14:15:34 INFO  [hc-auth,,,] main org.apache.catalina.core.StandardEngine Starting Servlet engine: [Apache Tomcat/9.0.21]
+2019-12-05 14:15:44 INFO  [hc-auth,,,] main org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] Initializing Spring embedded WebApplicationContext
+2019-12-05 14:15:44 INFO  [hc-auth,,,] main org.springframework.web.context.ContextLoader Root WebApplicationContext: initialization completed in 21958 ms
+2019-12-05 14:15:44 INFO  [hc-auth,,,] main com.netflix.config.sources.URLConfigurationSource To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2019-12-05 14:15:45 INFO  [hc-auth,,,] main com.netflix.config.DynamicPropertyFactory DynamicPropertyFactory is initialized with configuration sources: com.netflix.config.ConcurrentCompositeConfiguration@7b5c9412
+2019-12-05 14:15:46 INFO  [hc-auth,,,] main com.zaxxer.hikari.HikariDataSource base - Starting...
+2019-12-05 14:15:50 INFO  [hc-auth,,,] main com.zaxxer.hikari.HikariDataSource base - Start completed.
+2019-12-05 14:15:50 INFO  [hc-auth,,,] main com.baomidou.dynamic.datasource.DynamicRoutingDataSource 初始共加载 1 个数据源
+2019-12-05 14:15:50 INFO  [hc-auth,,,] main com.baomidou.dynamic.datasource.DynamicRoutingDataSource 动态数据源-加载 base 成功
+2019-12-05 14:15:50 INFO  [hc-auth,,,] main com.baomidou.dynamic.datasource.DynamicRoutingDataSource 当前的默认数据源是单数据源，数据源名为 base
+2019-12-05 14:15:52 INFO  [hc-auth,,,] main org.springframework.boot.actuate.endpoint.web.ServletEndpointRegistrar Registered '/actuator/jolokia' to jolokia-actuator-endpoint
+2019-12-05 14:15:57 INFO  [hc-auth,,,] main org.springframework.security.web.DefaultSecurityFilterChain Creating filter chain: OrRequestMatcher [requestMatchers=[Ant [pattern='/oauth/token'], Ant [pattern='/oauth/token_key'], Ant [pattern='/oauth/check_token']]], [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@54faa040, org.springframework.security.web.context.SecurityContextPersistenceFilter@1cf7c055, org.springframework.security.web.header.HeaderWriterFilter@f9d8285, org.springframework.security.web.authentication.logout.LogoutFilter@20724c21, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@16b713dd, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@6b7ebac1, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@663cc8c9, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@35d4fecf, org.springframework.security.web.session.SessionManagementFilter@39f3285d, org.springframework.security.web.access.ExceptionTranslationFilter@3e8eea59, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@7fb2645b]
+2019-12-05 14:15:57 INFO  [hc-auth,,,] main org.springframework.security.web.DefaultSecurityFilterChain Creating filter chain: OrRequestMatcher [requestMatchers=[Ant [pattern='/oauth/**']]], [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@21ebf9be, org.springframework.security.web.context.SecurityContextPersistenceFilter@4cc4f6bd, org.springframework.security.web.header.HeaderWriterFilter@24455d50, org.springframework.security.web.authentication.logout.LogoutFilter@77902ed6, com.hc.auth.filter.ValidateCodeFilter@34ab398b, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@798753cc, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@77262e71, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@7d50b4c4, org.springframework.security.web.session.SessionManagementFilter@bb160fb, org.springframework.security.web.access.ExceptionTranslationFilter@2f6352a3, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@6f53f5a4]
+2019-12-05 14:15:57 INFO  [hc-auth,,,] main org.springframework.security.web.DefaultSecurityFilterChain Creating filter chain: OrRequestMatcher [requestMatchers=[Ant [pattern='/**']]], [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@7e8f97dd, org.springframework.security.web.context.SecurityContextPersistenceFilter@350ede1, org.springframework.security.web.header.HeaderWriterFilter@5ab29866, org.springframework.security.web.authentication.logout.LogoutFilter@47462daf, org.springframework.security.oauth2.provider.authentication.OAuth2AuthenticationProcessingFilter@78d52d4c, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@2bbaf1bc, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@65852d05, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@183435c0, org.springframework.security.web.session.SessionManagementFilter@74cad577, org.springframework.security.web.access.ExceptionTranslationFilter@47596e9, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@44b5b54]
+2019-12-05 14:15:57 INFO  [hc-auth,,,] main com.netflix.config.sources.URLConfigurationSource To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2019-12-05 14:15:57 INFO  [hc-auth,,,] main org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor Initializing ExecutorService 'applicationTaskExecutor'
+2019-12-05 14:15:58 INFO  [hc-auth,,,] main org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler Initializing ExecutorService
+2019-12-05 14:15:58 INFO  [hc-auth,,,] main org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver Exposing 20 endpoint(s) beneath base path '/actuator'
+2019-12-05 14:15:58 INFO  [hc-auth,,,] main org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler Initializing ExecutorService 'taskScheduler'
+2019-12-05 14:16:00 INFO  [hc-auth,,,] main com.netflix.discovery.DiscoveryClient Shutting down DiscoveryClient ...
+2019-12-05 14:16:03 INFO  [hc-auth,,,] main com.netflix.discovery.DiscoveryClient Unregistering ...
+2019-12-05 14:16:03 INFO  [hc-auth,,,] main com.netflix.discovery.DiscoveryClient DiscoveryClient_HC-AUTH/DESKTOP-R1RTOA8:hc-auth:9020 - deregister  status: 200
+2019-12-05 14:16:03 INFO  [hc-auth,,,] main com.netflix.discovery.DiscoveryClient Completed shut down of DiscoveryClient
+2019-12-05 14:16:03 INFO  [hc-auth,,,] main org.springframework.cloud.netflix.eureka.InstanceInfoFactory Setting initial instance status as: STARTING
+2019-12-05 14:16:03 INFO  [hc-auth,,,] main com.netflix.discovery.DiscoveryClient Initializing Eureka in region us-east-1
+2019-12-05 14:16:03 INFO  [hc-auth,,,] main com.netflix.discovery.provider.DiscoveryJerseyProvider Using JSON encoding codec LegacyJacksonJson
+2019-12-05 14:16:03 INFO  [hc-auth,,,] main com.netflix.discovery.provider.DiscoveryJerseyProvider Using JSON decoding codec LegacyJacksonJson
+2019-12-05 14:16:03 INFO  [hc-auth,,,] main com.netflix.discovery.provider.DiscoveryJerseyProvider Using XML encoding codec XStreamXml
+2019-12-05 14:16:03 INFO  [hc-auth,,,] main com.netflix.discovery.provider.DiscoveryJerseyProvider Using XML decoding codec XStreamXml
+2019-12-05 14:16:04 INFO  [hc-auth,,,] main com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver Resolving eureka endpoints via configuration
+2019-12-05 14:16:04 INFO  [hc-auth,,,] main com.netflix.discovery.DiscoveryClient Disable delta property : false
+2019-12-05 14:16:04 INFO  [hc-auth,,,] main com.netflix.discovery.DiscoveryClient Single vip registry refresh property : null
+2019-12-05 14:16:04 INFO  [hc-auth,,,] main com.netflix.discovery.DiscoveryClient Force full registry fetch : false
+2019-12-05 14:16:04 INFO  [hc-auth,,,] main com.netflix.discovery.DiscoveryClient Application is null : false
+2019-12-05 14:16:04 INFO  [hc-auth,,,] main com.netflix.discovery.DiscoveryClient Registered Applications size is zero : true
+2019-12-05 14:16:04 INFO  [hc-auth,,,] main com.netflix.discovery.DiscoveryClient Application version is -1: true
+2019-12-05 14:16:04 INFO  [hc-auth,,,] main com.netflix.discovery.DiscoveryClient Getting all instance registry info from the eureka server
+2019-12-05 14:16:04 INFO  [hc-auth,,,] main com.netflix.discovery.DiscoveryClient The response status is 200
+2019-12-05 14:16:04 INFO  [hc-auth,,,] main com.netflix.discovery.DiscoveryClient Starting heartbeat executor: renew interval is: 30
+2019-12-05 14:16:04 INFO  [hc-auth,,,] main com.netflix.discovery.InstanceInfoReplicator InstanceInfoReplicator onDemand update allowed rate per min is 4
+2019-12-05 14:16:04 INFO  [hc-auth,,,] main com.netflix.discovery.DiscoveryClient Discovery Client initialized at timestamp 1575526564146 with initial instances count: 3
+2019-12-05 14:16:04 INFO  [hc-auth,,,] main org.springframework.cloud.netflix.eureka.serviceregistry.EurekaServiceRegistry Registering application HC-AUTH with eureka with status UP
+2019-12-05 14:16:04 INFO  [hc-auth,,,] main com.netflix.discovery.DiscoveryClient Saw local status change event StatusChangeEvent [timestamp=1575526564149, current=UP, previous=STARTING]
+2019-12-05 14:16:04 INFO  [hc-auth,,,] DiscoveryClient-InstanceInfoReplicator-0 com.netflix.discovery.DiscoveryClient DiscoveryClient_HC-AUTH/DESKTOP-R1RTOA8:hc-auth:9020: registering service...
+2019-12-05 14:16:04 INFO  [hc-auth,,,] DiscoveryClient-InstanceInfoReplicator-0 com.netflix.discovery.DiscoveryClient DiscoveryClient_HC-AUTH/DESKTOP-R1RTOA8:hc-auth:9020 - registration status: 204
+2019-12-05 14:16:04 INFO  [hc-auth,,,] main org.apache.coyote.http11.Http11NioProtocol Starting ProtocolHandler ["http-nio-9020"]
+2019-12-05 14:16:04 INFO  [hc-auth,,,] main org.springframework.boot.web.embedded.tomcat.TomcatWebServer Tomcat started on port(s): 9020 (http) with context path ''
+2019-12-05 14:16:04 INFO  [hc-auth,,,] main org.springframework.cloud.netflix.eureka.serviceregistry.EurekaAutoServiceRegistration Updating port to 9020
+2019-12-05 14:16:04 INFO  [hc-auth,,,] main org.springframework.cloud.netflix.eureka.serviceregistry.EurekaAutoServiceRegistration Updating port to 9020
+2019-12-05 14:16:04 INFO  [hc-auth,,,] main com.hc.auth.HcAuthApplication Started HcAuthApplication in 53.402 seconds (JVM running for 54.747)
+2019-12-05 14:16:04 INFO  [hc-auth,,,] RMI TCP Connection(20)-192.168.41.90 org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-12-05 14:16:04 INFO  [hc-auth,,,] RMI TCP Connection(20)-192.168.41.90 org.springframework.web.servlet.DispatcherServlet Initializing Servlet 'dispatcherServlet'
+2019-12-05 14:16:04 INFO  [hc-auth,,,] RMI TCP Connection(20)-192.168.41.90 org.springframework.web.servlet.DispatcherServlet Completed initialization in 14 ms
+2019-12-05 14:16:06 INFO  [hc-auth,,,] RMI TCP Connection(22)-192.168.41.90 org.springframework.cloud.config.client.ConfigServicePropertySourceLocator Fetching config from server at : http://DESKTOP-R1RTOA8:9050/
+2019-12-05 14:16:08 INFO  [hc-auth,,,] RMI TCP Connection(22)-192.168.41.90 org.springframework.cloud.config.client.ConfigServicePropertySourceLocator Located environment: name=hc-auth, profiles=[dev], label=null, version=4e957313e00d4ddce675c635e17cf802649eddad, state=null
+2019-12-05 14:16:08 INFO  [hc-auth,,,] parallel-1 io.lettuce.core.EpollProvider Starting without optional epoll library
+2019-12-05 14:16:08 INFO  [hc-auth,,,] parallel-1 io.lettuce.core.KqueueProvider Starting without optional kqueue library
+2019-12-05 14:21:04 INFO  [hc-auth,,,] AsyncResolver-bootstrap-executor-0 com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver Resolving eureka endpoints via configuration
+2019-12-05 14:26:04 INFO  [hc-auth,,,] AsyncResolver-bootstrap-executor-0 com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver Resolving eureka endpoints via configuration
+2019-12-05 14:31:04 INFO  [hc-auth,,,] AsyncResolver-bootstrap-executor-0 com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver Resolving eureka endpoints via configuration
+2019-12-05 14:36:04 INFO  [hc-auth,,,] AsyncResolver-bootstrap-executor-0 com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver Resolving eureka endpoints via configuration
+2019-12-05 14:41:04 INFO  [hc-auth,,,] AsyncResolver-bootstrap-executor-0 com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver Resolving eureka endpoints via configuration
+2019-12-05 14:46:04 INFO  [hc-auth,,,] AsyncResolver-bootstrap-executor-0 com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver Resolving eureka endpoints via configuration
+2019-12-05 14:51:04 INFO  [hc-auth,,,] AsyncResolver-bootstrap-executor-0 com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver Resolving eureka endpoints via configuration
+2019-12-05 14:56:04 INFO  [hc-auth,,,] AsyncResolver-bootstrap-executor-0 com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver Resolving eureka endpoints via configuration
+2019-12-05 15:01:04 INFO  [hc-auth,,,] AsyncResolver-bootstrap-executor-0 com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver Resolving eureka endpoints via configuration
+2019-12-05 15:06:04 INFO  [hc-auth,,,] AsyncResolver-bootstrap-executor-0 com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver Resolving eureka endpoints via configuration
+2019-12-05 15:11:04 INFO  [hc-auth,,,] AsyncResolver-bootstrap-executor-0 com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver Resolving eureka endpoints via configuration
+2019-12-05 15:16:04 INFO  [hc-auth,,,] AsyncResolver-bootstrap-executor-0 com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver Resolving eureka endpoints via configuration
+2019-12-05 15:21:04 INFO  [hc-auth,,,] AsyncResolver-bootstrap-executor-0 com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver Resolving eureka endpoints via configuration
+2019-12-05 15:26:04 INFO  [hc-auth,,,] AsyncResolver-bootstrap-executor-0 com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver Resolving eureka endpoints via configuration
+2019-12-05 15:31:04 INFO  [hc-auth,,,] AsyncResolver-bootstrap-executor-0 com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver Resolving eureka endpoints via configuration
+2019-12-05 15:36:04 INFO  [hc-auth,,,] AsyncResolver-bootstrap-executor-0 com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver Resolving eureka endpoints via configuration
+2019-12-05 15:41:04 INFO  [hc-auth,,,] AsyncResolver-bootstrap-executor-0 com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver Resolving eureka endpoints via configuration
+2019-12-05 15:46:04 INFO  [hc-auth,,,] AsyncResolver-bootstrap-executor-0 com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver Resolving eureka endpoints via configuration
+2019-12-05 15:51:04 INFO  [hc-auth,,,] AsyncResolver-bootstrap-executor-0 com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver Resolving eureka endpoints via configuration
+2019-12-05 15:56:04 INFO  [hc-auth,,,] AsyncResolver-bootstrap-executor-0 com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver Resolving eureka endpoints via configuration
+2019-12-05 16:01:04 INFO  [hc-auth,,,] AsyncResolver-bootstrap-executor-0 com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver Resolving eureka endpoints via configuration
+2019-12-05 16:06:04 INFO  [hc-auth,,,] AsyncResolver-bootstrap-executor-0 com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver Resolving eureka endpoints via configuration
+2019-12-05 16:11:04 INFO  [hc-auth,,,] AsyncResolver-bootstrap-executor-0 com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver Resolving eureka endpoints via configuration
+2019-12-05 16:16:04 INFO  [hc-auth,,,] AsyncResolver-bootstrap-executor-0 com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver Resolving eureka endpoints via configuration
+2019-12-05 16:21:04 INFO  [hc-auth,,,] AsyncResolver-bootstrap-executor-0 com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver Resolving eureka endpoints via configuration
+2019-12-05 16:26:04 INFO  [hc-auth,,,] AsyncResolver-bootstrap-executor-0 com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver Resolving eureka endpoints via configuration
+2019-12-05 16:31:04 INFO  [hc-auth,,,] AsyncResolver-bootstrap-executor-0 com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver Resolving eureka endpoints via configuration
+2019-12-05 16:36:04 INFO  [hc-auth,,,] AsyncResolver-bootstrap-executor-0 com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver Resolving eureka endpoints via configuration
+2019-12-05 16:41:04 INFO  [hc-auth,,,] AsyncResolver-bootstrap-executor-0 com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver Resolving eureka endpoints via configuration
+2019-12-05 16:46:04 INFO  [hc-auth,,,] AsyncResolver-bootstrap-executor-0 com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver Resolving eureka endpoints via configuration
+2019-12-05 16:51:04 INFO  [hc-auth,,,] AsyncResolver-bootstrap-executor-0 com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver Resolving eureka endpoints via configuration
+2019-12-05 16:56:04 INFO  [hc-auth,,,] AsyncResolver-bootstrap-executor-0 com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver Resolving eureka endpoints via configuration
+2019-12-05 17:01:04 INFO  [hc-auth,,,] AsyncResolver-bootstrap-executor-0 com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver Resolving eureka endpoints via configuration
+2019-12-05 17:06:04 INFO  [hc-auth,,,] AsyncResolver-bootstrap-executor-0 com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver Resolving eureka endpoints via configuration
+2019-12-05 17:11:04 INFO  [hc-auth,,,] AsyncResolver-bootstrap-executor-0 com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver Resolving eureka endpoints via configuration
+2019-12-05 17:16:04 INFO  [hc-auth,,,] AsyncResolver-bootstrap-executor-0 com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver Resolving eureka endpoints via configuration
+2019-12-05 17:21:04 INFO  [hc-auth,,,] AsyncResolver-bootstrap-executor-0 com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver Resolving eureka endpoints via configuration
+2019-12-05 17:26:04 INFO  [hc-auth,,,] AsyncResolver-bootstrap-executor-0 com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver Resolving eureka endpoints via configuration
+2019-12-05 17:31:04 INFO  [hc-auth,,,] AsyncResolver-bootstrap-executor-0 com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver Resolving eureka endpoints via configuration
+2019-12-05 17:36:04 INFO  [hc-auth,,,] AsyncResolver-bootstrap-executor-0 com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver Resolving eureka endpoints via configuration
+2019-12-05 17:41:04 INFO  [hc-auth,,,] AsyncResolver-bootstrap-executor-0 com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver Resolving eureka endpoints via configuration
+2019-12-05 17:46:04 INFO  [hc-auth,,,] AsyncResolver-bootstrap-executor-0 com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver Resolving eureka endpoints via configuration
+2019-12-05 17:51:05 INFO  [hc-auth,,,] AsyncResolver-bootstrap-executor-0 com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver Resolving eureka endpoints via configuration
+2019-12-05 17:56:05 INFO  [hc-auth,,,] AsyncResolver-bootstrap-executor-0 com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver Resolving eureka endpoints via configuration
+2019-12-05 18:01:05 INFO  [hc-auth,,,] AsyncResolver-bootstrap-executor-0 com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver Resolving eureka endpoints via configuration
+2019-12-05 18:06:05 INFO  [hc-auth,,,] AsyncResolver-bootstrap-executor-0 com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver Resolving eureka endpoints via configuration
+2019-12-05 18:11:05 INFO  [hc-auth,,,] AsyncResolver-bootstrap-executor-0 com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver Resolving eureka endpoints via configuration
+2019-12-05 18:16:05 INFO  [hc-auth,,,] AsyncResolver-bootstrap-executor-0 com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver Resolving eureka endpoints via configuration
+2019-12-05 18:21:05 INFO  [hc-auth,,,] AsyncResolver-bootstrap-executor-0 com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver Resolving eureka endpoints via configuration
+2019-12-05 18:26:05 INFO  [hc-auth,,,] AsyncResolver-bootstrap-executor-0 com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver Resolving eureka endpoints via configuration
+2019-12-05 18:31:05 INFO  [hc-auth,,,] AsyncResolver-bootstrap-executor-0 com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver Resolving eureka endpoints via configuration
+2019-12-05 18:36:05 INFO  [hc-auth,,,] AsyncResolver-bootstrap-executor-0 com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver Resolving eureka endpoints via configuration
+2019-12-05 18:41:05 INFO  [hc-auth,,,] AsyncResolver-bootstrap-executor-0 com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver Resolving eureka endpoints via configuration
+2019-12-05 18:46:05 INFO  [hc-auth,,,] AsyncResolver-bootstrap-executor-0 com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver Resolving eureka endpoints via configuration
+2019-12-05 18:51:05 INFO  [hc-auth,,,] AsyncResolver-bootstrap-executor-0 com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver Resolving eureka endpoints via configuration
+2019-12-05 18:56:05 INFO  [hc-auth,,,] AsyncResolver-bootstrap-executor-0 com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver Resolving eureka endpoints via configuration
+2019-12-05 19:01:05 INFO  [hc-auth,,,] AsyncResolver-bootstrap-executor-0 com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver Resolving eureka endpoints via configuration
+2019-12-05 19:06:05 INFO  [hc-auth,,,] AsyncResolver-bootstrap-executor-0 com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver Resolving eureka endpoints via configuration
+2019-12-05 19:11:05 INFO  [hc-auth,,,] AsyncResolver-bootstrap-executor-0 com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver Resolving eureka endpoints via configuration
+2019-12-05 19:16:05 INFO  [hc-auth,,,] AsyncResolver-bootstrap-executor-0 com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver Resolving eureka endpoints via configuration
+2019-12-05 19:21:05 INFO  [hc-auth,,,] AsyncResolver-bootstrap-executor-0 com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver Resolving eureka endpoints via configuration
+2019-12-05 19:26:05 INFO  [hc-auth,,,] AsyncResolver-bootstrap-executor-0 com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver Resolving eureka endpoints via configuration
+2019-12-05 19:31:05 INFO  [hc-auth,,,] AsyncResolver-bootstrap-executor-0 com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver Resolving eureka endpoints via configuration
+2019-12-05 19:36:05 INFO  [hc-auth,,,] AsyncResolver-bootstrap-executor-0 com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver Resolving eureka endpoints via configuration
+2019-12-05 19:41:05 INFO  [hc-auth,,,] AsyncResolver-bootstrap-executor-0 com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver Resolving eureka endpoints via configuration
+2019-12-05 19:46:05 INFO  [hc-auth,,,] AsyncResolver-bootstrap-executor-0 com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver Resolving eureka endpoints via configuration
+2019-12-05 19:51:05 INFO  [hc-auth,,,] AsyncResolver-bootstrap-executor-0 com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver Resolving eureka endpoints via configuration
+2019-12-05 19:56:05 INFO  [hc-auth,,,] AsyncResolver-bootstrap-executor-0 com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver Resolving eureka endpoints via configuration
+2019-12-05 20:01:05 INFO  [hc-auth,,,] AsyncResolver-bootstrap-executor-0 com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver Resolving eureka endpoints via configuration
+2019-12-05 20:06:05 INFO  [hc-auth,,,] AsyncResolver-bootstrap-executor-0 com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver Resolving eureka endpoints via configuration
+2019-12-05 20:11:05 INFO  [hc-auth,,,] AsyncResolver-bootstrap-executor-0 com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver Resolving eureka endpoints via configuration
+2019-12-05 20:16:05 INFO  [hc-auth,,,] AsyncResolver-bootstrap-executor-0 com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver Resolving eureka endpoints via configuration
+2019-12-05 20:21:05 INFO  [hc-auth,,,] AsyncResolver-bootstrap-executor-0 com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver Resolving eureka endpoints via configuration
+2019-12-05 20:26:05 INFO  [hc-auth,,,] AsyncResolver-bootstrap-executor-0 com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver Resolving eureka endpoints via configuration
+2019-12-05 20:31:05 INFO  [hc-auth,,,] AsyncResolver-bootstrap-executor-0 com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver Resolving eureka endpoints via configuration
+2019-12-05 20:36:05 INFO  [hc-auth,,,] AsyncResolver-bootstrap-executor-0 com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver Resolving eureka endpoints via configuration
+2019-12-05 20:41:05 INFO  [hc-auth,,,] AsyncResolver-bootstrap-executor-0 com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver Resolving eureka endpoints via configuration
+2019-12-05 20:46:05 INFO  [hc-auth,,,] AsyncResolver-bootstrap-executor-0 com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver Resolving eureka endpoints via configuration
+2019-12-05 20:51:05 INFO  [hc-auth,,,] AsyncResolver-bootstrap-executor-0 com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver Resolving eureka endpoints via configuration
+2019-12-05 20:56:05 INFO  [hc-auth,,,] AsyncResolver-bootstrap-executor-0 com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver Resolving eureka endpoints via configuration
+2019-12-05 21:01:05 INFO  [hc-auth,,,] AsyncResolver-bootstrap-executor-0 com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver Resolving eureka endpoints via configuration
+2019-12-05 21:06:05 INFO  [hc-auth,,,] AsyncResolver-bootstrap-executor-0 com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver Resolving eureka endpoints via configuration
+2019-12-05 21:11:05 INFO  [hc-auth,,,] AsyncResolver-bootstrap-executor-0 com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver Resolving eureka endpoints via configuration
+2019-12-05 21:16:05 INFO  [hc-auth,,,] AsyncResolver-bootstrap-executor-0 com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver Resolving eureka endpoints via configuration
+2019-12-05 21:21:05 INFO  [hc-auth,,,] AsyncResolver-bootstrap-executor-0 com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver Resolving eureka endpoints via configuration
+2019-12-05 21:26:05 INFO  [hc-auth,,,] AsyncResolver-bootstrap-executor-0 com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver Resolving eureka endpoints via configuration
+2019-12-05 21:31:05 INFO  [hc-auth,,,] AsyncResolver-bootstrap-executor-0 com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver Resolving eureka endpoints via configuration
+2019-12-05 21:36:05 INFO  [hc-auth,,,] AsyncResolver-bootstrap-executor-0 com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver Resolving eureka endpoints via configuration
+2019-12-05 21:41:05 INFO  [hc-auth,,,] AsyncResolver-bootstrap-executor-0 com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver Resolving eureka endpoints via configuration
+2019-12-05 21:46:05 INFO  [hc-auth,,,] AsyncResolver-bootstrap-executor-0 com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver Resolving eureka endpoints via configuration
+2019-12-05 21:51:05 INFO  [hc-auth,,,] AsyncResolver-bootstrap-executor-0 com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver Resolving eureka endpoints via configuration
+2019-12-05 21:56:05 INFO  [hc-auth,,,] AsyncResolver-bootstrap-executor-0 com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver Resolving eureka endpoints via configuration
+2019-12-05 22:01:05 INFO  [hc-auth,,,] AsyncResolver-bootstrap-executor-0 com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver Resolving eureka endpoints via configuration
+2019-12-05 22:06:05 INFO  [hc-auth,,,] AsyncResolver-bootstrap-executor-0 com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver Resolving eureka endpoints via configuration
+2019-12-05 22:11:05 INFO  [hc-auth,,,] AsyncResolver-bootstrap-executor-0 com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver Resolving eureka endpoints via configuration
+2019-12-05 22:16:05 INFO  [hc-auth,,,] AsyncResolver-bootstrap-executor-0 com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver Resolving eureka endpoints via configuration
+2019-12-05 22:21:05 INFO  [hc-auth,,,] AsyncResolver-bootstrap-executor-0 com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver Resolving eureka endpoints via configuration
+2019-12-05 22:26:05 INFO  [hc-auth,,,] AsyncResolver-bootstrap-executor-0 com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver Resolving eureka endpoints via configuration
+2019-12-05 22:31:05 INFO  [hc-auth,,,] AsyncResolver-bootstrap-executor-0 com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver Resolving eureka endpoints via configuration
+2019-12-05 22:36:05 INFO  [hc-auth,,,] AsyncResolver-bootstrap-executor-0 com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver Resolving eureka endpoints via configuration
+2019-12-05 22:41:05 INFO  [hc-auth,,,] AsyncResolver-bootstrap-executor-0 com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver Resolving eureka endpoints via configuration
+2019-12-05 22:46:05 INFO  [hc-auth,,,] AsyncResolver-bootstrap-executor-0 com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver Resolving eureka endpoints via configuration
+2019-12-05 22:51:05 INFO  [hc-auth,,,] AsyncResolver-bootstrap-executor-0 com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver Resolving eureka endpoints via configuration
+2019-12-05 22:56:05 INFO  [hc-auth,,,] AsyncResolver-bootstrap-executor-0 com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver Resolving eureka endpoints via configuration
+2019-12-05 23:01:05 INFO  [hc-auth,,,] AsyncResolver-bootstrap-executor-0 com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver Resolving eureka endpoints via configuration
+2019-12-05 23:06:05 INFO  [hc-auth,,,] AsyncResolver-bootstrap-executor-0 com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver Resolving eureka endpoints via configuration
+2019-12-05 23:11:05 INFO  [hc-auth,,,] AsyncResolver-bootstrap-executor-0 com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver Resolving eureka endpoints via configuration
+2019-12-05 23:16:05 INFO  [hc-auth,,,] AsyncResolver-bootstrap-executor-0 com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver Resolving eureka endpoints via configuration
+2019-12-05 23:21:05 INFO  [hc-auth,,,] AsyncResolver-bootstrap-executor-0 com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver Resolving eureka endpoints via configuration
+2019-12-05 23:26:05 INFO  [hc-auth,,,] AsyncResolver-bootstrap-executor-0 com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver Resolving eureka endpoints via configuration
+2019-12-05 23:31:05 INFO  [hc-auth,,,] AsyncResolver-bootstrap-executor-0 com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver Resolving eureka endpoints via configuration
+2019-12-05 23:36:05 INFO  [hc-auth,,,] AsyncResolver-bootstrap-executor-0 com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver Resolving eureka endpoints via configuration
+2019-12-05 23:41:05 INFO  [hc-auth,,,] AsyncResolver-bootstrap-executor-0 com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver Resolving eureka endpoints via configuration
+2019-12-05 23:46:05 INFO  [hc-auth,,,] AsyncResolver-bootstrap-executor-0 com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver Resolving eureka endpoints via configuration
+2019-12-05 23:51:05 INFO  [hc-auth,,,] AsyncResolver-bootstrap-executor-0 com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver Resolving eureka endpoints via configuration
+2019-12-05 23:56:05 INFO  [hc-auth,,,] AsyncResolver-bootstrap-executor-0 com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver Resolving eureka endpoints via configuration

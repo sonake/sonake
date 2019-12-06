@@ -1,0 +1,875 @@
+2019-12-05 12:42:30 INFO  [hc-register,,,] main org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$b85169cb] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-05 12:42:31 INFO  [hc-register,,,] main com.hc.register.HcRegisterApplication No active profile set, falling back to default profiles: default
+2019-12-05 12:42:32 INFO  [hc-register,,,] main org.springframework.cloud.context.scope.GenericScope BeanFactory id=6ff42770-9d56-32d6-b989-eefa7ce12c63
+2019-12-05 12:42:32 INFO  [hc-register,,,] main org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$b85169cb] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-05 12:42:32 INFO  [hc-register,,,] main org.springframework.boot.web.embedded.tomcat.TomcatWebServer Tomcat initialized with port(s): 9010 (http)
+2019-12-05 12:42:32 INFO  [hc-register,,,] main org.apache.coyote.http11.Http11NioProtocol Initializing ProtocolHandler ["http-nio-9010"]
+2019-12-05 12:42:32 INFO  [hc-register,,,] main org.apache.catalina.core.StandardService Starting service [Tomcat]
+2019-12-05 12:42:32 INFO  [hc-register,,,] main org.apache.catalina.core.StandardEngine Starting Servlet engine: [Apache Tomcat/9.0.21]
+2019-12-05 12:42:32 INFO  [hc-register,,,] main org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/register] Initializing Spring embedded WebApplicationContext
+2019-12-05 12:42:32 INFO  [hc-register,,,] main org.springframework.web.context.ContextLoader Root WebApplicationContext: initialization completed in 1202 ms
+2019-12-05 12:42:33 INFO  [hc-register,,,] main com.netflix.config.sources.URLConfigurationSource To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2019-12-05 12:42:33 INFO  [hc-register,,,] main com.netflix.config.DynamicPropertyFactory DynamicPropertyFactory is initialized with configuration sources: com.netflix.config.ConcurrentCompositeConfiguration@6637a365
+2019-12-05 12:42:34 INFO  [hc-register,,,] main org.springframework.boot.actuate.endpoint.web.ServletEndpointRegistrar Registered '/actuator/jolokia' to jolokia-actuator-endpoint
+2019-12-05 12:42:34 INFO  [hc-register,,,] main com.sun.jersey.server.impl.application.WebApplicationImpl Initiating Jersey application, version 'Jersey: 1.19.1 03/11/2016 02:08 PM'
+2019-12-05 12:42:34 INFO  [hc-register,,,] main com.netflix.discovery.provider.DiscoveryJerseyProvider Using JSON encoding codec LegacyJacksonJson
+2019-12-05 12:42:34 INFO  [hc-register,,,] main com.netflix.discovery.provider.DiscoveryJerseyProvider Using JSON decoding codec LegacyJacksonJson
+2019-12-05 12:42:34 INFO  [hc-register,,,] main com.netflix.discovery.provider.DiscoveryJerseyProvider Using XML encoding codec XStreamXml
+2019-12-05 12:42:34 INFO  [hc-register,,,] main com.netflix.discovery.provider.DiscoveryJerseyProvider Using XML decoding codec XStreamXml
+2019-12-05 12:42:34 INFO  [hc-register,,,] main org.springframework.security.web.DefaultSecurityFilterChain Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@77e730bd, org.springframework.security.web.context.SecurityContextPersistenceFilter@46fb9581, org.springframework.security.web.header.HeaderWriterFilter@670c171c, org.springframework.security.web.csrf.CsrfFilter@4e9ea32f, org.springframework.security.web.authentication.logout.LogoutFilter@13137835, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@6879e983, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@517bdce0, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@2d3c501b, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@26612078, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@416b681c, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@51df2a41, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@7b8cb283, org.springframework.security.web.session.SessionManagementFilter@6614289a, org.springframework.security.web.access.ExceptionTranslationFilter@7ccf6114, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@72e49f6a]
+2019-12-05 12:42:34 INFO  [hc-register,,,] main com.netflix.config.sources.URLConfigurationSource To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2019-12-05 12:42:34 INFO  [hc-register,,,] main org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor Initializing ExecutorService 'applicationTaskExecutor'
+2019-12-05 12:42:35 INFO  [hc-register,,,] main org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler Initializing ExecutorService
+2019-12-05 12:42:35 INFO  [hc-register,,,] main org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver Exposing 20 endpoint(s) beneath base path '/actuator'
+2019-12-05 12:42:36 INFO  [hc-register,,,] main org.springframework.cloud.netflix.eureka.InstanceInfoFactory Setting initial instance status as: STARTING
+2019-12-05 12:42:36 INFO  [hc-register,,,] main com.netflix.discovery.DiscoveryClient Initializing Eureka in region us-east-1
+2019-12-05 12:42:36 INFO  [hc-register,,,] main com.netflix.discovery.DiscoveryClient Client configured to neither register nor query for data.
+2019-12-05 12:42:36 INFO  [hc-register,,,] main com.netflix.discovery.DiscoveryClient Discovery Client initialized at timestamp 1575520956180 with initial instances count: 0
+2019-12-05 12:42:36 INFO  [hc-register,,,] main com.netflix.eureka.DefaultEurekaServerContext Initializing ...
+2019-12-05 12:42:36 INFO  [hc-register,,,] main com.netflix.eureka.registry.AbstractInstanceRegistry Finished initializing remote region registries. All known remote regions: []
+2019-12-05 12:42:36 INFO  [hc-register,,,] main com.netflix.eureka.DefaultEurekaServerContext Initialized
+2019-12-05 12:42:36 INFO  [hc-register,,,] main org.springframework.cloud.netflix.eureka.serviceregistry.EurekaServiceRegistry Registering application HC-REGISTER with eureka with status UP
+2019-12-05 12:42:36 INFO  [hc-register,,,] Thread-21 org.springframework.cloud.netflix.eureka.server.EurekaServerBootstrap Setting the eureka configuration..
+2019-12-05 12:42:36 INFO  [hc-register,,,] Thread-21 org.springframework.cloud.netflix.eureka.server.EurekaServerBootstrap Eureka data center value eureka.datacenter is not set, defaulting to default
+2019-12-05 12:42:36 INFO  [hc-register,,,] Thread-21 org.springframework.cloud.netflix.eureka.server.EurekaServerBootstrap Eureka environment value eureka.environment is not set, defaulting to test
+2019-12-05 12:42:36 INFO  [hc-register,,,] main org.apache.coyote.http11.Http11NioProtocol Starting ProtocolHandler ["http-nio-9010"]
+2019-12-05 12:42:36 INFO  [hc-register,,,] Thread-21 org.springframework.cloud.netflix.eureka.server.EurekaServerBootstrap isAws returned false
+2019-12-05 12:42:36 INFO  [hc-register,,,] Thread-21 org.springframework.cloud.netflix.eureka.server.EurekaServerBootstrap Initialized server context
+2019-12-05 12:42:36 INFO  [hc-register,,,] Thread-21 com.netflix.eureka.registry.PeerAwareInstanceRegistryImpl Got 1 instances from neighboring DS node
+2019-12-05 12:42:36 INFO  [hc-register,,,] Thread-21 com.netflix.eureka.registry.PeerAwareInstanceRegistryImpl Renew threshold is: 1
+2019-12-05 12:42:36 INFO  [hc-register,,,] Thread-21 com.netflix.eureka.registry.PeerAwareInstanceRegistryImpl Changing status to UP
+2019-12-05 12:42:36 INFO  [hc-register,,,] Thread-21 org.springframework.cloud.netflix.eureka.server.EurekaServerInitializerConfiguration Started Eureka Server
+2019-12-05 12:42:36 INFO  [hc-register,,,] main org.springframework.boot.web.embedded.tomcat.TomcatWebServer Tomcat started on port(s): 9010 (http) with context path '/register'
+2019-12-05 12:42:36 INFO  [hc-register,,,] main org.springframework.cloud.netflix.eureka.serviceregistry.EurekaAutoServiceRegistration Updating port to 9010
+2019-12-05 12:42:36 INFO  [hc-register,,,] main com.hc.register.HcRegisterApplication Started HcRegisterApplication in 7.272 seconds (JVM running for 8.29)
+2019-12-05 12:42:37 INFO  [hc-register,,,] RMI TCP Connection(5)-192.168.41.90 org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/register] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-12-05 12:42:37 INFO  [hc-register,,,] RMI TCP Connection(5)-192.168.41.90 org.springframework.web.servlet.DispatcherServlet Initializing Servlet 'dispatcherServlet'
+2019-12-05 12:42:37 INFO  [hc-register,,,] RMI TCP Connection(5)-192.168.41.90 org.springframework.web.servlet.DispatcherServlet Completed initialization in 8 ms
+2019-12-05 12:42:38 INFO  [hc-register,,,] registrationTask1 de.codecentric.boot.admin.client.registration.ApplicationRegistrator Application registered itself as f86b0848dd66
+2019-12-05 12:43:06 INFO  [hc-register,,,] http-nio-9010-exec-6 com.netflix.eureka.registry.AbstractInstanceRegistry Registered instance HC-CONFIG/DESKTOP-R1RTOA8:hc-config:9050 with status UP (replication=false)
+2019-12-05 12:43:34 INFO  [hc-register,,,] http-nio-9010-exec-10 com.netflix.eureka.registry.AbstractInstanceRegistry Registered instance HC-GATEWAY/DESKTOP-R1RTOA8:hc-gateway:9030 with status UP (replication=false)
+2019-12-05 12:43:36 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 12:43:45 INFO  [hc-register,,,] http-nio-9010-exec-8 com.netflix.eureka.registry.AbstractInstanceRegistry Cancelled instance HC-GATEWAY/DESKTOP-R1RTOA8:hc-gateway:9030 (replication=false)
+2019-12-05 12:43:46 INFO  [hc-register,,,] http-nio-9010-exec-1 com.netflix.eureka.registry.AbstractInstanceRegistry Registered instance HC-GATEWAY/DESKTOP-R1RTOA8:hc-gateway:9030 with status UP (replication=false)
+2019-12-05 12:44:19 INFO  [hc-register,,,] http-nio-9010-exec-10 com.netflix.eureka.registry.AbstractInstanceRegistry Registered instance HC-AUTH/DESKTOP-R1RTOA8:hc-auth:9020 with status UP (replication=false)
+2019-12-05 12:44:31 INFO  [hc-register,,,] http-nio-9010-exec-2 com.netflix.eureka.registry.AbstractInstanceRegistry Cancelled instance HC-AUTH/DESKTOP-R1RTOA8:hc-auth:9020 (replication=false)
+2019-12-05 12:44:31 INFO  [hc-register,,,] http-nio-9010-exec-6 com.netflix.eureka.registry.AbstractInstanceRegistry Registered instance HC-AUTH/DESKTOP-R1RTOA8:hc-auth:9020 with status UP (replication=false)
+2019-12-05 12:44:36 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 12:44:54 INFO  [hc-register,,,] http-nio-9010-exec-5 com.netflix.eureka.registry.AbstractInstanceRegistry Registered instance HC-SERVER-SYSTEM/DESKTOP-R1RTOA8:hc-server-system:9041 with status UP (replication=false)
+2019-12-05 12:45:10 INFO  [hc-register,,,] http-nio-9010-exec-10 com.netflix.eureka.registry.AbstractInstanceRegistry Cancelled instance HC-SERVER-SYSTEM/DESKTOP-R1RTOA8:hc-server-system:9041 (replication=false)
+2019-12-05 12:45:11 INFO  [hc-register,,,] http-nio-9010-exec-2 com.netflix.eureka.registry.AbstractInstanceRegistry Registered instance HC-SERVER-SYSTEM/DESKTOP-R1RTOA8:hc-server-system:9041 with status UP (replication=false)
+2019-12-05 12:45:26 INFO  [hc-register,,,] http-nio-9010-exec-6 com.netflix.eureka.registry.AbstractInstanceRegistry Registered instance HC-SERVER-TEST/DESKTOP-R1RTOA8:hc-server-test:9042 with status UP (replication=false)
+2019-12-05 12:45:36 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 12:45:40 INFO  [hc-register,,,] http-nio-9010-exec-1 com.netflix.eureka.registry.AbstractInstanceRegistry Cancelled instance HC-SERVER-TEST/DESKTOP-R1RTOA8:hc-server-test:9042 (replication=false)
+2019-12-05 12:45:40 INFO  [hc-register,,,] http-nio-9010-exec-6 com.netflix.eureka.registry.AbstractInstanceRegistry Registered instance HC-SERVER-TEST/DESKTOP-R1RTOA8:hc-server-test:9042 with status UP (replication=false)
+2019-12-05 12:46:36 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 12:47:36 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 12:48:36 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 12:49:36 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 12:50:36 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 12:51:36 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 12:52:36 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 12:53:36 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 12:54:36 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 12:55:36 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 12:56:36 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 12:57:36 INFO  [hc-register,,,] ReplicaAwareInstanceRegistry - RenewalThresholdUpdater com.netflix.eureka.registry.PeerAwareInstanceRegistryImpl Current renewal threshold is : 10
+2019-12-05 12:57:36 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 12:58:36 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 12:59:36 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 13:00:36 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 13:01:36 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 13:02:36 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 13:03:36 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 13:03:55 INFO  [hc-register,,,] http-nio-9010-exec-5 com.netflix.eureka.registry.AbstractInstanceRegistry Registered instance HC-SERVER-SYSTEM/DESKTOP-R1RTOA8:hc-server-system:9041 with status DOWN (replication=false)
+2019-12-05 13:04:00 INFO  [hc-register,,,] http-nio-9010-exec-1 com.netflix.eureka.registry.AbstractInstanceRegistry Cancelled instance HC-SERVER-SYSTEM/DESKTOP-R1RTOA8:hc-server-system:9041 (replication=false)
+2019-12-05 13:04:07 INFO  [hc-register,,,] http-nio-9010-exec-9 com.netflix.eureka.registry.AbstractInstanceRegistry Registered instance HC-SERVER-SYSTEM/DESKTOP-R1RTOA8:hc-server-system:9041 with status UP (replication=false)
+2019-12-05 13:04:24 INFO  [hc-register,,,] http-nio-9010-exec-1 com.netflix.eureka.registry.AbstractInstanceRegistry Cancelled instance HC-SERVER-SYSTEM/DESKTOP-R1RTOA8:hc-server-system:9041 (replication=false)
+2019-12-05 13:04:25 INFO  [hc-register,,,] http-nio-9010-exec-5 com.netflix.eureka.registry.AbstractInstanceRegistry Registered instance HC-SERVER-SYSTEM/DESKTOP-R1RTOA8:hc-server-system:9041 with status UP (replication=false)
+2019-12-05 13:04:36 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 13:05:36 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 13:06:00 INFO  [hc-register,,,] http-nio-9010-exec-1 com.netflix.eureka.registry.AbstractInstanceRegistry Registered instance HC-SERVER-SYSTEM/DESKTOP-R1RTOA8:hc-server-system:9041 with status DOWN (replication=false)
+2019-12-05 13:06:04 INFO  [hc-register,,,] http-nio-9010-exec-4 com.netflix.eureka.registry.AbstractInstanceRegistry Cancelled instance HC-SERVER-SYSTEM/DESKTOP-R1RTOA8:hc-server-system:9041 (replication=false)
+2019-12-05 13:06:14 INFO  [hc-register,,,] http-nio-9010-exec-1 com.netflix.eureka.registry.AbstractInstanceRegistry Registered instance HC-SERVER-SYSTEM/DESKTOP-R1RTOA8:hc-server-system:9041 with status UP (replication=false)
+2019-12-05 13:06:30 INFO  [hc-register,,,] http-nio-9010-exec-3 com.netflix.eureka.registry.AbstractInstanceRegistry Cancelled instance HC-SERVER-SYSTEM/DESKTOP-R1RTOA8:hc-server-system:9041 (replication=false)
+2019-12-05 13:06:31 INFO  [hc-register,,,] http-nio-9010-exec-6 com.netflix.eureka.registry.AbstractInstanceRegistry Registered instance HC-SERVER-SYSTEM/DESKTOP-R1RTOA8:hc-server-system:9041 with status UP (replication=false)
+2019-12-05 13:06:36 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 13:07:26 INFO  [hc-register,,,] http-nio-9010-exec-10 com.netflix.eureka.registry.AbstractInstanceRegistry Registered instance HC-SERVER-SYSTEM/DESKTOP-R1RTOA8:hc-server-system:9041 with status DOWN (replication=false)
+2019-12-05 13:07:31 INFO  [hc-register,,,] http-nio-9010-exec-2 com.netflix.eureka.registry.AbstractInstanceRegistry Cancelled instance HC-SERVER-SYSTEM/DESKTOP-R1RTOA8:hc-server-system:9041 (replication=false)
+2019-12-05 13:07:36 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 13:07:38 INFO  [hc-register,,,] http-nio-9010-exec-5 com.netflix.eureka.registry.AbstractInstanceRegistry Registered instance HC-SERVER-SYSTEM/DESKTOP-R1RTOA8:hc-server-system:9041 with status UP (replication=false)
+2019-12-05 13:07:54 INFO  [hc-register,,,] http-nio-9010-exec-8 com.netflix.eureka.registry.AbstractInstanceRegistry Cancelled instance HC-SERVER-SYSTEM/DESKTOP-R1RTOA8:hc-server-system:9041 (replication=false)
+2019-12-05 13:07:55 INFO  [hc-register,,,] http-nio-9010-exec-2 com.netflix.eureka.registry.AbstractInstanceRegistry Registered instance HC-SERVER-SYSTEM/DESKTOP-R1RTOA8:hc-server-system:9041 with status UP (replication=false)
+2019-12-05 13:08:36 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 5ms
+2019-12-05 13:09:36 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 13:10:36 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 13:11:36 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 13:12:36 INFO  [hc-register,,,] ReplicaAwareInstanceRegistry - RenewalThresholdUpdater com.netflix.eureka.registry.PeerAwareInstanceRegistryImpl Current renewal threshold is : 10
+2019-12-05 13:12:36 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 13:13:36 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 13:14:36 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 13:15:36 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 13:16:36 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 13:17:36 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 13:18:36 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 13:19:36 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 13:20:36 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 13:21:36 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 13:22:36 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 13:23:36 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 13:24:36 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 13:25:36 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 13:26:36 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 13:27:36 INFO  [hc-register,,,] ReplicaAwareInstanceRegistry - RenewalThresholdUpdater com.netflix.eureka.registry.PeerAwareInstanceRegistryImpl Current renewal threshold is : 10
+2019-12-05 13:27:36 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 13:28:36 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 13:29:36 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 13:30:36 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 13:31:36 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 13:32:36 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 13:33:36 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 13:34:36 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 13:35:36 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 13:36:36 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 13:37:36 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 13:38:36 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 13:39:36 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 13:40:36 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 13:41:36 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 13:42:36 INFO  [hc-register,,,] ReplicaAwareInstanceRegistry - RenewalThresholdUpdater com.netflix.eureka.registry.PeerAwareInstanceRegistryImpl Current renewal threshold is : 10
+2019-12-05 13:42:36 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 13:43:36 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 13:44:36 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 13:45:36 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 13:46:36 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 13:47:36 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 13:48:36 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 13:49:36 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 13:50:36 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 13:51:36 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 13:52:36 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 13:53:36 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 13:54:37 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 47ms
+2019-12-05 13:55:36 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 1ms
+2019-12-05 13:56:36 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 13:57:36 INFO  [hc-register,,,] ReplicaAwareInstanceRegistry - RenewalThresholdUpdater com.netflix.eureka.registry.PeerAwareInstanceRegistryImpl Current renewal threshold is : 10
+2019-12-05 13:57:36 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 13:58:36 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 13:59:36 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 14:00:36 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 14:01:36 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 14:02:36 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 14:03:36 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 1ms
+2019-12-05 14:04:36 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 14:05:36 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 14:06:36 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 14:07:36 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 14:07:59 INFO  [hc-register,,,] http-nio-9010-exec-7 com.netflix.eureka.registry.AbstractInstanceRegistry Registered instance HC-GATEWAY/DESKTOP-R1RTOA8:hc-gateway:9030 with status DOWN (replication=false)
+2019-12-05 14:08:03 INFO  [hc-register,,,] http-nio-9010-exec-3 com.netflix.eureka.registry.AbstractInstanceRegistry Registered instance HC-AUTH/DESKTOP-R1RTOA8:hc-auth:9020 with status DOWN (replication=false)
+2019-12-05 14:08:23 INFO  [hc-register,,,] http-nio-9010-exec-2 com.netflix.eureka.registry.AbstractInstanceRegistry Cancelled instance HC-GATEWAY/DESKTOP-R1RTOA8:hc-gateway:9030 (replication=false)
+2019-12-05 14:08:23 INFO  [hc-register,,,] http-nio-9010-exec-3 com.netflix.eureka.registry.AbstractInstanceRegistry Cancelled instance HC-AUTH/DESKTOP-R1RTOA8:hc-auth:9020 (replication=false)
+2019-12-05 14:08:29 INFO  [hc-register,,,] Thread-24 org.springframework.cloud.netflix.eureka.serviceregistry.EurekaServiceRegistry Unregistering application HC-REGISTER with eureka with status DOWN
+2019-12-05 14:08:34 INFO  [hc-register,,,] http-nio-9010-exec-10 com.netflix.eureka.registry.AbstractInstanceRegistry Registered instance HC-CONFIG/DESKTOP-R1RTOA8:hc-config:9050 with status DOWN (replication=false)
+2019-12-05 14:08:36 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 14:08:37 INFO  [hc-register,,,] Thread-24 com.netflix.eureka.DefaultEurekaServerContext Shutting down ...
+2019-12-05 14:08:37 INFO  [hc-register,,,] Thread-24 com.netflix.eureka.DefaultEurekaServerContext Shut down
+2019-12-05 14:08:38 INFO  [hc-register,,,] Thread-24 org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler Shutting down ExecutorService
+2019-12-05 14:08:38 INFO  [hc-register,,,] Thread-24 org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor Shutting down ExecutorService 'applicationTaskExecutor'
+2019-12-05 14:08:42 INFO  [hc-register,,,] http-nio-9010-exec-6 com.netflix.eureka.registry.AbstractInstanceRegistry Registered instance HC-SERVER-SYSTEM/DESKTOP-R1RTOA8:hc-server-system:9041 with status DOWN (replication=false)
+2019-12-05 14:08:42 INFO  [hc-register,,,] Thread-24 com.netflix.discovery.DiscoveryClient Shutting down DiscoveryClient ...
+2019-12-05 14:08:43 INFO  [hc-register,,,] Thread-24 com.netflix.discovery.DiscoveryClient Completed shut down of DiscoveryClient
+2019-12-05 14:08:43 INFO  [hc-register,,,] http-nio-9010-exec-5 com.netflix.eureka.registry.AbstractInstanceRegistry Registered instance HC-SERVER-TEST/DESKTOP-R1RTOA8:hc-server-test:9042 with status DOWN (replication=false)
+2019-12-05 14:10:46 INFO  [hc-register,,,] main org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$4df1cd02] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-05 14:10:47 INFO  [hc-register,,,] main com.hc.register.HcRegisterApplication No active profile set, falling back to default profiles: default
+2019-12-05 14:10:48 INFO  [hc-register,,,] main org.springframework.cloud.context.scope.GenericScope BeanFactory id=6ff42770-9d56-32d6-b989-eefa7ce12c63
+2019-12-05 14:10:48 INFO  [hc-register,,,] main org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$4df1cd02] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-05 14:10:49 INFO  [hc-register,,,] main org.springframework.boot.web.embedded.tomcat.TomcatWebServer Tomcat initialized with port(s): 9010 (http)
+2019-12-05 14:10:49 INFO  [hc-register,,,] main org.apache.coyote.http11.Http11NioProtocol Initializing ProtocolHandler ["http-nio-9010"]
+2019-12-05 14:10:49 INFO  [hc-register,,,] main org.apache.catalina.core.StandardService Starting service [Tomcat]
+2019-12-05 14:10:49 INFO  [hc-register,,,] main org.apache.catalina.core.StandardEngine Starting Servlet engine: [Apache Tomcat/9.0.21]
+2019-12-05 14:10:49 INFO  [hc-register,,,] main org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/register] Initializing Spring embedded WebApplicationContext
+2019-12-05 14:10:49 INFO  [hc-register,,,] main org.springframework.web.context.ContextLoader Root WebApplicationContext: initialization completed in 2135 ms
+2019-12-05 14:10:49 INFO  [hc-register,,,] main com.netflix.config.sources.URLConfigurationSource To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2019-12-05 14:10:49 INFO  [hc-register,,,] main com.netflix.config.DynamicPropertyFactory DynamicPropertyFactory is initialized with configuration sources: com.netflix.config.ConcurrentCompositeConfiguration@629e8212
+2019-12-05 14:10:50 INFO  [hc-register,,,] main org.springframework.boot.actuate.endpoint.web.ServletEndpointRegistrar Registered '/actuator/jolokia' to jolokia-actuator-endpoint
+2019-12-05 14:10:51 INFO  [hc-register,,,] main com.sun.jersey.server.impl.application.WebApplicationImpl Initiating Jersey application, version 'Jersey: 1.19.1 03/11/2016 02:08 PM'
+2019-12-05 14:10:51 INFO  [hc-register,,,] main com.netflix.discovery.provider.DiscoveryJerseyProvider Using JSON encoding codec LegacyJacksonJson
+2019-12-05 14:10:51 INFO  [hc-register,,,] main com.netflix.discovery.provider.DiscoveryJerseyProvider Using JSON decoding codec LegacyJacksonJson
+2019-12-05 14:10:51 INFO  [hc-register,,,] main com.netflix.discovery.provider.DiscoveryJerseyProvider Using XML encoding codec XStreamXml
+2019-12-05 14:10:51 INFO  [hc-register,,,] main com.netflix.discovery.provider.DiscoveryJerseyProvider Using XML decoding codec XStreamXml
+2019-12-05 14:10:52 INFO  [hc-register,,,] main org.springframework.security.web.DefaultSecurityFilterChain Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@a7ae340, org.springframework.security.web.context.SecurityContextPersistenceFilter@50fa5938, org.springframework.security.web.header.HeaderWriterFilter@6cb194f5, org.springframework.security.web.csrf.CsrfFilter@7be62956, org.springframework.security.web.authentication.logout.LogoutFilter@31b650e9, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@752494dd, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@73d83141, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@5e8bd498, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@3d4818e8, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@58b5f7d2, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@18d22ecf, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@335972a5, org.springframework.security.web.session.SessionManagementFilter@74f649a7, org.springframework.security.web.access.ExceptionTranslationFilter@4ff9f715, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@5358c8fa]
+2019-12-05 14:10:52 INFO  [hc-register,,,] main com.netflix.config.sources.URLConfigurationSource To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2019-12-05 14:10:52 INFO  [hc-register,,,] main org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor Initializing ExecutorService 'applicationTaskExecutor'
+2019-12-05 14:10:52 INFO  [hc-register,,,] main org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler Initializing ExecutorService
+2019-12-05 14:10:52 INFO  [hc-register,,,] main org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver Exposing 20 endpoint(s) beneath base path '/actuator'
+2019-12-05 14:10:53 INFO  [hc-register,,,] main org.springframework.cloud.netflix.eureka.InstanceInfoFactory Setting initial instance status as: STARTING
+2019-12-05 14:10:53 INFO  [hc-register,,,] main com.netflix.discovery.DiscoveryClient Initializing Eureka in region us-east-1
+2019-12-05 14:10:53 INFO  [hc-register,,,] main com.netflix.discovery.DiscoveryClient Client configured to neither register nor query for data.
+2019-12-05 14:10:53 INFO  [hc-register,,,] main com.netflix.discovery.DiscoveryClient Discovery Client initialized at timestamp 1575526253887 with initial instances count: 0
+2019-12-05 14:10:53 INFO  [hc-register,,,] main com.netflix.eureka.DefaultEurekaServerContext Initializing ...
+2019-12-05 14:10:53 INFO  [hc-register,,,] main com.netflix.eureka.registry.AbstractInstanceRegistry Finished initializing remote region registries. All known remote regions: []
+2019-12-05 14:10:53 INFO  [hc-register,,,] main com.netflix.eureka.DefaultEurekaServerContext Initialized
+2019-12-05 14:10:54 INFO  [hc-register,,,] main org.springframework.cloud.netflix.eureka.serviceregistry.EurekaServiceRegistry Registering application HC-REGISTER with eureka with status UP
+2019-12-05 14:10:54 INFO  [hc-register,,,] Thread-28 org.springframework.cloud.netflix.eureka.server.EurekaServerBootstrap Setting the eureka configuration..
+2019-12-05 14:10:54 INFO  [hc-register,,,] Thread-28 org.springframework.cloud.netflix.eureka.server.EurekaServerBootstrap Eureka data center value eureka.datacenter is not set, defaulting to default
+2019-12-05 14:10:54 INFO  [hc-register,,,] Thread-28 org.springframework.cloud.netflix.eureka.server.EurekaServerBootstrap Eureka environment value eureka.environment is not set, defaulting to test
+2019-12-05 14:10:54 INFO  [hc-register,,,] main org.apache.coyote.http11.Http11NioProtocol Starting ProtocolHandler ["http-nio-9010"]
+2019-12-05 14:10:54 INFO  [hc-register,,,] Thread-28 org.springframework.cloud.netflix.eureka.server.EurekaServerBootstrap isAws returned false
+2019-12-05 14:10:54 INFO  [hc-register,,,] Thread-28 org.springframework.cloud.netflix.eureka.server.EurekaServerBootstrap Initialized server context
+2019-12-05 14:10:54 INFO  [hc-register,,,] Thread-28 com.netflix.eureka.registry.PeerAwareInstanceRegistryImpl Got 1 instances from neighboring DS node
+2019-12-05 14:10:54 INFO  [hc-register,,,] Thread-28 com.netflix.eureka.registry.PeerAwareInstanceRegistryImpl Renew threshold is: 1
+2019-12-05 14:10:54 INFO  [hc-register,,,] Thread-28 com.netflix.eureka.registry.PeerAwareInstanceRegistryImpl Changing status to UP
+2019-12-05 14:10:54 INFO  [hc-register,,,] Thread-28 org.springframework.cloud.netflix.eureka.server.EurekaServerInitializerConfiguration Started Eureka Server
+2019-12-05 14:10:54 INFO  [hc-register,,,] main org.springframework.boot.web.embedded.tomcat.TomcatWebServer Tomcat started on port(s): 9010 (http) with context path '/register'
+2019-12-05 14:10:54 INFO  [hc-register,,,] main org.springframework.cloud.netflix.eureka.serviceregistry.EurekaAutoServiceRegistration Updating port to 9010
+2019-12-05 14:10:54 INFO  [hc-register,,,] main com.hc.register.HcRegisterApplication Started HcRegisterApplication in 11.057 seconds (JVM running for 12.723)
+2019-12-05 14:10:55 INFO  [hc-register,,,] RMI TCP Connection(6)-192.168.41.90 org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/register] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-12-05 14:10:55 INFO  [hc-register,,,] RMI TCP Connection(6)-192.168.41.90 org.springframework.web.servlet.DispatcherServlet Initializing Servlet 'dispatcherServlet'
+2019-12-05 14:10:55 INFO  [hc-register,,,] RMI TCP Connection(6)-192.168.41.90 org.springframework.web.servlet.DispatcherServlet Completed initialization in 18 ms
+2019-12-05 14:11:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 14:12:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 14:13:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 14:14:31 INFO  [hc-register,,,] http-nio-9010-exec-1 com.netflix.eureka.registry.AbstractInstanceRegistry Registered instance HC-CONFIG/DESKTOP-R1RTOA8:hc-config:9050 with status UP (replication=false)
+2019-12-05 14:14:48 INFO  [hc-register,,,] http-nio-9010-exec-9 com.netflix.eureka.registry.AbstractInstanceRegistry Registered instance HC-AUTH/DESKTOP-R1RTOA8:hc-auth:9020 with status UP (replication=false)
+2019-12-05 14:14:48 INFO  [hc-register,,,] http-nio-9010-exec-10 com.netflix.eureka.registry.AbstractInstanceRegistry Registered instance HC-AUTH/DESKTOP-R1RTOA8:hc-auth:9020 with status DOWN (replication=false)
+2019-12-05 14:14:48 INFO  [hc-register,,,] http-nio-9010-exec-2 com.netflix.eureka.registry.AbstractInstanceRegistry Cancelled instance HC-AUTH/DESKTOP-R1RTOA8:hc-auth:9020 (replication=false)
+2019-12-05 14:14:53 INFO  [hc-register,,,] http-nio-9010-exec-6 com.netflix.eureka.registry.AbstractInstanceRegistry Registered instance HC-GATEWAY/DESKTOP-R1RTOA8:hc-gateway:9030 with status UP (replication=false)
+2019-12-05 14:14:53 INFO  [hc-register,,,] http-nio-9010-exec-7 com.netflix.eureka.registry.AbstractInstanceRegistry Registered instance HC-GATEWAY/DESKTOP-R1RTOA8:hc-gateway:9030 with status DOWN (replication=false)
+2019-12-05 14:14:53 INFO  [hc-register,,,] http-nio-9010-exec-8 com.netflix.eureka.registry.AbstractInstanceRegistry Cancelled instance HC-GATEWAY/DESKTOP-R1RTOA8:hc-gateway:9030 (replication=false)
+2019-12-05 14:14:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 14:15:05 INFO  [hc-register,,,] http-nio-9010-exec-6 com.netflix.eureka.registry.AbstractInstanceRegistry Registered instance HC-SERVER-SYSTEM/DESKTOP-R1RTOA8:hc-server-system:9041 with status UP (replication=false)
+2019-12-05 14:15:17 INFO  [hc-register,,,] http-nio-9010-exec-6 com.netflix.eureka.registry.AbstractInstanceRegistry Registered instance HC-AUTH/DESKTOP-R1RTOA8:hc-auth:9020 with status UP (replication=false)
+2019-12-05 14:15:23 INFO  [hc-register,,,] http-nio-9010-exec-1 com.netflix.eureka.registry.AbstractInstanceRegistry Registered instance HC-GATEWAY/DESKTOP-R1RTOA8:hc-gateway:9030 with status UP (replication=false)
+2019-12-05 14:15:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 1ms
+2019-12-05 14:15:59 INFO  [hc-register,,,] http-nio-9010-exec-3 com.netflix.eureka.registry.AbstractInstanceRegistry Cancelled instance HC-GATEWAY/DESKTOP-R1RTOA8:hc-gateway:9030 (replication=false)
+2019-12-05 14:16:00 INFO  [hc-register,,,] http-nio-9010-exec-9 com.netflix.eureka.registry.AbstractInstanceRegistry Registered instance HC-GATEWAY/DESKTOP-R1RTOA8:hc-gateway:9030 with status UP (replication=false)
+2019-12-05 14:16:03 INFO  [hc-register,,,] http-nio-9010-exec-5 com.netflix.eureka.registry.AbstractInstanceRegistry Cancelled instance HC-AUTH/DESKTOP-R1RTOA8:hc-auth:9020 (replication=false)
+2019-12-05 14:16:04 INFO  [hc-register,,,] http-nio-9010-exec-8 com.netflix.eureka.registry.AbstractInstanceRegistry Registered instance HC-AUTH/DESKTOP-R1RTOA8:hc-auth:9020 with status UP (replication=false)
+2019-12-05 14:16:04 INFO  [hc-register,,,] http-nio-9010-exec-9 com.netflix.eureka.registry.AbstractInstanceRegistry Cancelled instance HC-SERVER-SYSTEM/DESKTOP-R1RTOA8:hc-server-system:9041 (replication=false)
+2019-12-05 14:16:05 INFO  [hc-register,,,] http-nio-9010-exec-4 com.netflix.eureka.registry.AbstractInstanceRegistry Registered instance HC-SERVER-SYSTEM/DESKTOP-R1RTOA8:hc-server-system:9041 with status UP (replication=false)
+2019-12-05 14:16:14 INFO  [hc-register,,,] http-nio-9010-exec-6 com.netflix.eureka.registry.AbstractInstanceRegistry Registered instance HC-SERVER-TEST/DESKTOP-R1RTOA8:hc-server-test:9042 with status UP (replication=false)
+2019-12-05 14:16:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 14:17:04 INFO  [hc-register,,,] http-nio-9010-exec-9 com.netflix.eureka.registry.AbstractInstanceRegistry Cancelled instance HC-SERVER-TEST/DESKTOP-R1RTOA8:hc-server-test:9042 (replication=false)
+2019-12-05 14:17:07 INFO  [hc-register,,,] http-nio-9010-exec-5 com.netflix.eureka.registry.AbstractInstanceRegistry Registered instance HC-SERVER-TEST/DESKTOP-R1RTOA8:hc-server-test:9042 with status UP (replication=false)
+2019-12-05 14:17:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 14:18:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 14:19:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 14:20:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 14:21:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 14:22:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 14:23:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 14:24:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 14:25:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 14:25:54 INFO  [hc-register,,,] ReplicaAwareInstanceRegistry - RenewalThresholdUpdater com.netflix.eureka.registry.PeerAwareInstanceRegistryImpl Current renewal threshold is : 10
+2019-12-05 14:26:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 14:27:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 14:28:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 14:29:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 14:30:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 14:31:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 14:32:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 14:33:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 14:34:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 14:35:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 14:36:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 14:37:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 14:38:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 14:39:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 14:40:53 INFO  [hc-register,,,] ReplicaAwareInstanceRegistry - RenewalThresholdUpdater com.netflix.eureka.registry.PeerAwareInstanceRegistryImpl Current renewal threshold is : 10
+2019-12-05 14:40:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 14:41:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 14:42:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 14:43:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 14:44:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 14:45:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 14:46:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 14:47:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 14:48:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 14:49:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 14:50:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 14:51:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 14:52:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 14:53:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 14:54:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 14:55:53 INFO  [hc-register,,,] ReplicaAwareInstanceRegistry - RenewalThresholdUpdater com.netflix.eureka.registry.PeerAwareInstanceRegistryImpl Current renewal threshold is : 10
+2019-12-05 14:55:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 14:56:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 14:57:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 14:58:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 14:59:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 15:00:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 15:01:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 15:02:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 15:03:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 15:04:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 15:05:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 15:06:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 1ms
+2019-12-05 15:07:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 15:08:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 15:09:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 15:10:53 INFO  [hc-register,,,] ReplicaAwareInstanceRegistry - RenewalThresholdUpdater com.netflix.eureka.registry.PeerAwareInstanceRegistryImpl Current renewal threshold is : 10
+2019-12-05 15:10:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 15:11:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 15:12:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 15:13:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 15:14:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 15:15:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 15:16:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 15:17:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 15:18:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 15:19:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 15:20:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 15:21:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 15:22:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 15:23:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 15:24:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 15:25:53 INFO  [hc-register,,,] ReplicaAwareInstanceRegistry - RenewalThresholdUpdater com.netflix.eureka.registry.PeerAwareInstanceRegistryImpl Current renewal threshold is : 10
+2019-12-05 15:25:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 15:26:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 15:27:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 15:28:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 15:29:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 15:30:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 15:31:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 15:32:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 15:33:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 15:34:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 15:35:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 15:36:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 15:37:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 15:38:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 15:39:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 15:40:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 15:40:53 INFO  [hc-register,,,] ReplicaAwareInstanceRegistry - RenewalThresholdUpdater com.netflix.eureka.registry.PeerAwareInstanceRegistryImpl Current renewal threshold is : 10
+2019-12-05 15:41:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 15:42:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 15:43:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 15:44:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 15:45:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 15:46:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 15:47:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 15:48:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 15:49:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 15:50:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 15:51:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 15:52:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 15:53:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 15:54:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 15:55:53 INFO  [hc-register,,,] ReplicaAwareInstanceRegistry - RenewalThresholdUpdater com.netflix.eureka.registry.PeerAwareInstanceRegistryImpl Current renewal threshold is : 10
+2019-12-05 15:55:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 15:56:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 15:57:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 15:58:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 15:59:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 16:00:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 16:01:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 16:02:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 16:03:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 16:04:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 16:05:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 16:06:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 16:07:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 16:08:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 16:09:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 16:10:53 INFO  [hc-register,,,] ReplicaAwareInstanceRegistry - RenewalThresholdUpdater com.netflix.eureka.registry.PeerAwareInstanceRegistryImpl Current renewal threshold is : 10
+2019-12-05 16:10:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 16:11:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 16:12:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 16:13:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 16:14:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 16:15:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 1ms
+2019-12-05 16:16:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 16:17:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 16:18:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 16:19:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 16:20:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 16:21:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 16:22:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 16:23:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 16:24:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 16:25:53 INFO  [hc-register,,,] ReplicaAwareInstanceRegistry - RenewalThresholdUpdater com.netflix.eureka.registry.PeerAwareInstanceRegistryImpl Current renewal threshold is : 10
+2019-12-05 16:25:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 16:26:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 16:27:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 16:28:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 16:29:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 16:30:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 16:31:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 16:32:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 16:33:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 16:34:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 16:35:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 16:36:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 16:37:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 16:38:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 16:39:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 16:40:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 16:41:05 INFO  [hc-register,,,] ReplicaAwareInstanceRegistry - RenewalThresholdUpdater com.netflix.eureka.registry.PeerAwareInstanceRegistryImpl Current renewal threshold is : 10
+2019-12-05 16:41:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 16:42:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 16:43:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 1ms
+2019-12-05 16:44:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 16:45:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 16:46:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 16:47:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 16:48:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 16:49:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 16:50:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 16:51:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 16:52:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 16:53:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 16:54:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 16:55:53 INFO  [hc-register,,,] ReplicaAwareInstanceRegistry - RenewalThresholdUpdater com.netflix.eureka.registry.PeerAwareInstanceRegistryImpl Current renewal threshold is : 10
+2019-12-05 16:55:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 16:56:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 16:57:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 16:58:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 16:59:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 17:00:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 17:01:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 1ms
+2019-12-05 17:02:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 17:03:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 17:04:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 17:05:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 17:06:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 17:07:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 17:08:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 17:09:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 17:10:53 INFO  [hc-register,,,] ReplicaAwareInstanceRegistry - RenewalThresholdUpdater com.netflix.eureka.registry.PeerAwareInstanceRegistryImpl Current renewal threshold is : 10
+2019-12-05 17:10:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 17:11:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 17:12:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 17:13:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 17:14:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 17:15:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 17:16:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 17:17:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 17:18:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 17:19:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 17:20:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 17:21:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 17:22:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 17:23:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 17:24:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 17:25:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 17:25:54 INFO  [hc-register,,,] ReplicaAwareInstanceRegistry - RenewalThresholdUpdater com.netflix.eureka.registry.PeerAwareInstanceRegistryImpl Current renewal threshold is : 10
+2019-12-05 17:26:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 17:27:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 17:28:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 17:29:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 17:30:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 17:31:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 17:32:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 17:33:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 17:34:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 17:35:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 17:36:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 1ms
+2019-12-05 17:37:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 17:38:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 17:39:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 17:40:54 INFO  [hc-register,,,] ReplicaAwareInstanceRegistry - RenewalThresholdUpdater com.netflix.eureka.registry.PeerAwareInstanceRegistryImpl Current renewal threshold is : 10
+2019-12-05 17:40:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 17:41:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 17:42:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 17:43:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 17:44:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 17:45:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 17:46:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 17:47:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 17:48:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 17:49:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 17:50:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 17:51:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 17:52:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 17:53:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 17:54:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 17:55:53 INFO  [hc-register,,,] ReplicaAwareInstanceRegistry - RenewalThresholdUpdater com.netflix.eureka.registry.PeerAwareInstanceRegistryImpl Current renewal threshold is : 10
+2019-12-05 17:55:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 17:56:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 17:57:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 17:58:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 17:59:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 1ms
+2019-12-05 18:00:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 18:01:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 18:02:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 18:03:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 18:04:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 18:05:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 18:06:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 18:07:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 18:08:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 18:09:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 18:10:53 INFO  [hc-register,,,] ReplicaAwareInstanceRegistry - RenewalThresholdUpdater com.netflix.eureka.registry.PeerAwareInstanceRegistryImpl Current renewal threshold is : 10
+2019-12-05 18:10:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 18:11:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 18:12:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 18:13:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 18:14:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 18:15:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 18:16:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 18:17:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 18:18:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 18:19:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 18:20:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 18:21:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 18:22:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 18:23:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 18:24:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 18:25:53 INFO  [hc-register,,,] ReplicaAwareInstanceRegistry - RenewalThresholdUpdater com.netflix.eureka.registry.PeerAwareInstanceRegistryImpl Current renewal threshold is : 10
+2019-12-05 18:25:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 18:26:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 18:27:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 18:28:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 18:29:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 18:30:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 18:31:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 18:32:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 18:33:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 18:34:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 18:35:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 18:36:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 18:37:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 18:38:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 18:39:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 18:40:53 INFO  [hc-register,,,] ReplicaAwareInstanceRegistry - RenewalThresholdUpdater com.netflix.eureka.registry.PeerAwareInstanceRegistryImpl Current renewal threshold is : 10
+2019-12-05 18:40:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 18:41:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 18:42:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 18:43:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 18:44:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 18:45:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 18:46:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 18:47:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 18:48:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 18:49:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 18:50:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 18:51:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 18:52:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 18:53:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 18:54:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 18:55:53 INFO  [hc-register,,,] ReplicaAwareInstanceRegistry - RenewalThresholdUpdater com.netflix.eureka.registry.PeerAwareInstanceRegistryImpl Current renewal threshold is : 10
+2019-12-05 18:55:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 18:56:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 18:57:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 18:58:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 18:59:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 19:00:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 19:01:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 19:02:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 19:03:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 19:04:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 19:05:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 19:06:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 19:07:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 19:08:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 19:09:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 19:10:53 INFO  [hc-register,,,] ReplicaAwareInstanceRegistry - RenewalThresholdUpdater com.netflix.eureka.registry.PeerAwareInstanceRegistryImpl Current renewal threshold is : 10
+2019-12-05 19:10:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 19:11:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 19:12:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 19:13:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 19:14:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 19:15:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 19:16:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 19:17:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 19:18:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 19:19:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 19:20:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 19:21:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 19:22:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 19:23:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 19:24:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 19:25:53 INFO  [hc-register,,,] ReplicaAwareInstanceRegistry - RenewalThresholdUpdater com.netflix.eureka.registry.PeerAwareInstanceRegistryImpl Current renewal threshold is : 10
+2019-12-05 19:25:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 19:26:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 19:27:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 19:28:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 19:29:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 19:30:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 19:31:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 19:32:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 19:33:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 19:34:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 19:35:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 19:36:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 19:37:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 19:38:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 19:39:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 19:40:53 INFO  [hc-register,,,] ReplicaAwareInstanceRegistry - RenewalThresholdUpdater com.netflix.eureka.registry.PeerAwareInstanceRegistryImpl Current renewal threshold is : 10
+2019-12-05 19:40:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 19:41:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 19:42:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 19:43:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 19:44:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 19:45:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 19:46:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 19:47:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 19:48:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 19:49:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 19:50:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 19:51:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 19:52:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 19:53:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 19:54:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 19:55:53 INFO  [hc-register,,,] ReplicaAwareInstanceRegistry - RenewalThresholdUpdater com.netflix.eureka.registry.PeerAwareInstanceRegistryImpl Current renewal threshold is : 10
+2019-12-05 19:55:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 19:56:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 19:57:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 19:58:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 19:59:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 20:00:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 20:01:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 20:02:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 20:03:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 20:04:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 20:05:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 20:06:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 20:07:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 20:08:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 20:09:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 20:10:53 INFO  [hc-register,,,] ReplicaAwareInstanceRegistry - RenewalThresholdUpdater com.netflix.eureka.registry.PeerAwareInstanceRegistryImpl Current renewal threshold is : 10
+2019-12-05 20:10:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 20:11:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 20:12:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 20:13:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 20:14:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 20:15:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 20:16:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 20:17:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 20:18:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 20:19:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 20:20:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 20:21:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 20:22:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 20:23:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 20:24:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 20:25:53 INFO  [hc-register,,,] ReplicaAwareInstanceRegistry - RenewalThresholdUpdater com.netflix.eureka.registry.PeerAwareInstanceRegistryImpl Current renewal threshold is : 10
+2019-12-05 20:25:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 20:26:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 20:27:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 20:28:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 20:29:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 20:30:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 20:31:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 20:32:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 20:33:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 20:34:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 20:35:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 20:36:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 20:37:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 20:38:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 20:39:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 20:40:53 INFO  [hc-register,,,] ReplicaAwareInstanceRegistry - RenewalThresholdUpdater com.netflix.eureka.registry.PeerAwareInstanceRegistryImpl Current renewal threshold is : 10
+2019-12-05 20:40:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 20:41:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 20:42:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 20:43:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 20:44:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 20:45:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 20:46:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 20:47:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 20:48:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 20:49:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 20:50:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 20:51:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 20:52:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 20:53:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 20:54:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 20:55:53 INFO  [hc-register,,,] ReplicaAwareInstanceRegistry - RenewalThresholdUpdater com.netflix.eureka.registry.PeerAwareInstanceRegistryImpl Current renewal threshold is : 10
+2019-12-05 20:55:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 20:56:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 20:57:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 20:58:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 20:59:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 21:00:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 21:01:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 21:02:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 21:03:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 21:04:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 21:05:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 21:06:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 21:07:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 21:08:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 21:09:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 21:10:53 INFO  [hc-register,,,] ReplicaAwareInstanceRegistry - RenewalThresholdUpdater com.netflix.eureka.registry.PeerAwareInstanceRegistryImpl Current renewal threshold is : 10
+2019-12-05 21:10:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 21:11:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 1ms
+2019-12-05 21:12:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 21:13:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 21:14:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 21:15:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 21:16:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 21:17:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 21:18:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 21:19:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 21:20:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 21:21:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 21:22:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 21:23:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 21:24:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 21:25:53 INFO  [hc-register,,,] ReplicaAwareInstanceRegistry - RenewalThresholdUpdater com.netflix.eureka.registry.PeerAwareInstanceRegistryImpl Current renewal threshold is : 10
+2019-12-05 21:25:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 21:26:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 21:27:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 21:28:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 21:29:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 21:30:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 21:31:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 21:32:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 21:33:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 21:34:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 21:35:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 21:36:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 21:37:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 21:38:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 21:39:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 21:40:53 INFO  [hc-register,,,] ReplicaAwareInstanceRegistry - RenewalThresholdUpdater com.netflix.eureka.registry.PeerAwareInstanceRegistryImpl Current renewal threshold is : 10
+2019-12-05 21:40:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 21:41:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 21:42:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 21:43:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 21:44:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 21:45:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 21:46:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 21:47:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 21:48:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 21:49:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 21:50:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 21:51:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 21:52:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 21:53:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 21:54:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 21:55:53 INFO  [hc-register,,,] ReplicaAwareInstanceRegistry - RenewalThresholdUpdater com.netflix.eureka.registry.PeerAwareInstanceRegistryImpl Current renewal threshold is : 10
+2019-12-05 21:55:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 21:56:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 21:57:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 21:58:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 21:59:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 22:00:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 22:01:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 22:02:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 22:03:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 22:04:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 22:05:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 22:06:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 22:07:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 22:08:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 22:09:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 22:10:53 INFO  [hc-register,,,] ReplicaAwareInstanceRegistry - RenewalThresholdUpdater com.netflix.eureka.registry.PeerAwareInstanceRegistryImpl Current renewal threshold is : 10
+2019-12-05 22:10:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 22:11:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 22:12:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 22:13:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 22:14:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 22:15:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 22:16:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 22:17:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 22:18:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 22:19:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 22:20:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 22:21:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 22:22:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 22:23:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 22:24:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 22:25:53 INFO  [hc-register,,,] ReplicaAwareInstanceRegistry - RenewalThresholdUpdater com.netflix.eureka.registry.PeerAwareInstanceRegistryImpl Current renewal threshold is : 10
+2019-12-05 22:25:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 22:26:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 22:27:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 22:28:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 22:29:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 22:30:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 22:31:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 22:32:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 22:33:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 22:34:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 22:35:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 22:36:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 22:37:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 22:38:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 22:39:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 22:40:53 INFO  [hc-register,,,] ReplicaAwareInstanceRegistry - RenewalThresholdUpdater com.netflix.eureka.registry.PeerAwareInstanceRegistryImpl Current renewal threshold is : 10
+2019-12-05 22:40:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 22:41:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 22:42:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 22:43:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 22:44:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 22:45:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 22:46:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 22:47:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 22:48:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 22:49:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 22:50:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 22:51:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 22:52:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 22:53:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 22:54:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 22:55:53 INFO  [hc-register,,,] ReplicaAwareInstanceRegistry - RenewalThresholdUpdater com.netflix.eureka.registry.PeerAwareInstanceRegistryImpl Current renewal threshold is : 10
+2019-12-05 22:55:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 22:56:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 22:57:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 22:58:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 22:59:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 23:00:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 23:01:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 23:02:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 23:03:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 23:04:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 23:05:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 23:06:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 23:07:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 23:08:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 23:09:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 23:10:53 INFO  [hc-register,,,] ReplicaAwareInstanceRegistry - RenewalThresholdUpdater com.netflix.eureka.registry.PeerAwareInstanceRegistryImpl Current renewal threshold is : 10
+2019-12-05 23:10:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 23:11:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 23:12:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 23:13:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 23:14:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 23:15:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 23:16:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 23:17:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 23:18:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 23:19:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 23:20:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 23:21:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 23:22:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 23:23:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 23:24:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 23:25:53 INFO  [hc-register,,,] ReplicaAwareInstanceRegistry - RenewalThresholdUpdater com.netflix.eureka.registry.PeerAwareInstanceRegistryImpl Current renewal threshold is : 10
+2019-12-05 23:25:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 23:26:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 23:27:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 23:28:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 23:29:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 23:30:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 23:31:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 23:32:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 23:33:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 23:34:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 23:35:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 23:36:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 23:37:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 23:38:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 23:39:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 23:40:53 INFO  [hc-register,,,] ReplicaAwareInstanceRegistry - RenewalThresholdUpdater com.netflix.eureka.registry.PeerAwareInstanceRegistryImpl Current renewal threshold is : 10
+2019-12-05 23:40:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 23:41:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 23:42:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 23:43:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 23:44:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 23:45:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 23:46:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 23:47:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 23:48:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 23:49:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 23:50:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 2ms
+2019-12-05 23:51:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 23:52:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 23:53:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 23:54:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 23:55:53 INFO  [hc-register,,,] ReplicaAwareInstanceRegistry - RenewalThresholdUpdater com.netflix.eureka.registry.PeerAwareInstanceRegistryImpl Current renewal threshold is : 10
+2019-12-05 23:55:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 23:56:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 23:57:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 23:58:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-05 23:59:54 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms

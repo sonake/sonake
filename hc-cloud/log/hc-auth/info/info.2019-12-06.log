@@ -1,0 +1,133 @@
+2019-12-06 00:01:05 INFO  [hc-auth,,,] AsyncResolver-bootstrap-executor-0 com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver Resolving eureka endpoints via configuration
+2019-12-06 00:06:06 INFO  [hc-auth,,,] AsyncResolver-bootstrap-executor-0 com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver Resolving eureka endpoints via configuration
+2019-12-06 00:11:06 INFO  [hc-auth,,,] AsyncResolver-bootstrap-executor-0 com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver Resolving eureka endpoints via configuration
+2019-12-06 00:16:06 INFO  [hc-auth,,,] AsyncResolver-bootstrap-executor-0 com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver Resolving eureka endpoints via configuration
+2019-12-06 00:21:06 INFO  [hc-auth,,,] AsyncResolver-bootstrap-executor-0 com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver Resolving eureka endpoints via configuration
+2019-12-06 00:26:06 INFO  [hc-auth,,,] AsyncResolver-bootstrap-executor-0 com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver Resolving eureka endpoints via configuration
+2019-12-06 00:31:06 INFO  [hc-auth,,,] AsyncResolver-bootstrap-executor-0 com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver Resolving eureka endpoints via configuration
+2019-12-06 00:36:06 INFO  [hc-auth,,,] AsyncResolver-bootstrap-executor-0 com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver Resolving eureka endpoints via configuration
+2019-12-06 00:41:06 INFO  [hc-auth,,,] AsyncResolver-bootstrap-executor-0 com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver Resolving eureka endpoints via configuration
+2019-12-06 00:46:06 INFO  [hc-auth,,,] AsyncResolver-bootstrap-executor-0 com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver Resolving eureka endpoints via configuration
+2019-12-06 00:51:06 INFO  [hc-auth,,,] AsyncResolver-bootstrap-executor-0 com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver Resolving eureka endpoints via configuration
+2019-12-06 00:56:06 INFO  [hc-auth,,,] AsyncResolver-bootstrap-executor-0 com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver Resolving eureka endpoints via configuration
+2019-12-06 01:01:06 INFO  [hc-auth,,,] AsyncResolver-bootstrap-executor-0 com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver Resolving eureka endpoints via configuration
+2019-12-06 01:06:06 INFO  [hc-auth,,,] AsyncResolver-bootstrap-executor-0 com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver Resolving eureka endpoints via configuration
+2019-12-06 01:11:06 INFO  [hc-auth,,,] AsyncResolver-bootstrap-executor-0 com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver Resolving eureka endpoints via configuration
+2019-12-06 01:16:06 INFO  [hc-auth,,,] AsyncResolver-bootstrap-executor-0 com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver Resolving eureka endpoints via configuration
+2019-12-06 01:21:06 INFO  [hc-auth,,,] AsyncResolver-bootstrap-executor-0 com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver Resolving eureka endpoints via configuration
+2019-12-06 01:26:06 INFO  [hc-auth,,,] AsyncResolver-bootstrap-executor-0 com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver Resolving eureka endpoints via configuration
+2019-12-06 01:31:06 INFO  [hc-auth,,,] AsyncResolver-bootstrap-executor-0 com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver Resolving eureka endpoints via configuration
+2019-12-06 01:36:06 INFO  [hc-auth,,,] AsyncResolver-bootstrap-executor-0 com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver Resolving eureka endpoints via configuration
+2019-12-06 01:41:06 INFO  [hc-auth,,,] AsyncResolver-bootstrap-executor-0 com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver Resolving eureka endpoints via configuration
+2019-12-06 01:46:06 INFO  [hc-auth,,,] AsyncResolver-bootstrap-executor-0 com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver Resolving eureka endpoints via configuration
+2019-12-06 01:51:06 INFO  [hc-auth,,,] AsyncResolver-bootstrap-executor-0 com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver Resolving eureka endpoints via configuration
+2019-12-06 01:56:06 INFO  [hc-auth,,,] AsyncResolver-bootstrap-executor-0 com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver Resolving eureka endpoints via configuration
+2019-12-06 02:01:06 INFO  [hc-auth,,,] AsyncResolver-bootstrap-executor-0 com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver Resolving eureka endpoints via configuration
+2019-12-06 02:06:06 INFO  [hc-auth,,,] AsyncResolver-bootstrap-executor-0 com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver Resolving eureka endpoints via configuration
+2019-12-06 02:11:06 INFO  [hc-auth,,,] AsyncResolver-bootstrap-executor-0 com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver Resolving eureka endpoints via configuration
+2019-12-06 02:16:06 INFO  [hc-auth,,,] AsyncResolver-bootstrap-executor-0 com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver Resolving eureka endpoints via configuration
+2019-12-06 02:21:06 INFO  [hc-auth,,,] AsyncResolver-bootstrap-executor-0 com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver Resolving eureka endpoints via configuration
+2019-12-06 02:26:06 INFO  [hc-auth,,,] AsyncResolver-bootstrap-executor-0 com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver Resolving eureka endpoints via configuration
+2019-12-06 02:31:06 INFO  [hc-auth,,,] AsyncResolver-bootstrap-executor-0 com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver Resolving eureka endpoints via configuration
+2019-12-06 02:36:06 INFO  [hc-auth,,,] AsyncResolver-bootstrap-executor-0 com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver Resolving eureka endpoints via configuration
+2019-12-06 02:41:06 INFO  [hc-auth,,,] AsyncResolver-bootstrap-executor-0 com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver Resolving eureka endpoints via configuration
+2019-12-06 02:46:06 INFO  [hc-auth,,,] AsyncResolver-bootstrap-executor-0 com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver Resolving eureka endpoints via configuration
+2019-12-06 02:51:06 INFO  [hc-auth,,,] AsyncResolver-bootstrap-executor-0 com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver Resolving eureka endpoints via configuration
+2019-12-06 02:56:06 INFO  [hc-auth,,,] AsyncResolver-bootstrap-executor-0 com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver Resolving eureka endpoints via configuration
+2019-12-06 03:01:06 INFO  [hc-auth,,,] AsyncResolver-bootstrap-executor-0 com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver Resolving eureka endpoints via configuration
+2019-12-06 03:06:06 INFO  [hc-auth,,,] AsyncResolver-bootstrap-executor-0 com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver Resolving eureka endpoints via configuration
+2019-12-06 03:11:06 INFO  [hc-auth,,,] AsyncResolver-bootstrap-executor-0 com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver Resolving eureka endpoints via configuration
+2019-12-06 03:16:06 INFO  [hc-auth,,,] AsyncResolver-bootstrap-executor-0 com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver Resolving eureka endpoints via configuration
+2019-12-06 03:21:06 INFO  [hc-auth,,,] AsyncResolver-bootstrap-executor-0 com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver Resolving eureka endpoints via configuration
+2019-12-06 03:26:06 INFO  [hc-auth,,,] AsyncResolver-bootstrap-executor-0 com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver Resolving eureka endpoints via configuration
+2019-12-06 03:31:06 INFO  [hc-auth,,,] AsyncResolver-bootstrap-executor-0 com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver Resolving eureka endpoints via configuration
+2019-12-06 03:36:06 INFO  [hc-auth,,,] AsyncResolver-bootstrap-executor-0 com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver Resolving eureka endpoints via configuration
+2019-12-06 03:41:06 INFO  [hc-auth,,,] AsyncResolver-bootstrap-executor-0 com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver Resolving eureka endpoints via configuration
+2019-12-06 03:46:06 INFO  [hc-auth,,,] AsyncResolver-bootstrap-executor-0 com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver Resolving eureka endpoints via configuration
+2019-12-06 03:51:06 INFO  [hc-auth,,,] AsyncResolver-bootstrap-executor-0 com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver Resolving eureka endpoints via configuration
+2019-12-06 03:56:06 INFO  [hc-auth,,,] AsyncResolver-bootstrap-executor-0 com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver Resolving eureka endpoints via configuration
+2019-12-06 04:01:06 INFO  [hc-auth,,,] AsyncResolver-bootstrap-executor-0 com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver Resolving eureka endpoints via configuration
+2019-12-06 04:06:06 INFO  [hc-auth,,,] AsyncResolver-bootstrap-executor-0 com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver Resolving eureka endpoints via configuration
+2019-12-06 04:11:06 INFO  [hc-auth,,,] AsyncResolver-bootstrap-executor-0 com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver Resolving eureka endpoints via configuration
+2019-12-06 04:16:06 INFO  [hc-auth,,,] AsyncResolver-bootstrap-executor-0 com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver Resolving eureka endpoints via configuration
+2019-12-06 04:21:06 INFO  [hc-auth,,,] AsyncResolver-bootstrap-executor-0 com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver Resolving eureka endpoints via configuration
+2019-12-06 04:26:06 INFO  [hc-auth,,,] AsyncResolver-bootstrap-executor-0 com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver Resolving eureka endpoints via configuration
+2019-12-06 04:31:06 INFO  [hc-auth,,,] AsyncResolver-bootstrap-executor-0 com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver Resolving eureka endpoints via configuration
+2019-12-06 04:36:06 INFO  [hc-auth,,,] AsyncResolver-bootstrap-executor-0 com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver Resolving eureka endpoints via configuration
+2019-12-06 04:41:06 INFO  [hc-auth,,,] AsyncResolver-bootstrap-executor-0 com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver Resolving eureka endpoints via configuration
+2019-12-06 04:46:06 INFO  [hc-auth,,,] AsyncResolver-bootstrap-executor-0 com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver Resolving eureka endpoints via configuration
+2019-12-06 04:51:06 INFO  [hc-auth,,,] AsyncResolver-bootstrap-executor-0 com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver Resolving eureka endpoints via configuration
+2019-12-06 04:56:06 INFO  [hc-auth,,,] AsyncResolver-bootstrap-executor-0 com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver Resolving eureka endpoints via configuration
+2019-12-06 05:01:06 INFO  [hc-auth,,,] AsyncResolver-bootstrap-executor-0 com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver Resolving eureka endpoints via configuration
+2019-12-06 05:06:06 INFO  [hc-auth,,,] AsyncResolver-bootstrap-executor-0 com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver Resolving eureka endpoints via configuration
+2019-12-06 05:11:06 INFO  [hc-auth,,,] AsyncResolver-bootstrap-executor-0 com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver Resolving eureka endpoints via configuration
+2019-12-06 05:16:06 INFO  [hc-auth,,,] AsyncResolver-bootstrap-executor-0 com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver Resolving eureka endpoints via configuration
+2019-12-06 05:21:06 INFO  [hc-auth,,,] AsyncResolver-bootstrap-executor-0 com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver Resolving eureka endpoints via configuration
+2019-12-06 05:26:06 INFO  [hc-auth,,,] AsyncResolver-bootstrap-executor-0 com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver Resolving eureka endpoints via configuration
+2019-12-06 05:31:06 INFO  [hc-auth,,,] AsyncResolver-bootstrap-executor-0 com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver Resolving eureka endpoints via configuration
+2019-12-06 05:36:06 INFO  [hc-auth,,,] AsyncResolver-bootstrap-executor-0 com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver Resolving eureka endpoints via configuration
+2019-12-06 05:41:06 INFO  [hc-auth,,,] AsyncResolver-bootstrap-executor-0 com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver Resolving eureka endpoints via configuration
+2019-12-06 05:46:06 INFO  [hc-auth,,,] AsyncResolver-bootstrap-executor-0 com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver Resolving eureka endpoints via configuration
+2019-12-06 05:51:06 INFO  [hc-auth,,,] AsyncResolver-bootstrap-executor-0 com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver Resolving eureka endpoints via configuration
+2019-12-06 05:56:06 INFO  [hc-auth,,,] AsyncResolver-bootstrap-executor-0 com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver Resolving eureka endpoints via configuration
+2019-12-06 06:01:06 INFO  [hc-auth,,,] AsyncResolver-bootstrap-executor-0 com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver Resolving eureka endpoints via configuration
+2019-12-06 06:06:06 INFO  [hc-auth,,,] AsyncResolver-bootstrap-executor-0 com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver Resolving eureka endpoints via configuration
+2019-12-06 06:11:06 INFO  [hc-auth,,,] AsyncResolver-bootstrap-executor-0 com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver Resolving eureka endpoints via configuration
+2019-12-06 06:16:06 INFO  [hc-auth,,,] AsyncResolver-bootstrap-executor-0 com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver Resolving eureka endpoints via configuration
+2019-12-06 06:21:06 INFO  [hc-auth,,,] AsyncResolver-bootstrap-executor-0 com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver Resolving eureka endpoints via configuration
+2019-12-06 06:26:06 INFO  [hc-auth,,,] AsyncResolver-bootstrap-executor-0 com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver Resolving eureka endpoints via configuration
+2019-12-06 06:31:06 INFO  [hc-auth,,,] AsyncResolver-bootstrap-executor-0 com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver Resolving eureka endpoints via configuration
+2019-12-06 06:36:06 INFO  [hc-auth,,,] AsyncResolver-bootstrap-executor-0 com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver Resolving eureka endpoints via configuration
+2019-12-06 06:41:06 INFO  [hc-auth,,,] AsyncResolver-bootstrap-executor-0 com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver Resolving eureka endpoints via configuration
+2019-12-06 06:46:06 INFO  [hc-auth,,,] AsyncResolver-bootstrap-executor-0 com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver Resolving eureka endpoints via configuration
+2019-12-06 06:51:06 INFO  [hc-auth,,,] AsyncResolver-bootstrap-executor-0 com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver Resolving eureka endpoints via configuration
+2019-12-06 06:56:06 INFO  [hc-auth,,,] AsyncResolver-bootstrap-executor-0 com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver Resolving eureka endpoints via configuration
+2019-12-06 07:01:06 INFO  [hc-auth,,,] AsyncResolver-bootstrap-executor-0 com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver Resolving eureka endpoints via configuration
+2019-12-06 07:06:06 INFO  [hc-auth,,,] AsyncResolver-bootstrap-executor-0 com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver Resolving eureka endpoints via configuration
+2019-12-06 07:11:06 INFO  [hc-auth,,,] AsyncResolver-bootstrap-executor-0 com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver Resolving eureka endpoints via configuration
+2019-12-06 07:16:06 INFO  [hc-auth,,,] AsyncResolver-bootstrap-executor-0 com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver Resolving eureka endpoints via configuration
+2019-12-06 07:21:06 INFO  [hc-auth,,,] AsyncResolver-bootstrap-executor-0 com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver Resolving eureka endpoints via configuration
+2019-12-06 07:26:06 INFO  [hc-auth,,,] AsyncResolver-bootstrap-executor-0 com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver Resolving eureka endpoints via configuration
+2019-12-06 07:31:06 INFO  [hc-auth,,,] AsyncResolver-bootstrap-executor-0 com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver Resolving eureka endpoints via configuration
+2019-12-06 07:36:06 INFO  [hc-auth,,,] AsyncResolver-bootstrap-executor-0 com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver Resolving eureka endpoints via configuration
+2019-12-06 07:41:06 INFO  [hc-auth,,,] AsyncResolver-bootstrap-executor-0 com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver Resolving eureka endpoints via configuration
+2019-12-06 07:46:06 INFO  [hc-auth,,,] AsyncResolver-bootstrap-executor-0 com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver Resolving eureka endpoints via configuration
+2019-12-06 07:51:06 INFO  [hc-auth,,,] AsyncResolver-bootstrap-executor-0 com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver Resolving eureka endpoints via configuration
+2019-12-06 07:56:06 INFO  [hc-auth,,,] AsyncResolver-bootstrap-executor-0 com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver Resolving eureka endpoints via configuration
+2019-12-06 08:01:06 INFO  [hc-auth,,,] AsyncResolver-bootstrap-executor-0 com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver Resolving eureka endpoints via configuration
+2019-12-06 08:06:06 INFO  [hc-auth,,,] AsyncResolver-bootstrap-executor-0 com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver Resolving eureka endpoints via configuration
+2019-12-06 08:11:06 INFO  [hc-auth,,,] AsyncResolver-bootstrap-executor-0 com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver Resolving eureka endpoints via configuration
+2019-12-06 08:16:06 INFO  [hc-auth,,,] AsyncResolver-bootstrap-executor-0 com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver Resolving eureka endpoints via configuration
+2019-12-06 08:21:06 INFO  [hc-auth,,,] AsyncResolver-bootstrap-executor-0 com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver Resolving eureka endpoints via configuration
+2019-12-06 08:26:06 INFO  [hc-auth,,,] AsyncResolver-bootstrap-executor-0 com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver Resolving eureka endpoints via configuration
+2019-12-06 08:31:06 INFO  [hc-auth,,,] AsyncResolver-bootstrap-executor-0 com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver Resolving eureka endpoints via configuration
+2019-12-06 08:36:06 INFO  [hc-auth,,,] AsyncResolver-bootstrap-executor-0 com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver Resolving eureka endpoints via configuration
+2019-12-06 08:41:06 INFO  [hc-auth,,,] AsyncResolver-bootstrap-executor-0 com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver Resolving eureka endpoints via configuration
+2019-12-06 08:46:06 INFO  [hc-auth,,,] AsyncResolver-bootstrap-executor-0 com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver Resolving eureka endpoints via configuration
+2019-12-06 08:51:06 INFO  [hc-auth,,,] AsyncResolver-bootstrap-executor-0 com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver Resolving eureka endpoints via configuration
+2019-12-06 08:56:06 INFO  [hc-auth,,,] AsyncResolver-bootstrap-executor-0 com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver Resolving eureka endpoints via configuration
+2019-12-06 09:01:06 INFO  [hc-auth,,,] AsyncResolver-bootstrap-executor-0 com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver Resolving eureka endpoints via configuration
+2019-12-06 09:06:06 INFO  [hc-auth,,,] AsyncResolver-bootstrap-executor-0 com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver Resolving eureka endpoints via configuration
+2019-12-06 09:11:06 INFO  [hc-auth,,,] AsyncResolver-bootstrap-executor-0 com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver Resolving eureka endpoints via configuration
+2019-12-06 09:16:07 INFO  [hc-auth,,,] Thread-76 org.springframework.cloud.netflix.eureka.serviceregistry.EurekaServiceRegistry Unregistering application HC-AUTH with eureka with status DOWN
+2019-12-06 09:16:07 INFO  [hc-auth,,,] AsyncResolver-bootstrap-executor-0 com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver Resolving eureka endpoints via configuration
+2019-12-06 09:16:07 INFO  [hc-auth,,,] DiscoveryClient-InstanceInfoReplicator-0 com.netflix.discovery.DiscoveryClient DiscoveryClient_HC-AUTH/DESKTOP-R1RTOA8:hc-auth:9020: registering service...
+2019-12-06 09:16:10 INFO  [hc-auth,,,] DiscoveryClient-HeartbeatExecutor-0 com.netflix.discovery.DiscoveryClient DiscoveryClient_HC-AUTH/DESKTOP-R1RTOA8:hc-auth:9020 - Re-registering apps/HC-AUTH
+2019-12-06 09:16:10 INFO  [hc-auth,,,] DiscoveryClient-HeartbeatExecutor-0 com.netflix.discovery.DiscoveryClient DiscoveryClient_HC-AUTH/DESKTOP-R1RTOA8:hc-auth:9020: registering service...
+2019-12-06 09:16:10 INFO  [hc-auth,,,] DiscoveryClient-HeartbeatExecutor-0 com.netflix.discovery.DiscoveryClient DiscoveryClient_HC-AUTH/DESKTOP-R1RTOA8:hc-auth:9020 - registration status: 204
+2019-12-06 09:16:10 INFO  [hc-auth,,,] DiscoveryClient-InstanceInfoReplicator-0 com.netflix.discovery.DiscoveryClient DiscoveryClient_HC-AUTH/DESKTOP-R1RTOA8:hc-auth:9020 - registration status: 204
+2019-12-06 09:16:18 INFO  [hc-auth,,,] Thread-76 org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler Shutting down ExecutorService 'taskScheduler'
+2019-12-06 09:16:20 INFO  [hc-auth,,,] Thread-76 org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler Shutting down ExecutorService
+2019-12-06 09:16:20 INFO  [hc-auth,,,] Thread-76 org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor Shutting down ExecutorService 'applicationTaskExecutor'
+2019-12-06 09:16:35 INFO  [hc-auth,,,] DiscoveryClient-CacheRefreshExecutor-0 org.apache.http.impl.client.DefaultHttpClient I/O exception (org.apache.http.NoHttpResponseException) caught when processing request to {}->http://hc-register:9010: The target server failed to respond
+2019-12-06 09:16:35 INFO  [hc-auth,,,] DiscoveryClient-CacheRefreshExecutor-0 org.apache.http.impl.client.DefaultHttpClient Retrying request to {}->http://hc-register:9010
+2019-12-06 09:16:39 INFO  [hc-auth,,,] DiscoveryClient-CacheRefreshExecutor-1 org.apache.http.impl.client.DefaultHttpClient I/O exception (org.apache.http.NoHttpResponseException) caught when processing request to {}->http://hc-register:9010: The target server failed to respond
+2019-12-06 09:16:39 INFO  [hc-auth,,,] DiscoveryClient-CacheRefreshExecutor-1 org.apache.http.impl.client.DefaultHttpClient Retrying request to {}->http://hc-register:9010
+2019-12-06 09:16:39 INFO  [hc-auth,,,] DiscoveryClient-CacheRefreshExecutor-0 org.apache.http.impl.client.DefaultHttpClient I/O exception (org.apache.http.NoHttpResponseException) caught when processing request to {}->http://hc-register:9010: The target server failed to respond
+2019-12-06 09:16:39 INFO  [hc-auth,,,] DiscoveryClient-CacheRefreshExecutor-0 org.apache.http.impl.client.DefaultHttpClient Retrying request to {}->http://hc-register:9010
+2019-12-06 09:16:52 INFO  [hc-auth,,,] Thread-76 com.baomidou.dynamic.datasource.DynamicRoutingDataSource closing dynamicDatasource  ing....
+2019-12-06 09:16:52 INFO  [hc-auth,,,] Thread-76 com.zaxxer.hikari.HikariDataSource base - Shutdown initiated...
+2019-12-06 09:16:53 INFO  [hc-auth,,,] Thread-76 com.zaxxer.hikari.HikariDataSource base - Shutdown completed.
+2019-12-06 09:16:53 INFO  [hc-auth,,,] Thread-76 com.netflix.discovery.DiscoveryClient Shutting down DiscoveryClient ...
+2019-12-06 09:16:56 INFO  [hc-auth,,,] Thread-76 com.netflix.discovery.DiscoveryClient Unregistering ...
+2019-12-06 09:16:59 INFO  [hc-auth,,,] Thread-76 com.netflix.discovery.DiscoveryClient Completed shut down of DiscoveryClient
