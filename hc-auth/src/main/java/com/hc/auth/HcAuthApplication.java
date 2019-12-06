@@ -11,7 +11,6 @@ import org.springframework.boot.context.properties.EnableConfigurationProperties
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 
 @SpringBootApplication
-@EnableDiscoveryClient
 @EnableConfigurationProperties({HcAuthProperties.class})
 @EnableHcAuthExceptionHandler
 @EnableHcServerProtect

@@ -19,6 +19,7 @@ public class TestController {
 
     @GetMapping("info")
     public String test(){
+
         return "hc-server-system";
     }
 

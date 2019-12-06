@@ -604,3 +604,142 @@
 2019-12-06 09:16:19 INFO  [hc-register,,,] http-nio-9010-exec-9 com.netflix.eureka.registry.AbstractInstanceRegistry Registered instance HC-SERVER-SYSTEM/DESKTOP-R1RTOA8:hc-server-system:9041 with status DOWN (replication=false)
 2019-12-06 09:16:24 INFO  [hc-register,,,] Thread-31 com.netflix.discovery.DiscoveryClient Shutting down DiscoveryClient ...
 2019-12-06 09:16:24 INFO  [hc-register,,,] Thread-31 com.netflix.discovery.DiscoveryClient Completed shut down of DiscoveryClient
+2019-12-06 14:06:39 INFO  [hc-register,,,] main org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$3be45fe7] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-06 14:06:40 INFO  [hc-register,,,] main com.hc.register.HcRegisterApplication No active profile set, falling back to default profiles: default
+2019-12-06 14:06:43 INFO  [hc-register,,,] main org.springframework.cloud.context.scope.GenericScope BeanFactory id=6ff42770-9d56-32d6-b989-eefa7ce12c63
+2019-12-06 14:06:43 INFO  [hc-register,,,] main org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$3be45fe7] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-06 14:06:43 INFO  [hc-register,,,] main org.springframework.boot.web.embedded.tomcat.TomcatWebServer Tomcat initialized with port(s): 9010 (http)
+2019-12-06 14:06:43 INFO  [hc-register,,,] main org.apache.coyote.http11.Http11NioProtocol Initializing ProtocolHandler ["http-nio-9010"]
+2019-12-06 14:06:43 INFO  [hc-register,,,] main org.apache.catalina.core.StandardService Starting service [Tomcat]
+2019-12-06 14:06:43 INFO  [hc-register,,,] main org.apache.catalina.core.StandardEngine Starting Servlet engine: [Apache Tomcat/9.0.21]
+2019-12-06 14:06:44 INFO  [hc-register,,,] main org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/register] Initializing Spring embedded WebApplicationContext
+2019-12-06 14:06:44 INFO  [hc-register,,,] main org.springframework.web.context.ContextLoader Root WebApplicationContext: initialization completed in 3713 ms
+2019-12-06 14:06:44 INFO  [hc-register,,,] main com.netflix.config.sources.URLConfigurationSource To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2019-12-06 14:06:44 INFO  [hc-register,,,] main com.netflix.config.DynamicPropertyFactory DynamicPropertyFactory is initialized with configuration sources: com.netflix.config.ConcurrentCompositeConfiguration@6f6cc7da
+2019-12-06 14:06:45 INFO  [hc-register,,,] main org.springframework.boot.actuate.endpoint.web.ServletEndpointRegistrar Registered '/actuator/jolokia' to jolokia-actuator-endpoint
+2019-12-06 14:06:46 INFO  [hc-register,,,] main com.sun.jersey.server.impl.application.WebApplicationImpl Initiating Jersey application, version 'Jersey: 1.19.1 03/11/2016 02:08 PM'
+2019-12-06 14:06:46 INFO  [hc-register,,,] main com.netflix.discovery.provider.DiscoveryJerseyProvider Using JSON encoding codec LegacyJacksonJson
+2019-12-06 14:06:46 INFO  [hc-register,,,] main com.netflix.discovery.provider.DiscoveryJerseyProvider Using JSON decoding codec LegacyJacksonJson
+2019-12-06 14:06:46 INFO  [hc-register,,,] main com.netflix.discovery.provider.DiscoveryJerseyProvider Using XML encoding codec XStreamXml
+2019-12-06 14:06:46 INFO  [hc-register,,,] main com.netflix.discovery.provider.DiscoveryJerseyProvider Using XML decoding codec XStreamXml
+2019-12-06 14:06:47 INFO  [hc-register,,,] main org.springframework.security.web.DefaultSecurityFilterChain Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@7109b603, org.springframework.security.web.context.SecurityContextPersistenceFilter@6b4fd7d, org.springframework.security.web.header.HeaderWriterFilter@77476fcf, org.springframework.security.web.csrf.CsrfFilter@4b00d59, org.springframework.security.web.authentication.logout.LogoutFilter@5c5f12e, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@50bb1c1f, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@20914835, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@76b642aa, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@b4d83ac, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@12723c5d, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1e9d7366, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@29b5e7db, org.springframework.security.web.session.SessionManagementFilter@e7d0db2, org.springframework.security.web.access.ExceptionTranslationFilter@6802d023, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@612ac38b]
+2019-12-06 14:06:47 INFO  [hc-register,,,] main com.netflix.config.sources.URLConfigurationSource To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2019-12-06 14:06:47 INFO  [hc-register,,,] main org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor Initializing ExecutorService 'applicationTaskExecutor'
+2019-12-06 14:06:48 INFO  [hc-register,,,] main org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler Initializing ExecutorService
+2019-12-06 14:06:48 INFO  [hc-register,,,] main org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver Exposing 20 endpoint(s) beneath base path '/actuator'
+2019-12-06 14:06:49 INFO  [hc-register,,,] main org.springframework.cloud.netflix.eureka.InstanceInfoFactory Setting initial instance status as: STARTING
+2019-12-06 14:06:49 INFO  [hc-register,,,] main com.netflix.discovery.DiscoveryClient Initializing Eureka in region us-east-1
+2019-12-06 14:06:49 INFO  [hc-register,,,] main com.netflix.discovery.DiscoveryClient Client configured to neither register nor query for data.
+2019-12-06 14:06:49 INFO  [hc-register,,,] main com.netflix.discovery.DiscoveryClient Discovery Client initialized at timestamp 1575612409834 with initial instances count: 0
+2019-12-06 14:06:49 INFO  [hc-register,,,] main com.netflix.eureka.DefaultEurekaServerContext Initializing ...
+2019-12-06 14:06:49 INFO  [hc-register,,,] main com.netflix.eureka.registry.AbstractInstanceRegistry Finished initializing remote region registries. All known remote regions: []
+2019-12-06 14:06:49 INFO  [hc-register,,,] main com.netflix.eureka.DefaultEurekaServerContext Initialized
+2019-12-06 14:06:49 INFO  [hc-register,,,] main org.springframework.cloud.netflix.eureka.serviceregistry.EurekaServiceRegistry Registering application HC-REGISTER with eureka with status UP
+2019-12-06 14:06:49 INFO  [hc-register,,,] Thread-34 org.springframework.cloud.netflix.eureka.server.EurekaServerBootstrap Setting the eureka configuration..
+2019-12-06 14:06:49 INFO  [hc-register,,,] Thread-34 org.springframework.cloud.netflix.eureka.server.EurekaServerBootstrap Eureka data center value eureka.datacenter is not set, defaulting to default
+2019-12-06 14:06:49 INFO  [hc-register,,,] Thread-34 org.springframework.cloud.netflix.eureka.server.EurekaServerBootstrap Eureka environment value eureka.environment is not set, defaulting to test
+2019-12-06 14:06:50 INFO  [hc-register,,,] main org.apache.coyote.http11.Http11NioProtocol Starting ProtocolHandler ["http-nio-9010"]
+2019-12-06 14:06:50 INFO  [hc-register,,,] Thread-34 org.springframework.cloud.netflix.eureka.server.EurekaServerBootstrap isAws returned false
+2019-12-06 14:06:50 INFO  [hc-register,,,] Thread-34 org.springframework.cloud.netflix.eureka.server.EurekaServerBootstrap Initialized server context
+2019-12-06 14:06:50 INFO  [hc-register,,,] Thread-34 com.netflix.eureka.registry.PeerAwareInstanceRegistryImpl Got 1 instances from neighboring DS node
+2019-12-06 14:06:50 INFO  [hc-register,,,] Thread-34 com.netflix.eureka.registry.PeerAwareInstanceRegistryImpl Renew threshold is: 1
+2019-12-06 14:06:50 INFO  [hc-register,,,] Thread-34 com.netflix.eureka.registry.PeerAwareInstanceRegistryImpl Changing status to UP
+2019-12-06 14:06:50 INFO  [hc-register,,,] Thread-34 org.springframework.cloud.netflix.eureka.server.EurekaServerInitializerConfiguration Started Eureka Server
+2019-12-06 14:06:50 INFO  [hc-register,,,] main org.springframework.boot.web.embedded.tomcat.TomcatWebServer Tomcat started on port(s): 9010 (http) with context path '/register'
+2019-12-06 14:06:50 INFO  [hc-register,,,] main org.springframework.cloud.netflix.eureka.serviceregistry.EurekaAutoServiceRegistration Updating port to 9010
+2019-12-06 14:06:50 INFO  [hc-register,,,] main com.hc.register.HcRegisterApplication Started HcRegisterApplication in 11.985 seconds (JVM running for 13.288)
+2019-12-06 14:06:50 INFO  [hc-register,,,] RMI TCP Connection(2)-192.168.41.90 org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/register] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-12-06 14:06:50 INFO  [hc-register,,,] RMI TCP Connection(2)-192.168.41.90 org.springframework.web.servlet.DispatcherServlet Initializing Servlet 'dispatcherServlet'
+2019-12-06 14:06:50 INFO  [hc-register,,,] RMI TCP Connection(2)-192.168.41.90 org.springframework.web.servlet.DispatcherServlet Completed initialization in 6 ms
+2019-12-06 14:07:24 INFO  [hc-register,,,] http-nio-9010-exec-2 com.netflix.eureka.registry.AbstractInstanceRegistry Registered instance HC-CONFIG/DESKTOP-R1RTOA8:hc-config:9050 with status UP (replication=false)
+2019-12-06 14:07:50 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-06 14:08:16 INFO  [hc-register,,,] http-nio-9010-exec-2 com.netflix.eureka.registry.AbstractInstanceRegistry Registered instance HC-GATEWAY/DESKTOP-R1RTOA8:hc-gateway:9030 with status UP (replication=false)
+2019-12-06 14:08:47 INFO  [hc-register,,,] http-nio-9010-exec-9 com.netflix.eureka.registry.AbstractInstanceRegistry Registered instance HC-AUTH/DESKTOP-R1RTOA8:hc-auth:9020 with status UP (replication=false)
+2019-12-06 14:08:50 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-06 14:09:04 INFO  [hc-register,,,] http-nio-9010-exec-9 com.netflix.eureka.registry.AbstractInstanceRegistry Cancelled instance HC-AUTH/DESKTOP-R1RTOA8:hc-auth:9020 (replication=false)
+2019-12-06 14:09:05 INFO  [hc-register,,,] http-nio-9010-exec-6 com.netflix.eureka.registry.AbstractInstanceRegistry Registered instance HC-AUTH/DESKTOP-R1RTOA8:hc-auth:9020 with status UP (replication=false)
+2019-12-06 14:09:38 INFO  [hc-register,,,] http-nio-9010-exec-5 com.netflix.eureka.registry.AbstractInstanceRegistry Registered instance HC-SERVER-SYSTEM/DESKTOP-R1RTOA8:hc-server-system:9041 with status UP (replication=false)
+2019-12-06 14:09:50 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-06 14:10:01 INFO  [hc-register,,,] http-nio-9010-exec-2 com.netflix.eureka.registry.AbstractInstanceRegistry Registered instance HC-SERVER-TEST/DESKTOP-R1RTOA8:hc-server-test:9042 with status UP (replication=false)
+2019-12-06 14:10:04 INFO  [hc-register,,,] http-nio-9010-exec-9 com.netflix.eureka.registry.AbstractInstanceRegistry Cancelled instance HC-SERVER-SYSTEM/DESKTOP-R1RTOA8:hc-server-system:9041 (replication=false)
+2019-12-06 14:10:05 INFO  [hc-register,,,] http-nio-9010-exec-3 com.netflix.eureka.registry.AbstractInstanceRegistry Registered instance HC-SERVER-SYSTEM/DESKTOP-R1RTOA8:hc-server-system:9041 with status UP (replication=false)
+2019-12-06 14:10:20 INFO  [hc-register,,,] http-nio-9010-exec-10 com.netflix.eureka.registry.AbstractInstanceRegistry Cancelled instance HC-SERVER-TEST/DESKTOP-R1RTOA8:hc-server-test:9042 (replication=false)
+2019-12-06 14:10:21 INFO  [hc-register,,,] http-nio-9010-exec-1 com.netflix.eureka.registry.AbstractInstanceRegistry Registered instance HC-SERVER-TEST/DESKTOP-R1RTOA8:hc-server-test:9042 with status UP (replication=false)
+2019-12-06 14:10:50 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-06 14:11:50 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-06 14:12:50 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-06 14:13:50 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-06 14:14:50 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-06 14:15:50 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 1ms
+2019-12-06 14:16:50 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-06 14:17:50 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-06 14:18:50 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-06 14:19:50 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-06 14:20:50 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-06 14:21:49 INFO  [hc-register,,,] ReplicaAwareInstanceRegistry - RenewalThresholdUpdater com.netflix.eureka.registry.PeerAwareInstanceRegistryImpl Current renewal threshold is : 10
+2019-12-06 14:21:50 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-06 14:22:50 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-06 14:23:43 INFO  [hc-register,,,] http-nio-9010-exec-7 com.netflix.eureka.registry.AbstractInstanceRegistry Registered instance HC-AUTH/DESKTOP-R1RTOA8:hc-auth:9020 with status DOWN (replication=false)
+2019-12-06 14:23:47 INFO  [hc-register,,,] http-nio-9010-exec-1 com.netflix.eureka.registry.AbstractInstanceRegistry Cancelled instance HC-AUTH/DESKTOP-R1RTOA8:hc-auth:9020 (replication=false)
+2019-12-06 14:23:50 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-06 14:24:50 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-06 14:25:50 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 2ms
+2019-12-06 14:26:50 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-06 14:27:50 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-06 14:28:50 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-06 14:29:50 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-06 14:30:12 INFO  [hc-register,,,] http-nio-9010-exec-7 com.netflix.eureka.registry.AbstractInstanceRegistry Registered instance HC-GATEWAY/DESKTOP-R1RTOA8:hc-gateway:9030 with status DOWN (replication=false)
+2019-12-06 14:30:16 INFO  [hc-register,,,] http-nio-9010-exec-10 com.netflix.eureka.registry.AbstractInstanceRegistry Cancelled instance HC-GATEWAY/DESKTOP-R1RTOA8:hc-gateway:9030 (replication=false)
+2019-12-06 14:30:23 INFO  [hc-register,,,] http-nio-9010-exec-2 com.netflix.eureka.registry.AbstractInstanceRegistry Registered instance HC-AUTH/DESKTOP-R1RTOA8:hc-auth:9020 with status UP (replication=false)
+2019-12-06 14:30:38 INFO  [hc-register,,,] http-nio-9010-exec-9 com.netflix.eureka.registry.AbstractInstanceRegistry Registered instance HC-GATEWAY/DESKTOP-R1RTOA8:hc-gateway:9030 with status UP (replication=false)
+2019-12-06 14:30:46 INFO  [hc-register,,,] http-nio-9010-exec-6 com.netflix.eureka.registry.AbstractInstanceRegistry Cancelled instance HC-AUTH/DESKTOP-R1RTOA8:hc-auth:9020 (replication=false)
+2019-12-06 14:30:46 INFO  [hc-register,,,] http-nio-9010-exec-1 com.netflix.eureka.registry.AbstractInstanceRegistry Registered instance HC-AUTH/DESKTOP-R1RTOA8:hc-auth:9020 with status UP (replication=false)
+2019-12-06 14:30:50 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-06 14:31:07 INFO  [hc-register,,,] http-nio-9010-exec-10 com.netflix.eureka.registry.AbstractInstanceRegistry Registered instance HC-AUTH/DESKTOP-R1RTOA8:hc-auth:9020 with status DOWN (replication=false)
+2019-12-06 14:31:11 INFO  [hc-register,,,] http-nio-9010-exec-6 com.netflix.eureka.registry.AbstractInstanceRegistry Cancelled instance HC-AUTH/DESKTOP-R1RTOA8:hc-auth:9020 (replication=false)
+2019-12-06 14:31:50 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-06 14:32:50 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-06 14:33:27 INFO  [hc-register,,,] http-nio-9010-exec-7 com.netflix.eureka.registry.AbstractInstanceRegistry Registered instance HC-AUTH/DESKTOP-R1RTOA8:hc-auth:9020 with status UP (replication=false)
+2019-12-06 14:33:29 INFO  [hc-register,,,] http-nio-9010-exec-10 com.netflix.eureka.registry.AbstractInstanceRegistry Registered instance HC-SERVER-SYSTEM/DESKTOP-R1RTOA8:hc-server-system:9041 with status DOWN (replication=false)
+2019-12-06 14:33:34 INFO  [hc-register,,,] http-nio-9010-exec-5 com.netflix.eureka.registry.AbstractInstanceRegistry Cancelled instance HC-SERVER-SYSTEM/DESKTOP-R1RTOA8:hc-server-system:9041 (replication=false)
+2019-12-06 14:33:40 INFO  [hc-register,,,] http-nio-9010-exec-6 com.netflix.eureka.registry.AbstractInstanceRegistry Cancelled instance HC-AUTH/DESKTOP-R1RTOA8:hc-auth:9020 (replication=false)
+2019-12-06 14:33:41 INFO  [hc-register,,,] http-nio-9010-exec-1 com.netflix.eureka.registry.AbstractInstanceRegistry Registered instance HC-AUTH/DESKTOP-R1RTOA8:hc-auth:9020 with status UP (replication=false)
+2019-12-06 14:33:46 INFO  [hc-register,,,] http-nio-9010-exec-3 com.netflix.eureka.registry.AbstractInstanceRegistry Registered instance HC-SERVER-SYSTEM/DESKTOP-R1RTOA8:hc-server-system:9041 with status UP (replication=false)
+2019-12-06 14:33:50 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-06 14:34:05 INFO  [hc-register,,,] http-nio-9010-exec-4 com.netflix.eureka.registry.AbstractInstanceRegistry Cancelled instance HC-SERVER-SYSTEM/DESKTOP-R1RTOA8:hc-server-system:9041 (replication=false)
+2019-12-06 14:34:05 INFO  [hc-register,,,] http-nio-9010-exec-10 com.netflix.eureka.registry.AbstractInstanceRegistry Registered instance HC-SERVER-SYSTEM/DESKTOP-R1RTOA8:hc-server-system:9041 with status UP (replication=false)
+2019-12-06 14:34:50 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-06 14:35:50 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-06 14:36:49 INFO  [hc-register,,,] ReplicaAwareInstanceRegistry - RenewalThresholdUpdater com.netflix.eureka.registry.PeerAwareInstanceRegistryImpl Current renewal threshold is : 10
+2019-12-06 14:36:50 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-06 14:37:50 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-06 14:38:50 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-06 14:39:00 INFO  [hc-register,,,] http-nio-9010-exec-1 com.netflix.eureka.registry.AbstractInstanceRegistry Registered instance HC-GATEWAY/DESKTOP-R1RTOA8:hc-gateway:9030 with status DOWN (replication=false)
+2019-12-06 14:39:03 INFO  [hc-register,,,] http-nio-9010-exec-6 com.netflix.eureka.registry.AbstractInstanceRegistry Cancelled instance HC-GATEWAY/DESKTOP-R1RTOA8:hc-gateway:9030 (replication=false)
+2019-12-06 14:39:19 INFO  [hc-register,,,] http-nio-9010-exec-2 com.netflix.eureka.registry.AbstractInstanceRegistry Registered instance HC-GATEWAY/DESKTOP-R1RTOA8:hc-gateway:9030 with status UP (replication=false)
+2019-12-06 14:39:31 INFO  [hc-register,,,] http-nio-9010-exec-4 com.netflix.eureka.registry.AbstractInstanceRegistry Registered instance HC-SERVER-SYSTEM/DESKTOP-R1RTOA8:hc-server-system:9041 with status DOWN (replication=false)
+2019-12-06 14:39:36 INFO  [hc-register,,,] http-nio-9010-exec-4 com.netflix.eureka.registry.AbstractInstanceRegistry Cancelled instance HC-SERVER-SYSTEM/DESKTOP-R1RTOA8:hc-server-system:9041 (replication=false)
+2019-12-06 14:39:43 INFO  [hc-register,,,] http-nio-9010-exec-10 com.netflix.eureka.registry.AbstractInstanceRegistry Registered instance HC-SERVER-SYSTEM/DESKTOP-R1RTOA8:hc-server-system:9041 with status UP (replication=false)
+2019-12-06 14:39:50 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-06 14:40:00 INFO  [hc-register,,,] http-nio-9010-exec-1 com.netflix.eureka.registry.AbstractInstanceRegistry Cancelled instance HC-SERVER-SYSTEM/DESKTOP-R1RTOA8:hc-server-system:9041 (replication=false)
+2019-12-06 14:40:00 INFO  [hc-register,,,] http-nio-9010-exec-4 com.netflix.eureka.registry.AbstractInstanceRegistry Registered instance HC-SERVER-SYSTEM/DESKTOP-R1RTOA8:hc-server-system:9041 with status UP (replication=false)
+2019-12-06 14:40:50 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-06 14:41:50 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-06 14:42:50 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 1ms
+2019-12-06 14:43:50 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-06 14:44:50 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-06 14:45:50 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-06 14:46:50 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-06 14:47:26 INFO  [hc-register,,,] http-nio-9010-exec-6 com.netflix.eureka.registry.AbstractInstanceRegistry Registered instance HC-GATEWAY/DESKTOP-R1RTOA8:hc-gateway:9030 with status DOWN (replication=false)
+2019-12-06 14:47:29 INFO  [hc-register,,,] http-nio-9010-exec-4 com.netflix.eureka.registry.AbstractInstanceRegistry Cancelled instance HC-GATEWAY/DESKTOP-R1RTOA8:hc-gateway:9030 (replication=false)
+2019-12-06 14:47:47 INFO  [hc-register,,,] http-nio-9010-exec-7 com.netflix.eureka.registry.AbstractInstanceRegistry Registered instance HC-GATEWAY/DESKTOP-R1RTOA8:hc-gateway:9030 with status UP (replication=false)
+2019-12-06 14:47:50 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-06 14:48:50 INFO  [hc-register,,,] Eureka-EvictionTimer com.netflix.eureka.registry.AbstractInstanceRegistry Running the evict task with compensationTime 0ms
+2019-12-06 14:49:01 INFO  [hc-register,,,] http-nio-9010-exec-2 com.netflix.eureka.registry.AbstractInstanceRegistry Registered instance HC-SERVER-SYSTEM/DESKTOP-R1RTOA8:hc-server-system:9041 with status DOWN (replication=false)
+2019-12-06 14:49:01 INFO  [hc-register,,,] Thread-36 org.springframework.cloud.netflix.eureka.serviceregistry.EurekaServiceRegistry Unregistering application HC-REGISTER with eureka with status DOWN
+2019-12-06 14:49:01 INFO  [hc-register,,,] Thread-36 com.netflix.eureka.DefaultEurekaServerContext Shutting down ...
+2019-12-06 14:49:01 INFO  [hc-register,,,] Thread-36 com.netflix.eureka.DefaultEurekaServerContext Shut down
+2019-12-06 14:49:01 INFO  [hc-register,,,] Thread-36 org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler Shutting down ExecutorService
+2019-12-06 14:49:01 INFO  [hc-register,,,] Thread-36 org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor Shutting down ExecutorService 'applicationTaskExecutor'
+2019-12-06 14:49:01 INFO  [hc-register,,,] Thread-36 com.netflix.discovery.DiscoveryClient Shutting down DiscoveryClient ...
+2019-12-06 14:49:01 INFO  [hc-register,,,] Thread-36 com.netflix.discovery.DiscoveryClient Completed shut down of DiscoveryClient

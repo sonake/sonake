@@ -13,11 +13,11 @@
             <pattern>${log.colorPattern}</pattern>
         </encoder>
     </appender>
-    <!--输出到 logstash的 appender-->
-    <appender name="logstash" class="net.logstash.logback.appender.LogstashTcpSocketAppender">
-        <destination>192.168.242.128:4560</destination>
-        <encoder charset="UTF-8" class="net.logstash.logback.encoder.LogstashEncoder"/>
-    </appender>
+<!--    &lt;!&ndash;输出到 logstash的 appender&ndash;&gt;-->
+<!--    <appender name="logstash" class="net.logstash.logback.appender.LogstashTcpSocketAppender">-->
+<!--        <destination>192.168.242.128:4560</destination>-->
+<!--        <encoder charset="UTF-8" class="net.logstash.logback.encoder.LogstashEncoder"/>-->
+<!--    </appender>-->
 
     <!--输出到文件-->
     <appender name="file_info" class="ch.qos.logback.core.rolling.RollingFileAppender">
@@ -54,7 +54,7 @@
     </root>
 
     <root level="info">
-        <appender-ref ref="logstash" />
+<!--        <appender-ref ref="logstash" />-->
         <appender-ref ref="file_info" />
         <appender-ref ref="file_error" />
     </root>

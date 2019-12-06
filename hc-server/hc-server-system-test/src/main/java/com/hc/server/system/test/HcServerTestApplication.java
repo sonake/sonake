@@ -10,7 +10,6 @@ import org.springframework.security.config.annotation.method.configuration.Enabl
 @HcCloudApplication
 @EnableFeignClients
 @SpringBootApplication
-@EnableDiscoveryClient
 @EnableGlobalMethodSecurity(prePostEnabled = true)
 public class HcServerTestApplication {
 

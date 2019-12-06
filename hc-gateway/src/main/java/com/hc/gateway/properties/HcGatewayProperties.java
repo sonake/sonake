@@ -7,8 +7,8 @@ import org.springframework.context.annotation.Configuration;
 
 /**
  * @author ：xzyuan
- * @date ：Created in 2019/12/5 11:20
- * @description：禁止外部访问的url
+ * @date ：Created in 2019/12/6 13:41
+ * @description：
  * @version: 1.0
  */
 @RefreshScope
