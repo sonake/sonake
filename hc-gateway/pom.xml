@@ -8,10 +8,10 @@
         <version>1.0-SNAPSHOT</version>
         <relativePath>../hc-cloud/pom.xml</relativePath>
     </parent>
-    <artifactId>febs-gateway</artifactId>
+    <artifactId>hc-gateway</artifactId>
     <version>1.0-SNAPSHOT</version>
-    <name>FEBS-Gateway</name>
-    <description>FEBS-Gateway服务网关模块</description>
+    <name>hc-gateway</name>
+    <description>hc-gateway服务网关模块</description>
 
     <dependencies>
 

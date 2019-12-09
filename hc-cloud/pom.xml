@@ -11,7 +11,6 @@
     <name>hc-cloud</name>
     <description>hc-cloud微服务权限管理系统,服务治理，提供常见的微服务,聚合服务管理，业务微服务,公共模块</description>
     <modules>
-        <module>../hc-config</module>
         <module>../hc-common</module>
         <module>../hc-auth</module>
         <module>../hc-gateway</module>

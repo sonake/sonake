@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: hc-auth
+  cloud:
+    nacos:
+      discovery:
+        server-addr: ${nacos.url}:9010
+      config:
+        server-addr: ${nacos.url}:9010
+        group: DEFAULT_GROUP
+        prefix: hc-auth
+        file-extension: yaml

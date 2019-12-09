@@ -37,7 +37,7 @@ public class HcGatewaySentinelConfigure {
     private final ServerCodecConfigurer serverCodecConfigurer;
 
     public HcGatewaySentinelConfigure(ObjectProvider<List<ViewResolver>> viewResolversProvider,
-                                      ServerCodecConfigurer serverCodecConfigurer) {
+                                        ServerCodecConfigurer serverCodecConfigurer) {
         this.viewResolvers = viewResolversProvider.getIfAvailable(Collections::emptyList);
         this.serverCodecConfigurer = serverCodecConfigurer;
     }

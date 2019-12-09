@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: hc-server-test
+  cloud:
+    nacos:
+      discovery:
+        server-addr: ${nacos.url}:9010
+      config:
+        server-addr: ${nacos.url}:9010
+        group: DEFAULT_GROUP
+        prefix: hc-server-test
+        file-extension: yaml
