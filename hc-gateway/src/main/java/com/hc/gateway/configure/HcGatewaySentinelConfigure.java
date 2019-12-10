@@ -31,7 +31,7 @@ import java.util.Set;
  * @description：哨兵限流
  * @version: 1.0
  */
-@Configuration
+//@Configuration
 public class HcGatewaySentinelConfigure {
     private final List<ViewResolver> viewResolvers;
     private final ServerCodecConfigurer serverCodecConfigurer;

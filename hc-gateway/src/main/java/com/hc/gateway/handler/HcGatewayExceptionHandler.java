@@ -1,5 +1,6 @@
 package com.hc.gateway.handler;
 
+import com.alibaba.csp.sentinel.slots.block.flow.FlowException;
 import com.alibaba.csp.sentinel.slots.block.flow.param.ParamFlowException;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;
@@ -50,8 +51,8 @@ public class HcGatewayExceptionHandler extends DefaultErrorWebExceptionHandler {
             errorMessage = "目标服务拒绝连接";
         } else if (error instanceof TimeoutException) {
             errorMessage = "访问服务超时";
-        }else if(error instanceof ParamFlowException){
-            errorMessage = "访问频率超限";
+        }else if(error instanceof FlowException){
+            errorMessage = "访问频率过高";
         } else if (error instanceof ResponseStatusException
                 && StringUtils.containsIgnoreCase(error.getMessage(), HttpStatus.NOT_FOUND.toString())) {
             errorMessage = "未找到该资源";
