@@ -18,22 +18,27 @@
         <!--在hc-gateway模块中，引入了sentinel-spring-cloud-gateway-adapter依赖，版本为1.6.3，而spring-cloud-alibaba-dependencies.0.9.0.RELEASE
         中定义的sentinel版本还是1.5.2的：-->
         <!--加如下依赖来覆盖默认的版本-->
-        <dependency>
-            <groupId>com.alibaba.csp</groupId>
-            <artifactId>sentinel-core</artifactId>
-            <version>1.6.3</version>
-        </dependency>
-        <dependency>
-            <groupId>com.alibaba.csp</groupId>
-            <artifactId>sentinel-parameter-flow-control</artifactId>
-            <version>1.6.3</version>
-        </dependency>
+<!--        <dependency>-->
+<!--            <groupId>com.alibaba.csp</groupId>-->
+<!--            <artifactId>sentinel-core</artifactId>-->
+<!--            <version>1.7.0</version>-->
+<!--        </dependency>-->
+<!--        <dependency>-->
+<!--            <groupId>com.alibaba.csp</groupId>-->
+<!--            <artifactId>sentinel-parameter-flow-control</artifactId>-->
+<!--            <version>1.7.0</version>-->
+<!--        </dependency>-->
         <!--截至目前位置，Spring Cloud Alibaba Sentinel控制台还不支持WebFlux编程模型，所以我们使用的是Sentinel提供
         的Spring Cloud Gateway适配依赖sentinel-spring-cloud-gateway-adapter-->
         <dependency>
             <groupId>com.alibaba.csp</groupId>
             <artifactId>sentinel-spring-cloud-gateway-adapter</artifactId>
-            <version>1.6.3</version>
+            <version>1.7.0</version>
+        </dependency>
+        <dependency>
+            <groupId>com.alibaba.csp</groupId>
+            <artifactId>sentinel-transport-simple-http</artifactId>
+            <version>1.7.0</version>
         </dependency>
         <dependency>
             <groupId>com.hc</groupId>

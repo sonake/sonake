@@ -23,7 +23,7 @@ public class HcAccessDeniedHandler implements AccessDeniedHandler {
     @Override
     public void handle(HttpServletRequest request, HttpServletResponse response, AccessDeniedException accessDeniedException) throws IOException {
         ToolUtil.makeResponse(
-                response, MediaType.APPLICATION_JSON_UTF8_VALUE,
+                response, MediaType.APPLICATION_JSON_VALUE,
                 HttpServletResponse.SC_FORBIDDEN, Rets.failure("没有权限访问该资源"));
     }
 }

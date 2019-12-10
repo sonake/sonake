@@ -20,7 +20,7 @@ public class HcAuthExceptionEntryPoint implements AuthenticationEntryPoint {
     @Override
     public void commence(HttpServletRequest request, HttpServletResponse response,
                          AuthenticationException authException) throws IOException {
-        ToolUtil.makeResponse(response,MediaType.APPLICATION_JSON_UTF8_VALUE,
+        ToolUtil.makeResponse(response,MediaType.APPLICATION_JSON_VALUE,
                 HttpServletResponse.SC_UNAUTHORIZED,Rets.failure("token无效"));
     }
 }
