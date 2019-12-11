@@ -21,6 +21,6 @@ spring:
       datasource:
         nacos:
           server-addr: ${nacos.url}:9010
-          dataId: ${spring.application.name}-sentinel
-          groupId: DEFAULT_GROUP
+          dataId: ${spring.application.name}-flow-rules
+          groupId: SENTINEL_GROUP
           rule-type: flow

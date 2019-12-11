@@ -28,7 +28,7 @@ import java.util.Set;
 /**
  * @author ：xzyuan
  * @date ：Created in 2019/12/6 14:43
- * @description：哨兵限流
+ * @description：哨兵限流:可以使用sentinel-dashboard对限流做控制
  * @version: 1.0
  */
 //@Configuration
