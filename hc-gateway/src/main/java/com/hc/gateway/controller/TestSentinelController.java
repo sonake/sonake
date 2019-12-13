@@ -20,4 +20,9 @@ public class TestSentinelController {
     public String sen(){
         return "sentinel";
     }
+
+    @GetMapping("len")
+    public String len(){
+        return "lentinel";
+    }
 }

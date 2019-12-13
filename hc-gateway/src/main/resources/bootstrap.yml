@@ -19,8 +19,10 @@ spring:
       ##取消Sentinel控制台懒加载
       eager: true
       datasource:
-        nacos:
-          server-addr: ${nacos.url}:9010
-          dataId: ${spring.application.name}-flow-rules
-          groupId: SENTINEL_GROUP
-          rule-type: flow
+        ns:
+          nacos:
+            server-addr: 127.0.0.1:9010
+            dataId: ${spring.application.name}-flow-rules
+            groupId: SENTINEL_GROUP
+            ruleType: flow
+            dataType: json
