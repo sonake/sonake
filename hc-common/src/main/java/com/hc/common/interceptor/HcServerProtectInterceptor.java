@@ -5,7 +5,7 @@ import com.hc.common.constant.HcConstant;
 import org.springframework.http.MediaType;
 import org.springframework.util.Base64Utils;
 import org.springframework.web.servlet.HandlerInterceptor;
-import com.hc.common.result.Rets;
+import com.hc.common.result.Rs;
 import com.hc.common.utils.ToolUtil;
 
 import javax.servlet.http.HttpServletRequest;
@@ -31,7 +31,7 @@ public class HcServerProtectInterceptor implements HandlerInterceptor {
         }else {
             response.setContentType(MediaType.APPLICATION_JSON_VALUE);
             response.setStatus(HttpServletResponse.SC_FORBIDDEN);
-            response.getWriter().write(JSONObject.toJSONString(Rets.failure("请通过网关获取资源")));
+            response.getWriter().write(JSONObject.toJSONString(Rs.failure("请通过网关获取资源")));
             return false;
         }
     }

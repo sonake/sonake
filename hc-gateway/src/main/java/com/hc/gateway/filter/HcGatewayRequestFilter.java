@@ -2,8 +2,8 @@ package com.hc.gateway.filter;
 
 import com.alibaba.fastjson.JSONObject;
 import com.hc.common.constant.HcConstant;
-import com.hc.common.result.Ret;
-import com.hc.common.result.Rets;
+import com.hc.common.result.R;
+import com.hc.common.result.Rs;
 import com.hc.gateway.properties.HcGatewayProperties;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.ArrayUtils;
@@ -78,12 +78,12 @@ public class HcGatewayRequestFilter implements GlobalFilter {
             }
         }
         if (!shouldForward) {
-            return makeResponse(response, Rets.failure("该URI不允许外部访问"));
+            return makeResponse(response, Rs.failure("该URI不允许外部访问"));
         }
         return null;
     }
 
-    private Mono<Void> makeResponse(ServerHttpResponse response, Ret r) {
+    private Mono<Void> makeResponse(ServerHttpResponse response, R r) {
         response.setStatusCode(HttpStatus.FORBIDDEN);
         response.getHeaders().add(HttpHeaders.CONTENT_TYPE, MediaType.APPLICATION_JSON_VALUE);
         DataBuffer dataBuffer = response.bufferFactory().wrap(JSONObject.toJSONString(r).getBytes());

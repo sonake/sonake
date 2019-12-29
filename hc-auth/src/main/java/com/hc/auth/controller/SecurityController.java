@@ -9,8 +9,8 @@ import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 import com.hc.common.exception.HcException;
-import com.hc.common.result.Ret;
-import com.hc.common.result.Rets;
+import com.hc.common.result.R;
+import com.hc.common.result.Rs;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -41,13 +41,13 @@ public class SecurityController {
     }
 
     @DeleteMapping("signout")
-    public Ret signout(HttpServletRequest request) throws HcException {
+    public R signout(HttpServletRequest request) throws HcException {
         String authorization = request.getHeader("Authorization");
         String token = StringUtils.replace(authorization, "bearer ", "");
         if (!consumerTokenServices.revokeToken(token)) {
             throw new HcException("退出登录失败");
         }
-        return Rets.success("退出登录成功");
+        return Rs.success("退出登录成功");
     }
 
     @GetMapping("captcha")

@@ -9,23 +9,23 @@ import lombok.Data;
  * @version: 1.0
  */
 @Data
-public class Ret<T> {
+public class R<T> {
     private Integer code;
     private String msg;
     private T data;
 
-    public Ret(){};
+    public R(){};
 
-    public Ret(String msg) {
+    public R(String msg) {
         this.msg=msg;
 
     }
 
-    public Ret(Integer code, String msg) {
+    public R(Integer code, String msg) {
         this.code = code;
         this.msg = msg;
     }
-    public Ret(Integer code, String msg, T data) {
+    public R(Integer code, String msg, T data) {
         this.code = code;
         this.msg = msg;
         this.data = data;

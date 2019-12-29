@@ -4,7 +4,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.MediaType;
 import org.springframework.security.access.AccessDeniedException;
 import org.springframework.security.web.access.AccessDeniedHandler;
-import com.hc.common.result.Rets;
+import com.hc.common.result.Rs;
 import com.hc.common.utils.ToolUtil;
 
 import javax.servlet.http.HttpServletRequest;
@@ -24,6 +24,6 @@ public class HcAccessDeniedHandler implements AccessDeniedHandler {
     public void handle(HttpServletRequest request, HttpServletResponse response, AccessDeniedException accessDeniedException) throws IOException {
         ToolUtil.makeResponse(
                 response, MediaType.APPLICATION_JSON_VALUE,
-                HttpServletResponse.SC_FORBIDDEN, Rets.failure("没有权限访问该资源"));
+                HttpServletResponse.SC_FORBIDDEN, Rs.failure("没有权限访问该资源"));
     }
 }

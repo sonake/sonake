@@ -1,7 +1,7 @@
 package com.hc.common.handler;
 
 import com.hc.common.exception.HcException;
-import com.hc.common.result.Rets;
+import com.hc.common.result.Rs;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.http.HttpStatus;
@@ -27,14 +27,14 @@ public class BaseExceptionHandler {
     @ResponseStatus(HttpStatus.INTERNAL_SERVER_ERROR)
     public Object handleException(Exception e) {
         log.error("系统内部异常，异常信息", e);
-        return Rets.failure("系统内部异常");
+        return Rs.failure("系统内部异常");
     }
 
     @ExceptionHandler(value = HcException.class)
     @ResponseStatus(HttpStatus.INTERNAL_SERVER_ERROR)
     public Object handleFebsException(HcException e) {
         log.error("系统错误", e);
-        return Rets.failure(e.getMessage());
+        return Rs.failure(e.getMessage());
     }
 
     /**
@@ -52,7 +52,7 @@ public class BaseExceptionHandler {
             message.append(error.getField()).append(error.getDefaultMessage()).append(",");
         }
         message = new StringBuilder(message.substring(0, message.length() - 1));
-        return Rets.failure(message.toString());
+        return Rs.failure(message.toString());
     }
 
     /**
@@ -72,7 +72,7 @@ public class BaseExceptionHandler {
             message.append(pathArr[1]).append(violation.getMessage()).append(",");
         }
         message = new StringBuilder(message.substring(0, message.length() - 1));
-        return Rets.failure(message.toString());
+        return Rs.failure(message.toString());
     }
 
 //    @ExceptionHandler(value = FileDownloadException.class)
@@ -84,7 +84,7 @@ public class BaseExceptionHandler {
     @ExceptionHandler(value = AccessDeniedException.class)
     @ResponseStatus(HttpStatus.FORBIDDEN)
     public Object handleAccessDeniedException(){
-        return Rets.failure("没有权限访问该资源");
+        return Rs.failure("没有权限访问该资源");
     }
 
 }

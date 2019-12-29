@@ -4,7 +4,7 @@ import com.baomidou.mybatisplus.core.toolkit.StringPool;
 import com.hc.common.bean.QueryPage;
 import com.hc.common.bean.system.SysUser;
 import com.hc.common.exception.HcException;
-import com.hc.common.result.Rets;
+import com.hc.common.result.Rs;
 import com.hc.common.utils.ToolUtil;
 import com.hc.server.system.service.ISysUserService;
 import lombok.extern.slf4j.Slf4j;
@@ -35,7 +35,7 @@ public class SysUserController {
     @PreAuthorize("hasAnyAuthority('user:view')")
     public Object userList(QueryPage queryRequest, SysUser user) {
         Map<String, Object> dataTable = ToolUtil.getDataTable(userService.findUserDetail(user, queryRequest));
-        return Rets.success(dataTable);
+        return Rs.success(dataTable);
     }
 
     @PostMapping

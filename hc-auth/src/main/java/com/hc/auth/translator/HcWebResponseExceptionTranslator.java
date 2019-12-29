@@ -8,8 +8,7 @@ import org.springframework.security.oauth2.common.exceptions.InvalidGrantExcepti
 import org.springframework.security.oauth2.common.exceptions.UnsupportedGrantTypeException;
 import org.springframework.security.oauth2.provider.error.WebResponseExceptionTranslator;
 import org.springframework.stereotype.Component;
-import com.hc.common.result.Ret;
-import com.hc.common.result.Rets;
+import com.hc.common.result.Rs;
 
 /**
  * @author ：xzyuan
@@ -27,20 +26,20 @@ public class HcWebResponseExceptionTranslator implements WebResponseExceptionTra
         log.error(message, e);
         if (e instanceof UnsupportedGrantTypeException) {
             message = "不支持该认证类型";
-            return status.body(Rets.failure(message));
+            return status.body(Rs.failure(message));
         }
         if (e instanceof InvalidGrantException) {
             if (StringUtils.containsIgnoreCase(e.getMessage(), "Invalid refresh token")) {
                 message = "refresh token无效";
-                return status.body(Rets.failure(message));
+                return status.body(Rs.failure(message));
             }
             if (StringUtils.containsIgnoreCase(e.getMessage(), "locked")) {
                 message = "用户已被锁定，请联系管理员";
-                return status.body(Rets.failure(message));
+                return status.body(Rs.failure(message));
             }
             message = "用户名或密码错误";
-            return status.body(Rets.failure(message));
+            return status.body(Rs.failure(message));
         }
-        return status.body(Rets.failure(message));
+        return status.body(Rs.failure(message));
     }
 }
