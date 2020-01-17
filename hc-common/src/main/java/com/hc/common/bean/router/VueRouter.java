@@ -1,4 +1,4 @@
-package com.hc.server.system.entity.router;
+package com.hc.common.bean.router;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude;
@@ -17,14 +17,15 @@ public class VueRouter<T> implements Serializable {
 
     private static final long serialVersionUID = -3327478146308500708L;
 
-    @JsonIgnore
     private String id;
     @JsonIgnore
     private String parentId;
 
     private String path;
+    private String icon;
     private String name;
     private String component;
+    private RouterMeta meta;
     private String redirect;
     private Boolean hidden = false;
     private Boolean alwaysShow = false;
