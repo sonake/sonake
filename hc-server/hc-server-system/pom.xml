@@ -19,6 +19,18 @@
     </properties>
 
     <dependencies>
+        <!--代码生成-->
+<!--        <dependency>-->
+<!--            <groupId>com.github.sonake</groupId>-->
+<!--            <artifactId>autocode-spring-boot-starter</artifactId>-->
+<!--            <version>1.0.0</version>-->
+<!--        </dependency>-->
+<!--        <dependency>-->
+<!--            <groupId>com.github.sonake</groupId>-->
+<!--            <artifactId>auto-code-ui</artifactId>-->
+<!--            <version>1.0.0</version>-->
+<!--        </dependency>-->
+        <!--swagger-->
         <dependency>
             <groupId>io.springfox</groupId>
             <artifactId>springfox-swagger2</artifactId>

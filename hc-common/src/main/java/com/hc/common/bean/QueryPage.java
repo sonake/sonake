@@ -20,7 +20,7 @@ public class QueryPage implements Serializable {
     /**
      * 当前页码
      */
-    private int pageNum = 1;
+    private int pageNo = 1;
     /**
      * 排序字段
      */

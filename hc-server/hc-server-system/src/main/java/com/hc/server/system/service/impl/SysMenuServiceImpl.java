@@ -1,6 +1,8 @@
 package com.hc.server.system.service.impl;
 
+import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.hc.common.bean.QueryPage;
 import com.hc.common.bean.router.RouterMeta;
 import com.hc.common.bean.system.SysMenu;
@@ -28,7 +30,10 @@ public class SysMenuServiceImpl extends ServiceImpl<SysMenuMapper, SysMenu> impl
 
     @Override
     public IPage<SysMenu> findAll(SysMenu entity, QueryPage request) {
-        return null;
+        LambdaQueryWrapper<SysMenu> queryWrapper = new LambdaQueryWrapper<>();
+        Page<SysMenu> page = new Page<>(request.getPageNo(),request.getPageSize());
+        IPage<SysMenu> iPage = this.page(page,queryWrapper);
+        return iPage;
     }
 
     @Override

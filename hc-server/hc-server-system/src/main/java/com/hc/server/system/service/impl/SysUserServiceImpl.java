@@ -37,7 +37,7 @@ public class SysUserServiceImpl extends ServiceImpl<SysUserMapper, SysUser> impl
 
     @Override
     public IPage<SysUser> findUserDetail(SysUser user, QueryPage request) {
-        Page<SysUser> page = new Page<>(request.getPageNum(), request.getPageSize());
+        Page<SysUser> page = new Page<>(request.getPageNo(), request.getPageSize());
         return this.baseMapper.findUserDetailPage(page, user);
     }
 
@@ -48,6 +48,12 @@ public class SysUserServiceImpl extends ServiceImpl<SysUserMapper, SysUser> impl
         user.setCreateTime(new Date());
         user.setAvatar(SysUser.DEFAULT_AVATAR);
         user.setPassword(passwordEncoder.encode(SysUser.DEFAULT_PASSWORD));
+        user.setCreateBy(1L);
+        user.setUpdateBy(1L);
+        user.setAreaId(1L);
+        user.setDeptId(1L);
+        user.setCreateTime(new Date());
+        user.setUpdateTime(new Date());
         save(user);
         // 保存用户角色
         String[] roles = user.getRoleId().split(StringPool.COMMA);
@@ -60,7 +66,6 @@ public class SysUserServiceImpl extends ServiceImpl<SysUserMapper, SysUser> impl
         // 更新用户
 //        user.setPassword(null);
 //        user.setUsername(null);
-        user.setCreateTime(null);
         user.setUpdateTime(new Date());
         updateById(user);
 

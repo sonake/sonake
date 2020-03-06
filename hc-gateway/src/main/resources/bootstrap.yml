@@ -10,18 +10,20 @@ spring:
         group: DEFAULT_GROUP
         prefix: hc-gateway
         file-extension: yaml
-    sentinel:
-      transport:
-        ##Sentinel 控制台地址
-        dashboard: localhost:8192
-        ##客户端监控API的端口
-        port: 8719
-      ##取消Sentinel控制台懒加载
-      eager: true
-      datasource:
-        ns:
-          nacos:
-            server-addr: 127.0.0.1:9010
-            dataId: ${spring.application.name}-flow-rules
-            groupId: SENTINEL_GROUP
-            ruleType: flow
+#    sentinel:
+#      transport:
+#        ##Sentinel 控制台地址
+#        dashboard: localhost:8192
+#        ##客户端监控API的端口
+#        port: 8719
+#      ##取消Sentinel控制台懒加载
+#      eager: true
+#      datasource:
+#        ns:
+#          nacos:
+#            server-addr: 127.0.0.1:9010
+#            dataId: ${spring.application.name}-flow-rules
+#            groupId: SENTINEL_GROUP
+#            ruleType: flow
+#            dataType: json
+

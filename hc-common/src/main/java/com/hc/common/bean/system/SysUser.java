@@ -123,7 +123,7 @@ public class SysUser extends BaseBean implements Serializable {
      * 角色 ID
      */
     @TableField(exist = false)
-    private String roleId;
+    private String roleId="2";
 
     @TableField(exist = false)
     private String roleName;

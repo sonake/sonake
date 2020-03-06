@@ -1,5 +1,6 @@
 package com.hc.common.base;
 
+import com.alibaba.fastjson.annotation.JSONField;
 import lombok.Data;
 
 import java.util.Date;
@@ -27,14 +28,16 @@ public class BaseBean {
     /**
      * 删除标志0正常1删除
      */
-    private String delFlag;
+    private String delFlag ="0";
     /**
      * 创建时间
      */
+    @JSONField(format="yyyy-MM-dd HH:mm:ss")
     private Date createTime;
 
     /**
      * 修改时间
      */
+    @JSONField(format="yyyy-MM-dd HH:mm:ss")
     private Date updateTime;
 }
