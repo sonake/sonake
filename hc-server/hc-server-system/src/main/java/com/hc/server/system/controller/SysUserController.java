@@ -34,15 +34,15 @@ public class SysUserController {
     @GetMapping
     @PreAuthorize("hasAnyAuthority('user:view')")
     public Object userList(QueryPage queryRequest, SysUser user) {
-        Map<String, Object> dataTable = ToolUtil.getDataTable(userService.findUserDetail(user, queryRequest));
-        return Rs.success(dataTable);
+        return Rs.success(userService.findUserDetail(user,queryRequest));
     }
 
     @PostMapping
     @PreAuthorize("hasAnyAuthority('user:add')")
-    public void addUser(@Valid SysUser user) throws HcException {
+    public Object addUser(@Valid SysUser user) throws HcException {
         try {
             this.userService.createUser(user);
+            return Rs.success();
         } catch (Exception e) {
             String message = "新增用户失败";
             log.error(message, e);
@@ -52,9 +52,10 @@ public class SysUserController {
 
     @PutMapping
     @PreAuthorize("hasAnyAuthority('user:update')")
-    public void updateUser(@Valid SysUser user) throws HcException {
+    public Object updateUser(@Valid SysUser user) throws HcException {
         try {
             this.userService.updateUser(user);
+            return Rs.success();
         } catch (Exception e) {
             String message = "修改用户失败";
             log.error(message, e);
@@ -64,10 +65,11 @@ public class SysUserController {
 
     @DeleteMapping
     @PreAuthorize("hasAnyAuthority('user:delete')")
-    public void deleteUsers(@NotBlank(message = "{required}") String userIds) throws HcException {
+    public Object deleteUsers(@NotBlank(message = "{required}") String userIds) throws HcException {
         try {
             String[] ids = userIds.split(StringPool.COMMA);
             this.userService.deleteUsers(ids);
+            return Rs.success();
         } catch (Exception e) {
             String message = "删除用户失败";
             log.error(message, e);

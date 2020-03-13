@@ -36,19 +36,15 @@ public class SysRoleController {
     @GetMapping
     @PreAuthorize("hasAnyAuthority('role:view')")
     public Object userList(QueryPage queryRequest, SysRole role) {
-        Map<String, Object> dataTable = ToolUtil.getDataTable(roleService.findPage(role, queryRequest));
-        return Rs.success(dataTable);
+        return Rs.success(roleService.findPage(role,queryRequest));
     }
 
     @PostMapping
     @PreAuthorize("hasAnyAuthority('role:add')")
-    public void addUser(@Valid SysRole role) throws HcException {
+    public Object addUser(@Valid SysRole role) throws HcException {
         try {
-            role.setCreateTime(new Date());
-            role.setUpdateTime(new Date());
-            role.setCreateBy(1L);
-            role.setUpdateBy(1L);
-            this.roleService.save(role);
+            this.roleService.saveRoleAndPerms(role);
+            return Rs.success();
         } catch (Exception e) {
             String message = "新增角色失败";
             log.error(message, e);
@@ -58,9 +54,10 @@ public class SysRoleController {
 
     @PutMapping
     @PreAuthorize("hasAnyAuthority('role:update')")
-    public void updateUser(@Valid SysRole role) throws HcException {
+    public Object updateUser(@Valid SysRole role) throws HcException {
         try {
             this.roleService.updateById(role);
+            return Rs.success();
         } catch (Exception e) {
             String message = "修改角色失败";
             log.error(message, e);
@@ -70,11 +67,12 @@ public class SysRoleController {
 
     @DeleteMapping
     @PreAuthorize("hasAnyAuthority('role:delete')")
-    public void deleteUsers(@NotBlank(message = "{required}") String roleIds) throws HcException {
+    public Object deleteUsers(@NotBlank(message = "{required}") String roleIds) throws HcException {
         try {
             String[] ids = roleIds.split(StringPool.COMMA);
             List list  = new ArrayList(Arrays.asList(ids));
             this.roleService.removeByIds(list);
+            return Rs.success();
         } catch (Exception e) {
             String message = "删除角色失败";
             log.error(message, e);

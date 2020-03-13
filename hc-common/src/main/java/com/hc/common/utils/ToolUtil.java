@@ -18,6 +18,8 @@ package com.hc.common.utils;
 
 import com.alibaba.fastjson.JSONObject;
 import com.baomidou.mybatisplus.core.metadata.IPage;
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
+import com.hc.common.bean.QueryPage;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;
 
@@ -55,6 +57,20 @@ public class ToolUtil {
         Pattern pattern = Pattern.compile(regex);
         Matcher matcher = pattern.matcher(value);
         return matcher.matches();
+    }
+
+
+    /**
+     * 获取前台的当前页数及每页记录数
+     * @return
+     */
+    public static Page getPage(QueryPage queryPage){
+        long pageNo=queryPage.getPageNo();
+        long pageSize=queryPage.getPageSize();
+        return new Page()
+
+                .setCurrent(pageNo)
+                .setSize(pageSize);
     }
 
     /**

@@ -19,7 +19,7 @@ public class Tree<T> {
 
     private List<Tree<T>> children;
 
-    private String parentId;
+    private String pId;
 
     private boolean hasParent = false;
 

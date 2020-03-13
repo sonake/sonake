@@ -5,6 +5,7 @@ import com.hc.common.bean.QueryPage;
 import com.hc.common.bean.router.VueRouter;
 import com.hc.common.bean.system.SysMenu;
 import com.baomidou.mybatisplus.extension.service.IService;
+import com.hc.common.result.PageUtils;
 
 import java.util.List;
 
@@ -17,7 +18,7 @@ import java.util.List;
  */
 public interface ISysMenuService extends IService<SysMenu> {
 
-    IPage<SysMenu> findAll(SysMenu entity, QueryPage request);
+    PageUtils findAll(SysMenu entity, QueryPage request);
 
     void createOrUpdateMenu(SysMenu entity);
 

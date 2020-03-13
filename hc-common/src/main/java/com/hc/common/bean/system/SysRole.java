@@ -30,4 +30,7 @@ public class SysRole extends BaseBean implements Serializable {
      * 状态
      */
     private String status="1";
+
+    @TableField(exist = false)
+    private String[] menuIds;
 }

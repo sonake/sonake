@@ -26,7 +26,7 @@ public class TreeUtil {
         }
         List<Tree<T>> topNodes = new ArrayList<>();
         nodes.forEach(node -> {
-            String pid = node.getParentId();
+            String pid = node.getPId();
             if (pid == null || TOP_NODE_ID.equals(pid)) {
                 topNodes.add(node);
                 return;

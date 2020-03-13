@@ -4,6 +4,7 @@ import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.service.IService;
 import com.hc.common.bean.QueryPage;
 import com.hc.common.bean.system.SysUser;
+import com.hc.common.result.PageUtils;
 
 /**
  * @author ：xzyuan
@@ -19,7 +20,7 @@ public interface ISysUserService extends IService<SysUser> {
      * @param user    用户对象，用于传递查询条件
      * @return IPage
      */
-    IPage<SysUser> findUserDetail(SysUser user, QueryPage queryPage);
+    PageUtils findUserDetail(SysUser user, QueryPage queryPage);
 
     /**
      * 新增用户

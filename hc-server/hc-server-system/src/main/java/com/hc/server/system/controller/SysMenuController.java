@@ -55,9 +55,8 @@ public class SysMenuController{
     @GetMapping
     @ApiResponses({@ApiResponse(code = 200, message = "请求成功")})
     @ApiOperation(value = "查询 Menu列表" , notes = "查询Menu列表")
-    public Object list(QueryPage queryPage, SysMenu entity) {
-        Map<String, Object> dataTable = ToolUtil.getDataTable(menuService.findAll(entity, queryPage));
-        return Rs.success(dataTable);
+    public Object list(QueryPage queryPage, SysMenu menu) {
+        return Rs.success(menuService.findAll(menu,queryPage));
     }
 
     /**
@@ -66,10 +65,11 @@ public class SysMenuController{
     @ApiResponses({@ApiResponse(code = 200, message = "新增成功")})
     @ApiOperation(value = "新增 Menu" , notes = "新增Menu")
     @PostMapping
-    public void save(@RequestBody SysMenu entity) throws HcException {
+    public Object save(@RequestBody SysMenu entity) throws HcException {
         log.info(JSON.toJSONString(entity));
         try {
             this.menuService.createOrUpdateMenu(entity);
+            return Rs.success();
         } catch (Exception e) {
             String message = "新增menu失败";
             log.error(message, e);
@@ -83,12 +83,13 @@ public class SysMenuController{
     @ApiResponses({@ApiResponse(code = 200, message = "修改成功")})
     @ApiOperation(value = "修改 Menu" , notes = "新增Menu")
     @PutMapping
-    public void update(@RequestBody SysMenu entity) throws HcException{
+    public Object update(@RequestBody SysMenu entity) throws HcException{
         log.info(JSON.toJSONString(entity));
         try {
             this.menuService.createOrUpdateMenu(entity);
+            return Rs.success();
         } catch (Exception e) {
-            String message = "新增menu失败";
+            String message = "修改menu失败";
             log.error(message, e);
             throw new HcException(message);
         }
@@ -100,10 +101,11 @@ public class SysMenuController{
     @ApiResponses({@ApiResponse(code = 200, message = "删除成功")})
     @ApiOperation(value = "删除 Menu" , notes = "删除 Menu")
     @DeleteMapping
-    public void delete(@NotBlank(message = "{required}") String userIds) throws HcException {
+    public Object delete(@NotBlank(message = "{required}") String userIds) throws HcException {
         try {
             String[] ids = userIds.split(StringPool.COMMA);
             this.menuService.delete(ids);
+            return Rs.success();
         } catch (Exception e) {
             String message = "删除部门失败";
             log.error(message, e);

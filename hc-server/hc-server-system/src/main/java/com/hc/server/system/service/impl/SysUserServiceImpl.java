@@ -8,6 +8,8 @@ import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.hc.common.bean.QueryPage;
 import com.hc.common.bean.system.SysUser;
 import com.hc.common.bean.system.SysUserRole;
+import com.hc.common.result.PageUtils;
+import com.hc.common.utils.ToolUtil;
 import com.hc.server.system.mapper.SysUserMapper;
 import com.hc.server.system.service.ISysUserRoleService;
 import com.hc.server.system.service.ISysUserService;
@@ -36,9 +38,10 @@ public class SysUserServiceImpl extends ServiceImpl<SysUserMapper, SysUser> impl
     private PasswordEncoder passwordEncoder;
 
     @Override
-    public IPage<SysUser> findUserDetail(SysUser user, QueryPage request) {
-        Page<SysUser> page = new Page<>(request.getPageNo(), request.getPageSize());
-        return this.baseMapper.findUserDetailPage(page, user);
+    public PageUtils findUserDetail(SysUser user, QueryPage request) {
+        //Page<SysUser> page = new Page<>(request.getPageNo(), request.getPageSize());
+        IPage<SysUser> iPage = this.baseMapper.findUserDetailPage(ToolUtil.getPage(request),user);
+        return new PageUtils(iPage);
     }
 
     @Override
