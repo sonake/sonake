@@ -36,7 +36,7 @@ public class SysRoleController {
     @GetMapping
     @PreAuthorize("hasAnyAuthority('role:view')")
     public Object userList(QueryPage queryRequest, SysRole role) {
-        return Rs.success(roleService.findPage(role,queryRequest));
+        return Rs.success(roleService.findPageDetail(role,queryRequest));
     }
 
     @PostMapping

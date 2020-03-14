@@ -30,9 +30,9 @@ public class SysRoleServiceImpl extends ServiceImpl<SysRoleMapper, SysRole> impl
     private ISysMenuRoleService menuRoleService;
 
     @Override
-    public PageUtils findPage(SysRole role, QueryPage request) {
+    public PageUtils findPageDetail(SysRole role, QueryPage request) {
         LambdaQueryWrapper<SysRole> queryWrapper = new LambdaQueryWrapper<>();
-        IPage<SysRole> iPage = this.page(ToolUtil.getPage(request),queryWrapper);
+        IPage<SysRole> iPage = this.baseMapper.findPageDetail(ToolUtil.getPage(request),role);
         return new PageUtils(iPage);
     }
 

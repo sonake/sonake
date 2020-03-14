@@ -8,7 +8,8 @@ import com.hc.common.bean.system.SysUser;
 import com.hc.common.result.PageUtils;
 
 public interface ISysRoleService extends IService<SysRole> {
-    PageUtils findPage(SysRole role, QueryPage queryRequest);
+    PageUtils findPageDetail(SysRole role, QueryPage queryRequest);
 
     void saveRoleAndPerms(SysRole role);
+
 }
