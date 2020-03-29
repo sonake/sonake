@@ -19,6 +19,7 @@ import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiResponse;
 import io.swagger.annotations.ApiResponses;
 
+import javax.validation.Valid;
 import javax.validation.constraints.NotBlank;
 
 
@@ -65,7 +66,7 @@ public class SysMenuController{
     @ApiResponses({@ApiResponse(code = 200, message = "新增成功")})
     @ApiOperation(value = "新增 Menu" , notes = "新增Menu")
     @PostMapping
-    public Object save(@RequestBody SysMenu entity) throws HcException {
+    public Object save(@Valid SysMenu entity) throws HcException {
         log.info(JSON.toJSONString(entity));
         try {
             this.menuService.createOrUpdateMenu(entity);
@@ -83,7 +84,7 @@ public class SysMenuController{
     @ApiResponses({@ApiResponse(code = 200, message = "修改成功")})
     @ApiOperation(value = "修改 Menu" , notes = "新增Menu")
     @PutMapping
-    public Object update(@RequestBody SysMenu entity) throws HcException{
+    public Object update(@Valid SysMenu entity) throws HcException{
         log.info(JSON.toJSONString(entity));
         try {
             this.menuService.createOrUpdateMenu(entity);

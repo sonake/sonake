@@ -27,12 +27,12 @@ public class SysMenu extends BaseBean implements Serializable {
      * 菜单/按钮ID
      */
     @TableId(type = IdType.AUTO)
-    private Long id;
+    private Integer id;
 
     /**
      * 上级菜单ID
      */
-    private Long pId;
+    private Integer parentId;
 
     /**
      * 菜单/按钮名称

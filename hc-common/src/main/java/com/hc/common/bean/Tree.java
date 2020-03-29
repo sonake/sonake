@@ -19,11 +19,11 @@ public class Tree<T> {
 
     private List<Tree<T>> children;
 
-    private String pId;
+    private String parentId;
 
-    private boolean hasParent = false;
-
-    private boolean hasChildren = false;
+//    private boolean hasParent = false;
+//
+//    private boolean hasChildren = false;
 
     public void initChildren(){
         this.children = new ArrayList<>();

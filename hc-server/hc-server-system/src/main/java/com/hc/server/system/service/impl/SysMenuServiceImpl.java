@@ -17,10 +17,7 @@ import com.hc.server.system.service.ISysMenuService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import org.springframework.stereotype.Service;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 /**
  * @author xzyuan
@@ -37,7 +34,9 @@ public class SysMenuServiceImpl extends ServiceImpl<SysMenuMapper, SysMenu> impl
         Map<String, List> result = new HashMap<>(1);
         try {
             LambdaQueryWrapper<SysMenu> queryWrapper = new LambdaQueryWrapper<>();
-            queryWrapper.orderByAsc(SysMenu::getOrderNum);
+            queryWrapper
+                    .like(ToolUtil.isNotEmpty(menu.getMenuName()),SysMenu::getMenuName,menu.getMenuName())
+                    .orderByAsc(SysMenu::getOrderNum);
             List<SysMenu> menuList = this.baseMapper.selectList(queryWrapper);
             List<MenuTree> menuTrees = new ArrayList<>();
             buildTrees(menuTrees, menuList);
@@ -57,7 +56,11 @@ public class SysMenuServiceImpl extends ServiceImpl<SysMenuMapper, SysMenu> impl
 
     @Override
     public void createOrUpdateMenu(SysMenu entity) {
-
+        entity.setCreateTime(new Date());
+        entity.setCreateBy(1L);
+        entity.setUpdateBy(1L);
+        entity.setUpdateTime(new Date());
+        this.save(entity);
     }
 
     @Override
@@ -70,7 +73,7 @@ public class SysMenuServiceImpl extends ServiceImpl<SysMenuMapper, SysMenu> impl
         menus.forEach(menu -> {
             MenuTree tree = new MenuTree();
             tree.setId(menu.getId().toString());
-            tree.setPId(menu.getPId().toString());
+            tree.setParentId(menu.getParentId().toString());
             tree.setLabel(menu.getMenuName());
             tree.setComponent(menu.getComponent());
             tree.setIcon(menu.getIcon());
@@ -100,7 +103,7 @@ public class SysMenuServiceImpl extends ServiceImpl<SysMenuMapper, SysMenu> impl
             menuList.forEach(menu -> {
                 VueRouter<SysMenu> router = new VueRouter<>();
                 router.setId(menu.getId().toString());
-                router.setParentId(menu.getPId().toString());
+                router.setParentId(menu.getParentId().toString());
                 router.setPath(menu.getPath());
                 router.setComponent(menu.getComponent());
                 router.setName(menu.getMenuName());
