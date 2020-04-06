@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.hc.server.system.mapper.SysDeptMapper">
+
+    <!-- 可根据自己的需求，是否要使用 -->
+    <resultMap type="com.hc.common.bean.system.SysDept" id="deptMap">
+        <result property="id" column="id"/>
+        <result property="parentId" column="parent_id"/>
+        <result property="deptName" column="dept_name"/>
+        <result property="delFlag" column="del_flag"/>
+        <result property="createBy" column="create_by"/>
+        <result property="createTime" column="create_time"/>
+        <result property="updateBy" column="update_by"/>
+        <result property="updateTime" column="update_time"/>
+        <result property="remark" column="remark"/>
+    </resultMap>
+
+
+    <select id="findList" parameterType="sysDept" resultType="sysDept">
+      SELECT
+	     d1.*, d2.dept_name AS parentName
+      FROM
+	     t_dept d1
+      LEFT JOIN t_dept d2 ON d1.parent_id = d2.id
+      WHERE 1 = 1
+      <if test="dept.deptName != null and dept.deptName != ''">
+        AND d1.dept_name like CONCAT('%',#{dept.deptName},'%')
+      </if>
+      <if test="dept.id != null and dept.id != ''">
+        AND d1.id = #{dept.id}
+      </if>
+      <if test="dept.parentId != null and dept.parentId != ''">
+        AND d1.parent_id = #{dept.parentId}
+      </if>
+      <if test="dept.delFlag != null and dept.delFlag != ''">
+        AND d1.del_flag = #{dept.delFlag}
+      </if>
+        ORDER BY d1.id
+     </select>
+
+</mapper>

@@ -28,14 +28,10 @@ import java.io.IOException;
 public class SocialLoginController {
     private String clientId = "2d0ee0978235dbfa19cd";
     private String clientSecret = "cb0d90ba0b2c0a566c58a043df18c71ad1b04367";
-    private String authorizeUrl = "https://github.com/login/oauth/authorize";
     private String redirectUrl = "http://127.0.0.1:9030/auth/social/callback";
-    private String accessTokenUrl = "https://github.com/login/oauth/access_token";
-    private String userInfoUrl = "https://api.github.com/user";
 
 
-
-    @PostMapping("/render")
+    @RequestMapping("/render")
     public void renderAuth(HttpServletResponse response) throws IOException {
         AuthRequest authRequest = getAuthRequest();
         response.sendRedirect(authRequest.authorize("hccl"+AuthStateUtils.createState()));

@@ -7,6 +7,7 @@ import com.hc.common.exception.HcException;
 import com.hc.common.result.Rs;
 import com.hc.common.utils.ToolUtil;
 import com.hc.server.system.service.ISysUserService;
+import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.prepost.PreAuthorize;
@@ -27,8 +28,8 @@ import java.util.Map;
 @Validated
 @RestController
 @RequestMapping("user")
+@AllArgsConstructor
 public class SysUserController {
-    @Autowired
     private ISysUserService userService;
 
     @GetMapping

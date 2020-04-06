@@ -12,6 +12,7 @@ import com.hc.common.exception.HcException;
 import com.hc.common.result.Rs;
 import com.hc.common.utils.ToolUtil;
 import com.hc.server.system.service.ISysMenuService;
+import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -33,8 +34,8 @@ import javax.validation.constraints.NotBlank;
 @Slf4j
 @RestController
 @RequestMapping("menu")
+@AllArgsConstructor
 public class SysMenuController{
-    @Autowired
     private ISysMenuService menuService;
 
 
