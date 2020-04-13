@@ -31,6 +31,7 @@ public class DataAccessServiceImpl extends ServiceImpl<DataAccessMapper, DataAcc
     @Override
     public void saveDataAccess(DataAccess dataAccess){
         this.save(dataAccess);
+        this.baseMapper.updateTable(dataAccess.getAccessResource(),dataAccess.getAccessResourceField());
     }
 
 

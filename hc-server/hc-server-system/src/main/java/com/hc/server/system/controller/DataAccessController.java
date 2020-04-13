@@ -84,7 +84,10 @@ public class DataAccessController {
     }
     @RequestMapping("/tableId")
     public Object tableId(String tableName) {
-        String tableId = tableMapper.tableId(tableName);
-        return Rs.success(tableId);
+        int index = tableName.lastIndexOf("_");
+        Map<String,String> columns = tableMapper.tableId(tableName);
+        String unionId = tableName.substring(index+1)+"_"+columns.get("columnName");
+        columns.put("columnName",unionId);
+        return Rs.success(columns);
     }
 }
