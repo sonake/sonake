@@ -6,7 +6,7 @@ import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.hc.common.bean.QueryPage;
 import com.hc.common.bean.system.SysDict;
 import com.hc.common.result.PageUtils;
-import com.hc.common.utils.ToolUtil;
+import com.hc.common.utils.CommonTools;
 import com.hc.server.system.mapper.SysDictMapper;
 import com.hc.server.system.service.ISysDictService;
 import org.springframework.stereotype.Service;
@@ -19,9 +19,9 @@ public class SysDictServiceImpl extends ServiceImpl<SysDictMapper, SysDict> impl
     @Override
     public PageUtils findPage(SysDict dict, QueryPage queryRequest) {
         LambdaQueryWrapper<SysDict> wrapper = new LambdaQueryWrapper<>();
-        wrapper.like(ToolUtil.isNotEmpty(dict.getFieldName()),SysDict::getFieldName,dict.getFieldName())
+        wrapper.like(CommonTools.isNotEmpty(dict.getFieldName()),SysDict::getFieldName,dict.getFieldName())
                 .orderByDesc(SysDict::getId);
-        IPage<SysDict> page = this.page(ToolUtil.getPage(queryRequest),wrapper);
+        IPage<SysDict> page = this.page(CommonTools.getPage(queryRequest),wrapper);
         return new PageUtils(page);
     }
 }

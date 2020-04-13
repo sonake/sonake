@@ -1,13 +1,11 @@
 package com.hc.server.system.service.impl;
 
-import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.hc.common.bean.QueryPage;
 import com.hc.common.bean.Tree;
 import com.hc.common.bean.system.DeptTree;
 import com.hc.common.bean.system.SysDept;
 import com.hc.common.result.PageUtils;
-import com.hc.common.utils.ToolUtil;
 import com.hc.common.utils.TreeUtil;
 import com.hc.server.system.mapper.SysDeptMapper;
 import com.hc.server.system.service.ISysDeptService;

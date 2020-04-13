@@ -1,17 +1,13 @@
 package com.hc.server.system.service.impl;
 
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
-import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
-import com.baomidou.mybatisplus.extension.plugins.PaginationInterceptor;
-import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.hc.common.bean.QueryPage;
 import com.hc.common.bean.system.SysMenuRole;
 import com.hc.common.bean.system.SysRole;
-import com.hc.common.bean.system.SysUser;
 import com.hc.common.result.PageUtils;
-import com.hc.common.utils.ToolUtil;
+import com.hc.common.utils.CommonTools;
 import com.hc.server.system.mapper.SysRoleMapper;
 import com.hc.server.system.service.ISysMenuRoleService;
 import com.hc.server.system.service.ISysRoleService;
@@ -32,7 +28,7 @@ public class SysRoleServiceImpl extends ServiceImpl<SysRoleMapper, SysRole> impl
     @Override
     public PageUtils findPageDetail(SysRole role, QueryPage request) {
         LambdaQueryWrapper<SysRole> queryWrapper = new LambdaQueryWrapper<>();
-        IPage<SysRole> iPage = this.baseMapper.findPageDetail(ToolUtil.getPage(request),role);
+        IPage<SysRole> iPage = this.baseMapper.findPageDetail(CommonTools.getPage(request),role);
         return new PageUtils(iPage);
     }
 

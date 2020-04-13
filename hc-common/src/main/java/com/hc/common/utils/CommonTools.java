@@ -40,7 +40,7 @@ import java.util.regex.Pattern;
  * 高频方法集合类
  */
 @Slf4j
-public class ToolUtil {
+public class CommonTools {
 
 	private static Pattern humpPattern = Pattern.compile("[A-Z]");
 
@@ -67,10 +67,7 @@ public class ToolUtil {
     public static Page getPage(QueryPage queryPage){
         long pageNo=queryPage.getPageNo();
         long pageSize=queryPage.getPageSize();
-        return new Page()
-
-                .setCurrent(pageNo)
-                .setSize(pageSize);
+        return new Page().setCurrent(pageNo).setSize(pageSize);
     }
 
     /**
@@ -576,11 +573,11 @@ public class ToolUtil {
      */
     public static String getWebRootPath(String filePath) {
         try {
-            String path = ToolUtil.class.getClassLoader().getResource("").toURI().getPath();
+            String path = CommonTools.class.getClassLoader().getResource("").toURI().getPath();
             path = path.replace("/WEB-INF/classes/", "");
             path = path.replace("/target/classes/", "");
             path = path.replace("file:/", "");
-            if (ToolUtil.isEmpty(filePath)) {
+            if (CommonTools.isEmpty(filePath)) {
                 return path;
             } else {
                 return path + "/" + filePath;

@@ -5,18 +5,15 @@ import com.hc.common.bean.QueryPage;
 import com.hc.common.bean.system.SysUser;
 import com.hc.common.exception.HcException;
 import com.hc.common.result.Rs;
-import com.hc.common.utils.ToolUtil;
 import com.hc.server.system.service.ISysUserService;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
 import javax.validation.constraints.NotBlank;
-import java.util.Map;
 
 /**
  * @author ：xzyuan

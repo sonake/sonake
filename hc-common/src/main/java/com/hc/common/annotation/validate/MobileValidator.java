@@ -1,7 +1,7 @@
 package com.hc.common.annotation.validate;
 
 import com.hc.common.bean.RegexpConstant;
-import com.hc.common.utils.ToolUtil;
+import com.hc.common.utils.CommonTools;
 import org.apache.commons.lang3.StringUtils;
 
 import javax.validation.ConstraintValidator;
@@ -25,7 +25,7 @@ public class MobileValidator implements ConstraintValidator<IsMobile, String> {
                 return true;
             } else {
                 String regex = RegexpConstant.MOBILE_REG;
-                return ToolUtil.match(regex, s);
+                return CommonTools.match(regex, s);
             }
         } catch (Exception e) {
             return false;

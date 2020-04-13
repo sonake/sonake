@@ -5,7 +5,7 @@ import com.hc.auth.properties.HcValidateCodeProperties;
 import com.hc.common.constant.HcConstant;
 import com.hc.common.exception.ValidateCodeException;
 import com.hc.common.service.RedisService;
-import com.hc.common.utils.ToolUtil;
+import com.hc.common.utils.CommonTools;
 import com.wf.captcha.Captcha;
 import com.wf.captcha.GifCaptcha;
 import com.wf.captcha.SpecCaptcha;
@@ -41,7 +41,7 @@ public class ValidateCodeService {
      */
     public void create(HttpServletRequest request, HttpServletResponse response) throws IOException, ValidateCodeException {
         String key = request.getParameter("key");
-        if (ToolUtil.isEmpty(key)) {
+        if (CommonTools.isEmpty(key)) {
             throw new ValidateCodeException("验证码key不能为空");
         }
         HcValidateCodeProperties code = hcAuthProperties.getCode();

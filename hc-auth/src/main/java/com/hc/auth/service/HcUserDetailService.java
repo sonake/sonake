@@ -3,10 +3,9 @@ package com.hc.auth.service;
 import com.hc.auth.manager.UserManager;
 import com.hc.common.bean.HcAuthUser;
 import com.hc.common.bean.system.SysUser;
-import com.hc.common.utils.ToolUtil;
+import com.hc.common.utils.CommonTools;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.authority.AuthorityUtils;
-import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
@@ -30,10 +29,10 @@ public class HcUserDetailService implements UserDetailsService {
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
         SysUser user=userManager.findUserByUsername(username);
-        if(ToolUtil.isNotEmpty(user)){
+        if(CommonTools.isNotEmpty(user)){
             String perms = userManager.findUserPermissions(username);
             boolean notBlock = false;
-            if(ToolUtil.equals(SysUser.STATUS_VALID,user.getStatus())){
+            if(CommonTools.equals(SysUser.STATUS_VALID,user.getStatus())){
                 notBlock = true;
             }
             HcAuthUser authUser = new HcAuthUser(user.getUsername(),user.getPassword(),true,true,

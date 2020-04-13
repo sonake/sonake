@@ -1,7 +1,7 @@
 package com.hc.server.system.controller;
 
+import java.util.Arrays;
 import java.util.List;
-import java.util.Map;
 
 import com.alibaba.fastjson.JSON;
 import com.baomidou.mybatisplus.core.toolkit.StringPool;
@@ -10,11 +10,9 @@ import com.hc.common.bean.router.VueRouter;
 import com.hc.common.bean.system.SysMenu;
 import com.hc.common.exception.HcException;
 import com.hc.common.result.Rs;
-import com.hc.common.utils.ToolUtil;
 import com.hc.server.system.service.ISysMenuService;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiResponse;
@@ -103,10 +101,11 @@ public class SysMenuController{
     @ApiResponses({@ApiResponse(code = 200, message = "删除成功")})
     @ApiOperation(value = "删除 Menu" , notes = "删除 Menu")
     @DeleteMapping
-    public Object delete(@NotBlank(message = "{required}") String userIds) throws HcException {
+    public Object delete(@NotBlank(message = "{required}") String menuIds) throws HcException {
         try {
-            String[] ids = userIds.split(StringPool.COMMA);
-            this.menuService.delete(ids);
+            String[] ids = menuIds.split(StringPool.COMMA);
+            List<String> list = Arrays.asList(ids);
+            this.menuService.removeByIds(list);
             return Rs.success();
         } catch (Exception e) {
             String message = "删除部门失败";

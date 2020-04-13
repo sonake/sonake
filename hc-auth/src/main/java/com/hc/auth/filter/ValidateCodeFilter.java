@@ -3,7 +3,7 @@ package com.hc.auth.filter;
 import com.hc.auth.service.ValidateCodeService;
 import com.hc.common.exception.ValidateCodeException;
 import com.hc.common.result.Rs;
-import com.hc.common.utils.ToolUtil;
+import com.hc.common.utils.CommonTools;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -46,7 +46,7 @@ public class ValidateCodeFilter extends OncePerRequestFilter {
                 validateCode(httpServletRequest);
                 filterChain.doFilter(httpServletRequest, httpServletResponse);
             } catch (ValidateCodeException e) {
-                ToolUtil.makeResponse(httpServletResponse, MediaType.APPLICATION_JSON_VALUE,
+                CommonTools.makeResponse(httpServletResponse, MediaType.APPLICATION_JSON_VALUE,
                         HttpServletResponse.SC_INTERNAL_SERVER_ERROR, Rs.failure(e.getMessage()));
                 log.error(e.getMessage(), e);
             }

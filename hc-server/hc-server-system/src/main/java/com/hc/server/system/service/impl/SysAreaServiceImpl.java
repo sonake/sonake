@@ -4,16 +4,12 @@ import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.hc.common.bean.QueryPage;
 import com.hc.common.bean.Tree;
 import com.hc.common.bean.system.AreaTree;
-import com.hc.common.bean.system.DeptTree;
 import com.hc.common.bean.system.SysArea;
-import com.hc.common.bean.system.SysDept;
 import com.hc.common.result.PageUtils;
-import com.hc.common.utils.ToolUtil;
+import com.hc.common.utils.CommonTools;
 import com.hc.common.utils.TreeUtil;
 import com.hc.server.system.mapper.SysAreaMapper;
-import com.hc.server.system.mapper.SysDeptMapper;
 import com.hc.server.system.service.ISysAreaService;
-import com.hc.server.system.service.ISysDeptService;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
@@ -60,7 +56,7 @@ public class SysAreaServiceImpl extends ServiceImpl<SysAreaMapper, SysArea> impl
     }
 
     public boolean save(SysArea area) {
-        if(ToolUtil.isEmpty(area.getParentId())){
+        if(CommonTools.isEmpty(area.getParentId())){
             area.setParentId(0L);
         }
         return this.retBool(this.baseMapper.insert(area));

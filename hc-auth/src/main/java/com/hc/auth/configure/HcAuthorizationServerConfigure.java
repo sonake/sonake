@@ -4,6 +4,7 @@ import com.hc.auth.properties.HcAuthProperties;
 import com.hc.auth.properties.HcClientsProperties;
 import com.hc.auth.service.HcUserDetailService;
 import com.hc.auth.translator.HcWebResponseExceptionTranslator;
+import com.hc.common.utils.CommonTools;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
@@ -20,7 +21,6 @@ import org.springframework.security.oauth2.config.annotation.web.configurers.Aut
 import org.springframework.security.oauth2.provider.token.DefaultTokenServices;
 import org.springframework.security.oauth2.provider.token.TokenStore;
 import org.springframework.security.oauth2.provider.token.store.redis.RedisTokenStore;
-import com.hc.common.utils.ToolUtil;
 
 import java.util.UUID;
 
@@ -50,12 +50,12 @@ public class HcAuthorizationServerConfigure extends AuthorizationServerConfigure
     public void configure(ClientDetailsServiceConfigurer clientDetailsServiceConfigurer) throws Exception {
         HcClientsProperties[] hcClientsProperties=hcAuthProperties.getClients();
         InMemoryClientDetailsServiceBuilder builder = clientDetailsServiceConfigurer.inMemory();
-        if(ToolUtil.isNotEmpty(hcClientsProperties)){
+        if(CommonTools.isNotEmpty(hcClientsProperties)){
             for (HcClientsProperties client : hcClientsProperties) {
-                if (ToolUtil.isEmpty(client.getClient())) {
+                if (CommonTools.isEmpty(client.getClient())) {
                     throw new Exception("client不能为空");
                 }
-                if (ToolUtil.isEmpty(client.getSecret())) {
+                if (CommonTools.isEmpty(client.getSecret())) {
                     throw new Exception("secret不能为空");
                 }
                 String[] grantTypes = StringUtils.splitByWholeSeparatorPreserveAllTokens(client.getGrantType(), ",");

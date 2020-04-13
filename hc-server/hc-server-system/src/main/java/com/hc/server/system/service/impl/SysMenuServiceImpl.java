@@ -1,15 +1,13 @@
 package com.hc.server.system.service.impl;
 
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
-import com.baomidou.mybatisplus.core.metadata.IPage;
-import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.hc.common.bean.QueryPage;
 import com.hc.common.bean.Tree;
 import com.hc.common.bean.router.RouterMeta;
 import com.hc.common.bean.system.MenuTree;
 import com.hc.common.bean.system.SysMenu;
 import com.hc.common.result.PageUtils;
-import com.hc.common.utils.ToolUtil;
+import com.hc.common.utils.CommonTools;
 import com.hc.common.bean.router.VueRouter;
 import com.hc.common.utils.TreeUtil;
 import com.hc.server.system.mapper.SysMenuMapper;
@@ -35,13 +33,13 @@ public class SysMenuServiceImpl extends ServiceImpl<SysMenuMapper, SysMenu> impl
         try {
             LambdaQueryWrapper<SysMenu> queryWrapper = new LambdaQueryWrapper<>();
             queryWrapper
-                    .like(ToolUtil.isNotEmpty(menu.getMenuName()),SysMenu::getMenuName,menu.getMenuName())
+                    .like(CommonTools.isNotEmpty(menu.getMenuName()),SysMenu::getMenuName,menu.getMenuName())
                     .orderByAsc(SysMenu::getOrderNum);
             List<SysMenu> menuList = this.baseMapper.selectList(queryWrapper);
             List<MenuTree> menuTrees = new ArrayList<>();
             buildTrees(menuTrees, menuList);
 
-            if (ToolUtil.equals(menu.getType(), SysMenu.TYPE_BUTTON)) {
+            if (CommonTools.equals(menu.getType(), SysMenu.TYPE_BUTTON)) {
                 result.put("rows", menuTrees);
             } else {
                 List<? extends Tree> menuTree = TreeUtil.build(menuTrees);
@@ -60,7 +58,7 @@ public class SysMenuServiceImpl extends ServiceImpl<SysMenuMapper, SysMenu> impl
         entity.setCreateBy(1L);
         entity.setUpdateBy(1L);
         entity.setUpdateTime(new Date());
-        this.save(entity);
+        this.saveOrUpdate(entity);
     }
 
     @Override
@@ -93,13 +91,13 @@ public class SysMenuServiceImpl extends ServiceImpl<SysMenuMapper, SysMenu> impl
      */
     @Override
     public List<VueRouter<SysMenu>> findPermsByUserId(Long userId) {
-        if (ToolUtil.isEmpty(userId)) {
+        if (CommonTools.isEmpty(userId)) {
             return null;
         }
         List<SysMenu> menuList = baseMapper.findPermsByUserId(userId);
         List<VueRouter<SysMenu>> routers = new ArrayList<>();
 
-        if (ToolUtil.isNotEmpty(menuList)) {
+        if (CommonTools.isNotEmpty(menuList)) {
             menuList.forEach(menu -> {
                 VueRouter<SysMenu> router = new VueRouter<>();
                 router.setId(menu.getId().toString());

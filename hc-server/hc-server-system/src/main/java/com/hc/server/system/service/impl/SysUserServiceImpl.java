@@ -3,13 +3,12 @@ package com.hc.server.system.service.impl;
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.core.toolkit.StringPool;
-import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.hc.common.bean.QueryPage;
 import com.hc.common.bean.system.SysUser;
 import com.hc.common.bean.system.SysUserRole;
 import com.hc.common.result.PageUtils;
-import com.hc.common.utils.ToolUtil;
+import com.hc.common.utils.CommonTools;
 import com.hc.server.system.mapper.SysUserMapper;
 import com.hc.server.system.service.ISysUserRoleService;
 import com.hc.server.system.service.ISysUserService;
@@ -40,7 +39,7 @@ public class SysUserServiceImpl extends ServiceImpl<SysUserMapper, SysUser> impl
     @Override
     public PageUtils findUserDetail(SysUser user, QueryPage request) {
         //Page<SysUser> page = new Page<>(request.getPageNo(), request.getPageSize());
-        IPage<SysUser> iPage = this.baseMapper.findUserDetailPage(ToolUtil.getPage(request),user);
+        IPage<SysUser> iPage = this.baseMapper.findUserDetailPage(CommonTools.getPage(request),user);
         return new PageUtils(iPage);
     }
 

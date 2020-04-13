@@ -4,7 +4,7 @@ import org.springframework.http.MediaType;
 import org.springframework.security.core.AuthenticationException;
 import org.springframework.security.web.AuthenticationEntryPoint;
 import com.hc.common.result.Rs;
-import com.hc.common.utils.ToolUtil;
+import com.hc.common.utils.CommonTools;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -20,7 +20,7 @@ public class HcAuthExceptionEntryPoint implements AuthenticationEntryPoint {
     @Override
     public void commence(HttpServletRequest request, HttpServletResponse response,
                          AuthenticationException authException) throws IOException {
-        ToolUtil.makeResponse(response,MediaType.APPLICATION_JSON_VALUE,
+        CommonTools.makeResponse(response,MediaType.APPLICATION_JSON_VALUE,
                 HttpServletResponse.SC_UNAUTHORIZED, Rs.failure("token无效"));
     }
 }
