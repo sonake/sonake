@@ -82,6 +82,7 @@ public class DataAccessController {
         List<Map>  map =  tableMapper.listTable();
         return Rs.success(map);
     }
+
     @RequestMapping("/tableId")
     public Object tableId(String tableName) {
         int index = tableName.lastIndexOf("_");
@@ -89,5 +90,10 @@ public class DataAccessController {
         String unionId = tableName.substring(index+1)+"_"+columns.get("columnName");
         columns.put("columnName",unionId);
         return Rs.success(columns);
+    }
+    @GetMapping("/detail")
+    public Object detail(String accessResource){
+        List<Map> map = tableMapper.getList(accessResource);
+        return Rs.success(map);
     }
 }
