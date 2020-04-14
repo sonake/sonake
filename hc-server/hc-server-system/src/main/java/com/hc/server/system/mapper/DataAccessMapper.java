@@ -11,5 +11,6 @@ import org.apache.ibatis.annotations.Param;
 public interface DataAccessMapper extends BaseMapper<DataAccess> {
 
     void updateTable(@Param("tableName") String tableName, @Param("column") String column);
+    int  selectExist(@Param("accessResource") String accessResource);
 
 }

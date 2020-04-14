@@ -6,9 +6,12 @@ import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.hc.common.bean.QueryPage;
 import com.hc.common.bean.system.DataAccess;
 import com.hc.common.result.PageUtils;
+import com.hc.common.service.RedisService;
 import com.hc.common.utils.CommonTools;
 import com.hc.server.system.mapper.DataAccessMapper;
 import com.hc.server.system.service.IDataAccessService;
+import lombok.AllArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
@@ -18,7 +21,8 @@ import org.springframework.transaction.annotation.Transactional;
 @Transactional(propagation = Propagation.SUPPORTS, readOnly = true, rollbackFor = Exception.class)
 public class DataAccessServiceImpl extends ServiceImpl<DataAccessMapper, DataAccess> implements IDataAccessService{
 
-
+    @Autowired
+    RedisService redisService;
     @Override
     public PageUtils findPage(DataAccess dataAccess, QueryPage queryRequest) {
         LambdaQueryWrapper<DataAccess> wrapper = new LambdaQueryWrapper<>();
@@ -32,6 +36,8 @@ public class DataAccessServiceImpl extends ServiceImpl<DataAccessMapper, DataAcc
     public void saveDataAccess(DataAccess dataAccess){
         this.save(dataAccess);
         this.baseMapper.updateTable(dataAccess.getAccessResource(),dataAccess.getAccessResourceField());
+        redisService.set(dataAccess.getAccessResource(),dataAccess.getAccessResourceField());
+
     }
 
 

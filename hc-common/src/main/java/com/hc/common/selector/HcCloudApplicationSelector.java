@@ -1,6 +1,7 @@
 package com.hc.common.selector;
 
 import com.hc.common.configure.HcAuthExceptionConfigure;
+import com.hc.common.configure.HcLettuceRedisConfigure;
 import com.hc.common.configure.HcOAuth2FeignConfigure;
 import com.hc.common.configure.HcServerProtectConfigure;
 import com.hc.common.handler.HcAuthExceptionEntryPoint;
@@ -19,7 +20,8 @@ public class HcCloudApplicationSelector implements ImportSelector {
         return new String[]{
                 HcAuthExceptionConfigure.class.getName(),
                 HcOAuth2FeignConfigure.class.getName(),
-                HcServerProtectConfigure.class.getName()
+                HcServerProtectConfigure.class.getName(),
+                HcLettuceRedisConfigure.class.getName()
         };
     }
 }

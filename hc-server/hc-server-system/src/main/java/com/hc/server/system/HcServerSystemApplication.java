@@ -1,5 +1,6 @@
 package com.hc.server.system;
 
+import com.hc.common.annotation.EnableDataAccess;
 import com.hc.common.annotation.HcCloudApplication;
 import com.hc.server.system.properties.HcSwaggerProperties;
 import org.mybatis.spring.annotation.MapperScan;
@@ -18,6 +19,7 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 @EnableFeignClients
 @MapperScan("com.hc.server.system.mapper")
 @EnableConfigurationProperties({HcSwaggerProperties.class})
+@EnableDataAccess
 public class HcServerSystemApplication {
 
     public static void main(String[] args) {

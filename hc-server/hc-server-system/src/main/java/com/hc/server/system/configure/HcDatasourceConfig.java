@@ -5,6 +5,7 @@ import com.baomidou.mybatisplus.extension.parsers.BlockAttackSqlParser;
 import com.baomidou.mybatisplus.extension.plugins.PaginationInterceptor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.core.annotation.Order;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -16,8 +17,14 @@ import java.util.List;
  * @version: 1.0
  */
 @Configuration
-public class MybatisPlusConfig {
+public class HcDatasourceConfig {
     @Bean
+    @Order(2)
+    public DataAccessInterceptor dataPermissionInterceptor(){
+        return new DataAccessInterceptor();
+    };
+    @Bean
+    @Order(1)
     public PaginationInterceptor paginationInterceptor() {
         PaginationInterceptor paginationInterceptor = new PaginationInterceptor();
         List<ISqlParser> sqlParserList = new ArrayList<>();
