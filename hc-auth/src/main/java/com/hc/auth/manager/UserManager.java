@@ -27,6 +27,11 @@ public class UserManager {
         return userMapper.findUserByUsername(username);
     }
 
+
+    public String selectSubDept(Long deptId){
+        return userMapper.selectSubDept(deptId);
+    }
+
     public String findUserPermissions(String username) {
         List<SysMenu> userPermissions = menuMapper.findPermsByUsername(username);
         return userPermissions.stream().map(SysMenu::getPerms).collect(Collectors.joining(","));

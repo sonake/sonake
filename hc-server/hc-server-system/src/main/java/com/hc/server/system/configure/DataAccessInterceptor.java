@@ -102,6 +102,7 @@ public class DataAccessInterceptor extends AbstractSqlParserHandler implements I
             if (user == null) {
                 return originSql;
             }
+            String subDept = "("+redisService.get("subDept").toString()+")";
             CCJSqlParserManager parserManager = new CCJSqlParserManager();
             Select select = (Select) parserManager.parse(new StringReader(originSql));
             PlainSelect plainSelect = (PlainSelect) select.getSelectBody();
@@ -109,7 +110,8 @@ public class DataAccessInterceptor extends AbstractSqlParserHandler implements I
             String selectTableName = fromItem.getAlias() == null ? fromItem.getName() : fromItem.getAlias().getName();
             // 获取数据权限关联字段
             String connectField = redisService.get(fromItem.getName()).toString().split(" ")[0];
-            String dataPermissionSql = String.format("%s."+connectField+" = '%s'", selectTableName, 3);
+            String dataPermissionSql = selectTableName+"."+connectField+" in "+subDept;
+                    //String.format("%s."+connectField+" in '%s'", selectTableName, subDept);
 
             if (plainSelect.getWhere() == null) {
                 plainSelect.setWhere(CCJSqlParserUtil.parseCondExpression(dataPermissionSql));

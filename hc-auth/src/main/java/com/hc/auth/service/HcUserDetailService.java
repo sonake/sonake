@@ -3,6 +3,7 @@ package com.hc.auth.service;
 import com.hc.auth.manager.UserManager;
 import com.hc.common.bean.HcAuthUser;
 import com.hc.common.bean.system.SysUser;
+import com.hc.common.service.RedisService;
 import com.hc.common.utils.CommonTools;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.authority.AuthorityUtils;
@@ -24,11 +25,15 @@ public class HcUserDetailService implements UserDetailsService {
     private PasswordEncoder passwordEncoder;
     @Autowired
     private UserManager userManager;
+    @Autowired
+    private RedisService redisService;
 
 
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
         SysUser user=userManager.findUserByUsername(username);
+        String subDept = user.getDeptId()+","+userManager.selectSubDept(user.getDeptId());
+        redisService.set("subDept",subDept);
         if(CommonTools.isNotEmpty(user)){
             String perms = userManager.findUserPermissions(username);
             boolean notBlock = false;

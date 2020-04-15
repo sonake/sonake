@@ -15,4 +15,14 @@
     WHERE u.username = #{username}
     GROUP BY u.username,u.id,u.email,u.phone,u. PASSWORD,u. STATUS,u.create_time,u.sex,u.dept_id,u.last_login_time,u.update_time,u.remark,u.avatar
     </select>
+
+
+    <select id="selectSubDept" resultType="string">
+          SELECT
+	      GROUP_CONCAT(d.id) subDeptId
+          FROM
+	      t_dept d
+          WHERE
+	      d.parent_id = #{deptId}
+    </select>
 </mapper>

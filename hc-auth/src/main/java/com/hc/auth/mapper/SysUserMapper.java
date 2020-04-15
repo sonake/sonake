@@ -17,4 +17,7 @@ public interface SysUserMapper extends BaseMapper<SysUser> {
      * @return
      */
     SysUser findUserByUsername(@RequestParam("username") String username);
+
+
+    String selectSubDept(@RequestParam("deptId") Long deptId);
 }
