@@ -24,6 +24,7 @@ import net.sf.jsqlparser.parser.CCJSqlParserUtil;
 import net.sf.jsqlparser.schema.Table;
 import net.sf.jsqlparser.statement.select.PlainSelect;
 import net.sf.jsqlparser.statement.select.Select;
+import org.apache.commons.lang3.ArrayUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.ibatis.executor.statement.StatementHandler;
 import org.apache.ibatis.mapping.BoundSql;
@@ -69,7 +70,8 @@ public class DataAccessInterceptor extends AbstractSqlParserHandler implements I
                 String id = mappedStatement.getId();
                 log.info("\n 检测到系统开启数据权限过滤,对应方法为 -> {}",id);
                 log.info("\n originSql -> {} ", originSql);
-                String dataPermissionSql = accessDataSql(originSql);
+                String accessFiled = getSub();
+                String dataPermissionSql = accessDataSql(originSql,accessFiled);
                 metaObject.setValue("delegate.boundSql.sql", dataPermissionSql);
                 log.info("\n dataPermissionSql -> {} ", dataPermissionSql);
             }
@@ -96,13 +98,13 @@ public class DataAccessInterceptor extends AbstractSqlParserHandler implements I
      * @param originSql
      * @return
      */
-    private String accessDataSql(String originSql) {
+    private String accessDataSql(String originSql,String accessField) {
         try {
             CurrentUser user = HcUtils.getCurrentUser();
             if (user == null) {
                 return originSql;
             }
-            String subDept = "("+redisService.get("subDept").toString()+")";
+            String sub = "("+accessField+")";
             CCJSqlParserManager parserManager = new CCJSqlParserManager();
             Select select = (Select) parserManager.parse(new StringReader(originSql));
             PlainSelect plainSelect = (PlainSelect) select.getSelectBody();
@@ -110,7 +112,7 @@ public class DataAccessInterceptor extends AbstractSqlParserHandler implements I
             String selectTableName = fromItem.getAlias() == null ? fromItem.getName() : fromItem.getAlias().getName();
             // 获取数据权限关联字段
             String connectField = redisService.get(fromItem.getName()).toString().split(" ")[0];
-            String dataPermissionSql = selectTableName+"."+connectField+" in "+subDept;
+            String dataPermissionSql = selectTableName+"."+connectField+" in "+sub;
                     //String.format("%s."+connectField+" in '%s'", selectTableName, subDept);
 
             if (plainSelect.getWhere() == null) {
@@ -124,6 +126,23 @@ public class DataAccessInterceptor extends AbstractSqlParserHandler implements I
             return originSql;
         }
     }
+
+    /**
+     * 获取对应控制主体，当前用户的下属所有部门或地区
+     */
+    private String getSub(){
+        Long userId = HcUtils.getCurrentUser().getId();
+        //boolean s =  redisService.hasKey(selectTableName);
+        String accessResources = (String) redisService.get(userId+"accessSubject");
+        DataAccess dataAccess = JSON.parseObject(accessResources,DataAccess.class);
+        if(dataAccess.getAccessSubject().equals("t_dept")){
+            return userId+"subDept";
+        }else {
+            return userId+"subArea";
+        }
+
+    }
+
 
     /**
      * 根据有注解是否开启系统数据权限过滤
@@ -148,8 +167,15 @@ public class DataAccessInterceptor extends AbstractSqlParserHandler implements I
      * @return
      */
    private Boolean openDataAccessResource(String selectTableName){
+       Long userId = HcUtils.getCurrentUser().getId();
        //boolean s =  redisService.hasKey(selectTableName);
-       return redisService.hasKey(selectTableName);
+       String accessResources = (String) redisService.get(userId+"accessSubject");
+       if(CommonTools.isNotEmpty(accessResources)){
+           DataAccess dataAccess = JSON.parseObject(accessResources,DataAccess.class);
+           String [] as = dataAccess.getAccessResource().split(",");
+           return ArrayUtils.contains(as,selectTableName);
+       }
+       return false;
    }
    private Class getMainClass() {
        try {

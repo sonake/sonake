@@ -32,8 +32,12 @@ public class HcUserDetailService implements UserDetailsService {
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
         SysUser user=userManager.findUserByUsername(username);
+
+        // 数据权限备用 用户退出时/token失效时 删除
         String subDept = user.getDeptId()+","+userManager.selectSubDept(user.getDeptId());
-        redisService.set("subDept",subDept);
+        String subArea = user.getAreaId()+","+userManager.selectSubArea(user.getAreaId());
+        redisService.set(user.getId()+"subDept",subDept);
+        redisService.set(user.getId()+"subArea",subArea);
         if(CommonTools.isNotEmpty(user)){
             String perms = userManager.findUserPermissions(username);
             boolean notBlock = false;

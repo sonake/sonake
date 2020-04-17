@@ -20,4 +20,7 @@ public interface SysUserMapper extends BaseMapper<SysUser> {
 
 
     String selectSubDept(@RequestParam("deptId") Long deptId);
+
+    String selectSubArea(@RequestParam("areaId") Long areaId);
+
 }

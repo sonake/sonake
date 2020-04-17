@@ -25,4 +25,12 @@
           WHERE
 	      d.parent_id = #{deptId}
     </select>
+    <select id="selectSubArea" resultType="string">
+          SELECT
+	      GROUP_CONCAT(a.id) subAreaId
+          FROM
+	      t_area a
+          WHERE
+	      a.parent_id = #{areaId}
+    </select>
 </mapper>
