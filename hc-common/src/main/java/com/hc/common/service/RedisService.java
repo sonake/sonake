@@ -2,6 +2,7 @@ package com.hc.common.service;
 
 import org.aspectj.lang.annotation.Aspect;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.redis.core.ListOperations;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Service;
 
@@ -559,5 +560,22 @@ public class RedisService {
             e.printStackTrace();
             return 0L;
         }
+    }
+    /**
+     * 队列右侧刷入
+     * @param k
+     * @param v
+     */
+    public void lPush(String k,Object v){
+        ListOperations<String, Object> list = redisTemplate.opsForList();
+        list.rightPush(k,v);
+    }
+    /**
+     * 队列左侧刷出
+     * @param k
+     */
+    public void rPop(String k){
+        ListOperations<String, Object> list = redisTemplate.opsForList();
+        list.leftPop(k);
     }
 }

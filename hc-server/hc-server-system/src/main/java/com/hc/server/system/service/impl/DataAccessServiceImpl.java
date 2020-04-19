@@ -29,7 +29,8 @@ public class DataAccessServiceImpl extends ServiceImpl<DataAccessMapper, DataAcc
     @Override
     public PageUtils findPage(DataAccess dataAccess, QueryPage queryRequest) {
         LambdaQueryWrapper<DataAccess> wrapper = new LambdaQueryWrapper<>();
-        wrapper.like(CommonTools.isNotEmpty(dataAccess.getAccessName()),DataAccess::getAccessName,dataAccess.getAccessName())
+        wrapper.eq(CommonTools.isNotEmpty(dataAccess.getAccessResource()),DataAccess::getAccessResource,dataAccess.getAccessResource())
+                .like(CommonTools.isNotEmpty(dataAccess.getAccessName()),DataAccess::getAccessName,dataAccess.getAccessName())
                 .orderByDesc(DataAccess::getId);
         IPage<DataAccess> page = this.page(CommonTools.getPage(queryRequest),wrapper);
         return new PageUtils(page);
@@ -41,7 +42,7 @@ public class DataAccessServiceImpl extends ServiceImpl<DataAccessMapper, DataAcc
         this.baseMapper.updateTable(dataAccess.getAccessResource(),dataAccess.getAccessResourceField());
         Long userId = HcUtils.getCurrentUser().getId();
         // 存储当前用户针对某个资源控制主体开启了对某个资源的数据权限,用户退出时/token失效时删除
-        redisService.set(userId+"accessSubject", JSON.toJSONString(dataAccess));
+        redisService.set("accessSubject", JSON.toJSONString(dataAccess));
     }
 
 

@@ -19,7 +19,8 @@ public class SysDictServiceImpl extends ServiceImpl<SysDictMapper, SysDict> impl
     @Override
     public PageUtils findPage(SysDict dict, QueryPage queryRequest) {
         LambdaQueryWrapper<SysDict> wrapper = new LambdaQueryWrapper<>();
-        wrapper.like(CommonTools.isNotEmpty(dict.getFieldName()),SysDict::getFieldName,dict.getFieldName())
+        wrapper.eq(CommonTools.isNotEmpty(dict.getId()),SysDict::getId,dict.getId())
+                .like(CommonTools.isNotEmpty(dict.getFieldName()),SysDict::getFieldName,dict.getFieldName())
                 .orderByDesc(SysDict::getId);
         IPage<SysDict> page = this.page(CommonTools.getPage(queryRequest),wrapper);
         return new PageUtils(page);

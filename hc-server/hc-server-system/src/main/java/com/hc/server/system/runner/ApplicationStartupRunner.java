@@ -1,5 +1,7 @@
 package com.hc.server.system.runner;
 
+import com.alibaba.fastjson.JSON;
+import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.hc.common.bean.system.DataAccess;
 import com.hc.common.service.RedisService;
 import com.hc.server.system.service.IDataAccessService;
@@ -28,7 +30,7 @@ public class ApplicationStartupRunner implements ApplicationRunner {
     public void run(ApplicationArguments args) throws Exception {
         List<DataAccess> list = dataAccessService.list();
         list.forEach(dataAccess -> {
-            redisService.set(dataAccess.getAccessResource(),dataAccess.getAccessResourceField());
+            redisService.set("accessSubject", JSON.toJSONString(dataAccess));
         });
         log.info("数据权限信息同步至redis完毕");
     }

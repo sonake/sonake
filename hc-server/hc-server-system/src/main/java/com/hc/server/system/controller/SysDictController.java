@@ -37,7 +37,7 @@ public class SysDictController {
 
     @PostMapping
     @PreAuthorize("hasAnyAuthority('dict:add')")
-    public Object addUser(@Valid SysDict dict) throws HcException {
+    public Object add(@Valid SysDict dict) throws HcException {
         try {
             this.dictService.save(dict);
             return Rs.success();
@@ -50,7 +50,7 @@ public class SysDictController {
 
     @PutMapping
     @PreAuthorize("hasAnyAuthority('dict:update')")
-    public Object updateUser(@Valid SysDict dict) throws HcException {
+    public Object update(@Valid SysDict dict) throws HcException {
         try {
             this.dictService.updateById(dict);
             return Rs.success();
@@ -63,7 +63,7 @@ public class SysDictController {
 
     @DeleteMapping
     @PreAuthorize("hasAnyAuthority('dict:delete')")
-    public Object deleteUsers(@NotBlank(message = "{required}") String dictIds) throws HcException {
+    public Object delete(@NotBlank(message = "{required}") String dictIds) throws HcException {
         try {
             List<Long> ids = Arrays.asList(dictIds.split(StringPool.COMMA)).stream().map(s -> Long.parseLong(s.trim())).collect(Collectors.toList());
             this.dictService.removeByIds(ids);
